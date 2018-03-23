@@ -1,0 +1,21 @@
+extends layout.pug
+block contenido
+  div(class="col-md-6 remove-float center-block big-top-space" ng-controller="login")
+    form(name="frmLogin" id="frmLogin")
+      div
+        label(for="email") Correo:
+        input(type="email", name="iptEmail", placeholder="Email", id="iptEmail", class="form-control",ng-model="iptEmail" ng-required="true")
+        span(ng-show="frmLogin.iptEmail.$error.required && frmLogin.iptEmail.$dirty") El correo es requerido.
+        span(ng-show="frmLogin.iptEmail.$error.email && frmLogin.iptEmail.$dirty") El correo ingresado no es válido.
+      div
+        label(for="Password") Contraseña:
+        input(type="password", name="iptPassord",placeholder="password",id="iptPassword", class="form-control", ng-model="iptPassword" ng-required="true" maxlength="30")
+        span(ng-show="frmLogin.iptPassword.$error.required && frmLogin.iptPassword.$dirty") El password es requerido.
+        span(ng-show="frmLogin.iptPassword.$error.maxlength && frmLogin.iptPassword.$dirty") El password debe de tener maximo 30 caracteres.
+        div(class="row top-space")
+          div(class="col-xs-12 col-sm-6")
+            input(type="button" value="Iniciar sesion" clavss="btn btn-info" ng-click="loginUser()" ng-disabled="frmLogin.$invalid")
+          div(class="col-xs-12 col-sm-6")
+            a(href="/signup") No tengo una cuenta.
+          div(class="col-xs-12 col-sm-6")
+            a(href="/forgotpassword") ¿Olvidaste tu contraseña?

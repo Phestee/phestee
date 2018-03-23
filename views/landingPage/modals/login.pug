@@ -1,0 +1,51 @@
+// ------
+// Modales
+// Modal Login - Activated by "Inicia Sesión" in NavBar and "Entrar" in Footer section
+#phLoginMdl.modal.fade.inxFrnt(tabindex='-1', role='dialog', aria-labelledby='phLoginMdl', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content.phfont-muli
+      .modal-header
+        h5#phLoginMdl.h5.modal-title.text-center
+          img.d-inline-block.align-top.my-auto(src='../img/system/phesteelogox2.png', width='35', height='35', alt='Logo Phestee')
+          |  Inicia Sesión
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        form
+          .form-group.text-center
+            p.form-text.text-dark Entrar con 
+            //
+              <button type="button" class="btn phbtn-dark my-2 btn-sm">
+              <i class="fab fa-google-plus-g fa-fw fa-1x"></i> Google</button>
+            button.btn.phbtn-dark(type='button')
+              i.fab.fa-facebook-f.fa-fw.fa-1x(aria-hidden='true')
+              |  facebook
+            p.form-text.text-dark.mt-3 Entrar con mi cuenta
+          .form-group.d-flex
+            i.fas.fa-envelope.fa-sm.my-auto.text-muted
+            input#phUsrNm.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='email', placeholder='Correo electrónico', required='')
+            // -Activated by condition--
+            // <small class="form-text phtext-danger">El correo electrónico no está registrado <i class="fa fa-frown-o fa-1x text-danger" aria-hidden="true"></i></small>
+          .form-group.d-flex
+            i.fas.fa-lock.fa-sm.my-auto.text-muted
+            input#phPwdConfr.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Contraseña')
+            // -Activated by condition--
+            // <small class="form-text phtext-red">¡Ouch! La contraseña no coincide <i class="fa fa-ban fa-1x text-danger" aria-hidden="true"></i></small>
+          .form-check.text-dark
+            small
+              label.text-dark
+                input(type='checkbox')
+                |                                   Mantener la sesión iniciada
+          .form-group.text-center
+            a.btn.phbtn-blue.text-white.font-weight-light(href='phlayout.html')
+              | Entrar  
+              i.fas.fa-arrow-circle-right.fa-sm
+          .form-group.text-center
+            small#emailHelp.form-text.text-dark
+              | ¿Aún no tienes una cuenta? 
+              a(href='') Regístrate
+            small#emailHelp.form-text.text-dark
+              | Recuerda que al registrarte aceptas nuestra 
+              a(href='#') política de privacidad
+              |  y 
+              a(href='#') términos de servicio

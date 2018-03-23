@@ -1,0 +1,29 @@
+extends layout.pug
+block contenido
+  div(class="col-md-6 remove-float center-block big-top-space" ng-controller="postController")
+    form(name="frmLogin" id="frmLogin")
+      div
+        label(for="ID") ID:
+        input(type="text", name="iptID", id="iptID", class="form-control", ng-model="id")
+      div
+        label(for="ID") Session:
+        input(type="text", name="iptSession", id="iptSession", class="form-control" ng-model="session")
+      div
+        label(for="post") Post:
+        input(type="text", name="iptPost", id="iptPost", class="form-control", ng-model="iptPost")
+        div(class="row top-space")
+          div(class="col-xs-12 col-sm-6")
+            input(type="button" value="Solicitar" clavss="btn btn-info" ng-click="postRequest()")
+            input(type="button" value="Update Feed" clavss="btn btn-info" ng-click="updateFeed()")
+  div(ng-controller='feed')
+    div(ng-repeat='customer in newCustomers') {{customer.name}}
+  .col
+    h6 Messages
+    .overflowable
+      p(ng-repeat='message in messages') : 
+  script(src='/socket.io/socket.io.js')
+  script.
+    var socket = io.connect('http://localhost:8080');
+    socket.on('message', function(message) {
+      alert('The server has a message for you: ' + message);
+    })

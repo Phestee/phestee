@@ -1,0 +1,14 @@
+extends ../layout.pug
+block contenido
+  div(class="col-md-6 remove-float center-block big-top-space" ng-controller="homeController" ng-init="getDataUser("+JSON.stringify(user)+")")
+    h1 Wilkommen neuer Benutzer
+    a(ng-click="signout()") Cerrar sesion
+    br
+    a(href="/app/profile") Editar perfil.
+    br
+    a(href="/app/business") Editar Negocio.
+    br
+    a(href="/app/services") Editar tablero.
+    br
+    div {{name}}
+    br

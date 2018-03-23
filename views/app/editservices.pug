@@ -1,0 +1,57 @@
+extends ../layout.pug
+block contenido
+  div(class="col-md-6 remove-float center-block big-top-space" ng-controller="editServicesController" ng-init="loadServicesUser("+JSON.stringify(databusiness)+")")
+    form(id="frmServices" name="frmServices")
+      div(ng-repeat="databusinesshtml in dataServicesUser") {{databusinesshtml.name}} {{$index}}
+        div
+          label(for="slcProdServiceAdd")
+          select(id="slcProdServiceAdd" name="slcProdServiceAdd" ng-model="slcProdServiceAdd[$index]" ng-options="obj.value as obj.label for obj in selectprodservice")
+        div
+          label(for="serviceprod") Nombre:
+          input(type="text" id="iptNameServiceAdd" name="iptNameServiceAdd" ng-model="iptNameServiceAdd[$index]")
+          br
+          label(for="costserv") $
+          input(type="text" id="iptCostServiceAdd" name="iptCostServiceAdd" ng-model="iptCostServiceAdd[$index]" ng-pattern="onlynumbers")
+          span(ng-show="frmServices.iptCostServiceAdd.$error.pattern && frmServices.iptCostServiceAdd.$dirty") El costo debe de tener solo números.
+        div
+          label(for="description") Descripción
+          textarea(name="txtaDescriptionAdd" id="txtaDescriptionAdd" ng-model="txtaDescriptionAdd[$index]")
+        div
+          label(for="homeserviceormobile") Tipo de servicio/producto.
+          select(id="slcTypeServiceAdd" name="slcTypeServiceAdd" ng-model="slcTypeServiceAdd[$index]" ng-options="obj.value as obj.label for obj in selecttypeservice")
+        div
+          label(for="Etiquetas") Etiquetas.
+          textarea(name="txtaHashtagAdd" id="txtaHashtagAdd" ng-model="txtaHashtagAdd[$index]")
+        div
+          label(for="imgs") Imagenes
+          input(type='file', ngf-select='', ng-model='imgServiceAdd[$index]', name='imgServiceAdd', multiple accept='image/*', ngf-max-size='2MB', ngf-model-invalid='errorFile')
+          li(ng-repeat="f in imgServiceAdd[$index]")
+            img(style="width: 50px; height: 50px;" ngf-thumbnail="f")
+        div
+          input(type="button" value="Agregar servicio" ng-click="addService($index)" ng-disabled="frmServices.$invalid")
+          input(type="button" value="Checar archivos" ng-click="checararchivos($index,imgServiceAdd[$index])")
+
+        div(ng-repeat="dataserviceshtml in databusinesshtml.services")
+          div
+            select(id="slcProdService" name="slcProdService" ng-model="slcProdService[$index]" ng-options="obj.value as obj.label for obj in selectprodservice")
+            label(for="nameservice")
+            input(type="text" id="iptNameService" name="iptNameService" ng-model="iptNameService[$index]")
+            label(for="costService") $
+            input(type="text" id="iptCostService" name="iptCostService" ng-model="iptCostService[$index]" ng-pattern="onlynumbers")
+          div
+            label(for="description") Descripción
+            textarea(name="txtaDescription" id="txtaDescription" ng-model="txtaDescription[$index]")
+          div
+              label(for="homeserviceormobile")
+              select(id="slcTypeService" name="slcTypeService" ng-model="slcTypeService[$index]" ng-options="obj.value as obj.label for obj in selecttypeservice")
+          div
+            label(for="Etiquetas") Hashtags:
+            textarea(name="txtaHashtag" id="txtaHashtag" ng-model="txtaHashtag[$index]")
+          div
+            label(for="imgs") Imagenes
+            input(type='file', ngf-select='', ng-model='imgProfile[$index]', name='imgProfile', multiple accept='image/*', ngf-max-size='2MB', ngf-model-invalid='errorFile')
+            li(ng-repeat="f in imgProfile[$index]")
+              img(style="width: 50px; height: 50px;" ngf-thumbnail="f")
+          div
+            input(type="button" value="Guardar servicio" ng-click="updateService($index)")
+            input(type="button" value="Eliminar servicio" ng-click="deleteService($index)")

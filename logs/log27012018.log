@@ -1,0 +1,159 @@
+[ 27-Enero-2018  17:57:08 ] M001 - GET "/"
+[ 27-Enero-2018  17:57:33 ] M001 - GET "/"
+[ 27-Enero-2018  18:20:04 ] M001 - GET "/"
+[ 27-Enero-2018  18:36:06 ] M001 - GET "/"
+[ 27-Enero-2018  18:40:24 ] M001 - GET "/"
+[ 27-Enero-2018  18:42:33 ] -----------------------------------------------------
+[ 27-Enero-2018  18:42:33 ] M001 GET "/availableemail/emailcheck"
+[ 27-Enero-2018  18:42:33 ] Emailcheck: ramon@ramon.com
+[ 27-Enero-2018  18:42:40 ] -----------------------------------------------------
+[ 27-Enero-2018  18:42:40 ] M001 GET "/availableemail/emailcheck"
+[ 27-Enero-2018  18:42:40 ] Emailcheck: ramon@gama.com
+[ 27-Enero-2018  18:42:53 ] -----------------------------------------------------
+[ 27-Enero-2018  18:42:53 ] M001 POST "/users"
+[ 27-Enero-2018  18:42:53 ] Email: ramon@gama.com
+[ 27-Enero-2018  18:42:53 ] Password: ramongama
+[ 27-Enero-2018  18:42:53 ] Username: undefined
+[ 27-Enero-2018  18:42:53 ] Se guardara el negocio por default
+[ 27-Enero-2018  18:42:53 ] Folder del usuario: G0HzI5SAjZofVKqqRNO4SduOEiudB7vzn1h6
+[ 27-Enero-2018  18:42:53 ] ID Negocio: 5a6d1c8dfc5e37ede4d01dc5
+[ 27-Enero-2018  18:42:53 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth", name: Path `name` is required.
+[ 27-Enero-2018  18:42:57 ] -----------------------------------------------------
+[ 27-Enero-2018  18:42:57 ] M001 POST "/users"
+[ 27-Enero-2018  18:42:57 ] Email: ramon@gama.com
+[ 27-Enero-2018  18:42:57 ] Password: ramongama
+[ 27-Enero-2018  18:42:57 ] Username: undefined
+[ 27-Enero-2018  18:42:57 ] Se guardara el negocio por default
+[ 27-Enero-2018  18:42:57 ] Folder del usuario: WeTmWdTZhaWVGE5v9u4ce9d1Fi40ZmTPxr7Y
+[ 27-Enero-2018  18:42:57 ] ID Negocio: 5a6d1c91fc5e37ede4d01dc7
+[ 27-Enero-2018  18:42:57 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth", name: Path `name` is required.
+[ 27-Enero-2018  18:43:01 ] -----------------------------------------------------
+[ 27-Enero-2018  18:43:01 ] M001 POST "/users"
+[ 27-Enero-2018  18:43:01 ] Email: ramon@gama.com
+[ 27-Enero-2018  18:43:01 ] Password: ramongama
+[ 27-Enero-2018  18:43:01 ] Username: undefined
+[ 27-Enero-2018  18:43:01 ] Se guardara el negocio por default
+[ 27-Enero-2018  18:43:01 ] Folder del usuario: 8HFpBgmeMbKP7nplhM68tyHkm7Kzjd49MGtq
+[ 27-Enero-2018  18:43:01 ] ID Negocio: 5a6d1c95fc5e37ede4d01dc9
+[ 27-Enero-2018  18:43:01 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth", name: Path `name` is required.
+[ 27-Enero-2018  18:43:01 ] -----------------------------------------------------
+[ 27-Enero-2018  18:43:01 ] M001 POST "/users"
+[ 27-Enero-2018  18:43:01 ] Email: ramon@gama.com
+[ 27-Enero-2018  18:43:01 ] Password: ramongama
+[ 27-Enero-2018  18:43:01 ] Username: undefined
+[ 27-Enero-2018  18:43:01 ] Se guardara el negocio por default
+[ 27-Enero-2018  18:43:02 ] Folder del usuario: BKItF3Bd5UvN4Wx7IwNEDWRhdDGSeHaapAw6
+[ 27-Enero-2018  18:43:02 ] ID Negocio: 5a6d1c95fc5e37ede4d01dcb
+[ 27-Enero-2018  18:43:02 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth", name: Path `name` is required.
+[ 27-Enero-2018  18:43:02 ] -----------------------------------------------------
+[ 27-Enero-2018  18:43:02 ] M001 POST "/users"
+[ 27-Enero-2018  18:43:02 ] Email: ramon@gama.com
+[ 27-Enero-2018  18:43:02 ] Password: ramongama
+[ 27-Enero-2018  18:43:02 ] Username: undefined
+[ 27-Enero-2018  18:43:02 ] Se guardara el negocio por default
+[ 27-Enero-2018  18:43:02 ] Folder del usuario: wfggs29yH0NeXxDDIFZhXcXPlGDQakZXrAxN
+[ 27-Enero-2018  18:43:02 ] ID Negocio: 5a6d1c96fc5e37ede4d01dcd
+[ 27-Enero-2018  18:43:02 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth", name: Path `name` is required.
+[ 27-Enero-2018  18:43:02 ] -----------------------------------------------------
+[ 27-Enero-2018  18:43:02 ] M001 POST "/users"
+[ 27-Enero-2018  18:43:02 ] Email: ramon@gama.com
+[ 27-Enero-2018  18:43:02 ] Password: ramongama
+[ 27-Enero-2018  18:43:02 ] Username: undefined
+[ 27-Enero-2018  18:43:02 ] Se guardara el negocio por default
+[ 27-Enero-2018  18:43:02 ] Folder del usuario: OhpUqAtpCkytWPsYpPnuiONwboL32DVDpQ90
+[ 27-Enero-2018  18:43:02 ] ID Negocio: 5a6d1c96fc5e37ede4d01dcf
+[ 27-Enero-2018  18:43:02 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth", name: Path `name` is required.
+[ 27-Enero-2018  18:44:10 ] -----------------------------------------------------
+[ 27-Enero-2018  18:44:10 ] M001 - GET "/login"
+[ 27-Enero-2018  18:44:10 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:44:10 ] -----------------------------------------------------
+[ 27-Enero-2018  18:44:10 ] M001 - GET "/login"
+[ 27-Enero-2018  18:44:10 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:44:10 ] -----------------------------------------------------
+[ 27-Enero-2018  18:44:10 ] M001 - GET "/login"
+[ 27-Enero-2018  18:44:10 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:00 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:00 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:00 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:01 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:01 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:01 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:01 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:01 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:01 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:01 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:01 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:01 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:01 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:01 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:01 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:29 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:29 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:29 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:29 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:29 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:29 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:29 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:29 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:29 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:29 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:29 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:29 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:29 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:29 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:29 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:52:41 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:41 ] M001 GET "/availableemail/emailcheck"
+[ 27-Enero-2018  18:52:41 ] Emailcheck: ramon@gama.com
+[ 27-Enero-2018  18:52:56 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:56 ] M001 POST "/users"
+[ 27-Enero-2018  18:52:56 ] Email: ramon@gama.com
+[ 27-Enero-2018  18:52:56 ] Password: 8246sie3
+[ 27-Enero-2018  18:52:56 ] Username: undefined
+[ 27-Enero-2018  18:52:56 ] Se guardara el negocio por default
+[ 27-Enero-2018  18:52:56 ] Folder del usuario: 6IWOs0f0Q1czUCG6s8YNYYealfpyfhriJ26p
+[ 27-Enero-2018  18:52:56 ] ID Negocio: 5a6d1ee8097f51f04471a02c
+[ 27-Enero-2018  18:52:59 ] -----------------------------------------------------
+[ 27-Enero-2018  18:52:59 ] M001 - GET "/login"
+[ 27-Enero-2018  18:52:59 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:01 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:01 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:01 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:01 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:01 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:01 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:02 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:02 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:02 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:13 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:13 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:13 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:13 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:13 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:13 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:13 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:13 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:13 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:13 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:13 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:13 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:13 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:13 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:13 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:16 ] M001 - GET "/"
+[ 27-Enero-2018  18:53:16 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:20 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:20 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:20 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:20 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:20 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:20 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:20 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:20 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:20 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:20 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:20 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:20 ] El id user no tiene ningún id
+[ 27-Enero-2018  18:53:21 ] -----------------------------------------------------
+[ 27-Enero-2018  18:53:21 ] M001 - GET "/login"
+[ 27-Enero-2018  18:53:21 ] El id user no tiene ningún id

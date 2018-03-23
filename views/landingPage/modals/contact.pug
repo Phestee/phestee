@@ -1,0 +1,29 @@
+// ---
+// Modal Contacto - Activated by "Contacto" in Footer
+#phContact.modal.fade.inxFrnt(tabindex='-1', role='dialog', aria-labelledby='phContact', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content.phfont-muli.bgrndModal
+      .modal-header
+        h5#phContact.h5.modal-title.text-center
+          img.d-inline-block.align-top.my-auto(src='../img/system/phesteelogox2.png', width='35', height='35', alt='Logo Phestee')
+          |  Contacto
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        form
+          .form-group.text-left
+            p.form-text.phtext-dark.font-weight-bold ¿Cuál es tu correo electrónico?
+            input.phinput.phtext-blue.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='text', required='')
+            p.form-text.phtext-dark.mt-3.font-weight-bold Asunto
+            input.phinput.phtext-blue.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='email', required='')
+            p.form-text.phtext-dark.mt-3.font-weight-bold Mensaje
+            textarea#exampleFormControlTextarea1.phinput.form-control.rounded-0.border-top-0.border-left-0.border-right-0.mt-3(rows='3')
+          .form-group.text-center
+            button.btn.phbtn-blue(type='button') Enviar
+          .form-group.text-center
+            small#emailHelp.form-text.text-dark
+              a(href='') FAQ's
+            small#emailHelp.form-text.text-dark
+              a(href='#') Política de Privacidad
+              |  y 
+              a(href='#') Términos de Servicio

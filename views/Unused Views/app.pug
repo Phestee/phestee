@@ -1,0 +1,439 @@
+extends layout.pug
+block contenido
+  // Header
+  small
+    nav#navbar-phHome.navbar.navbar-dark.navbar-expand-lg.fixed-top.phNavApp
+      a.navbar-brand(href='')
+        img.d-inline-block.align-top(src='../img/system/assembly5.png', width='30', height='30', alt='Logo Phestee')
+        |  phestee
+      form.form-inline.ml-1.my-2.my-lg-0
+        input.form-control.form-control-sm.mr-sm-2.srchNavFld2(type='search', placeholder='Buscar', aria-label='Search')
+        i.fas.fa-search.icnTblroEdt
+      a.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNavDropdown.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.mr-5
+            a.nav-link.icnTblro
+              i.fas.fa-paper-plane(aria-hidden='true')
+              |  Mensajes
+          li.nav-item.dropdown.icnTblro.mr-5
+            a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+              i.fas.fa-bell(aria-hidden='true')
+              |  Notificaciones
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                small Aún no tienes notificaciones
+          // PLaceholder for future capabilities, Calendar and Analytics
+          //
+            <li class="nav-item mr-5">
+            <a class="nav-link icnTblro"><i class="fas fa-calendar-check" aria-hidden="true"></i> Calendario</a>
+            </li>
+            <li class="nav-item mr-5">
+            <a class="nav-link icnTblro"><i class="fas fa-chart-area" aria-hidden="true"></i> Estadísticas</a>
+            </li>
+          li.nav-item.dropdown.icnTblro
+            a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+              i.fas.fa-user(aria-hidden='true')
+              |  Cuenta
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                small Editar Perfil
+              a.dropdown-item
+                small Ver Tableros
+              a.dropdown-item
+                small Certificación
+              .dropdown-divider(role='separator')
+              a.dropdown-item
+                small Salir
+  // Main Container
+  // phAppBgnd Container - Board and Feed
+  .container-fluid.phAppBgnd
+    .container(href='#navDscvr')
+      .row.rowHapp.justify-content-around
+        // Left panel, Tablero
+        .col-3.mt-5.pt-3
+          .card.bgrndTblroAppBrnd
+            .card-body.rounded-top.bgrndTblroApp.pstFldbrnd.text-left
+            .card-body.rounded.bgrndTblroApp.text-center
+              h5.card-title User Name 
+              p Freelancer
+              .d-flex.justify-content-center
+                i.fas.fa-star.fa-xs.icnStr.ml-1(title='rate', aria-hidden='true')
+                i.fas.fa-star.fa-xs.icnStr.ml-1(title='rate', aria-hidden='true')
+                i.fas.fa-star.fa-xs.icnStr.ml-1(title='rate', aria-hidden='true')
+                i.fas.fa-star.fa-xs.icnStr.ml-1(title='rate', aria-hidden='true')
+                i.fas.fa-star.fa-xs.icnStr.ml-1(title='rate', aria-hidden='true')
+                // <i class="fa fa-certificate text-primary text-center icnTblro ml-1" title="Perfil certificado" aria-hidden="true"></i>
+                // Placeholder for users w/o business added
+                // <small><p>No has agregado servicios a tu tablero</p></small>
+                // Placeholder for users with business added
+              .card-text.text-center.mt-3(data-toggle='tooltip', data-placement='left', title='Puedes editar tu Perfil desde aquí. Crea contenido')
+                small
+                  i.fas.fa-pen-square.icnTblroEdt.fa-2x.font-light
+          .card.mt-2.bgrndTblroAppBrnd
+            .card-header.text-center.bgrndTblroApp.d-flex
+              .mx-auto
+                small
+                  h6.font-weight-bold 0
+                small
+                  p.font-weight-light Clientes
+              .mx-auto
+                small
+                  h6.font-weight-bold 0
+                small
+                  p.font-weight-light Seguidores
+              .mx-auto
+                small
+                  h6.font-weight-bold 0
+                small
+                  p.font-weight-light Siguiendo
+            .card-header.text-center.bgrndTblroApp.d-flex
+              i.fa.fa-caret-left.icnTblro.mx-auto(aria-hidden='true', title='Tablero previo')
+              small.mx-auto.font-weight-light  TABLERO
+              i.fa.fa-caret-right.icnTblro.mx-auto(aria-hidden='true', title='Siguiente tablero')
+            .rowHgtTblr.ovrFlwApp
+              ul.list-group
+                // -Default Service
+                small
+                  li.text-center.list-group-item.bgrndTblroAppBrnd.rounded-0.font-weight-light(data-toggle='tooltip', data-placement='left', title='Aquí enlistas lo que puedes ofrecer para generar ingresos. Puedes editarlo en cualquier momento.')
+                    | Agrega lo que ofreces
+                    p.text-center.mt-3
+                      i.fa.fa-plus-square.fa-2x.icnTblroEdt(title='Agrega Servicios', aria-hidden='true')
+                //
+                  <small><li class="list-group-item bgrndTblroAppBrnd rounded-0 "><i class="fa fa-plus-square fa-lg icnTblro" title="Agrega Servicios" aria-hidden="true"></i> Agrega algo que puedes ofrecer
+                  <p class="card-text ml-1 text-truncate" style="max-width: auto;"><small class="text-muted">#</small></p>
+                  </li></small>
+                // -
+        // End of left panel, Tablero
+        // Mid panel. Feed
+        .col-5.mt-5.pt-3.ovrFlwApp
+          .row.rounded.bgndPostIcns
+            .col-6.icnPstActnLft(data-toggle='collapse', href='#slctaPost', aria-expanded='false', aria-controls='slctaPost', onclick='ClearFields();')
+              h5.text-center.my-2
+                i.fas.fa-pencil-alt.fa-fw.fa-1x
+              h6.text-center.my-2.font-weight-bold Solicita
+            .col-6.icnPstActnRight(data-toggle='collapse', href='#annciaPost', aria-expanded='false', aria-controls='annciaPost')
+              h5.text-center.my-2
+                i.fas.fa-bullhorn.fa-fw.fa-1x
+              h6.text-center.my-2.font-weight-bold Anuncia
+            #slctaPost.col-12.collapse.rounded-bottom.slctaPstFld
+              .card.card-body.slctaPstFld(onmouseover='ActiveFields();')
+                p.text-justify.font-weight-bold
+                  img.rounded(src='../img/system/1a.png', width='65', height='65')
+                  |  User Name
+                  button.close(type='button', data-toggle='collapse', href='#slctaPost', aria-expanded='false', aria-controls='slctaPost')
+                    span(aria-hidden='true')
+                      small ×
+                textarea#slctaPstFld.form-control.slctaPstFld2.mt-3(rows='5', placeholder='Hola User, ¿Qué necesitas?', autofocus='')
+                .row.mt-3
+                  .col-3.my-auto.d-flex.justify-content-start
+                    i.fas.fa-camera.icnMdl
+                  .col-3.my-auto.d-flex.justify-content-start
+                    i.fas.fa-video.icnMdl
+                  .col-3.my-auto.d-flex.justify-content-start
+                    i.fas.fa-microphone.icnMdl
+                  .col-3.my-auto.d-flex.justify-content-end
+                    button.btn.btnEntr.btn-sm.font-weight-bold.rounded  Solicitar
+            #annciaPost.collapse
+              .card.card-body.font-weight-bold
+                p.text-right
+                  button.close(type='button', data-toggle='collapse', href='#annciaPost', aria-expanded='false', aria-controls='annciaPost')
+                    span(aria-hidden='true') ×
+                |                                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          .row.d-flex.justify-content-around
+            .col-4.mt-3.text-center.bgrndTblroApp
+              small
+                a.text-muted(href='#')
+                  p Mis publicaciones
+            .col-4.mt-3.text-center.bgrndTblroApp
+              small
+                a.text-muted(href='#')
+                  p Todas publicaciones
+            #phFeed.col-12.rowHgtFeed
+              .card-deck.mt-3
+                .card.bgrndPst
+                  .card-body
+                    button.close(type='button', data-='', aria-expanded='false', href='#slctaPost', aria-controls='slctaPost')
+                      span(aria-hidden='true')
+                        small ×
+                    h6.card-title.font-weight-bold ¿Dónde puedo donar ropa?
+                    p.card-text
+                      small.text-muted Hoy, a las 09:30 am
+                  .card-footer.bgrndPst
+                    .container.d-flex.justify-content-around
+                      i.fas.fa-hand-paper.icn.mt-3(data-toggle='collapse', data-parent='#accordion', href='#collapseRaiseOffer', aria-expanded='false', aria-controls='collapseRaiseOffer')
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 18
+                      i.fas.fa-heart.ml-2.icnHrt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 435
+                      i.fas.fa-retweet.ml-3.icn.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 12
+                      i.fas.fa-share.ml-3.icn.mt-3
+                      i.fas.fa-ellipsis-v.ml-3.icn.mt-3
+                  .card-footer.bgrndPst
+                    .input-group.input-group-sm
+                      span#basic-addon1.input-group-addon.tagAtBgn
+                        i.fas.fa-at
+                      input.form-control.tagPstFld(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+              .card-deck.mt-3
+                #usrPstTmplte.card.bgrndTblroAppBrnd
+                  .card-body.bgrndTblroAppSvs
+                    p.text-justify.font-weight-light
+                      img.rounded(src='../img/system/1a.png', width='40', height='40')
+                      |  UserName
+                      button.close(type='button', data-='', aria-expanded='false', href='#slctaPost', aria-controls='slctaPost')
+                        span(aria-hidden='true')
+                          small.text-light ×
+                    h6.card-title.font-weight-light Me duele la espalda
+                    p.card-text
+                      small.text-muted Hoy, a las 09:30 am
+                  .card-footer.bgrndTblroAppSvs
+                    .container.d-flex.justify-content-around
+                      i.fas.fa-external-link-square-alt.icnTblroEdt.mt-3(data-toggle='collapse', data-parent='#accordion', href='#collapseSeeService', aria-expanded='true', aria-controls='collapseSeeService')
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 18
+                      i.fas.fa-heart.ml-2.icnHrt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 435
+                      i.fas.fa-retweet.ml-3.icnTblroEdt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 12
+                      i.fas.fa-share.ml-3.icnTblroEdt.mt-3
+                      i.fas.fa-ellipsis-v.ml-3.icnTblroEdt.-muted.mt-3
+                  .card-footer.bgrndTblroAppSvs
+                    .input-group.input-group-sm
+                      span#basic-addon1.input-group-addon.tagAtBgnOwn
+                        i.fas.fa-at.font-weight-light
+                      input.form-control.tagAtBgnOwn.tagPstFldOwn(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+              .card-deck.mt-3
+                .card.bgrndPst
+                  .card-body
+                    button.close(type='button', data-='', aria-expanded='false', href='#slctaPost', aria-controls='slctaPost')
+                      span(aria-hidden='true')
+                        small ×
+                    h6.card-title.font-weight-bold ¿Alguien que quiera limpiar mi casa? #estuvobuenalafiesta #quiendiceyo
+                    p.card-text
+                      small.text-muted Hoy, a las 09:30 am
+                  img.card-img-top.rounded-0(src='../img/system/cleanhouse.jpeg', alt='Card image cap')
+                  .card-footer.bgrndPst
+                    .container.d-flex.justify-content-around
+                      i.fas.fa-hand-paper.icn.mt-3(data-toggle='collapse', data-parent='#accordion', href='#collapseRaiseOffer', aria-expanded='false', aria-controls='collapseRaiseOffer')
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 18
+                      i.fas.fa-heart.ml-2.icnHrt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 435
+                      i.fas.fa-retweet.ml-3.icn.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 12
+                      i.fas.fa-share.ml-3.icn.mt-3
+                      i.fas.fa-ellipsis-v.ml-3.icn.mt-3
+                  .card-footer.bgrndPst
+                    .input-group.input-group-sm
+                      span#basic-addon1.input-group-addon.tagAtBgn
+                        i.fas.fa-at
+                      input.form-control.tagPstFld(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+              .card-deck.mt-3
+                .card.bgrndTblroAppBrnd
+                  .card-body.bgrndTblroAppSvs
+                    p.text-justify.font-weight-light
+                      img.rounded(src='../img/system/1a.png', width='40', height='40')
+                      |  UserName
+                      button.close(type='button', data-='', aria-expanded='false', href='#slctaPost', aria-controls='slctaPost')
+                        span(aria-hidden='true')
+                          small.text-light ×
+                    h6.card-title.font-weight-light
+                      | Mi sobrino cumple años la próxima semana y me toca organizar la party. Alguna idea? #elmejortiodelmundo
+                    p.card-text
+                      small.text-muted Hoy, a las 09:30 am
+                  img.card-img-top.rounded-0(src='../img/system/Dipper-hm.gif', alt='Card image cap')
+                  .card-footer.bgrndTblroAppSvs
+                    .container.d-flex.justify-content-around
+                      i.fas.fa-external-link-square-alt.icnTblroEdt.mt-3(data-toggle='collapse', data-parent='#accordion', href='#collapseSeeService', aria-expanded='true', aria-controls='collapseSeeService')
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 18
+                      i.fas.fa-heart.ml-2.icnTblroEdt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 435
+                      i.fas.fa-retweet.ml-3.icnTblroEdt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 12
+                      i.fas.fa-share.ml-3.icnTblroEdt.mt-3
+                      i.fas.fa-ellipsis-v.ml-3.icnTblroEdt.-muted.mt-3
+                  .card-footer.bgrndTblroAppSvs
+                    .input-group.input-group-sm
+                      span#basic-addon1.input-group-addon.tagAtBgnOwn
+                        i.fas.fa-at.font-weight-light
+                      input.form-control.tagAtBgnOwn.tagPstFldOwn(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+              .card-deck.mt-3
+                .card.bgrndPst
+                  .card-body
+                    button.close(type='button', data-='', aria-expanded='false', href='#slctaPost', aria-controls='slctaPost')
+                      span(aria-hidden='true')
+                        small ×
+                    h6.card-title.font-weight-bold ¡Me urge un corte ya!
+                    p.card-text
+                      small.text-muted Hoy, a las 09:30 am
+                  video(width='100%', height='80%', controls='')
+                    source(src='../img/system/2017-12-04-VIDEO-00000654.mp4', type='video/mp4')
+                  .card-footer.bgrndPst
+                    .container.d-flex.justify-content-around
+                      i.fas.fa-hand-paper.icn.mt-3(data-toggle='collapse', data-parent='#accordion', href='#collapseRaiseOffer', aria-expanded='false', aria-controls='collapseRaiseOffer')
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 18
+                      i.fas.fa-heart.ml-2.icnHrt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 435
+                      i.fas.fa-retweet.ml-3.icn.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 12
+                      i.fas.fa-share.ml-3.icn.mt-3
+                      i.fas.fa-ellipsis-v.ml-3.icn.mt-3
+                  .card-footer.bgrndPst
+                    .input-group.input-group-sm
+                      span#basic-addon1.input-group-addon.tagAtBgn
+                        i.fas.fa-at
+                      input.form-control.tagPstFld(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+              .card-deck.mt-3
+                .card.bgrndPst
+                  .card-body
+                    button.close(type='button', data-='', aria-expanded='false', href='#slctaPost', aria-controls='slctaPost')
+                      span(aria-hidden='true')
+                        small ×
+                    h6.card-title.font-weight-bold Estoy estrenando ropa y necesito URGENTEMENTE un guardaropa nuevo. #quiéndiceyo
+                    p.card-text
+                      small.text-muted Hoy, a las 09:30 am
+                  img.card-img-top.rounded-0(src='../img/system/emHm.gif', alt='Card image cap')
+                  .card-footer.bgrndPst
+                    .container.d-flex.justify-content-around
+                      i.fas.fa-hand-paper.icn.mt-3(data-toggle='collapse', data-parent='#accordion', href='#collapseRaiseOffer', aria-expanded='false', aria-controls='collapseRaiseOffer')
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 18
+                      i.fas.fa-heart.ml-2.icnHrt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 435
+                      i.fas.fa-retweet.ml-3.icn.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 12
+                      i.fas.fa-share.ml-3.icn.mt-3
+                      i.fas.fa-ellipsis-v.ml-3.icn.mt-3
+                  .card-footer.bgrndPst
+                    .input-group.input-group-sm
+                      span#basic-addon1.input-group-addon.tagAtBgn
+                        i.fas.fa-at
+                      input.form-control.tagPstFld(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+              .card-deck.mt-3
+                .card.bgrndTblroAppBrnd
+                  .card-body.bgrndTblroAppSvs
+                    p.text-justify.font-weight-light
+                      img.rounded(src='../img/system/1a.png', width='40', height='40')
+                      |  UserName
+                      button.close(type='button', data-='', aria-expanded='false', href='#slctaPost', aria-controls='slctaPost')
+                        span(aria-hidden='true')
+                          small.text-light ×
+                    h6.card-title.font-weight-light Queremos regresar a mazamitla :(
+                    p.card-text
+                      small.text-muted Hoy, a las 09:30 am
+                  img.card-img-top.rounded-0(src='../img/system/discover3.jpeg', alt='Card image cap')
+                  .card-footer.bgrndTblroAppSvs
+                    .container.d-flex.justify-content-around
+                      i.fas.fa-external-link-square-alt.icnTblroEdt.mt-3(data-toggle='collapse', data-parent='#accordion', href='#collapseSeeService', aria-expanded='true', aria-controls='collapseSeeService')
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 18
+                      i.fas.fa-heart.ml-2.icnTblroEdt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 435
+                      i.fas.fa-retweet.ml-3.icnTblroEdt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 12
+                      i.fas.fa-share.ml-3.icnTblroEdt.mt-3
+                      i.fas.fa-ellipsis-v.ml-3.icnTblroEdt.-muted.mt-3
+                  .card-footer.bgrndTblroAppSvs
+                    .input-group.input-group-sm
+                      span#basic-addon1.input-group-addon.tagAtBgnOwn
+                        i.fas.fa-at.font-weight-light
+                      input.form-control.tagAtBgnOwn.tagPstFldOwn(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+              .card-deck.mt-3
+                .card.bgrndPst
+                  .card-body
+                    button.close(type='button', data-='', aria-expanded='false', href='#slctaPost', aria-controls='slctaPost')
+                      span(aria-hidden='true')
+                        small ×
+                    h6.card-title.font-weight-bold Necesito ir al Centro y hay tarifa dinámica en Uber
+                    p.card-text
+                      small.text-muted Hoy, a las 09:30 am
+                  img.card-img-top.rounded-0(src='../img/system/discover.jpeg', alt='Card image cap')
+                  .card-footer.bgrndPst
+                    .container.d-flex.justify-content-around
+                      i.fas.fa-hand-paper.icn.mt-3(data-toggle='collapse', data-parent='#accordion', href='#collapseRaiseOffer', aria-expanded='false', aria-controls='collapseRaiseOffer')
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 18
+                      i.fas.fa-heart.ml-2.icnHrt.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 435
+                      i.fas.fa-retweet.ml-3.icn.mt-3
+                      small.mt-3
+                        p.my-auto.text-muted.font-weight-light.ml-1 12
+                      i.fas.fa-share.ml-3.icn.mt-3
+                      i.fas.fa-ellipsis-v.ml-3.icn.mt-3
+                  .card-footer.bgrndPst
+                    .input-group.input-group-sm
+                      span#basic-addon1.input-group-addon.tagAtBgn
+                        i.fas.fa-at
+                      input.form-control.tagPstFld(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+        // End of Mid panel, Feed
+        // Right panel, Actions (activated by "Make an Offer", "See services")
+        .col-4.mt-5.pt-3.rowHgtFeed
+          #accordion.card.bgrndPst(data-children='.item')
+            .item
+              #collapseSeeService.collapse(role='tabpanel')
+                .card-body
+                  .card-title.text-left.text-muted.font-weight-light
+                    small Estas son las ofertas para tu solicitud.
+                    button.close(type='button', data-toggle='collapse', data-parent='#accordion', href='#collapseSeeService', aria-expanded='true', aria-controls='collapseSeeService')
+                      span(aria-hidden='true')
+                        small ×
+                  p.text-justify.font-weight-bold
+                    img.rounded(src='../img/system/1a.png', width='60', height='60')
+                    |  UserName
+                  p.h6.card-title.font-weight-bold Me duele la espalda
+                  p.card-text
+                    small.text-muted Hoy, a las 09:30 am
+            .card.bgrndPstOffrs
+              #collapseRaiseOffer.collapse(role='tabpanel')
+                .card-body
+                  button.close(type='button', data-toggle='collapse', data-parent='#accordion', href='#collapseRaiseOffer', aria-expanded='false', aria-controls='collapseRaiseOffer')
+                    span(aria-hidden='true')
+                      small.text-light ×
+                  .card-title.text-left.text-muted.font-weight-light
+                    small Alguien publicó esto. Levanta la mano y haz una oferta.
+                  p.h5.card-title.font-weight-bold ¿Dónde puedo donar ropa?
+                  p.card-text
+                    small.text-muted Hoy, a las 09:30 am
+                  small
+                    p.card-text
+                      | Aún no tienes artículos o servicios en tu Tablero. Agrega lo que quieres ofrecer, ¡es muy fácil!
+                  a.btn.mt-3.btn-success.btn-sm(href='#') Actualizar Tablero
+        // End of Right panel, Actions
+  // ---
+  // Scripts
+  script(src='../js/jquery-3.2.1.min.js')
+  script(src='../js/popper.min.js')
+  script(src='../js/bootstrap.min.js')
+  script(src='../js/typed.js')
+  script(src='../js/css3-animate-it.js')
+  script.
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  script(type='text/javascript').
+    function ActiveFields() {
+    document.getElementById("slctaPstFld").focus();
+    }
+    function ClearFields() {
+    document.getElementById("slctaPstFld").value = "";
+    document.getElementById("slctaPstFld").focus();
+    }

@@ -1,0 +1,172 @@
+[ 24-Enero-2018  09:53:14 ] M001 - GET "/"
+[ 24-Enero-2018  09:53:18 ] -----------------------------------------------------
+[ 24-Enero-2018  09:53:18 ] M001 - GET "/login"
+[ 24-Enero-2018  09:53:18 ] El id user no tiene ningún id
+[ 24-Enero-2018  09:54:04 ] -----------------------------------------------------
+[ 24-Enero-2018  09:54:04 ] M001 - POST "/validation"
+[ 24-Enero-2018  09:54:04 ] Email: mike@yahoo.com
+[ 24-Enero-2018  09:54:04 ] Password: password
+[ 24-Enero-2018  09:54:04 ] Esto se guardara en las variables de sesion: 
+[ 24-Enero-2018  09:54:04 ] ID USER: 5a5f96ff70fb77298087ddcd
+[ 24-Enero-2018  09:54:04 ] LOADBUSINESS: 0
+[ 24-Enero-2018  09:54:04 ] -----------------------------------------------------
+[ 24-Enero-2018  09:54:04 ] M001 GET "/ principal"
+[ 24-Enero-2018  09:54:07 ] -----------------------------------------------------
+[ 24-Enero-2018  09:54:07 ] M001 GET "/services"
+[ 24-Enero-2018  09:54:07 ] Cargará los datos por primera vez
+[ 24-Enero-2018  09:54:07 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  09:55:34 ] -----------------------------------------------------
+[ 24-Enero-2018  09:55:34 ] M001 GET "/services"
+[ 24-Enero-2018  09:55:34 ] Cargará los datos por primera vez
+[ 24-Enero-2018  09:55:34 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  09:56:07 ] -----------------------------------------------------
+[ 24-Enero-2018  09:56:07 ] M001 GET "/services"
+[ 24-Enero-2018  09:56:07 ] Cargará los datos por primera vez
+[ 24-Enero-2018  09:56:07 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  09:58:13 ] -----------------------------------------------------
+[ 24-Enero-2018  09:58:13 ] M001 GET "/services"
+[ 24-Enero-2018  09:58:13 ] Cargará los datos por primera vez
+[ 24-Enero-2018  09:58:13 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  10:01:59 ] -----------------------------------------------------
+[ 24-Enero-2018  10:01:59 ] M001 GET "/services"
+[ 24-Enero-2018  10:01:59 ] Cargará los datos por primera vez
+[ 24-Enero-2018  10:01:59 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  10:02:31 ] -----------------------------------------------------
+[ 24-Enero-2018  10:02:31 ] M001 GET "/services"
+[ 24-Enero-2018  10:02:31 ] Cargará los datos por primera vez
+[ 24-Enero-2018  10:02:31 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  10:03:10 ] -----------------------------------------------------
+[ 24-Enero-2018  10:03:10 ] M001 GET "/services"
+[ 24-Enero-2018  10:03:10 ] Cargará los datos por primera vez
+[ 24-Enero-2018  10:03:10 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  10:03:22 ] -----------------------------------------------------
+[ 24-Enero-2018  10:03:22 ] M001 GET "/services"
+[ 24-Enero-2018  10:03:22 ] Cargará los datos por primera vez
+[ 24-Enero-2018  10:03:22 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  13:16:44 ] M001 - GET "/"
+[ 24-Enero-2018  13:16:50 ] -----------------------------------------------------
+[ 24-Enero-2018  13:16:50 ] M001 - GET "/signup"
+[ 24-Enero-2018  13:17:37 ] -----------------------------------------------------
+[ 24-Enero-2018  13:17:37 ] M001 - GET "/signup"
+[ 24-Enero-2018  13:17:41 ] -----------------------------------------------------
+[ 24-Enero-2018  13:17:41 ] M001 GET "/availablename/variable"
+[ 24-Enero-2018  13:17:41 ] nameusercheck: m
+[ 24-Enero-2018  13:17:41 ] -----------------------------------------------------
+[ 24-Enero-2018  13:17:41 ] M001 GET "/availablename/variable"
+[ 24-Enero-2018  13:17:41 ] nameusercheck: mi
+[ 24-Enero-2018  13:17:41 ] -----------------------------------------------------
+[ 24-Enero-2018  13:17:41 ] M001 GET "/availablename/variable"
+[ 24-Enero-2018  13:17:41 ] nameusercheck: mik
+[ 24-Enero-2018  13:17:41 ] -----------------------------------------------------
+[ 24-Enero-2018  13:17:41 ] M001 GET "/availablename/variable"
+[ 24-Enero-2018  13:17:41 ] nameusercheck: mike
+[ 24-Enero-2018  13:17:49 ] -----------------------------------------------------
+[ 24-Enero-2018  13:17:49 ] M001 GET "/availableemail/emailcheck"
+[ 24-Enero-2018  13:17:49 ] Emailcheck: mike@yahoo.com
+[ 24-Enero-2018  13:18:01 ] -----------------------------------------------------
+[ 24-Enero-2018  13:18:01 ] M001 POST "/users"
+[ 24-Enero-2018  13:18:01 ] Email: mike@yahoo.com
+[ 24-Enero-2018  13:18:01 ] Password: password
+[ 24-Enero-2018  13:18:01 ] Username: mike
+[ 24-Enero-2018  13:18:01 ] Se guardara el negocio por default
+[ 24-Enero-2018  13:18:01 ] Folder del usuario: pvIhZ80MTMkeMo1T4ZmZv5uyiDPAvGxROOzc
+[ 24-Enero-2018  13:18:01 ] ID Negocio: 5a68dbe9f646df2c48538a62
+[ 24-Enero-2018  13:18:02 ] -----------------------------------------------------
+[ 24-Enero-2018  13:18:02 ] M001 - GET "/login"
+[ 24-Enero-2018  13:18:02 ] ID user: 5a5f96ff70fb77298087ddcd
+[ 24-Enero-2018  13:18:02 ] -----------------------------------------------------
+[ 24-Enero-2018  13:18:02 ] M001 GET "/ principal"
+[ 24-Enero-2018  13:18:13 ] -----------------------------------------------------
+[ 24-Enero-2018  13:18:13 ] M001 - GET "/login"
+[ 24-Enero-2018  13:18:13 ] ID user: 5a5f96ff70fb77298087ddcd
+[ 24-Enero-2018  13:18:13 ] -----------------------------------------------------
+[ 24-Enero-2018  13:18:13 ] M001 GET "/ principal"
+[ 24-Enero-2018  13:18:51 ] -----------------------------------------------------
+[ 24-Enero-2018  13:18:51 ] M001 - GET "/login"
+[ 24-Enero-2018  13:19:02 ] -----------------------------------------------------
+[ 24-Enero-2018  13:19:02 ] M001 - POST "/validation"
+[ 24-Enero-2018  13:19:02 ] Email: mike@yahoo.com
+[ 24-Enero-2018  13:19:02 ] Password: password
+[ 24-Enero-2018  13:19:03 ] Esto se guardara en las variables de sesion: 
+[ 24-Enero-2018  13:19:03 ] ID USER: 5a68dbe9f646df2c48538a63
+[ 24-Enero-2018  13:19:03 ] LOADBUSINESS: 0
+[ 24-Enero-2018  13:19:03 ] -----------------------------------------------------
+[ 24-Enero-2018  13:19:03 ] M001 GET "/ principal"
+[ 24-Enero-2018  13:22:02 ] -----------------------------------------------------
+[ 24-Enero-2018  13:22:02 ] M001 GET "/services"
+[ 24-Enero-2018  13:22:02 ] Cargará los datos por primera vez
+[ 24-Enero-2018  13:22:03 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  13:30:25 ] -----------------------------------------------------
+[ 24-Enero-2018  13:30:25 ] M001 GET "/services"
+[ 24-Enero-2018  13:30:25 ] Cargará los datos por primera vez
+[ 24-Enero-2018  13:30:25 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  13:41:58 ] -----------------------------------------------------
+[ 24-Enero-2018  13:41:58 ] M001 GET "/services"
+[ 24-Enero-2018  13:41:58 ] Cargará los datos por primera vez
+[ 24-Enero-2018  13:41:58 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  13:43:45 ] -----------------------------------------------------
+[ 24-Enero-2018  13:43:45 ] M001 GET "/services"
+[ 24-Enero-2018  13:43:45 ] Cargará los datos por primera vez
+[ 24-Enero-2018  13:43:45 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  13:46:59 ] -----------------------------------------------------
+[ 24-Enero-2018  13:46:59 ] M001 GET "/services"
+[ 24-Enero-2018  13:46:59 ] Cargará los datos por primera vez
+[ 24-Enero-2018  13:46:59 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  13:54:51 ] -----------------------------------------------------
+[ 24-Enero-2018  13:54:51 ] M001 GET "/services"
+[ 24-Enero-2018  13:54:51 ] Cargará los datos por primera vez
+[ 24-Enero-2018  13:54:51 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  13:54:59 ] Path: undefined
+[ 24-Enero-2018  15:53:09 ] M001 - GET "/"
+[ 24-Enero-2018  15:53:27 ] -----------------------------------------------------
+[ 24-Enero-2018  15:53:27 ] M001 - GET "/login"
+[ 24-Enero-2018  15:53:36 ] -----------------------------------------------------
+[ 24-Enero-2018  15:53:36 ] M001 - POST "/validation"
+[ 24-Enero-2018  15:53:36 ] Email: mike@yahoo.com
+[ 24-Enero-2018  15:53:36 ] Password: password
+[ 24-Enero-2018  15:53:37 ] Esto se guardara en las variables de sesion: 
+[ 24-Enero-2018  15:53:37 ] ID USER: 5a68dbe9f646df2c48538a63
+[ 24-Enero-2018  15:53:37 ] LOADBUSINESS: 0
+[ 24-Enero-2018  15:53:37 ] -----------------------------------------------------
+[ 24-Enero-2018  15:53:37 ] M001 GET "/ principal"
+[ 24-Enero-2018  15:53:44 ] -----------------------------------------------------
+[ 24-Enero-2018  15:53:44 ] M001 GET "/services"
+[ 24-Enero-2018  15:53:44 ] Cargará los datos por primera vez
+[ 24-Enero-2018  15:53:44 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  15:53:54 ] Path: {"file":[{"fieldName":"file[0]","originalFilename":"Desert.jpg","path":"C:\\Users\\hejosemi\\AppData\\Local\\Temp\\tk_QNcKx1veuV11mUl6lSwVt.jpg","headers":{"content-disposition":"form-data; name=\"file[0]\"; filename=\"Desert.jpg\"","content-type":"image/jpeg"},"size":845941,"name":"Desert.jpg","type":"image/jpeg"},{"fieldName":"file[1]","originalFilename":"Penguins.jpg","path":"C:\\Users\\hejosemi\\AppData\\Local\\Temp\\JV272mvbGYA88dqEy9TTQVdB.jpg","headers":{"content-disposition":"form-data; name=\"file[1]\"; filename=\"Penguins.jpg\"","content-type":"image/jpeg"},"size":777835,"name":"Penguins.jpg","type":"image/jpeg"}]}
+[ 24-Enero-2018  16:22:29 ] -----------------------------------------------------
+[ 24-Enero-2018  16:22:29 ] M001 GET "/services"
+[ 24-Enero-2018  16:22:29 ] Cargará los datos por primera vez
+[ 24-Enero-2018  16:22:29 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  16:23:44 ] -----------------------------------------------------
+[ 24-Enero-2018  16:23:44 ] M001 GET "/services"
+[ 24-Enero-2018  16:23:44 ] Cargará los datos por primera vez
+[ 24-Enero-2018  16:23:44 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  16:23:51 ] -----------------------------------------------------
+[ 24-Enero-2018  16:23:51 ] M001 - PUT "/editServiceTest"
+[ 24-Enero-2018  16:25:34 ] -----------------------------------------------------
+[ 24-Enero-2018  16:25:34 ] M001 GET "/services"
+[ 24-Enero-2018  16:25:34 ] Cargará los datos por primera vez
+[ 24-Enero-2018  16:25:34 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  16:27:04 ] -----------------------------------------------------
+[ 24-Enero-2018  16:27:04 ] M001 GET "/services"
+[ 24-Enero-2018  16:27:04 ] Cargará los datos por primera vez
+[ 24-Enero-2018  16:27:04 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  16:27:11 ] -----------------------------------------------------
+[ 24-Enero-2018  16:27:11 ] M001 - PUT "/editServiceTest"
+[ 24-Enero-2018  16:27:11 ] Entro a la condicion
+[ 24-Enero-2018  16:27:11 ] Tamaño: undefined
+[ 24-Enero-2018  16:28:18 ] -----------------------------------------------------
+[ 24-Enero-2018  16:28:18 ] M001 GET "/services"
+[ 24-Enero-2018  16:28:18 ] Cargará los datos por primera vez
+[ 24-Enero-2018  16:28:18 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  16:34:41 ] -----------------------------------------------------
+[ 24-Enero-2018  16:34:41 ] M001 GET "/services"
+[ 24-Enero-2018  16:34:41 ] Cargará los datos por primera vez
+[ 24-Enero-2018  16:34:41 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 24-Enero-2018  16:37:29 ] -----------------------------------------------------
+[ 24-Enero-2018  16:37:29 ] M001 - PUT "/editServiceTest"
+[ 24-Enero-2018  16:37:29 ] Entro a la condicion
+[ 24-Enero-2018  16:37:29 ] Tamaño: 2
+[ 24-Enero-2018  16:37:29 ] Contador: 0
+[ 24-Enero-2018  16:37:29 ] Contador: 1

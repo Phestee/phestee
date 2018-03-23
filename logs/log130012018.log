@@ -1,0 +1,144 @@
+[ 13-Enero-2018  17:36:48 ] M001 - GET "/"
+[ 13-Enero-2018  17:36:55 ] -----------------------------------------------------
+[ 13-Enero-2018  17:36:55 ] M001 - GET "/signup"
+[ 13-Enero-2018  17:37:01 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:01 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:37:01 ] nameusercheck: l
+[ 13-Enero-2018  17:37:01 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:01 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:37:01 ] nameusercheck: lo
+[ 13-Enero-2018  17:37:01 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:01 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:37:01 ] nameusercheck: log
+[ 13-Enero-2018  17:37:01 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:01 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:37:01 ] nameusercheck: logs
+[ 13-Enero-2018  17:37:08 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:08 ] M001 GET "/availableemail/emailcheck"
+[ 13-Enero-2018  17:37:08 ] Emailcheck: log@yahoo.com
+[ 13-Enero-2018  17:37:25 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:25 ] M001 POST "/users"
+[ 13-Enero-2018  17:37:25 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:37:25 ] Password: password
+[ 13-Enero-2018  17:37:25 ] Username: logs
+[ 13-Enero-2018  17:37:25 ] Se guardara el negocio por default
+[ 13-Enero-2018  17:37:26 ] Folder del usuario: C5ib6FyG0iNyWXzzTf5xrp9OpcnvIaZltfAb
+[ 13-Enero-2018  17:37:26 ] ID Negocio: 5a5a98353febad27b0a733f2
+[ 13-Enero-2018  17:37:26 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 13-Enero-2018  17:37:28 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:28 ] M001 POST "/users"
+[ 13-Enero-2018  17:37:28 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:37:28 ] Password: password
+[ 13-Enero-2018  17:37:28 ] Username: logs
+[ 13-Enero-2018  17:37:28 ] Se guardara el negocio por default
+[ 13-Enero-2018  17:37:28 ] Folder del usuario: PnOIVIxNxfVWxzrc1qkmKeHVkKyONugYjQz9
+[ 13-Enero-2018  17:37:28 ] ID Negocio: 5a5a98383febad27b0a733f4
+[ 13-Enero-2018  17:37:28 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 13-Enero-2018  17:37:33 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:33 ] M001 POST "/users"
+[ 13-Enero-2018  17:37:33 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:37:33 ] Password: password
+[ 13-Enero-2018  17:37:33 ] Username: logs
+[ 13-Enero-2018  17:37:33 ] Se guardara el negocio por default
+[ 13-Enero-2018  17:37:33 ] Folder del usuario: UidEhtZEyx0xeYyb0hNLu5cZ7jwYQe2wMhmD
+[ 13-Enero-2018  17:37:33 ] ID Negocio: 5a5a983d3febad27b0a733f6
+[ 13-Enero-2018  17:37:33 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 13-Enero-2018  17:37:33 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:33 ] M001 POST "/users"
+[ 13-Enero-2018  17:37:33 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:37:33 ] Password: password
+[ 13-Enero-2018  17:37:33 ] Username: logs
+[ 13-Enero-2018  17:37:33 ] Se guardara el negocio por default
+[ 13-Enero-2018  17:37:33 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:33 ] M001 POST "/users"
+[ 13-Enero-2018  17:37:33 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:37:33 ] Password: password
+[ 13-Enero-2018  17:37:33 ] Username: logs
+[ 13-Enero-2018  17:37:33 ] Se guardara el negocio por default
+[ 13-Enero-2018  17:37:33 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:33 ] M001 POST "/users"
+[ 13-Enero-2018  17:37:33 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:37:33 ] Password: password
+[ 13-Enero-2018  17:37:33 ] Username: logs
+[ 13-Enero-2018  17:37:33 ] Se guardara el negocio por default
+[ 13-Enero-2018  17:37:34 ] Folder del usuario: 6rXBGsWf0kfGcoFftyGqXLGcooTauPgyV9YW
+[ 13-Enero-2018  17:37:34 ] ID Negocio: 5a5a983d3febad27b0a733f8
+[ 13-Enero-2018  17:37:34 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 13-Enero-2018  17:37:34 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:34 ] M001 POST "/users"
+[ 13-Enero-2018  17:37:34 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:37:34 ] Password: password
+[ 13-Enero-2018  17:37:34 ] Username: logs
+[ 13-Enero-2018  17:37:34 ] Se guardara el negocio por default
+[ 13-Enero-2018  17:37:34 ] Folder del usuario: bb4MYf1FWepvV96Y1KvXLQznUu6nR0tpxjnY
+[ 13-Enero-2018  17:37:34 ] ID Negocio: 5a5a983d3febad27b0a733f9
+[ 13-Enero-2018  17:37:34 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 13-Enero-2018  17:37:35 ] Folder del usuario: 25imesOmAayZ4BIYfQiBuUDLXYXqRmwQMHXX
+[ 13-Enero-2018  17:37:35 ] ID Negocio: 5a5a983d3febad27b0a733fa
+[ 13-Enero-2018  17:37:35 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 13-Enero-2018  17:37:35 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:35 ] M001 - GET "/signup"
+[ 13-Enero-2018  17:37:36 ] Folder del usuario: fazqnSbpHAVqxZInZyOEaDkZho72fiLTqXLG
+[ 13-Enero-2018  17:37:36 ] ID Negocio: 5a5a983e3febad27b0a733fc
+[ 13-Enero-2018  17:37:36 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 13-Enero-2018  17:37:38 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:38 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:37:38 ] nameusercheck: l
+[ 13-Enero-2018  17:37:38 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:38 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:37:38 ] nameusercheck: lo
+[ 13-Enero-2018  17:37:38 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:38 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:37:38 ] nameusercheck: log
+[ 13-Enero-2018  17:37:39 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:39 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:37:39 ] nameusercheck: logs
+[ 13-Enero-2018  17:37:43 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:43 ] M001 GET "/availableemail/emailcheck"
+[ 13-Enero-2018  17:37:43 ] Emailcheck: log@yahoo.com
+[ 13-Enero-2018  17:37:55 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:55 ] M001 POST "/users"
+[ 13-Enero-2018  17:37:55 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:37:55 ] Password: password
+[ 13-Enero-2018  17:37:55 ] Username: logs
+[ 13-Enero-2018  17:37:55 ] Se guardara el negocio por default
+[ 13-Enero-2018  17:37:55 ] Folder del usuario: TiuUSK24AZgwTdjOkRop2QxxRLgOfLo5g2wJ
+[ 13-Enero-2018  17:37:55 ] ID Negocio: 5a5a98533febad27b0a73400
+[ 13-Enero-2018  17:37:58 ] -----------------------------------------------------
+[ 13-Enero-2018  17:37:58 ] M001 - GET "/login"
+[ 13-Enero-2018  17:37:58 ] El id user no tiene ningún id
+[ 13-Enero-2018  17:38:07 ] -----------------------------------------------------
+[ 13-Enero-2018  17:38:07 ] M001 - POST "/validation"
+[ 13-Enero-2018  17:38:07 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:38:07 ] Password: password
+[ 13-Enero-2018  17:38:08 ] Esto se guardara en las variables de sesion: 
+[ 13-Enero-2018  17:38:08 ] ID USER: 5a5a98533febad27b0a73401
+[ 13-Enero-2018  17:38:08 ] LOADBUSINESS: 0
+[ 13-Enero-2018  17:38:08 ] -----------------------------------------------------
+[ 13-Enero-2018  17:38:08 ] M001 GET "/ principal"
+[ 13-Enero-2018  17:38:12 ] -----------------------------------------------------
+[ 13-Enero-2018  17:38:12 ] M001 GET "/profile"
+[ 13-Enero-2018  17:39:18 ] -----------------------------------------------------
+[ 13-Enero-2018  17:39:18 ] M001 GET "/availablename/variable"
+[ 13-Enero-2018  17:39:18 ] nameusercheck: logs2
+[ 13-Enero-2018  17:39:21 ] -----------------------------------------------------
+[ 13-Enero-2018  17:39:21 ] M001 PUT "uploadImage"
+[ 13-Enero-2018  17:39:21 ] Password: undefined
+[ 13-Enero-2018  17:39:21 ] Username: logs2
+[ 13-Enero-2018  17:39:21 ] Email: log@yahoo.com
+[ 13-Enero-2018  17:39:22 ] -----------------------------------------------------
+[ 13-Enero-2018  17:39:22 ] M001 GET "/ principal"
+[ 13-Enero-2018  17:39:36 ] -----------------------------------------------------
+[ 13-Enero-2018  17:39:36 ] M001 GET "/business"
+[ 13-Enero-2018  17:39:36 ] Cargará los datos por primera vez
+[ 13-Enero-2018  17:39:36 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 13-Enero-2018  17:40:26 ] -----------------------------------------------------
+[ 13-Enero-2018  17:40:26 ] M001 PUT "/editBusiness"
+[ 13-Enero-2018  17:40:26 ] Datos negocios: {"_id":"5a5a98533febad27b0a73400","isHeadBusiness":false,"name":"mike","__v":0,"Services":[],"address":{"country":"mexico","state":"sinaloa","city":"mazatlan","zipCode":"234","aditional":"","number":"2342","street":"av. mazatlan"},"Branches":[],"delegatedUsers":[],"telephone":{"number":"342423424","typeTel":"Celular"},"licenseType":"Freemium","businessType":"Freelance","isActive":false}
+[ 13-Enero-2018  17:40:27 ] -----------------------------------------------------
+[ 13-Enero-2018  17:40:27 ] M001 GET "/ principal"
+[ 13-Enero-2018  17:40:37 ] -----------------------------------------------------
+[ 13-Enero-2018  17:40:37 ] M001 GET "/signout"
+[ 13-Enero-2018  17:40:37 ] -----------------------------------------------------
+[ 13-Enero-2018  17:40:37 ] M001 - GET "/login"
+[ 13-Enero-2018  17:40:37 ] El id user no tiene ningún id

@@ -1,0 +1,63 @@
+// ------
+// Modal Sign in - Activated by "Registrate" in NavBar and "Crear mi Tablero" in Landing Page and phHmBsns Container (AKA "Administra" in navBar
+#phRegMdl.modal.fade.inxFrnt(tabindex='-1', role='dialog', aria-labelledby='phRegMdl', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content.phfont-muli.bgrndModal
+      .modal-header
+        h5#phRegMdl.modal-title
+          img.d-inline-block.align-top.my-auto(src='../img/system/phesteelogox2.png', width='35', height='35', alt='Logo Phestee')
+          |  Registro
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        .form-group.text-center
+          p.form-text.text-dark Regístrate con 
+          //
+            <button type="button" class="btn phbtn-dark btnSocial my-2 btn-sm">
+            <i class="fab fa-google-plus-g fa-fw fa-1x"></i> Google</button>
+          button.btn.phbtn-dark(type='button')
+            i.fab.fa-facebook-f.fa-fw.fa-1x(aria-hidden='true')
+            |  facebook
+          p.form-text.text-dark.mt-3 O bien, crea una cuenta
+        form
+          //
+            <div class="form-group d-flex">
+            <i class="fas fa-user fa-sm my-auto text-dark"></i><input type="text" class="ml-2 form-control fldsMdl" id="phUsrNm" placeholder="Crea un nombre de usuario">
+          // -Activated by condition--
+          //
+            <small class="form-text text-danger">¡Ouch! El nombre de usuario no está disponible <i class="fa fa-frown-o fa-1x text-danger" aria-hidden="true"></i></small>
+            <small class="form-text text-info">¡El nombre de usuario está disponible! <i class="fa fa-child fa-1x text-info" aria-hidden="true"></i></small>
+            </div>
+          .form-group.d-flex
+            i.fas.fa-envelope.fa-sm.my-auto.text-muted
+            input#phMail.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='email', aria-describedby='emailHelp', placeholder='Ingresa tu correo electrónico')
+          .form-group
+            small#emailHelp.mx-auto.form-text.text-dark.ml-1
+              i.fas.fa-shield-alt.fa-1x.text-muted(aria-hidden='true')
+              |  No te preocupes, jamás compartiremos tu correo con terceros.
+          .form-group.d-flex
+            i.fas.fa-key.fa-sm.my-auto.text-muted
+            input#phPwd.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Crea una contraseña')
+          .form-group.d-flex
+            i.fas.fa-lock.fa-sm.my-auto.text-muted
+            input#phPwdConfr.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Repite la contraseña')
+            // -Activated by condition--
+            // <small class="form-text text-danger">¡Oops! La contraseña no coincide <i class="fa fa-ban fa-1x text-danger" aria-hidden="true"></i></small>
+          .form-check.text-dark
+            small
+              label.text-dark
+                input(type='checkbox')
+                |                               Mantener la sesión iniciada
+          .form-group.text-center
+            button.btn.phbtn-blue.font-weight-light(type='button')
+              | Registrarme 
+              i.fas.fa-arrow-circle-right.fa-sm
+          .form-group.text-center
+            small#emailHelp.form-text.text-dark
+              | Recuerda que al registrarte aceptas nuestra 
+              a(href='#') política de privacidad
+              |  y 
+              a(href='#') términos de servicio
+            small#emailHelp.form-text.text-dark
+              | ¿Ya tienes una cuenta? 
+              a(href='') Iniciar Sesión

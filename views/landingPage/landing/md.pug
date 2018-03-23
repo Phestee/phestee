@@ -1,0 +1,16 @@
+// --
+// -Responsive on md devices only-
+// phHome Container - Landing page visible on md only
+.container-fluid.d-none.d-md-block.d-xl-none
+  .row.animatedParent
+    .col-12.text-center.phhgt-cover.bg-white.d-flex.align-items-center.justify-content-center
+      .col-12
+        // <i class="fab fa-grav fa-5x phtext-dark animated rollIn" data-fa-transform="flip-h rotate-5"></i>
+        img.animated.fadeInDownShort(src='../img/system/phesteelogox2.png', width='120', height='120')
+        p.h2.mt-3.font-weight-bold.phtext-dark.phfont-lato.animated.fadeInDownShort Deja los motores de búsqueda en el pasado
+        p.h5.mt-4.phfont-muli.phtext-dark.animated.fadeInDownShort Únete a Phestee y descubre por qué.
+        button.btn.btn-lg.phbtn-blue.mt-4.font-weight-light.animated.fadeInUpShort.phfont-muli(data-toggle='modal', data-target='#phRegMdl', style='width: 10rem;') Empezar
+        button.btn.btn-lg.phbtn-outline-blue.mt-4.ml-3.font-weight-light.animated.fadeInUpShort.phfont-muli(data-toggle='modal', data-target='#phLoginMdl', style='width: 10rem;') Inicia sesión
+        p.mt-3
+          a(href='#navExprnce-md')
+            i.fas.fa-chevron-down.animated.fadeInUpShort.delay-500.fa-lg.phtext-light

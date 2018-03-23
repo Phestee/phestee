@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Phestee</title>
+        <meta charset="UTF-8">
+        <meta meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Benjamin Castro">
+        <!--Styles-->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/phstyles.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="js/fontawesome-all.min.js"></script>
+        <!------->
+    </head>
+    <body>
+		<!--Header-->
+            <small><nav id="navbar-phHome" class="navbar navbar-dark navbar-expand-lg fixed-top phNavApp">
+                  <a class="navbar-brand" href=""><img src="img/assembly5.png" width="30" height="30" class="d-inline-block align-top" alt="Logo Phestee"> phestee</a>
+                    <form class="form-inline ml-1 my-2 my-lg-0">
+                      <input class="form-control form-control-sm mr-sm-2 srchNavFld2" type="search" placeholder="Buscar" aria-label="Search">
+                      <i class="fas fa-search icnTblroEdt"></i>
+                    </form> 
+                  <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">    
+                  <span class="navbar-toggler-icon"></span>
+                  </a>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ml-auto"> 
+                    <li class="nav-item mr-5">
+                      <a class="nav-link icnTblro"><i class="fas fa-paper-plane" aria-hidden="true"></i> Mensajes</a>
+                    </li>
+                   <li class="nav-item dropdown icnTblro mr-5">
+                       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell" aria-hidden="true"></i> Notificaciones</a>    
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item"><small>Aún no tienes notificaciones</small></a>
+                      </div> 
+                    </li> 
+                      
+                    <!-- PLaceholder for future capabilities, Calendar and Analytics-->
+                      
+                    <!--<li class="nav-item mr-5">
+                      <a class="nav-link icnTblro"><i class="fas fa-calendar-check" aria-hidden="true"></i> Calendario</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                      <a class="nav-link icnTblro"><i class="fas fa-chart-area" aria-hidden="true"></i> Estadísticas</a>
+                    </li>  -->
+                      
+                    <li class="nav-item dropdown icnTblro">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user" aria-hidden="true"></i> Cuenta</a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item"><small>Editar Perfil</small></a>
+                        <a class="dropdown-item"><small>Ver Tableros</small></a>
+                        <a class="dropdown-item"><small>Certificación</small></a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item"><small>Salir</small></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>      
+            </nav>
+            </small>    
+        <!------->
+        <!--Main Container-->
+            <!--phAppBgnd Container - Board and Feed-->
+                <div class="container-fluid phAppBgnd">
+                    <div href="#navDscvr" class="container">
+                        <div class="row rowHapp justify-content-around">
+                            <!--Left panel, Tablero -->
+                            <div class="col-3 mt-5 pt-3">
+                            <div class="card bgrndTblroAppBrnd">
+                                <div class="card-body rounded-top bgrndTblroApp pstFldbrnd text-left">
+                                </div>    
+                                <div class="card-body rounded bgrndTblroApp text-center">
+                                    <h5 class="card-title">User Name </h5>
+                                    <p>Freelancer</p>
+                                    <div class="d-flex justify-content-center">     
+                                    <i class="fas fa-star fa-xs icnStr ml-1" title="rate" aria-hidden="true"></i>
+                                    <i class="fas fa-star fa-xs icnStr ml-1" title="rate" aria-hidden="true"></i>
+                                    <i class="fas fa-star fa-xs icnStr ml-1" title="rate" aria-hidden="true"></i>
+                                    <i class="fas fa-star fa-xs icnStr ml-1" title="rate" aria-hidden="true"></i>
+                                    <i class="fas fa-star fa-xs icnStr ml-1" title="rate" aria-hidden="true"></i>  
+                                    <!--<i class="fa fa-certificate text-primary text-center icnTblro ml-1" title="Perfil certificado" aria-hidden="true"></i>-->
+                                    <!--Placeholder for users w/o business added--> 
+                                    <!--<small><p>No has agregado servicios a tu tablero</p></small>-->  
+                                    <!--Placeholder for users with business added-->      
+                                    </div>
+                                    <div class="card-text text-center mt-3" data-toggle="tooltip" data-placement="left" title="Puedes editar tu Perfil desde aquí. Crea contenido">
+                                    <small><i class="fas fa-pen-square icnTblroEdt fa-2x font-light" ></i></small>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card mt-2 bgrndTblroAppBrnd">
+                                   <div class="card-header text-center bgrndTblroApp d-flex">
+                                    <div class="mx-auto">
+                                        <small><h6 class="font-weight-bold ">0</h6></small>
+                                        <small><p class="font-weight-light">Clientes</p></small>
+                                     </div>
+                                     <div class="mx-auto">
+                                        <small><h6 class="font-weight-bold">0</h6></small>
+                                        <small><p class="font-weight-light">Seguidores</p></small>
+                                     </div>
+                                      <div class="mx-auto">
+                                        <small><h6 class="font-weight-bold">0</h6></small>
+                                        <small><p class="font-weight-light">Siguiendo</p></small>
+                                     </div>
+                                  </div>            
+                                  <div class="card-header text-center bgrndTblroApp d-flex" >
+                                    <i class="fa fa-caret-left icnTblro mx-auto" aria-hidden="true" title="Tablero previo"></i>  
+                                    <small class="mx-auto font-weight-light"> TABLERO</small>
+                                    <i class="fa fa-caret-right icnTblro mx-auto" aria-hidden="true" title="Siguiente tablero"></i>            
+                                 </div>
+                                 <div class="rowHgtTblr ovrFlwApp">
+                                  <ul class="list-group">
+                                    <!---Default Service-->  
+                                    <small><li class="text-center list-group-item bgrndTblroAppBrnd rounded-0 font-weight-light" data-toggle="tooltip" data-placement="left" title="Aquí enlistas lo que puedes ofrecer para generar ingresos. Puedes editarlo en cualquier momento.">Agrega lo que ofreces<p class="text-center mt-3"><i class="fa fa-plus-square fa-2x icnTblroEdt" title="Agrega Servicios" aria-hidden="true"></i></p></li></small>
+                                      
+                                    <!--<small><li class="list-group-item bgrndTblroAppBrnd rounded-0 "><i class="fa fa-plus-square fa-lg icnTblro" title="Agrega Servicios" aria-hidden="true"></i> Agrega algo que puedes ofrecer
+                                    <p class="card-text ml-1 text-truncate" style="max-width: auto;"><small class="text-muted">#</small></p>
+                                    </li></small>-->
+                                      
+                                    <!----->  
+                                 </ul>
+                                 </div>
+                                 </div>
+                                 
+                            </div>
+                            <!--End of left panel, Tablero-->
+                            <!--Mid panel. Feed -->
+                            <div class="col-5 mt-5 pt-3 ovrFlwApp">
+                            <div class="row rounded bgndPostIcns">
+                                   <div class="col-6 icnPstActnLft" data-toggle="collapse" href="#slctaPost" aria-expanded="false" aria-controls="slctaPost" onclick="ClearFields();">
+                                  <h5 class="text-center my-2"><i class="fas fa-pencil-alt fa-fw fa-1x"></i></h5>
+                                   <h6 class="text-center my-2 font-weight-bold">Solicita</h6>
+                                   </div>
+                                   <div class="col-6 icnPstActnRight" data-toggle="collapse" href="#annciaPost" aria-expanded="false" aria-controls="annciaPost">
+                                  <h5 class="text-center my-2"><i class="fas fa-bullhorn fa-fw fa-1x"></i></h5>
+                                    <h6 class="text-center my-2 font-weight-bold">Anuncia</h6>
+                                    </div>
+                                 <div class="col-12 collapse rounded-bottom slctaPstFld" id="slctaPost">
+                                  <div class="card card-body slctaPstFld" onmouseover="ActiveFields();">
+                                    <p class="text-justify font-weight-bold"> <img class="rounded" src="img/1a.png" width="65" height="65"> User Name
+                                    <button type="button" class="close" data-toggle="collapse" href="#slctaPost" aria-expanded="false" aria-controls="slctaPost">
+                                    <span aria-hidden="true"><small>&times;</small></span>
+                                    </button></p> 
+                                    <textarea class="form-control slctaPstFld2 mt-3" id="slctaPstFld" rows="5" placeholder="Hola User, ¿Qué necesitas?" autofocus></textarea>
+                                    <div class="row mt-3">
+                                        <div class="col-3 my-auto d-flex justify-content-start"><i class="fas fa-camera icnMdl"></i></div>
+                                        <div class="col-3 my-auto d-flex justify-content-start"><i class="fas fa-video icnMdl"></i></div>
+                                        <div class="col-3 my-auto d-flex justify-content-start"><i class="fas fa-microphone icnMdl"></i></div>
+                                        <div class="col-3 my-auto d-flex justify-content-end"><button class="btn btnEntr btn-sm font-weight-bold rounded"> Solicitar</button></div>  
+                                    </div>      
+                                  </div>
+                                      
+                                </div>
+                                <div class="collapse" id="annciaPost">
+                                  <div class="card card-body font-weight-bold">
+                                    <p class="text-right"><button type="button" class="close" data-toggle="collapse" href="#annciaPost" aria-expanded="false" aria-controls="annciaPost">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button></p>  
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                  </div>
+                                </div>
+                             </div>
+                             <div class="row d-flex justify-content-around">
+                                  <div class="col-4 mt-3 text-center bgrndTblroApp">
+                                     <small><a class="text-muted" href="#"><p>Mis publicaciones</p></a></small>
+                                  </div>
+                                  <div class="col-4 mt-3 text-center bgrndTblroApp">
+                                     <small><a class="text-muted" href="#"><p>Todas publicaciones</p></a></small>
+                                  </div>
+                                 <div class="col-12 rowHgtFeed" id="phFeed">
+                                  <div class="card-deck mt-3">
+                                      <div class="card bgrndPst">  
+                                        <div class="card-body">
+                                          <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small>&times;</small></span>
+                                          </button>     
+                                          <h6 class="card-title font-weight-bold">¿Dónde puedo donar ropa?</h6>   
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>
+                                        <div class="card-footer bgrndPst">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-hand-paper icn mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseRaiseOffer" aria-expanded="false" aria-controls="collapseRaiseOffer"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnHrt mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icn mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icn mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icn mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndPst">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgn" id="basic-addon1"><i class="fas fa-at"></i></span>
+                                              <input type="text" class="form-control tagPstFld" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                     </div>
+                                  </div>   
+                                  <div class="card-deck mt-3">
+                                      <div class="card bgrndTblroAppBrnd" id="usrPstTmplte">
+                                        <div class="card-body bgrndTblroAppSvs"> 
+                                          <p class="text-justify font-weight-light"> <img class="rounded" src="img/1a.png" width="40" height="40"> UserName
+                                          <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small class="text-light">&times;</small></span>
+                                          </button></p>    
+                                          <h6 class="card-title font-weight-light">Me duele la espalda</h6>   
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>
+                                        <div class="card-footer bgrndTblroAppSvs">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-external-link-square-alt icnTblroEdt mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseSeeService" aria-expanded="true" aria-controls="collapseSeeService"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnHrt mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icnTblroEdt  mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icnTblroEdt  mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icnTblroEdt -muted mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndTblroAppSvs">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgnOwn" id="basic-addon1"><i class="fas fa-at font-weight-light"></i></span>
+                                              <input type="text" class="form-control tagAtBgnOwn tagPstFldOwn" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                       </div>
+                                  </div>
+                                  <div class="card-deck mt-3">
+                                      <div class="card bgrndPst">  
+                                        <div class="card-body">
+                                          <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small>&times;</small></span>
+                                          </button>     
+                                          <h6 class="card-title font-weight-bold">¿Alguien que quiera limpiar mi casa? #estuvobuenalafiesta #quiendiceyo</h6>   
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>    
+                                        <img class="card-img-top rounded-0" src="img/cleanhouse.jpeg" alt="Card image cap">
+                                        <div class="card-footer bgrndPst">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-hand-paper icn mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseRaiseOffer" aria-expanded="false" aria-controls="collapseRaiseOffer"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnHrt mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icn mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icn mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icn mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndPst">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgn" id="basic-addon1"><i class="fas fa-at"></i></span>
+                                              <input type="text" class="form-control tagPstFld" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                     </div>
+                                  </div>
+                                  <div class="card-deck mt-3">
+                                      <div class="card bgrndTblroAppBrnd">
+                                        <div class="card-body bgrndTblroAppSvs"> 
+                                          <p class="text-justify font-weight-light"> <img class="rounded" src="img/1a.png" width="40" height="40"> UserName
+                                          <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small class="text-light">&times;</small></span>
+                                          </button></p>
+                                          <h6 class="card-title font-weight-light">Mi sobrino cumple años la próxima semana y me toca organizar la party. Alguna idea? #elmejortiodelmundo</h6>   
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>    
+                                        <img class="card-img-top rounded-0" src="img/Dipper-hm.gif" alt="Card image cap">
+                                        <div class="card-footer bgrndTblroAppSvs">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-external-link-square-alt icnTblroEdt mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseSeeService" aria-expanded="true" aria-controls="collapseSeeService"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnTblroEdt  mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icnTblroEdt  mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icnTblroEdt  mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icnTblroEdt -muted mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndTblroAppSvs">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgnOwn" id="basic-addon1"><i class="fas fa-at font-weight-light"></i></span>
+                                              <input type="text" class="form-control tagAtBgnOwn tagPstFldOwn" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                       </div>
+                                 </div>
+                                 <div class="card-deck mt-3">
+                                      <div class="card bgrndPst">
+                                        <div class="card-body">
+                                          <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small>&times;</small></span>
+                                          </button>     
+                                          <h6 class="card-title font-weight-bold">¡Me urge un corte ya!</h6>   
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>
+                                        <video width="100%" height="80%" controls>
+                                          <source src="img/2017-12-04-VIDEO-00000654.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="card-footer bgrndPst">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-hand-paper icn mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseRaiseOffer" aria-expanded="false" aria-controls="collapseRaiseOffer"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnHrt mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icn mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icn mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icn mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndPst">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgn" id="basic-addon1"><i class="fas fa-at"></i></span>
+                                              <input type="text" class="form-control tagPstFld" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                       </div>
+                                 </div>
+                                 <div class="card-deck mt-3">
+                                      <div class="card bgrndPst">
+                                        <div class="card-body">
+                                          <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small>&times;</small></span>
+                                          </button>    
+                                          <h6 class="card-title font-weight-bold">Estoy estrenando ropa y necesito URGENTEMENTE un guardaropa nuevo. #quiéndiceyo</h6>   
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>    
+                                        <img class="card-img-top rounded-0" src="img/emHm.gif" alt="Card image cap">
+                                        <div class="card-footer bgrndPst">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-hand-paper icn mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseRaiseOffer" aria-expanded="false" aria-controls="collapseRaiseOffer"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnHrt mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icn mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icn mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icn mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndPst">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgn" id="basic-addon1"><i class="fas fa-at"></i></span>
+                                              <input type="text" class="form-control tagPstFld" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                       </div>
+                                 </div>
+                                 <div class="card-deck mt-3">
+                                      <div class="card bgrndTblroAppBrnd">
+                                        <div class="card-body bgrndTblroAppSvs"> 
+                                          <p class="text-justify font-weight-light"> <img class="rounded" src="img/1a.png" width="40" height="40"> UserName
+                                          <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small class="text-light">&times;</small></span>
+                                          </button></p>    
+                                          <h6 class="card-title font-weight-light">Queremos regresar a mazamitla :(</h6>   
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>    
+                                        <img class="card-img-top rounded-0" src="img/discover3.jpeg" alt="Card image cap">
+                                        <div class="card-footer bgrndTblroAppSvs">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-external-link-square-alt icnTblroEdt mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseSeeService" aria-expanded="true" aria-controls="collapseSeeService"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnTblroEdt  mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icnTblroEdt  mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icnTblroEdt  mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icnTblroEdt -muted mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndTblroAppSvs">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgnOwn" id="basic-addon1"><i class="fas fa-at font-weight-light"></i></span>
+                                              <input type="text" class="form-control tagAtBgnOwn tagPstFldOwn" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                       </div>
+                                </div>
+                                <div class="card-deck mt-3">
+                                      <div class="card bgrndPst">
+                                        <div class="card-body">
+                                         <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small>&times;</small></span>
+                                          </button>    
+                                          <h6 class="card-title font-weight-bold">Necesito ir al Centro y hay tarifa dinámica en Uber</h6>
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>  
+                                        <img class="card-img-top rounded-0" src="img/discover.jpeg" alt="Card image cap">
+                                        <div class="card-footer bgrndPst">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-hand-paper icn mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseRaiseOffer" aria-expanded="false" aria-controls="collapseRaiseOffer"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnHrt mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icn mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icn mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icn mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndPst">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgn" id="basic-addon1"><i class="fas fa-at"></i></span>
+                                              <input type="text" class="form-control tagPstFld" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                       </div>
+                                   </div>    
+                                 </div>
+                              </div>
+                            </div>
+                            <!--End of Mid panel, Feed-->
+                            <!--Right panel, Actions (activated by "Make an Offer", "See services")  -->
+                            <div class="col-4 mt-5 pt-3 rowHgtFeed">
+                                    <div id="accordion" data-children=".item" class="card bgrndPst">
+                                    <div class="item">
+                                    <div id="collapseSeeService" class="collapse" role="tabpanel">
+                                      <div class="card-body">
+                                        <div class="card-title text-left text-muted font-weight-light"><small>Estas son las ofertas para tu solicitud.</small><button type="button" class="close" data-toggle="collapse" data-parent="#accordion" href="#collapseSeeService" aria-expanded="true" aria-controls="collapseSeeService">
+                                        <span aria-hidden="true"><small>&times;</small></span>
+                                        </button></div>  
+                                        <p class="text-justify font-weight-bold"> <img class="rounded" src="img/1a.png" width="60" height="60"> UserName</p>    
+                                        <p class="h6 card-title font-weight-bold">Me duele la espalda</p>   
+                                        <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p> 
+                                      </div>
+                                 </div>  
+                                 </div>            
+                                 <div class="card bgrndPstOffrs">
+                                    <div id="collapseRaiseOffer" class="collapse" role="tabpanel">        
+                                      <div class="card-body">
+                                        <button type="button" class="close" data-toggle="collapse" data-parent="#accordion" href="#collapseRaiseOffer" aria-expanded="false" aria-controls="collapseRaiseOffer">
+                                        <span aria-hidden="true"><small class="text-light">&times;</small></span>
+                                        </button>  
+                                        <div class="card-title text-left text-muted font-weight-light"><small>Alguien publicó esto. Levanta la mano y haz una oferta.</small></div>
+                                        <p class="h5 card-title font-weight-bold">¿Dónde puedo donar ropa?</p>   
+                                        <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>
+                                        <small><p class="card-text">Aún no tienes artículos o servicios en tu Tablero. Agrega lo que quieres ofrecer, ¡es muy fácil!</p></small>
+                                        <a href="#" class="btn mt-3 btn-success btn-sm">Actualizar Tablero</a>
+                                      </div>    
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                            <!--End of Right panel, Actions-->
+                     </div>
+                </div>
+        </div>    
+        <!------->
+		<!--Scripts-->
+            <script src="js/jquery-3.2.1.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/typed.js"></script>
+            <script src="js/css3-animate-it.js"></script>
+            <script>
+                $(function () {
+                  $('[data-toggle="tooltip"]').tooltip()
+                })
+            </script>
+            
+            <script type="text/javascript">
+                
+                function ActiveFields() { 
+                    document.getElementById("slctaPstFld").focus();
+                }
+                function ClearFields() {
+                    document.getElementById("slctaPstFld").value = "";
+                    document.getElementById("slctaPstFld").focus();
+                }
+                
+            </script>
+                            <!--<div class="card-deck mt-3">
+                                      <div class="card bgrndTblroAppBrnd" id="usrPstTmplte">
+                                        <div class="card-body bgrndTblroAppSvs"> 
+                                          <p class="text-justify font-weight-light"> <img class="rounded" src="img/1a.png" width="40" height="40"> UserName
+                                          <button type="button" class="close" data- aria-expanded="false" href="#slctaPost" aria-controls="slctaPost">
+                                          <span aria-hidden="true"> <small class="text-light">&times;</small></span>
+                                          </button></p>    
+                                          <h6 class="card-title font-weight-light">Me duele la espalda</h6>   
+                                          <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p>  
+                                        </div>
+                                        <div class="card-footer bgrndTblroAppSvs">
+                                           <div class="container d-flex justify-content-around">
+                                              <i class="fas fa-external-link-square-alt icnTblroEdt mt-3" data-toggle="collapse" data-parent="#accordion" href="#collapseSeeService" aria-expanded="true" aria-controls="collapseSeeService"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">18</p></small>
+                                              <i class="fas fa-heart ml-2 icnHrt mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">435</p></small>
+                                              <i class="fas fa-retweet ml-3 icnTblroEdt  mt-3"></i>
+                                              <small class="mt-3"><p class="my-auto text-muted font-weight-light ml-1">12</p></small>
+                                              <i class="fas fa-share ml-3 icnTblroEdt  mt-3"></i>
+                                              <i class="fas fa-ellipsis-v ml-3 icnTblroEdt -muted mt-3"></i>
+                                          </div>
+                                        </div>
+                                        <div class="card-footer bgrndTblroAppSvs">
+                                            <div class="input-group input-group-sm">
+                                              <span class="input-group-addon tagAtBgnOwn" id="basic-addon1"><i class="fas fa-at font-weight-light"></i></span>
+                                              <input type="text" class="form-control tagAtBgnOwn tagPstFldOwn" placeholder="Etiqueta a alguien" aria-label="Tab" aria-describedby="basic-addon1">
+                                            </div>
+                                          </div>    
+                                       </div>
+                                  </div>-->
+	</body>
+</html>

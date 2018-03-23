@@ -1,0 +1,51 @@
+extends ../layout.pug
+block contenido
+    div(class="col-md-6 remove-float center-block big-top-space" ng-controller="editBusinessController" ng-init="loadBusinessUser("+JSON.stringify(databusiness)+")")
+      div(ng-repeat="databusinesshtml in dataBusinessUser") 
+        div
+          label(for="nameBusiness") Nombre:
+          input(type="text" id="iptNameBusiness" name="iptNameBusiness" ng-model="iptNameBusiness[$index]" maxlength="100")
+        br
+        div
+          label(for="businessType") Tipo de negocio:
+          select(id="slcBusinessType" name="slcBusinessType" ng-model="slcBusinessType[$index]" ng-options="obj.value as obj.label for obj in businesstypeselect")
+        br
+        div
+          label(for="PhoneBusiness") Teléfono:
+          select(id="slcTypePhone" name="slcTypePhone" ng-model="slcTypePhone[$index]" ng-options="obj.value as obj.label for obj in typecelselect")
+
+          input(type="text" name="iptPhoneNumberBusiness" id="iptPhoneNumberBusiness" ng-model="iptPhoneNumberBusiness[$index]" maxlength="50")
+        br
+        div
+          label(for="mainBusiness") Negocio principal:
+          input(type="checkbox" id="chbxMainBusiness" name="chbxMainBusiness" ng-model="chbxMainBusiness[$index]")
+        br
+        br
+        div
+          label(for="Address") DIRECCION:
+          div
+            label(for="Street") Calle:
+            input(type="text" name="iptStreet" id="iptStreet" ng-model="iptStreet[$index]" maxlength="130")
+          div
+            label(for="Number") Número:
+            input(type="text" name="iptNumber" id="iptNumber" ng-model="iptNumber[$index]" maxlength="50")
+          div
+            label(for="AdditionalInfo") Información adicional:
+            input(type="text" name="iptAdditionalInfo" id="iptAdditionalInfo" ng-model="iptAdditionalInfo[$index]" maxlength="50")
+          div
+            label(for="ZipCode") Código Postal:
+            input(type="text" name="iptZipCode" id="iptZipCode" ng-model="iptZipCode[$index]" maxlength="20")
+          div
+            label(for="City") Ciudad:
+            input(type="text" name="iptCity" id="iptCity" ng-model="iptCity[$index]" maxlength="50")
+          div
+            label(for="State") Estado:
+            input(type="text" name="iptState" id="iptState" ng-model="iptState[$index]" maxlength="70")
+          div
+            label(for="Country") País:
+            input(type="text" name="iptCountry" id="iptCountry" ng-model="iptCountry[$index]" maxlength="70")
+        br
+        div
+          input(type="button" value="Guardar negocio" ng-click="saveBusiness($index)")
+        br
+        br

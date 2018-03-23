@@ -1,0 +1,42 @@
+[ 05-Marzo-2018  12:22:23 ] M001 - GET "/"
+[ 05-Marzo-2018  12:22:23 ] El id user no tiene ningún id
+[ 05-Marzo-2018  12:22:29 ] -----------------------------------------------------
+[ 05-Marzo-2018  12:22:29 ] M001 - GET "/login"
+[ 05-Marzo-2018  12:22:29 ] El id user no tiene ningún id
+[ 05-Marzo-2018  12:22:51 ] -----------------------------------------------------
+[ 05-Marzo-2018  12:22:51 ] M001 - POST "/validation"
+[ 05-Marzo-2018  12:22:51 ] Email: ramon@ramon.com
+[ 05-Marzo-2018  12:22:51 ] Password: aid.ran-43
+[ 05-Marzo-2018  12:22:51 ] Esto se guardara en las variables de sesion: 
+[ 05-Marzo-2018  12:22:51 ] ID USER: 5a764d76543eb93a7cc56869
+[ 05-Marzo-2018  12:22:51 ] LOADBUSINESS: 0
+[ 05-Marzo-2018  12:22:52 ] -----------------------------------------------------
+[ 05-Marzo-2018  12:22:52 ] M001 GET "/ principal"
+[ 05-Marzo-2018  12:27:15 ] M001 - GET "/"
+[ 05-Marzo-2018  12:27:15 ] ID user: 5a764d76543eb93a7cc56869
+[ 05-Marzo-2018  12:27:27 ] M001 - GET "/"
+[ 05-Marzo-2018  12:27:27 ] ID user: 5a764d76543eb93a7cc56869
+[ 05-Marzo-2018  12:27:28 ] M001 - GET "/"
+[ 05-Marzo-2018  12:27:28 ] ID user: 5a764d76543eb93a7cc56869
+[ 05-Marzo-2018  12:27:45 ] M001 - GET "/"
+[ 05-Marzo-2018  12:27:45 ] ID user: 5a764d76543eb93a7cc56869
+[ 05-Marzo-2018  12:29:16 ] M001 - GET "/"
+[ 05-Marzo-2018  12:29:16 ] ID user: 5a764d76543eb93a7cc56869
+[ 05-Marzo-2018  12:29:40 ] M001 - GET "/"
+[ 05-Marzo-2018  12:29:40 ] ID user: 5a764d76543eb93a7cc56869
+[ 05-Marzo-2018  12:30:20 ] M001 - GET "/"
+[ 05-Marzo-2018  12:30:20 ] El id user no tiene ningún id
+[ 05-Marzo-2018  12:30:26 ] -----------------------------------------------------
+[ 05-Marzo-2018  12:30:26 ] M001 - GET "/login"
+[ 05-Marzo-2018  12:30:26 ] El id user no tiene ningún id
+[ 05-Marzo-2018  12:30:47 ] -----------------------------------------------------
+[ 05-Marzo-2018  12:30:47 ] M001 - POST "/validation"
+[ 05-Marzo-2018  12:30:47 ] Email: ramon@ramon.com
+[ 05-Marzo-2018  12:30:47 ] Password: aid.ran-43
+[ 05-Marzo-2018  12:30:47 ] Esto se guardara en las variables de sesion: 
+[ 05-Marzo-2018  12:30:47 ] ID USER: 5a764d76543eb93a7cc56869
+[ 05-Marzo-2018  12:30:47 ] LOADBUSINESS: 0
+[ 05-Marzo-2018  12:30:47 ] -----------------------------------------------------
+[ 05-Marzo-2018  12:30:47 ] M001 GET "/ principal"
+[ 05-Marzo-2018  12:34:54 ] M001 - GET "/"
+[ 05-Marzo-2018  12:34:54 ] El id user no tiene ningún id

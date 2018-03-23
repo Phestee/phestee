@@ -1,0 +1,61 @@
+extends layout.pug
+block contenido
+  div(class="col-md-6 remove-float center-block big-top-space" ng-controller="signup")
+    form(name="frmsignup" id="frmsignup")
+      div
+        label(for="username") Nombre:
+        input(type="text", name="iptName", placeholder="Nombre", id="iptName",class="form-control" ng-model="iptName" ng-pattern="alphanumeric" ng-required="true" ng-change="checkusername()")
+        span(ng-show="frmsignup.iptName.$error.required && frmsignup.iptName.$dirty") El campo nombre es requerido.
+        span(ng-show="frmsignup.iptName.$error.pattern && frmsignup.iptName.$dirty") El nombre solo puede contener letras y números.
+        span(ng-show="nameavailable && frmsignup.iptName.$dirty") El nombre esta disponible.
+        span(ng-show="namenotavailable && frmsignup.iptName.$dirty") El nombre no se encuentra disponible.
+
+      div
+        label(for="email") Email:
+        input(type="email", name="iptEmail", placeholder="Email", id="iptEmail", class="form-control" ng-model="iptEmail" ng-required="true")
+        input(type="button" id="btnCheckEmail" name="btnCheckEmail" ng-model="btnCheckEmail" ng-click="checkemail()" ng-disabled="frmsignup.iptEmail.$error.email || frmsignup.iptEmail.$invalid" value="Checar correo.")
+        span(ng-show="frmsignup.iptEmail.$error.required && frmsignup.iptEmail.$dirty") El correo es requerido.
+        span(ng-show="frmsignup.iptEmail.$error.email && frmsignup.iptEmail.$dirty") El correo no es válido.
+        span(ng-show="emailavailable && frmsignup.iptEmail.$dirty") El email esta disponible.
+        span(ng-show="emailnotavailable && frmsignup.iptEmail.$dirty") El email no se encuentra disponible.
+
+      div
+        label(for="Password") Contraseña:
+        input(type="password", name="iptPassword",placeholder="Password",id="iptPassword", class="form-control" ng-model="iptPassword" ng-required="true" ng-minlength="8")
+        span(ng-show="frmsignup.iptPassword.$error.required && frmsignup.iptPassword.$dirty") El password es requerido.
+        span(ng-show="frmsignup.iptPassword.$error.minlength && frmsignup.iptPassword.$dirty") El minimo del password son 8 caracteres.
+
+      div
+        label(for="ConfirmPassword") Confirmar contraseña:
+        input(type="password" name="iptConfirmPassword" placeholder="Confirmar password" id="iptConfirmPassword" class="form-control" ng-model="iptConfirmPassword" ng-required="true")
+        span(ng-show="frmsignup.iptConfirmPassword.$error.required && frmsignup.iptConfirmPassword.$dirty") La confirmación del password es requerido.
+        br
+        span(ng-show="mostrarmsj && frmsignup.iptConfirmPassword.$dirty") La confirmacion debe ser igual al password.
+      div
+        label(for="gender") Sexo:
+        select(id="slcGender" name="slcGender" ng-model="slcGender")
+          option(value="Hombre" selected) Hombre.
+          option(value="Mujer") Mujer.
+          option(value="Otro") Otro.
+      div
+        - var final = 1; var final2 = 1;
+        - var fecha = new Date(); var finalyear = fecha.getFullYear(); var finalyear2 = fecha.getFullYear();
+        - var months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+        label(for="dateBirth") Fecha de nacimiento:
+        select(id="slcDayBirth" name="slcDayBirth" ng-model="slcDayBirth")
+          while final < 32
+            option(value=final2++)=final++
+        select(id="slcMonthBirth" name="slcMonthBirth" ng-model="slcMonthBirth")
+          each month in months
+            option(value=month)=month
+        select(id="slcYearBirth" name="slcYearBirth" ng-model="slcYearBirth")
+          while finalyear > 1920
+            option(value=finalyear2--)=finalyear--
+
+
+      div(class="row top-space")
+        div(class="col-xs-12 col-sm-6")
+          input(name="btnRegister" id="btnRegister" type="button" value="Registrarse" ng-click="registerUser()" ng-disabled="frmsignup.$invalid")
+          input(ng-click="prueba()" type="button" value="prueba")
+        div(class="col-xs-12 col-sm-6")
+          a(href="/login") Ya tengo una cuenta.

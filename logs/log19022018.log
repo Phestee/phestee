@@ -1,0 +1,67 @@
+[ 19-Febrero-2018  13:20:33 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:20:33 ] M001 - GET "/login"
+[ 19-Febrero-2018  13:20:33 ] El id user no tiene ningún id
+[ 19-Febrero-2018  13:20:39 ] M001 - GET "/"
+[ 19-Febrero-2018  13:20:39 ] El id user no tiene ningún id
+[ 19-Febrero-2018  13:20:44 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:20:44 ] M001 - GET "/login"
+[ 19-Febrero-2018  13:20:44 ] El id user no tiene ningún id
+[ 19-Febrero-2018  13:20:50 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:20:50 ] M001 - POST "/validation"
+[ 19-Febrero-2018  13:20:50 ] Email: ramon@ramon.com
+[ 19-Febrero-2018  13:20:50 ] Password: aid.ran-43
+[ 19-Febrero-2018  13:20:51 ] Esto se guardara en las variables de sesion: 
+[ 19-Febrero-2018  13:20:51 ] ID USER: 5a764d76543eb93a7cc56869
+[ 19-Febrero-2018  13:20:51 ] LOADBUSINESS: 0
+[ 19-Febrero-2018  13:20:51 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:20:51 ] M001 GET "/ principal"
+[ 19-Febrero-2018  13:21:04 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:21:04 ] M001 GET "/services"
+[ 19-Febrero-2018  13:21:04 ] Cargará los datos por primera vez
+[ 19-Febrero-2018  13:21:04 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 19-Febrero-2018  13:21:08 ] M001 - GET "/"
+[ 19-Febrero-2018  13:21:08 ] ID user: 5a764d76543eb93a7cc56869
+[ 19-Febrero-2018  13:22:00 ] M001 - GET "/"
+[ 19-Febrero-2018  13:22:00 ] ID user: 5a764d76543eb93a7cc56869
+[ 19-Febrero-2018  13:22:22 ] M001 - GET "/"
+[ 19-Febrero-2018  13:22:22 ] ID user: 5a764d76543eb93a7cc56869
+[ 19-Febrero-2018  13:22:31 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:22:31 ] M001 GET "/ principal"
+[ 19-Febrero-2018  13:22:33 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:22:33 ] M001 GET "/profile"
+[ 19-Febrero-2018  13:22:36 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:22:36 ] M001 GET "/business"
+[ 19-Febrero-2018  13:22:36 ] Cargará los datos por primera vez
+[ 19-Febrero-2018  13:22:36 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 19-Febrero-2018  13:22:38 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:22:38 ] M001 GET "/services"
+[ 19-Febrero-2018  13:22:38 ] Se cargara editar negocios pero los datos los cargara el cliente.
+[ 19-Febrero-2018  13:23:08 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:23:08 ] M001 GET "/profile"
+[ 19-Febrero-2018  13:24:31 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:31 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:31 ] nameusercheck: s
+[ 19-Febrero-2018  13:24:31 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:31 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:31 ] nameusercheck: sa
+[ 19-Febrero-2018  13:24:31 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:31 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:31 ] nameusercheck: sad
+[ 19-Febrero-2018  13:24:31 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:31 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:31 ] nameusercheck: sads
+[ 19-Febrero-2018  13:24:31 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:31 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:31 ] nameusercheck: sadsa
+[ 19-Febrero-2018  13:24:33 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:33 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:33 ] nameusercheck: sads
+[ 19-Febrero-2018  13:24:33 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:33 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:33 ] nameusercheck: sad
+[ 19-Febrero-2018  13:24:33 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:33 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:33 ] nameusercheck: sa
+[ 19-Febrero-2018  13:24:33 ] -----------------------------------------------------
+[ 19-Febrero-2018  13:24:33 ] M001 GET "/availablename/variable"
+[ 19-Febrero-2018  13:24:33 ] nameusercheck: s

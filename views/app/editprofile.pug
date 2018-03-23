@@ -1,0 +1,95 @@
+extends ../layout.pug
+block contenido
+  div(class="col-md-6 remove-float center-block big-top-space" ng-controller="editProfileController" ng-init="loadDataUser()")
+
+    form(name="frmEditProfile" id="frmEditProfile" enctype="multipart/form-data")
+      div
+        label(for="username") Nombre:
+        input(type="text", name="iptName", placeholder="Nombre", id="iptName",class="form-control" ng-model="iptName" ng-pattern="alphanumeric" ng-required="true" ng-change="checkNameAvailable()")
+
+      div
+        label(for="Imagen") Imagen:
+        input(type='file', ngf-select='', ng-model='imgProfile', name='imgProfile', accept='image/*', ngf-max-size='2MB', ngf-model-invalid='errorFile')
+
+      div
+        label(for="email") Email:
+        input(type="email", name="iptEmail", placeholder="Email", id="iptEmail", class="form-control" ng-model="iptEmail" ng-required="true" ng-change="checkemail()")
+
+      div
+        label(for="Password") Contraseña:
+        input(type="password", name="iptPassword" placeholder="Password" id="iptPassword" class="form-control" ng-model="iptPassword" ng-required="true" ng-minlength="8" maxlength="50")
+
+      div
+       label(for="Password") Confirmar contraseña:
+       input(type="password" name="iptConfirmPassword" placeholder="Confirmar password" id="iptConfirmPassword" class="form-control" ng-model="iptConfirmPassword" ng-required="true" maxlength="50")
+       br
+       span(ng-show="mostrarmsj && frmsignup.iptConfirmPassword.$dirty") La confirmacion debe ser igual al password.
+
+      div
+       input(type="button" value="Guardar cambios perfil" ng-click="checkprofile(imgProfile)")
+       a(href="/app") Regresar.
+
+      div
+       span(ng-show="banErrorAlphanumeric == true") El nombre debe de contener letras y números.
+       span(ng-show="banErrorNameAvailable == true") El nombre no se encuentra disponible.
+       span(ng-show="!banErrorNameAvailable && frmEditProfile.iptName.$dirty && iptName != undefined") El nombre se encuentra disponible
+       span(ng-show="banErrorEmailValid == true") El correo ingresado es invalido.
+       span(ng-show="banErrorEmailAvailable == true && iptEmail != undefined") El correo no esta disponible.
+       span(ng-show="!banErrorEmailAvailable && frmEditProfile.iptEmail.$dirty && iptEmail != undefined") El correo esta disponible
+       span(ng-show="banErrorPasswordConfirm == true") El password debe ser igual a la confirmación.
+       span(ng-show="BanErrorUnknown") {{UnknownMessage}}
+       br
+       br
+       br
+
+    form(name="frmProfileBusiness" id="frmProfileBusiness")
+      div
+        label(for="nameBusiness")  Nombre del negocio:
+        input(type="text" name="iptNameBusiness" id="iptNameBusiness" ng-model="iptNameBusiness" maxlength="300")  
+      div
+        label(for="typePhone") Tipo número:
+        select(name="slcPhoneBusiness" id="slcPhoneBusiness" ng-model="slcPhoneBusiness")
+          option(value="private") Privado
+          option(value="cellphone") Número de celular
+
+        label(for="numberPhone") Numero de celular/teléfono:
+        input(type="text" name="iptPhoneNumber" id="iptPhoneNumber" ng-model="iptPhoneNumber" maxlength="50")
+
+      div
+        label(for="Address") DIRECCIÓN:
+        br
+        label(for="Street") Calle:
+        input(type="text" name="iptStreet" id="iptStreet" ng-model="iptStreet" maxlength="100")
+        br
+        label(for="AddressNumber") Número:
+        input(type="text" name="iptAddressNumber" id="iptAddressNumber" ng-model="iptAddressNumber" maxlength="30")
+        br
+        label(for="Aditional") Información adicional:
+        input(type="text" name="iptAditional" id="iptAditional" ng-model="iptAditional" maxlength="200")
+        br
+        label(for="Zipcode") Codigo Postal:
+        input(type="text" name="iptZipCode" id="iptZipCode" ng-model="iptZipCode" maxlength="30")
+        br
+        label(for="City") Ciudad:
+        input(type="text" name="iptCity" id="iptCity" ng-model="iptCity" maxlength="70")
+        br
+        label(for="State") Estado:
+        input(type="text" name="iptState" id="iptState" ng-model="iptState" maxlength="70")
+        br
+        label(for="Country") País:
+        input(type="text" name="iptCountry" id="iptCountry" ng-model="iptCountry" maxlength="50")
+
+
+
+      br
+      br
+      div
+        label(for="Services") Servicios:
+        br
+        label(for="nameService") Nombre del servicio:
+        input(type="text" name="iptNameService" id="iptNameService" ng-model="iptNameService")
+        label(for="costService") Costo:
+        input(type="text" name="iptCostService" id="iptCostService" ng-model="iptCostService")
+
+      div
+        input(type="button" id="btnSaveBusiness" name="btnSaveBusiness" value="Guardar datos negocio")

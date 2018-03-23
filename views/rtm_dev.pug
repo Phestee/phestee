@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Socket.io
+  body
+    h1 Communication with socket.io!
+    script(src='/socket.io/socket.io.js')
+    script.
+      var socket = io.connect('http://localhost:8080');
+      socket.on('message', function(message) {
+        alert('The server has a message for you: ' + message);
+      })

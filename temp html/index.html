@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Phestee</title>
+        <meta charset="UTF-8">
+        <meta meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="author" content="Benjamin Castro">
+        <!--Styles-->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/phstyles.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="js/fontawesome-all.min.js"></script>
+        <!------->
+    </head>
+    <body>
+		<!--Header-->
+            <nav id="navbar-phHome" class="navbar navbar-dark navbar-expand-lg fixed-top phNav">
+                  <a class="navbar-brand" href=""><img src="img/assembly5.png" width="30" height="30" class="d-inline-block align-top" alt="Logo Phestee"> phestee</a>
+                  <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                  </a>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#navDscvr">¿Festi?</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#navRsHnd">¿Cómo funciona?</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#NavBrd">Tableros</a>
+                    </li>  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administra</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#navBsns">Tu Oficio</a>
+                        <a class="dropdown-item" href="#navBsns">Tu Profesión</a>
+                        <a class="dropdown-item" href="#navBsns">Tu Servicio</a>  
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#navBsns">Empresas</a>
+                      </div>
+                    </li>
+                  </ul>
+                    <div class="navbar nav">	
+                        <div class="form-inline">
+                            <button class="btn btn-sm align-middle mx-1 rounded btnEntr" data-toggle="modal" data-target="#phLoginMdl" >Inicia sesión</button>
+                            <button class="btn btn-sm align-middle rounded btnRg" data-toggle="modal" data-target="#phRegMdl">Regístrate</button>
+                        </div>
+                    </div>
+                </div>      
+            </nav>
+        <!------->
+        <!--Modal Login - Activated by "Inicia Sesión" in NavBar and "Entrar" in Footer section-->
+            <div class="modal fade inxFrnt" id="phLoginMdl" tabindex="-1" role="dialog" aria-labelledby="phLoginMdl" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content bgrndModal">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="phLoginMdl">Inicia Sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">  
+                      <form>
+                          <div class="form-group d-flex">
+                            <i class="fas fa-envelope fa-sm my-auto text-dark"></i><input type="email" class="ml-2 form-control fldsMdl" id="phUsrNm" placeholder="Correo electrónico">
+                            <!---Activated by condition---->  
+                                <!--<small class="form-text text-danger">El correo electrónico no está registrado <i class="fa fa-frown-o fa-1x text-danger" aria-hidden="true"></i></small>-->
+                          </div>
+                          <div class="form-group d-flex">
+                            <i class="fas fa-lock fa-sm my-auto text-dark"></i><input type="password" class="ml-2 form-control fldsMdl" id="phPwdConfr" placeholder="Contraseña">
+                            <!---Activated by condition---->    
+                                 <!--<small class="form-text text-danger">¡Oops! La contraseña no coincide <i class="fa fa-ban fa-1x text-danger" aria-hidden="true"></i></small>-->
+                          </div>
+                          <div class="form-check text-dark">
+                            <small><label class="text-dark" >
+                              <input type="checkbox">
+                              Mantener la sesión iniciada
+                            </label></small>
+                          </div> 
+                          <div class="form-group text-center">
+                              <button type="button" class="btn btnMdlEntr btn-lg font-weight-bold">Entrar</button>
+                          </div>
+                          <div class="form-group text-center">
+                            <p class="form-text text-dark">También puedes entrar con... </p>  
+                            <button type="button" class="btn btn-dark btnSocial rounded-0 my-2">  
+                                <i class="fab fa-google-plus-g fa-fw fa-1x"></i></button>
+                            <button type="button" class="btn btn-dark btnSocial rounded-0 my-2 btn-md">
+                                <i class="fab fa-facebook-f fa-fw fa-1x" aria-hidden="true"></i></button>  
+                         </div>
+                         <div class="form-group text-center">
+                            <small id="emailHelp" class="form-text text-dark">¿Aún no tienes una cuenta? <a href="">Regístrate</a></small>
+                            <small id="emailHelp" class="form-text text-dark">Recuerda que al registrarte aceptas nuestra <a href="#">política de privacidad</a> y <a href="#">términos de servicio</a></small> 
+                         </div>     
+                       </form>
+                  </div>       
+                </div>
+              </div>
+            </div>
+        <!--Modal Sign in - Activated by "Registrate" in NavBar and "Crear mi Tablero" in Landing Page and phHmBsns Container (AKA "Administra" in navBar-->
+            <div class="modal fade inxFrnt" id="phRegMdl" tabindex="-1" role="dialog" aria-labelledby="phRegMdl" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content bgrndModal">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="phRegMdl">Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">  
+                      <form>
+                          <div class="form-group d-flex">
+                            <i class="fas fa-user fa-sm my-auto text-dark"></i><input type="text" class="ml-2 form-control fldsMdl" id="phUsrNm" placeholder="Crea un nombre de usuario">
+                            <!---Activated by condition---->  
+                                <!--<small class="form-text text-danger">¡Ouch! El nombre de usuario no está disponible <i class="fa fa-frown-o fa-1x text-danger" aria-hidden="true"></i></small>
+                                <small class="form-text text-info">¡El nombre de usuario está disponible! <i class="fa fa-child fa-1x text-info" aria-hidden="true"></i></small>-->
+                          </div>
+                          <div class="form-group d-flex">
+                            <i class="fas fa-envelope fa-sm my-auto text-dark"></i><input type="email" class="ml-2 form-control fldsMdl" id="phMail" aria-describedby="emailHelp" placeholder="Ingresa tu correo electrónico">
+                          </div>   
+                          <div class="form-group">
+                            <small id="emailHelp" class="mx-auto form-text text-dark ml-1">No te apures, jamás compartiremos tu correo con terceros.<i class="fas fa-shield-alt fa-1x text-dark" aria-hidden="true"></i> </small>  
+                          </div>
+                          <div class="form-group d-flex">
+                            <i class="fas fa-key fa-sm my-auto text-dark"></i><input type="password" class="ml-2 form-control fldsMdl" id="phPwd" placeholder="Crea una contraseña">
+                          </div>
+                          <div class="form-group d-flex">
+                            <i class="fas fa-lock fa-sm my-auto text-dark"></i><input type="password" class="ml-2 form-control fldsMdl" id="phPwdConfr" placeholder="Repite la contraseña">
+                            <!---Activated by condition---->    
+                                 <!--<small class="form-text text-danger">¡Oops! La contraseña no coincide <i class="fa fa-ban fa-1x text-danger" aria-hidden="true"></i></small>-->
+                          </div>
+                          <div class="form-check text-dark">
+                            <small><label class="text-dark" >
+                              <input type="checkbox">
+                              Mantener la sesión iniciada
+                            </label></small> 
+                          </div> 
+                          <div class="form-group text-center">
+                              <button type="button" class="btn btnMdlEntr btn-lg font-weight-bold">Entrar</button>
+                          </div>
+                          
+                          <div class="form-group text-center">
+                            <p class="form-text text-dark">O bien, regístrate con...</p>  
+                            <button type="button" class="btn btn-dark btnSocial rounded-0 my-2">  
+                                <i class="fab fa-google-plus-g fa-fw fa-1x"></i></button>
+                            <button type="button" class="btn btn-dark btnSocial rounded-0 my-2 btn-md">
+                                <i class="fab fa-facebook-f fa-fw fa-1x" aria-hidden="true"></i></button>  
+                         </div>
+                         <div class="form-group text-center"> 
+                          <small id="emailHelp" class="form-text text-dark">Recuerda que al registrarte aceptas nuestra <a href="#">política de privacidad</a> y <a href="#">términos de servicio</a></small>
+                        <small id="emailHelp" class="form-text text-dark">¿Ya tienes una cuenta? <a href="">Inicia Sesión</a></small>
+                          </div>     
+                       </form>
+                  </div>       
+                </div>
+              </div>
+            </div>
+        <!------->
+
+        <!--Main Container-->
+            <!--phHm Container - Landing page -->
+                <div class="container-fluid phHm">
+                    <div class="container">
+                    <div class="row rowh align-items-center justify-content-center animatedParent"> 
+                        <!--Responsive for sm devices-->
+                          <div class="d-sm-block d-md-none col-sm-12">	
+                              <p class="h2 mt-1 font-weight-bold animated fadeInDownShort text-center">Todo lo que necesitas está aquí.</p>
+                              <p class="text-center pt-3"><button class= "btn btn-md btn-info rounded font-weight-bold btnHm animated fadeInDownShort" data-toggle="modal" data-target="#phRegMdl">Entrar</button></p>
+                          </div>
+                          <!--Responsive for >md devices-->
+                          <div class="col-sm-8 col-md-5 col-lg-4 col-xl-3 offset-md-3 d-none d-md-block">	  
+                                <p class="h1 mt-1 font-weight-bold animated fadeInDownShort">Todo lo que necesitas está aquí.</p>
+                                <p class="h5 font-weight-light animated fadeInDownShort pt-2">Bueno, seremos sinceros, lo único que no necesitas es tu tarjeta de crédito.</p>
+                                <p class="pt-3"><button class= "btn btn-lg btn-info rounded font-weight-bold btnHm animated fadeInDownShort" data-toggle="modal" data-target="#phRegMdl">Entrar</button></p>
+                                <p class="pt-4"><a href="#navDscvr"><i class="fas fa-caret-down fa-fw fa-3x phHmAncr1 animated fadeInDownShort"></i></a></p>
+                        </div>
+                    </div>
+                    </div>    
+                </div>
+            <!------->
+            <!--phHmDscvr Container - "¿Festi?" in NavBar-->
+                <div class="container-fluid phHmDscvr" id="navDscvr">
+                    <div href="#navDscvr" class="container-fluid">
+                        <div class="row rowh align-items-center justify-content-center">
+                            <!--Responsive for sm devices-->
+                            <div class="col d-xl-none d-sm-block animatedParent">
+                                <div class="card mx-auto bgrndPst indxFrnt-1 animated fadeInDownShort" style="width:23rem;">
+                                <img class="card-img-top" src="img/discover3.jpeg" alt="Card image cap">     
+                                <div class="card-body">                
+                                    <h4 class="card-title col-12 pt-3 font-weight-bold text-left bgrndPst">Phestee es tan fantástico que lo querrás usar todos los días.</h4>
+                                    <p class="card-text col-12 text-justify text-wrap">Estamos convencidos de que existe una forma más fácil para encontrar lo que sea, en cualquier lugar; no importa si vas a organizar una fiesta o si tu mascota quiere un paseo por el parque. Todos estamos aquí para darnos la mano. </p>
+                                  <div class="row">
+                                    <div class="col-12 text-right">
+                                        <div class="container">
+                                            <i class="fa fa-hand-paper-o fa-1x fa-fw icn" title="Levanta la mano" aria-hidden="true"></i>
+                                            <i class="fa fa-heart ml-3 fa-1x icnHrt" title="Loooved it"  aria-hidden="true"></i>
+                                            <i class="fa fa-share-square-o ml-3 fa-1x fa-fw icn" title="Compártelo" aria-hidden="true"></i>
+                                            <i class="fa fa-retweet ml-3 fa-1x fa-fw icn" title="Repost"  aria-hidden="true"></i>
+                                            <i class="fa fa-cog fa-spin fa-fw ml-3 fa-1x icn" title="Ajusta" aria-hidden="true"></i>
+                                     </div>
+                                    </div>
+                                   </div>  
+                                  </div>
+                                </div>    
+                              </div>
+                            <!--Responsive for >md devices-->
+                            <div class="col pt-4 d-none d-xl-block">
+                                <div class="row animatedParent">
+                                    <div class="col-2 mt-2">
+                                    <i class="fab fa-superpowers fa-4x fa-fw icnDscvr animated rotateInDownLeft" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col"></div>
+                                    <div class="col-3 mt-3">
+                                    <i class="fas fa-futbol fa-5x fa-fw icnDscvr animated shakeUp" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col"></div>
+                                    <div class="col-2 mt-3">
+                                    <i class="fas fa-paint-brush fa-3x fa-fw icnDscvr animated rotateInDownRight" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1">
+                                    <i class="fas fa-plane fa-2x fa-fw icnDscvr animated shake" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-hand-peace fa-3x fa-fw icnDscvr animated bounceIn" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-4 mt-1">
+                                    <i class="fas fa-bicycle fa-5x fa-fw icnDscvr animated flip" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-4">
+                                    <i class="fas fa-birthday-cake fa-5x fa-fw icnDscvr animated shake" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-4">
+                                    <i class="fas fa-hashtag fa-5x fa-fw icnDscvr animated shakeUp" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-1"></div>
+                                    <div class="col-4 mt-1">
+                                    <i class="fas fa-comments fa-4x fa-fw icnDscvr animated fadeInRight" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3 mt-1">
+                                    <i class="fas fa-bullhorn fa-5x fa-fw icnDscvr animated bounceIn" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1">
+                                    <i class="fas fa-bed fa-3x fa-fw icnDscvr animated rotateIn" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-book fa-4x fa-fw icnDscvr animated wobble" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-1"></div>
+                                    <div class="col-2">
+                                    <i class="far fa-calendar fa-3x fa-fw icnDscvr animated wobble" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1 mt-4">
+                                    <i class="fas fa-cube fa-2x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-3">
+                                    <i class="fas fa-headphones fa-5x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-2 mt-3">
+                                    <i class="fas fa-taxi fa-2x fa-fw icnDscvr animated fadeInLeft" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-4 mt-5">
+                                    <i class="fas fa-rocket fa-3x fa-fw icnDscvr animated rotateIn" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-3">
+                                    <i class="fas fa-bell fa-3x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3 mt-5">
+                                    <i class="fab fa-grav fa-4x fa-fw icnDscvr animated rollIn" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3">
+                                    <i class="fas fa-paw fa-5x fa-fw icnDscvr animated lightSpeedInRight" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-2">
+                                    <i class="fas fa-graduation-cap fa-4x fa-fw icnDscvr animated rollIn" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3 mt-3">
+                                    <i class="far fa-heart fa-5x fa-fw icnDscvr animated fadeInLeft" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-bookmark fa-3x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2">
+                                    <i class="fas fa-child fa-4x fa-fw icnDscvr animated shakeUp" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3 mt-5">
+                                    <i class="fas fa-comment-alt fa-5x fa-fw icnDscvr animated rotateInUpRight" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                            </div>
+                            <div class="col-3 pt-4 d-none d-xl-block animatedParent">
+                                <div class="card mx-auto bgrndPst indxFrnt-1 animated fadeInDownShort">
+                                <img class="card-img-top" src="img/discover3.jpeg" alt="Card image cap">     
+                                <div class="card-body">
+                                    <h4 class="card-title col-12 font-weight-bold text-left bgrndPst">Phestee es tan fantástico que lo querrás usar todos los días.</h4>
+                                    <p class="card-text col-12 text-justify text-wrap">Estamos convencidos de que existe una forma más fácil para encontrar lo que sea, en cualquier lugar; no importa si vas a organizar una fiesta o si tu mascota quiere un paseo por el parque. Todos estamos aquí para darnos la mano. </p>
+                                  <div class="row">
+                                    <div class="col-12 align-items">
+                                        <div class="container d-flex justify-content-around">
+                                            <i class="fas fa-hand-paper fa-1x fa-fw icnRepst" title="Levanta la mano" aria-hidden="true"></i>
+                                            <i class="fas fa-heart fa-1x icnHrt" title="Loooved it"  aria-hidden="true"></i>
+                                            <i class="fas fa-share-square fa-1x fa-fw icnRepst" title="Compártelo" aria-hidden="true"></i>
+                                            <i class="fas fa-retweet fa-1x fa-fw icnRepst" title="Repost"  aria-hidden="true"></i>
+                                            
+                                     </div>
+                                    </div>
+                                   </div>  
+                                  </div>
+                                </div>    
+                              </div>
+                            <div class="col pt-4 d-none d-xl-block">
+                                <div class="row animatedParent">
+                                    <div class="col-1"></div>
+                                    <div class="col-4 mt-1">
+                                    <i class="fas fa-bicycle fa-4x fa-fw icnDscvr animated flip" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-4">
+                                    <i class="far fa-hand-paper fa-5x fa-fw icnDscvr animated shakeUp" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3">
+                                    <i class="fas fa-heart fa-5x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-1"></div>
+                                    <div class="col-2">
+                                    <i class="fas fa-at fa-3x fa-fw icnDscvr animated wobble" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1 mt-4">
+                                    <i class="fas fa-retweet fa-4x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3"></div>
+                                    <div class="col-3">
+                                    <i class="fas fa-headphones fa-3x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-rocket fa-3x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-3">
+                                    <i class="fas fa-bell fa-3x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fab fa-grav fa-4x fa-fw icnDscvr animated rollIn" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3 text-center mt-5">
+                                    <i class="fas fa-compass fa-3x fa-fw icnDscvr animated wobble" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3">
+                                    <i class="far fa-hand-peace fa-4x fa-fw icnDscvr animated flip" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-3 mt-5">
+                                    <i class="fab fa-superpowers fa-3x fa-fw icnDscvr animated rotateInDownLeft" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-3 mt-3">
+                                    <i class="fas fa-leaf fa-5x fa-fw icnDscvr animated shakeUp" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-lemon fa-3x fa-fw icnDscvr animated rotateInDownRight" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1">
+                                    <i class="fas fa-plane fa-2x fa-fw icnDscvr animated swing" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-hashtag fa-3x fa-fw icnDscvr animated bounceIn" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-1"></div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-trophy fa-3x fa-fw icnDscvr animated fadeInDown" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2">
+                                    <i class="far fa-comment fa-5x fa-fw icnDscvr animated flip" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-birthday-cake fa-2x fa-fw icnDscvr animated fadeInUp" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-ticket-alt fa-5x fa-fw icnDscvr animated shakeUp" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                                <div class="row animatedParent">
+                                    <div class="col-1"></div>
+                                    <div class="col-1"></div>
+                                    <div class="col-2">
+                                    <i class="fas fa-book fa-4x fa-fw icnDscvr animated fadeInUp" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-2 mt-5">
+                                    <a href="#navRsHnd"><i class="fas fa-caret-down fa-3x fa-fw phHmAncr animated swing" aria-hidden="true" title="¿Cómo funciona?"></i></a>
+                                    </div>
+                                    <div class="col-2 mt-5">
+                                    <i class="fas fa-globe fa-5x fa-fw icnDscvr animated fadeInDown" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-2">
+                                    <i class="fas fa-gamepad fa-5x fa-fw icnDscvr animated flip" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                     </div>
+                </div>
+            <!------->
+            <!--phHmRsHnd Container - "¿Cómo funciona?" in NavBar-->
+                <div class="container-fluid phHmRsHnd" id="navRsHnd">
+                    <div class="container">
+                        <div class="row rowh align-items-center">
+                            <div class="col-3">
+                                <p class="h1 font-weight-bold phHmRsHndTxt mt-5 font-weight-bold">Deja de buscar y déjate encontrar.</p>
+                                <p class="h5 phHmRsHndTxt pt-3 text-left">Logramos crear la plataforma ideal para que todo el mundo pueda ofrecer sus servicios en un santiamén. Tú solo publicas lo que necesitas, ellos levantan la mano, y listo.<br> 
+                                Lo demás sucede de forma natural.</p> 
+                                <p class="pt-4"><a href="#NavBrd"><i class="fa fa-caret-down fa-fw fa-3x phHmAncr"></i></a></p>
+                            </div>
+                            <div class="col-9 rowhlf ovrFlw">
+                                <div class="card-columns animatedParent">
+                                  <div class="card animated fadeIn bgrndPst slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">¿Alguien que quiera limpiar mi casa?<br>#cruda</h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 09:30 am</small></p> 
+                                    </div>
+                                    <img class="card-img-top" src="img/cleanhouse.jpeg">
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="card animated fadeIn bgrndPst delay-250 slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">Necesito un corte de cabello<br></h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 09:55 am</small></p> 
+                                    </div>
+                                    <img class="card-img-top" src="img/cortedecabello2.jpeg">
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="card animated fadeIn bgrndPst delay-500 slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">Urge un guardaropa nuevo<br>#estrenando</h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 3:55 pm</small></p> 
+                                    </div>
+                                    <img class="card-img-top" src="img/emHm.gif">
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>     
+                                <div class="card animated fadeIn bgrndPst delay-750 slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">Mi sobrino cumple años el viernes<br>#metocaorganizar #buentio</h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 8:15 pm</small></p> 
+                                    </div>
+                                    <img class="card-img-top" src="img/Dipper-hm.gif">
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>     
+                                <div class="card animated fadeIn bgrndPst delay-1000 slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">Tenemos antojo de  comida italiana<br></h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 10:25 pm</small></p> 
+                                    </div>
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="card animated fadeIn bgrndPst delay-1250 slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">¡Me hermana se comprometió!<br>#nuncaestarde</h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 11:30 pm</small></p> 
+                                    </div>
+                                    <img class="card-img-top" src="img/engagement.jpeg">
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="card animated fadeIn bgrndPst delay-1500 slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">¿Alguien que lave mi ropa?<br></h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 5:40 pm</small></p> 
+                                    </div>
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>    
+                                <div class="card animated fadeIn bgrndPst delay-1750 slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">Mi carro está sucio<br></h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 1:25 pm</small></p> 
+                                    </div>
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="card animated fadeIn bgrndPst delay-1250 slower">
+                                    <div class="card-body">
+                                      <h6 class="card-title font-weight-bold">¿Dónde puedo lavar mi ropa?<br></h6>
+                                      <p class="card-text"><small class="text-muted">Hoy, a las 11:30 pm</small></p> 
+                                    </div>
+                                    <img class="card-img-top" src="img/discover.jpeg">
+                                    <div class="card-footer bgrndPst">
+                                       <div class="container-fluid d-flex justify-content-around">
+                                          <i class="fas fa-hand-paper icn"></i>
+                                          <i class="fas fa-heart icnHrt"></i>
+                                          <i class="fa fa-retweet  icn"></i>
+                                          <i class="fas fa-share icn"></i>
+                                          <i class="fa fa-cog icn"></i>
+                                       </div>
+                                    </div>
+                                </div>
+                              </div>   
+                           </div>
+                    </div>
+                 </div>
+                </div>
+            <!------->
+            <!--phHmBrd Container - "Tableros" in NavBar-->
+                <div class="container-fluid phHmBrd" id="NavBrd">
+                    <div class="container">
+                        <div class="row rowh align-items-center justify-content-around">
+                            <div class="col-4">
+                                <div class="card animatedParent bgrndTblro">
+                                  <div class="card-body animated fadeInLeft bgrndPhotoTblr">
+                                    <h5 class="card-title">Esteban Puerta</h5>
+                                    <i class="fas fa-star icnStr" title="rate" aria-hidden="true"></i>
+                                    <i class="fas fa-star icnStr" title="rate" aria-hidden="true"></i>
+                                    <i class="fas fa-star icnStr" title="rate" aria-hidden="true"></i>
+                                    <i class="fas fa-star icnStr" title="rate" aria-hidden="true"></i>
+                                    <i class="fas fa-star icnStr" title="rate" aria-hidden="true"></i>   
+                                    <p><i class="fas fa-pen-square text-center icnTblro" title="Editar Perfil" aria-hidden="true"></i> Freelancer </p>
+                                    <span class="fa-layers fa-fw"> 
+                                    <i class="fas fa-certificate text-primary text-center" title="Perfil certificado" aria-hidden="true"></i>
+                                    <i class="fa fa-check text-center" data-fa-transform="shrink-7"></i>    
+                                    </span>  
+                                  </div>
+                                  <div class="card-header animated fadeInLeft text-center bgrndTblro d-flex">
+                                    <div class="mx-auto">
+                                        <small><h2 class="font-weight-bold">45</h2></small>
+                                        <small><p>Clientes</p></small>
+                                     </div>
+                                     <div class="mx-auto">
+                                        <small><h2 class="font-weight-bold">155</h2></small>
+                                        <small><p>Seguidores</p></small>
+                                     </div>
+                                      <div class="mx-auto">
+                                        <small><h2 class="font-weight-bold">122</h2></small>
+                                        <small><p>Siguiendo</p></small>
+                                     </div>
+                                  </div>     
+                                  <div class="card-header animated fadeInLeft bgrndTblro d-flex">
+                                    <div class="mx-auto"><p><i class="fas fa-pen-square icnTblro" title="Edita tus Servicios" aria-hidden="true"></i> Servicios</p></div>
+                                    <div class="mx-auto"><p><i class="fas fa-plus-square icnTblro" title="Agrega más Negocios" aria-hidden="true"></i>  Negocios</p></div>
+                                    <div class="mx-auto"><p><i class="fas fa-chart-area icnTblro" title="Checa tu Performance" aria-hidden="true"></i>  Stats</p> </div>
+                                  </div>
+                                  <div class="card-header animated fadeInUpShort text-center delay-1000">
+                                    <i class="fa fa-caret-left icnTblro mx-auto" aria-hidden="true"></i>  
+                                    <small class="mx-auto"> FREELANCER</small>
+                                    <i class="fa fa-caret-right icnTblro mx-auto" aria-hidden="true"></i>   
+                                  </div>    
+                                  <ul class="list-group animatedParent list-group-flush ovrFlw">
+                                    <li class="list-group-item animated fadeInUpShort delay-1000 bgrndTblro"> Desarrollo y diseño Web
+                                    <p class="card-text ml-1 text-truncate" style="max-width: auto;"><small class="text-muted">#necesito,#página,#web,#diseñoweb,#negocioweb,#web</small></p>
+                                    </li> 
+                                    <li class="list-group-item animated fadeInUpShort delay-1250 bgrndTblro">Diseño gráfico <p class="card-text ml-1 text-truncate" style="max-width:auto;"><small class="text-muted">#necesito,#tarjetas,#presentación,#volantes,#diseñador,#gráfico</small></p></li>
+                                    <li class="list-group-item animated fadeInUpShort delay-1500 bgrndTblro">Edición de Video <p class="card-text ml-1 text-truncate" style="max-width: auto;"><small class="text-muted">#video,#editar,#grabación,#grabarevento,#grabarboda</small></p></li>                         
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p class="h1 font-weight-bold phHmBrdTxt mt-5 font-weight-bold">Tu tablero es la parte más importante de Phestee.</p>
+                                <p class="h5 text-justify phHmBrdTxt pt-3 text-justify">Es aquí donde tu talento no tiene límites. Agrega eso que sabes hacer y que tus amigos te han reconocido, puede ser tu oficio, tu profesión, un producto o cualquier emprendimiento que tengas en mente. La gente que necesita de ti está justo al otro lado de la pantalla.
+                                <p class="pt-4"><a href="#navBsns"><i class="fa fa-caret-down fa-fw fa-3x phHmAncr" title="Negocios"  aria-hidden="true"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!------->
+            <!--phHmBsns Container - "Administra" in NavBar-->
+                <div class="container-fluid phHmBsns" id="navBsns">
+                    <div class="container">
+                        <div class="row rowh align-items-center justify-content-around">
+                            <div class="col-12 mt-5 rounded bgrndIcnHmLstPg">
+                              <div class="row rowhbgrnd align-items-center justify-content-around animatedParent">
+                                <div class="col-2 text-center font-weight-bold animated growIn"><i class="fab fa-grav fa-fw fa-5x icnDscvrBlue mt-3" aria-hidden="true"></i><p class="h5 font-weight-bold text-light text-center mt-2">Clientes</p>
+                                </div>
+                                <div class="col-2 text-center font-weight-bold animated growIn delay-250"><i class="fas fa-comment-alt fa-fw fa-5x icnDscvrRed mt-3" aria-hidden="true"></i><p class="h5 font-weight-bold text-light text-center mt-2">Publicaciones</p>
+                                </div>
+                                <div class="col-2 text-center font-weight-bold animated growIn delay-500"><i class="fab fa-connectdevelop fa-fw fa-5x icnDscvrPrpl mt-3" aria-hidden="true"></i><p class="h5 font-weight-bold text-light text-center mt-2">Negocios</p>
+                                </div>
+                                <div class="col-2 text-center font-weight-bold animated growIn delay-750"><i class="fas fa-check-circle fa-fw fa-5x icnDscvrGrn mt-3" aria-hidden="true"></i><p class="h5 font-weight-bold text-light text-center mt-2">Acuerdos</p>
+                                </div>
+                                <div class="col-2 text-center font-weight-bold animated growIn delay-1000"><i class="fas fa-bullhorn fa-fw fa-5x icnDscvrYllw mt-3" aria-hidden="true"></i><p class="h5 font-weight-bold text-light text-center mt-2">Anuncios</p>
+                                </div>      
+                              </div>
+                            </div>
+                            <div class="col-6 rounded text-center bgrndIcnHmLstPg1">
+                                <p class="h1 font-weight-bold">En serio, Phestee es para todos.</p>
+                                <p class="h5 font-weight-light pt-2">Si como nosotros, tú también piensas que las búsquedas pertenecen al pasado, da click abajo. ¡Nos vemos dentro!</p>
+                                <p class="pt-5"><button class= "btn btn-lg btn-info rounded font-weight-bold btnHm" data-toggle="modal" data-target="#phRegMdl">Crear mi Tablero</button></p>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            <!------->
+        <!---End of Main Container---->
+		<!--Footer-->
+		<div class="hmFtr">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-md-6">
+								<form>
+								  <div class="form">
+									<div class="col-6">
+									  <label class="mr-sm-2" for="inlineFormCustomSelect">Me interesa</label>
+									  <select class="form-control form-control-sm custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+									  <option selected>Recibir noticias</option>
+									  <option value="2">Invertir en el proyecto</option>
+									  <option value="3">Trabajar en el proyecto</option>
+									  </select>
+                                      <input type="text" class="form-control form-control-sm mb-2 mr-sm-2 mb-sm-0 mt-2" id="inlineFormInputName2" placeholder="Ingresa tu e-mail">
+                                      <button type="submit" class="btn btn-sm btnSnd mt-2">Enviar</button>
+                                    </div>
+								  </div>
+								</form>
+						</div>
+						<div class="col-md-2">
+							<h6>Producto</h6>
+							<ul class="list-unstyled">
+								<li><a href="#phLoginMdl" data-toggle="modal" data-target="#phLoginMdl">Entrar</a></li>
+                                <li><a href="">Features</a></li>
+								<li><a href="">Soluciones</a></li>
+								<li><a href="">Roadmap</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2">
+							<h6>Equipo</h6>
+							<ul class="list-unstyled">
+								<li><a href="">Acerca de</a></li>
+								<li><a href="">Highlights</a></li>
+								<li><a href="">Inversionistas</a></li>
+								<li><a href="">Partners</a></li>
+							</ul>
+						</div>
+						<div class="col-md-2">
+							<h6>Contacto</h6>
+							<ul class="list-unstyled">
+								<li><a href="">Puestos</a></li>
+								<li><a href="">Contacto</a></li>
+								<li><a href="">FAQ</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</div>
+        <!------->
+        <!--Closure-->
+			<div class="main-footer text-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 offset-md-3">
+						&copy; 2017 Phestee.<br>
+						Todos los derechos reservados.<br>
+						Puesto en marcha en Guadalajara, Jalisco, México.
+						</div>
+					</div>
+				</div>	
+			</div>	
+        <!------->
+		<!--Scripts-->
+            <script src="js/jquery-3.2.1.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/typed.js"></script>
+            <script src="js/css3-animate-it.js"></script>
+
+        
+        <!------->
+	</body>
+</html>
+<!--

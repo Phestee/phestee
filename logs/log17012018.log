@@ -1,0 +1,806 @@
+[ 17-Enero-2018  10:14:57 ] -----------------------------------------------------
+[ 17-Enero-2018  10:14:57 ] M001 - GET "/login"
+[ 17-Enero-2018  10:14:57 ] El id user no tiene ningún id
+[ 17-Enero-2018  10:15:11 ] -----------------------------------------------------
+[ 17-Enero-2018  10:15:11 ] M001 - POST "/validation"
+[ 17-Enero-2018  10:15:11 ] Email: mike@yahoo.com
+[ 17-Enero-2018  10:15:11 ] Password: password
+[ 17-Enero-2018  10:15:11 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  10:15:11 ] ID USER: 5a51680e6b8ba11138df4ce9
+[ 17-Enero-2018  10:15:11 ] LOADBUSINESS: 0
+[ 17-Enero-2018  10:15:12 ] -----------------------------------------------------
+[ 17-Enero-2018  10:15:12 ] M001 GET "/ principal"
+[ 17-Enero-2018  10:15:13 ] -----------------------------------------------------
+[ 17-Enero-2018  10:15:13 ] M001 GET "/services"
+[ 17-Enero-2018  10:15:13 ] Cargará los datos por primera vez
+[ 17-Enero-2018  10:15:13 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  10:19:07 ] -----------------------------------------------------
+[ 17-Enero-2018  10:19:07 ] M001 - POST "/addService"
+[ 17-Enero-2018  10:19:07 ] Objecto a enviar: {"type":"service","name":"servicio1","cost":"234","description":"descripcion prueba","homeservice":true,"isMovilOffering":false,"hshtgs":"#algo #ejemplo #deutsch"}
+[ 17-Enero-2018  10:19:07 ] Error: CastError: Cast to embedded failed for value "{ _id: \n   { [Function: ObjectID]\n     index: 6384702,\n     createPk: [Function: createPk],\n     createFromTime: [Function: createFromTime],\n     createFromHexString: [Function: createFromHexString],\n     isValid: [Function: isValid],\n     ObjectID: [Circular],\n     ObjectId: [Circular] },\n  type: \'service\',\n  name: \'servicio1\',\n  cost: \'234\',\n  description: \'descripcion prueba\',\n  homeservice: true,\n  isMovilOffering: false,\n  hshtgs: \'#algo #ejemplo #deutsch\' }" at path "services"
+[ 17-Enero-2018  10:33:49 ] -----------------------------------------------------
+[ 17-Enero-2018  10:33:49 ] M001 GET "/services"
+[ 17-Enero-2018  10:33:49 ] Cargará los datos por primera vez
+[ 17-Enero-2018  10:33:49 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  10:34:30 ] -----------------------------------------------------
+[ 17-Enero-2018  10:34:30 ] M001 - POST "/addService"
+[ 17-Enero-2018  10:34:30 ] Objecto a enviar: {"type":"service","name":"servicio1","cost":"123","description":"descripcion prueba","homeservice":false,"isMovilOffering":true,"hshtgs":"#hola #diamante #deutsch"}
+[ 17-Enero-2018  10:34:30 ] Error: CastError: Cast to embedded failed for value "{ _id: \n   { [Function: ObjectID]\n     index: 11560363,\n     createPk: [Function: createPk],\n     createFromTime: [Function: createFromTime],\n     createFromHexString: [Function: createFromHexString],\n     isValid: [Function: isValid],\n     ObjectID: [Circular],\n     ObjectId: [Circular] },\n  type: \'service\',\n  name: \'servicio1\',\n  cost: \'123\',\n  description: \'descripcion prueba\',\n  homeservice: false,\n  isMovilOffering: true,\n  hshtgs: \'#hola #diamante #deutsch\' }" at path "services"
+[ 17-Enero-2018  10:35:12 ] -----------------------------------------------------
+[ 17-Enero-2018  10:35:12 ] M001 - POST "/addService"
+[ 17-Enero-2018  10:35:12 ] Objecto a enviar: {"type":"service","name":"servicio1","cost":"123","description":"descripcion prueba","homeservice":false,"isMovilOffering":true,"hshtgs":"#hola #diamante #deutsch"}
+[ 17-Enero-2018  10:35:12 ] Error: CastError: Cast to embedded failed for value "{ _id: \n   { [Function: ObjectID]\n     index: 11560363,\n     createPk: [Function: createPk],\n     createFromTime: [Function: createFromTime],\n     createFromHexString: [Function: createFromHexString],\n     isValid: [Function: isValid],\n     ObjectID: [Circular],\n     ObjectId: [Circular] },\n  type: \'service\',\n  name: \'servicio1\',\n  cost: \'123\',\n  description: \'descripcion prueba\',\n  homeservice: false,\n  isMovilOffering: true,\n  hshtgs: \'#hola #diamante #deutsch\' }" at path "services"
+[ 17-Enero-2018  10:36:56 ] -----------------------------------------------------
+[ 17-Enero-2018  10:36:56 ] M001 GET "/signout"
+[ 17-Enero-2018  10:36:56 ] -----------------------------------------------------
+[ 17-Enero-2018  10:36:56 ] M001 - GET "/login"
+[ 17-Enero-2018  10:36:56 ] El id user no tiene ningún id
+[ 17-Enero-2018  10:48:55 ] -----------------------------------------------------
+[ 17-Enero-2018  10:48:55 ] M001 - POST "/validation"
+[ 17-Enero-2018  10:48:55 ] Email: mike@yahoo.com
+[ 17-Enero-2018  10:48:55 ] Password: password
+[ 17-Enero-2018  10:48:56 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  10:48:56 ] ID USER: 5a51680e6b8ba11138df4ce9
+[ 17-Enero-2018  10:48:56 ] LOADBUSINESS: 0
+[ 17-Enero-2018  10:48:56 ] -----------------------------------------------------
+[ 17-Enero-2018  10:48:56 ] M001 GET "/ principal"
+[ 17-Enero-2018  10:49:14 ] -----------------------------------------------------
+[ 17-Enero-2018  10:49:14 ] M001 GET "/services"
+[ 17-Enero-2018  10:49:14 ] Cargará los datos por primera vez
+[ 17-Enero-2018  10:49:14 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  10:49:37 ] -----------------------------------------------------
+[ 17-Enero-2018  10:49:37 ] M001 - POST "/addService"
+[ 17-Enero-2018  10:49:37 ] idservice: function ObjectID(id) {
+  // Duck-typing to support ObjectId from different npm packages
+  if(id instanceof ObjectID) return id;
+  if(!(this instanceof ObjectID)) return new ObjectID(id);
+
+  this._bsontype = 'ObjectID';
+
+  // The most common usecase (blank id, new objectId instance)
+  if(id == null || typeof id == 'number') {
+    // Generate a new id
+    this.id = this.generate(id);
+    // If we are caching the hex string
+    if(ObjectID.cacheHexString) this.__id = this.toString('hex');
+    // Return the object
+    return;
+  }
+
+  // Check if the passed in id is valid
+  var valid = ObjectID.isValid(id);
+
+  // Throw an error if it's not a valid setup
+  if(!valid && id != null){
+    throw new Error("Argument passed in must be a single String of 12 bytes or a string of 24 hex characters");
+  } else if(valid && typeof id == 'string' && id.length == 24 && hasBufferType) {
+    return new ObjectID(new Buffer(id, 'hex'));
+  } else if(valid && typeof id == 'string' && id.length == 24) {
+    return ObjectID.createFromHexString(id);
+  } else if(id != null && id.length === 12) {
+    // assume 12 byte string
+    this.id = id;
+  } else if(id != null && id.toHexString) {
+    // Duck-typing to support ObjectId from different npm packages
+    return id;
+  } else {
+    throw new Error("Argument passed in must be a single String of 12 bytes or a string of 24 hex characters");
+  }
+
+  if(ObjectID.cacheHexString) this.__id = this.toString('hex');
+}
+[ 17-Enero-2018  10:49:37 ] Objecto a enviar: {"type":"service","name":"rteregrgsrg","cost":"24","description":"sdfasfawegfaer","homeservice":true,"isMovilOffering":false,"hshtgs":"#sfwefwf #sdfssdf #SDFQFQWE"}
+[ 17-Enero-2018  10:49:37 ] Error: CastError: Cast to embedded failed for value "{ _id: \n   { [Function: ObjectID]\n     index: 3506471,\n     createPk: [Function: createPk],\n     createFromTime: [Function: createFromTime],\n     createFromHexString: [Function: createFromHexString],\n     isValid: [Function: isValid],\n     ObjectID: [Circular],\n     ObjectId: [Circular] },\n  type: \'service\',\n  name: \'rteregrgsrg\',\n  cost: \'24\',\n  description: \'sdfasfawegfaer\',\n  homeservice: true,\n  isMovilOffering: false,\n  hshtgs: \'#sfwefwf #sdfssdf #SDFQFQWE\' }" at path "services"
+[ 17-Enero-2018  10:55:18 ] -----------------------------------------------------
+[ 17-Enero-2018  10:55:18 ] M001 GET "/services"
+[ 17-Enero-2018  10:55:18 ] Cargará los datos por primera vez
+[ 17-Enero-2018  10:55:18 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  10:56:10 ] -----------------------------------------------------
+[ 17-Enero-2018  10:56:10 ] M001 - POST "/addService"
+[ 17-Enero-2018  10:56:10 ] idservice: 5a5f802aace6cd2b5cbb80ac
+[ 17-Enero-2018  10:56:10 ] Objecto a enviar: {"type":"product","name":"fsdsff","cost":"456","description":"mikeaksksjasdjdjkld","homeservice":false,"isMovilOffering":true,"hshtgs":"#mike #phestee #project #something"}
+[ 17-Enero-2018  10:56:10 ] Error: CastError: Cast to embedded failed for value "{ _id: \n   { [Function: ObjectID]\n     index: 12288172,\n     createPk: [Function: createPk],\n     createFromTime: [Function: createFromTime],\n     createFromHexString: [Function: createFromHexString],\n     isValid: [Function: isValid],\n     ObjectID: [Circular],\n     ObjectId: [Circular] },\n  type: \'product\',\n  name: \'fsdsff\',\n  cost: \'456\',\n  description: \'mikeaksksjasdjdjkld\',\n  homeservice: false,\n  isMovilOffering: true,\n  hshtgs: \'#mike #phestee #project #something\' }" at path "services"
+[ 17-Enero-2018  11:13:37 ] -----------------------------------------------------
+[ 17-Enero-2018  11:13:37 ] M001 GET "/services"
+[ 17-Enero-2018  11:13:37 ] Cargará los datos por primera vez
+[ 17-Enero-2018  11:13:37 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  11:14:11 ] -----------------------------------------------------
+[ 17-Enero-2018  11:14:11 ] M001 - POST "/addService"
+[ 17-Enero-2018  11:14:11 ] idbusiness: 5a51680e6b8ba11138df4ce8
+[ 17-Enero-2018  11:14:11 ] Objecto a enviar: {"type":"service","name":"wjkehqwefjk","cost":"234","description":"awdwweqew","homeservice":false,"isMovilOffering":true,"hshtgs":"#qwdfqwqw #sdfwefw #SDFWEFWE #yhHJTRH"}
+[ 17-Enero-2018  11:14:11 ] El servicio se ha agregado con éxito
+[ 17-Enero-2018  11:14:13 ] -----------------------------------------------------
+[ 17-Enero-2018  11:14:13 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:23:08 ] M001 - GET "/"
+[ 17-Enero-2018  11:23:11 ] -----------------------------------------------------
+[ 17-Enero-2018  11:23:11 ] M001 - GET "/login"
+[ 17-Enero-2018  11:23:11 ] ID user: 5a51680e6b8ba11138df4ce9
+[ 17-Enero-2018  11:23:11 ] -----------------------------------------------------
+[ 17-Enero-2018  11:23:11 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:23:23 ] -----------------------------------------------------
+[ 17-Enero-2018  11:23:23 ] M001 - GET "/login"
+[ 17-Enero-2018  11:23:23 ] ID user: 5a51680e6b8ba11138df4ce9
+[ 17-Enero-2018  11:23:23 ] -----------------------------------------------------
+[ 17-Enero-2018  11:23:23 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:24:11 ] M001 - GET "/"
+[ 17-Enero-2018  11:24:13 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:13 ] M001 - GET "/signup"
+[ 17-Enero-2018  11:24:16 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:16 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:24:16 ] nameusercheck: m
+[ 17-Enero-2018  11:24:16 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:16 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:24:16 ] nameusercheck: mi
+[ 17-Enero-2018  11:24:16 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:16 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:24:16 ] nameusercheck: mik
+[ 17-Enero-2018  11:24:16 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:16 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:24:16 ] nameusercheck: mike
+[ 17-Enero-2018  11:24:22 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:22 ] M001 GET "/availableemail/emailcheck"
+[ 17-Enero-2018  11:24:22 ] Emailcheck: mike@yahoo.com
+[ 17-Enero-2018  11:24:38 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:38 ] M001 POST "/users"
+[ 17-Enero-2018  11:24:38 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:24:38 ] Password: password
+[ 17-Enero-2018  11:24:38 ] Username: mike
+[ 17-Enero-2018  11:24:38 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:24:39 ] Folder del usuario: VzZtJF3jqKk9xfQISj5wBUKklnyoTIjIAvpP
+[ 17-Enero-2018  11:24:39 ] ID Negocio: 5a5f86d6ecafb22f70976342
+[ 17-Enero-2018  11:24:40 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:40 ] M001 - GET "/login"
+[ 17-Enero-2018  11:24:40 ] ID user: 5a51680e6b8ba11138df4ce9
+[ 17-Enero-2018  11:24:40 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:40 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:24:49 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:49 ] M001 - GET "/login"
+[ 17-Enero-2018  11:24:49 ] ID user: 5a51680e6b8ba11138df4ce9
+[ 17-Enero-2018  11:24:49 ] -----------------------------------------------------
+[ 17-Enero-2018  11:24:49 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:25:39 ] -----------------------------------------------------
+[ 17-Enero-2018  11:25:39 ] M001 - GET "/login"
+[ 17-Enero-2018  11:25:39 ] ID user: 5a51680e6b8ba11138df4ce9
+[ 17-Enero-2018  11:25:39 ] -----------------------------------------------------
+[ 17-Enero-2018  11:25:39 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:25:44 ] -----------------------------------------------------
+[ 17-Enero-2018  11:25:44 ] M001 - GET "/login"
+[ 17-Enero-2018  11:25:44 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:25:56 ] -----------------------------------------------------
+[ 17-Enero-2018  11:25:56 ] M001 - POST "/validation"
+[ 17-Enero-2018  11:25:56 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:25:56 ] Password: password
+[ 17-Enero-2018  11:25:57 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  11:25:57 ] ID USER: 5a5f86d7ecafb22f70976343
+[ 17-Enero-2018  11:25:57 ] LOADBUSINESS: 0
+[ 17-Enero-2018  11:25:57 ] -----------------------------------------------------
+[ 17-Enero-2018  11:25:57 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:26:01 ] -----------------------------------------------------
+[ 17-Enero-2018  11:26:01 ] M001 GET "/signout"
+[ 17-Enero-2018  11:26:01 ] -----------------------------------------------------
+[ 17-Enero-2018  11:26:01 ] M001 - GET "/login"
+[ 17-Enero-2018  11:26:01 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:26:14 ] -----------------------------------------------------
+[ 17-Enero-2018  11:26:14 ] M001 - GET "/login"
+[ 17-Enero-2018  11:26:14 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:26:28 ] -----------------------------------------------------
+[ 17-Enero-2018  11:26:28 ] M001 - POST "/validation"
+[ 17-Enero-2018  11:26:28 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:26:28 ] Password: password
+[ 17-Enero-2018  11:26:28 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  11:26:28 ] ID USER: 5a5f86d7ecafb22f70976343
+[ 17-Enero-2018  11:26:28 ] LOADBUSINESS: 0
+[ 17-Enero-2018  11:26:28 ] -----------------------------------------------------
+[ 17-Enero-2018  11:26:28 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:26:33 ] -----------------------------------------------------
+[ 17-Enero-2018  11:26:33 ] M001 GET "/services"
+[ 17-Enero-2018  11:26:33 ] Cargará los datos por primera vez
+[ 17-Enero-2018  11:26:33 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  11:27:04 ] -----------------------------------------------------
+[ 17-Enero-2018  11:27:04 ] M001 - POST "/addService"
+[ 17-Enero-2018  11:27:04 ] idbusiness: 5a5f86d6ecafb22f70976342
+[ 17-Enero-2018  11:27:04 ] Objecto a enviar: {"type":"product","name":"erklgjklsdfj","cost":"234","description":"sfjejfisafaijdfojgioajiogjsdfiojioadjio","homeservice":false,"isMovilOffering":true,"hshtgs":"#algo #Phestee #alg"}
+[ 17-Enero-2018  11:27:04 ] El servicio se ha agregado con éxito
+[ 17-Enero-2018  11:27:05 ] -----------------------------------------------------
+[ 17-Enero-2018  11:27:05 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:28:28 ] -----------------------------------------------------
+[ 17-Enero-2018  11:28:28 ] M001 GET "/signout"
+[ 17-Enero-2018  11:28:28 ] -----------------------------------------------------
+[ 17-Enero-2018  11:28:28 ] M001 - GET "/login"
+[ 17-Enero-2018  11:28:28 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:29:30 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:30 ] M001 - GET "/login"
+[ 17-Enero-2018  11:29:30 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:29:45 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:45 ] M001 - GET "/signup"
+[ 17-Enero-2018  11:29:48 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:48 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:29:48 ] nameusercheck: m
+[ 17-Enero-2018  11:29:48 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:48 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:29:48 ] nameusercheck: mi
+[ 17-Enero-2018  11:29:48 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:48 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:29:48 ] nameusercheck: mik
+[ 17-Enero-2018  11:29:48 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:48 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:29:48 ] nameusercheck: mikw
+[ 17-Enero-2018  11:29:48 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:48 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:29:48 ] nameusercheck: mikwe
+[ 17-Enero-2018  11:29:49 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:49 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:29:49 ] nameusercheck: mikw
+[ 17-Enero-2018  11:29:49 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:49 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:29:49 ] nameusercheck: mik
+[ 17-Enero-2018  11:29:49 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:49 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:29:49 ] nameusercheck: mike
+[ 17-Enero-2018  11:29:57 ] -----------------------------------------------------
+[ 17-Enero-2018  11:29:57 ] M001 GET "/availableemail/emailcheck"
+[ 17-Enero-2018  11:29:57 ] Emailcheck: mike@yahoo.com
+[ 17-Enero-2018  11:30:08 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:08 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:08 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:08 ] Password: password
+[ 17-Enero-2018  11:30:08 ] Username: mike
+[ 17-Enero-2018  11:30:08 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:09 ] Folder del usuario: g5yVzoCwJVFcXfhW6z2EGa1gQU3v3Gzz042V
+[ 17-Enero-2018  11:30:09 ] ID Negocio: 5a5f88202b9e6f2e542eef76
+[ 17-Enero-2018  11:30:09 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:13 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:13 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:13 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:13 ] Password: password
+[ 17-Enero-2018  11:30:13 ] Username: mike
+[ 17-Enero-2018  11:30:13 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:13 ] Folder del usuario: O7cVJrjklaEJhgQh70vHejUa61J9iKDLreE5
+[ 17-Enero-2018  11:30:13 ] ID Negocio: 5a5f88252b9e6f2e542eef78
+[ 17-Enero-2018  11:30:13 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:15 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:15 ] M001 - GET "/signup"
+[ 17-Enero-2018  11:30:17 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:17 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:30:17 ] nameusercheck: m
+[ 17-Enero-2018  11:30:17 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:17 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:30:17 ] nameusercheck: mi
+[ 17-Enero-2018  11:30:17 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:17 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:30:17 ] nameusercheck: mik
+[ 17-Enero-2018  11:30:17 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:17 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:30:17 ] nameusercheck: mike
+[ 17-Enero-2018  11:30:24 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:24 ] M001 GET "/availableemail/emailcheck"
+[ 17-Enero-2018  11:30:24 ] Emailcheck: mike@yahoo.com
+[ 17-Enero-2018  11:30:39 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:39 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:39 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:39 ] Password: password
+[ 17-Enero-2018  11:30:39 ] Username: mike
+[ 17-Enero-2018  11:30:39 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:40 ] Folder del usuario: dlMcDfzWdWiYmj6SimGw3PRWEuhB7MkKi4Sa
+[ 17-Enero-2018  11:30:40 ] ID Negocio: 5a5f883f2b9e6f2e542eef7a
+[ 17-Enero-2018  11:30:40 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:41 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:41 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:41 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:41 ] Password: password
+[ 17-Enero-2018  11:30:41 ] Username: mike
+[ 17-Enero-2018  11:30:41 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:41 ] Folder del usuario: wSkEWsl1WnQQ6BvbwO78bzJonE9n4CGG1ApW
+[ 17-Enero-2018  11:30:41 ] ID Negocio: 5a5f88412b9e6f2e542eef7c
+[ 17-Enero-2018  11:30:41 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:41 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:41 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:41 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:41 ] Password: password
+[ 17-Enero-2018  11:30:41 ] Username: mike
+[ 17-Enero-2018  11:30:41 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:41 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:41 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:41 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:41 ] Password: password
+[ 17-Enero-2018  11:30:41 ] Username: mike
+[ 17-Enero-2018  11:30:41 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:41 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:41 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:41 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:41 ] Password: password
+[ 17-Enero-2018  11:30:41 ] Username: mike
+[ 17-Enero-2018  11:30:41 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:42 ] Folder del usuario: UWdmMSUzjNjptda6qdOiJs8jfBJuJk0z79wR
+[ 17-Enero-2018  11:30:42 ] ID Negocio: 5a5f88412b9e6f2e542eef7e
+[ 17-Enero-2018  11:30:42 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:42 ] Folder del usuario: Udl1CWn8Zc5IMkXQqRYpF8pF0FMPUvfyBZAN
+[ 17-Enero-2018  11:30:42 ] ID Negocio: 5a5f88412b9e6f2e542eef7f
+[ 17-Enero-2018  11:30:42 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:43 ] Folder del usuario: gFj867qKJSARMVTOmLG5vc9HdIhUQkVSGQxk
+[ 17-Enero-2018  11:30:43 ] ID Negocio: 5a5f88412b9e6f2e542eef80
+[ 17-Enero-2018  11:30:43 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:44 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:44 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:44 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:44 ] Password: password
+[ 17-Enero-2018  11:30:44 ] Username: mike
+[ 17-Enero-2018  11:30:44 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:45 ] Folder del usuario: th2SlRWYRLpqWtdXPdDgVmNIKEPFPUBDEvpr
+[ 17-Enero-2018  11:30:45 ] ID Negocio: 5a5f88442b9e6f2e542eef84
+[ 17-Enero-2018  11:30:45 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:45 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:45 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:45 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:45 ] Password: password
+[ 17-Enero-2018  11:30:45 ] Username: mike
+[ 17-Enero-2018  11:30:45 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:45 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:45 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:45 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:45 ] Password: password
+[ 17-Enero-2018  11:30:45 ] Username: mike
+[ 17-Enero-2018  11:30:45 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:45 ] Folder del usuario: CC0cqIpoStIHtjHlUvQSgsy1Fw1Oqc7QmbKx
+[ 17-Enero-2018  11:30:45 ] ID Negocio: 5a5f88452b9e6f2e542eef86
+[ 17-Enero-2018  11:30:45 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:46 ] Folder del usuario: LUfGKahRZ9xfIGerSMD3q1wOoKdglLL1QwOR
+[ 17-Enero-2018  11:30:46 ] ID Negocio: 5a5f88452b9e6f2e542eef87
+[ 17-Enero-2018  11:30:46 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:46 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:46 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:46 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:46 ] Password: password
+[ 17-Enero-2018  11:30:46 ] Username: mike
+[ 17-Enero-2018  11:30:46 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:46 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:46 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:46 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:46 ] Password: password
+[ 17-Enero-2018  11:30:46 ] Username: mike
+[ 17-Enero-2018  11:30:46 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:46 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:46 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:46 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:46 ] Password: password
+[ 17-Enero-2018  11:30:46 ] Username: mike
+[ 17-Enero-2018  11:30:46 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:46 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:46 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:46 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:46 ] Password: password
+[ 17-Enero-2018  11:30:46 ] Username: mike
+[ 17-Enero-2018  11:30:46 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:46 ] Folder del usuario: yYdvx333FuuqwD9tq99CqOa0So4biaEbUtkP
+[ 17-Enero-2018  11:30:46 ] ID Negocio: 5a5f88462b9e6f2e542eef8a
+[ 17-Enero-2018  11:30:46 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:47 ] Folder del usuario: sxuf4pJzGbVSqvo3JSEpKEpWu7A1bFtI7lD9
+[ 17-Enero-2018  11:30:47 ] ID Negocio: 5a5f88462b9e6f2e542eef8b
+[ 17-Enero-2018  11:30:47 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:47 ] Folder del usuario: ukqr2qnssVevmVUj04ZTEOZv3EeUMesChale
+[ 17-Enero-2018  11:30:47 ] ID Negocio: 5a5f88462b9e6f2e542eef8c
+[ 17-Enero-2018  11:30:47 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:48 ] Folder del usuario: N3qqSoF1gqsnPLgTbRFiXs62Wc5NnIZTdf4Y
+[ 17-Enero-2018  11:30:48 ] ID Negocio: 5a5f88462b9e6f2e542eef8d
+[ 17-Enero-2018  11:30:48 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:48 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:48 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:48 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:48 ] Password: password
+[ 17-Enero-2018  11:30:48 ] Username: mike
+[ 17-Enero-2018  11:30:48 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:49 ] Folder del usuario: iF69fnLegODZPCNvhTQhNHbgfpQMlB4RNpRJ
+[ 17-Enero-2018  11:30:49 ] ID Negocio: 5a5f88482b9e6f2e542eef92
+[ 17-Enero-2018  11:30:49 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:49 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:49 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:49 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:49 ] Password: password
+[ 17-Enero-2018  11:30:49 ] Username: mike
+[ 17-Enero-2018  11:30:49 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:49 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:49 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:49 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:49 ] Password: password
+[ 17-Enero-2018  11:30:49 ] Username: mike
+[ 17-Enero-2018  11:30:49 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:49 ] Folder del usuario: qOUllNWrkKtq2xryHJdqNsXfPv5hHozVj0xb
+[ 17-Enero-2018  11:30:49 ] ID Negocio: 5a5f88492b9e6f2e542eef94
+[ 17-Enero-2018  11:30:49 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:50 ] Folder del usuario: ObNsfe8GazaPBHYDKYT9Ff2BskUwU4YUmnJ6
+[ 17-Enero-2018  11:30:50 ] ID Negocio: 5a5f88492b9e6f2e542eef95
+[ 17-Enero-2018  11:30:50 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:50 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:50 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:50 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:50 ] Password: password
+[ 17-Enero-2018  11:30:50 ] Username: mike
+[ 17-Enero-2018  11:30:50 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:50 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:50 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:50 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:50 ] Password: password
+[ 17-Enero-2018  11:30:50 ] Username: mike
+[ 17-Enero-2018  11:30:50 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:50 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:50 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:50 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:50 ] Password: password
+[ 17-Enero-2018  11:30:50 ] Username: mike
+[ 17-Enero-2018  11:30:50 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:50 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:50 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:50 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:50 ] Password: password
+[ 17-Enero-2018  11:30:50 ] Username: mike
+[ 17-Enero-2018  11:30:50 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:50 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:50 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:50 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:50 ] Password: password
+[ 17-Enero-2018  11:30:50 ] Username: mike
+[ 17-Enero-2018  11:30:50 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:50 ] Folder del usuario: ZvE3memSX0cqyYVrNuX6LVDo3NVQuIsPm22B
+[ 17-Enero-2018  11:30:50 ] ID Negocio: 5a5f884a2b9e6f2e542eef98
+[ 17-Enero-2018  11:30:50 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:51 ] Folder del usuario: 6ZqpH2YEEGYWFvXUTQBLjMKM39XRmXt8Ib5m
+[ 17-Enero-2018  11:30:51 ] ID Negocio: 5a5f884a2b9e6f2e542eef99
+[ 17-Enero-2018  11:30:51 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:51 ] Folder del usuario: JAwCNQY0xYpgqIVffbywewvBxdwPEBiFVU3Y
+[ 17-Enero-2018  11:30:51 ] ID Negocio: 5a5f884a2b9e6f2e542eef9a
+[ 17-Enero-2018  11:30:51 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:52 ] Folder del usuario: yvkMcfswnt2jjSZIu8zMhE8evCr5Nl38n3Yg
+[ 17-Enero-2018  11:30:52 ] ID Negocio: 5a5f884a2b9e6f2e542eef9b
+[ 17-Enero-2018  11:30:52 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:52 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:52 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:52 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:52 ] Password: password
+[ 17-Enero-2018  11:30:52 ] Username: mike
+[ 17-Enero-2018  11:30:52 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:52 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:52 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:52 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:52 ] Password: password
+[ 17-Enero-2018  11:30:52 ] Username: mike
+[ 17-Enero-2018  11:30:52 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:52 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:52 ] M001 POST "/users"
+[ 17-Enero-2018  11:30:52 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:30:52 ] Password: password
+[ 17-Enero-2018  11:30:52 ] Username: mike
+[ 17-Enero-2018  11:30:52 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:30:52 ] Folder del usuario: 6CctUwDu95S6CV9MXHylq82XRaTvEn3wG167
+[ 17-Enero-2018  11:30:52 ] ID Negocio: 5a5f884a2b9e6f2e542eef9c
+[ 17-Enero-2018  11:30:52 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:53 ] Folder del usuario: 73AypPOqkn2r3p2mp1v8sWrqK3Ybhb6K1LHW
+[ 17-Enero-2018  11:30:53 ] ID Negocio: 5a5f884c2b9e6f2e542eefa2
+[ 17-Enero-2018  11:30:53 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:53 ] Folder del usuario: Ejbe8Y9Sn0AIjcQgdMXgmdOz8tlqq7GJ4xED
+[ 17-Enero-2018  11:30:53 ] ID Negocio: 5a5f884c2b9e6f2e542eefa1
+[ 17-Enero-2018  11:30:53 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:54 ] Folder del usuario: HINZPKL3PwenAodMSvnUbeSJ2pLOL4UglVR7
+[ 17-Enero-2018  11:30:54 ] ID Negocio: 5a5f884c2b9e6f2e542eefa3
+[ 17-Enero-2018  11:30:54 ] Error: ValidationError: dateBirth: Cast to Date failed for value "Invalid Date" at path "dateBirth"
+[ 17-Enero-2018  11:30:54 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:54 ] M001 - GET "/signup"
+[ 17-Enero-2018  11:30:57 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:57 ] M001 - GET "/login"
+[ 17-Enero-2018  11:30:57 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:30:58 ] -----------------------------------------------------
+[ 17-Enero-2018  11:30:58 ] M001 - GET "/signup"
+[ 17-Enero-2018  11:31:01 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:01 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:01 ] nameusercheck: m
+[ 17-Enero-2018  11:31:01 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:01 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:01 ] nameusercheck: mi
+[ 17-Enero-2018  11:31:01 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:01 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:01 ] nameusercheck: mik
+[ 17-Enero-2018  11:31:01 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:01 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:01 ] nameusercheck: mike
+[ 17-Enero-2018  11:31:02 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:02 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:02 ] nameusercheck: mike@
+[ 17-Enero-2018  11:31:04 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:04 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:04 ] nameusercheck: mike@y
+[ 17-Enero-2018  11:31:04 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:04 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:04 ] nameusercheck: mike@ya
+[ 17-Enero-2018  11:31:04 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:04 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:04 ] nameusercheck: mike@yah
+[ 17-Enero-2018  11:31:04 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:04 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:04 ] nameusercheck: mike@yaho
+[ 17-Enero-2018  11:31:04 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:04 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:04 ] nameusercheck: mike@yahoo
+[ 17-Enero-2018  11:31:04 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:04 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:04 ] nameusercheck: mike@yahoo.
+[ 17-Enero-2018  11:31:05 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:05 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:05 ] nameusercheck: mike@yahoo.c
+[ 17-Enero-2018  11:31:05 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:05 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:05 ] nameusercheck: mike@yahoo.co
+[ 17-Enero-2018  11:31:05 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:05 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:05 ] nameusercheck: mike@yahoo.com
+[ 17-Enero-2018  11:31:12 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:12 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:12 ] nameusercheck: m
+[ 17-Enero-2018  11:31:12 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:12 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:12 ] nameusercheck: mi
+[ 17-Enero-2018  11:31:13 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:13 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:13 ] nameusercheck: mik
+[ 17-Enero-2018  11:31:13 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:13 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:31:13 ] nameusercheck: mike
+[ 17-Enero-2018  11:31:19 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:19 ] M001 GET "/availableemail/emailcheck"
+[ 17-Enero-2018  11:31:19 ] Emailcheck: mike@yahoo.com
+[ 17-Enero-2018  11:31:29 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:29 ] M001 POST "/users"
+[ 17-Enero-2018  11:31:29 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:31:29 ] Password: password
+[ 17-Enero-2018  11:31:29 ] Username: mike
+[ 17-Enero-2018  11:31:29 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:31:29 ] Folder del usuario: 2ZepLqqYZt4IiuVTQQpwPtq2IozrbWAIi7uz
+[ 17-Enero-2018  11:31:29 ] ID Negocio: 5a5f88712b9e6f2e542eefa8
+[ 17-Enero-2018  11:31:31 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:31 ] M001 - GET "/login"
+[ 17-Enero-2018  11:31:31 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:31:41 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:41 ] M001 - POST "/validation"
+[ 17-Enero-2018  11:31:41 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:31:41 ] Password: password
+[ 17-Enero-2018  11:31:41 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  11:31:41 ] ID USER: 5a5f88712b9e6f2e542eefa9
+[ 17-Enero-2018  11:31:41 ] LOADBUSINESS: 0
+[ 17-Enero-2018  11:31:41 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:41 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:31:43 ] -----------------------------------------------------
+[ 17-Enero-2018  11:31:43 ] M001 GET "/services"
+[ 17-Enero-2018  11:31:43 ] Cargará los datos por primera vez
+[ 17-Enero-2018  11:31:43 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  11:32:34 ] -----------------------------------------------------
+[ 17-Enero-2018  11:32:34 ] M001 - POST "/addService"
+[ 17-Enero-2018  11:32:34 ] idbusiness: 5a5f88712b9e6f2e542eefa8
+[ 17-Enero-2018  11:32:34 ] Objecto a enviar: {"type":"service","name":"sjkfhjfhsdjfhjkh","cost":"123","description":"sdfsdjfshjdsfj","homeservice":true,"isMovilOffering":false,"hshtgs":"#Phestee #algo #sencillo #porfavor #ya!!"}
+[ 17-Enero-2018  11:32:34 ] El servicio se ha agregado con éxito
+[ 17-Enero-2018  11:32:35 ] -----------------------------------------------------
+[ 17-Enero-2018  11:32:35 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:34:09 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:09 ] M001 GET "/signout"
+[ 17-Enero-2018  11:34:09 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:09 ] M001 - GET "/login"
+[ 17-Enero-2018  11:34:09 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:34:15 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:15 ] M001 - GET "/signup"
+[ 17-Enero-2018  11:34:18 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:18 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:34:18 ] nameusercheck: m
+[ 17-Enero-2018  11:34:18 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:18 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:34:18 ] nameusercheck: mi
+[ 17-Enero-2018  11:34:18 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:18 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:34:18 ] nameusercheck: mik
+[ 17-Enero-2018  11:34:18 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:18 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  11:34:18 ] nameusercheck: mike
+[ 17-Enero-2018  11:34:23 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:23 ] M001 GET "/availableemail/emailcheck"
+[ 17-Enero-2018  11:34:23 ] Emailcheck: mike@yahoo.com
+[ 17-Enero-2018  11:34:35 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:35 ] M001 POST "/users"
+[ 17-Enero-2018  11:34:35 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:34:35 ] Password: password
+[ 17-Enero-2018  11:34:35 ] Username: mike
+[ 17-Enero-2018  11:34:35 ] Se guardara el negocio por default
+[ 17-Enero-2018  11:34:35 ] Folder del usuario: kGrHd8a9AJp7cGXvrhCXrFf9lcgtS4LuaM2j
+[ 17-Enero-2018  11:34:35 ] ID Negocio: 5a5f892b1706141058f4c018
+[ 17-Enero-2018  11:34:36 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:36 ] M001 - GET "/login"
+[ 17-Enero-2018  11:34:36 ] El id user no tiene ningún id
+[ 17-Enero-2018  11:34:47 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:47 ] M001 - POST "/validation"
+[ 17-Enero-2018  11:34:47 ] Email: mike@yahoo.com
+[ 17-Enero-2018  11:34:47 ] Password: password
+[ 17-Enero-2018  11:34:47 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  11:34:47 ] ID USER: 5a5f892b1706141058f4c019
+[ 17-Enero-2018  11:34:47 ] LOADBUSINESS: 0
+[ 17-Enero-2018  11:34:47 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:47 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:34:49 ] -----------------------------------------------------
+[ 17-Enero-2018  11:34:49 ] M001 GET "/services"
+[ 17-Enero-2018  11:34:49 ] Cargará los datos por primera vez
+[ 17-Enero-2018  11:34:49 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  11:35:25 ] -----------------------------------------------------
+[ 17-Enero-2018  11:35:25 ] M001 - POST "/addService"
+[ 17-Enero-2018  11:35:25 ] idbusiness: 5a5f892b1706141058f4c018
+[ 17-Enero-2018  11:35:25 ] Objecto a enviar: {"type":"service","name":"servicio1","cost":"123","description":"descripcion prueba","homeservice":false,"isMovilOffering":true,"hshtgs":"#algo #mas #practico"}
+[ 17-Enero-2018  11:35:25 ] El servicio se ha agregado con éxito
+[ 17-Enero-2018  11:35:26 ] -----------------------------------------------------
+[ 17-Enero-2018  11:35:26 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:36:08 ] -----------------------------------------------------
+[ 17-Enero-2018  11:36:08 ] M001 GET "/services"
+[ 17-Enero-2018  11:36:08 ] Cargará los datos por primera vez
+[ 17-Enero-2018  11:36:08 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  11:38:14 ] -----------------------------------------------------
+[ 17-Enero-2018  11:38:14 ] M001 - POST "/addService"
+[ 17-Enero-2018  11:38:14 ] idbusiness: 5a5f892b1706141058f4c018
+[ 17-Enero-2018  11:38:14 ] Objecto a enviar: {"type":"product","name":"producto","cost":"123","description":"descripcion","homeservice":false,"isMovilOffering":true,"hshtgs":"#relacion #abogado #padreredentor"}
+[ 17-Enero-2018  11:38:14 ] El servicio se ha agregado con éxito
+[ 17-Enero-2018  11:38:15 ] -----------------------------------------------------
+[ 17-Enero-2018  11:38:15 ] M001 GET "/ principal"
+[ 17-Enero-2018  11:38:16 ] -----------------------------------------------------
+[ 17-Enero-2018  11:38:16 ] M001 GET "/services"
+[ 17-Enero-2018  11:38:16 ] Cargará los datos por primera vez
+[ 17-Enero-2018  11:38:16 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:05:34 ] -----------------------------------------------------
+[ 17-Enero-2018  12:05:34 ] M001 GET "/signout"
+[ 17-Enero-2018  12:05:34 ] -----------------------------------------------------
+[ 17-Enero-2018  12:05:34 ] M001 - GET "/login"
+[ 17-Enero-2018  12:05:34 ] El id user no tiene ningún id
+[ 17-Enero-2018  12:10:27 ] -----------------------------------------------------
+[ 17-Enero-2018  12:10:27 ] M001 - POST "/validation"
+[ 17-Enero-2018  12:10:27 ] Email: mike@yahoo.com
+[ 17-Enero-2018  12:10:27 ] Password: password
+[ 17-Enero-2018  12:10:27 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  12:10:27 ] ID USER: 5a5f892b1706141058f4c019
+[ 17-Enero-2018  12:10:27 ] LOADBUSINESS: 0
+[ 17-Enero-2018  12:10:28 ] -----------------------------------------------------
+[ 17-Enero-2018  12:10:28 ] M001 GET "/ principal"
+[ 17-Enero-2018  12:10:30 ] -----------------------------------------------------
+[ 17-Enero-2018  12:10:30 ] M001 GET "/services"
+[ 17-Enero-2018  12:10:30 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:10:30 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:11:15 ] -----------------------------------------------------
+[ 17-Enero-2018  12:11:15 ] M001 GET "/services"
+[ 17-Enero-2018  12:11:15 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:11:15 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:15:05 ] -----------------------------------------------------
+[ 17-Enero-2018  12:15:05 ] M001 GET "/services"
+[ 17-Enero-2018  12:15:05 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:15:05 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:26:38 ] -----------------------------------------------------
+[ 17-Enero-2018  12:26:38 ] M001 - POST "/addService"
+[ 17-Enero-2018  12:26:38 ] idbusiness: 5a5f892b1706141058f4c018
+[ 17-Enero-2018  12:26:38 ] Error: CastError: Cast to embedded failed for value "{ _id: 5a5f955e875519082c1ab2b3,\n  type: \'service\',\n  name: \'nombre\',\n  cost: \'sdadasda\',\n  description: \'werqweio\',\n  homeservice: true,\n  isMovilOffering: false,\n  hshtgs: \'sfqweqwetwqr\' }" at path "services"
+[ 17-Enero-2018  12:33:01 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:01 ] M001 GET "/signout"
+[ 17-Enero-2018  12:33:01 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:01 ] M001 - GET "/login"
+[ 17-Enero-2018  12:33:01 ] El id user no tiene ningún id
+[ 17-Enero-2018  12:33:14 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:14 ] M001 - GET "/login"
+[ 17-Enero-2018  12:33:14 ] El id user no tiene ningún id
+[ 17-Enero-2018  12:33:16 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:16 ] M001 - GET "/signup"
+[ 17-Enero-2018  12:33:18 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:18 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  12:33:18 ] nameusercheck: m
+[ 17-Enero-2018  12:33:18 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:18 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  12:33:18 ] nameusercheck: mi
+[ 17-Enero-2018  12:33:18 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:18 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  12:33:18 ] nameusercheck: mik
+[ 17-Enero-2018  12:33:18 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:18 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  12:33:18 ] nameusercheck: mike
+[ 17-Enero-2018  12:33:24 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:24 ] M001 GET "/availableemail/emailcheck"
+[ 17-Enero-2018  12:33:24 ] Emailcheck: mike@yahoo.com
+[ 17-Enero-2018  12:33:34 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:34 ] M001 POST "/users"
+[ 17-Enero-2018  12:33:34 ] Email: mike@yahoo.com
+[ 17-Enero-2018  12:33:34 ] Password: password
+[ 17-Enero-2018  12:33:34 ] Username: mike
+[ 17-Enero-2018  12:33:34 ] Se guardara el negocio por default
+[ 17-Enero-2018  12:33:35 ] Folder del usuario: 8AVgBYQ0FYynFSQi0O3w6TVTwTefMEO3v8lu
+[ 17-Enero-2018  12:33:35 ] ID Negocio: 5a5f96fe70fb77298087ddcc
+[ 17-Enero-2018  12:33:36 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:36 ] M001 - GET "/login"
+[ 17-Enero-2018  12:33:36 ] El id user no tiene ningún id
+[ 17-Enero-2018  12:33:50 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:50 ] M001 - POST "/validation"
+[ 17-Enero-2018  12:33:50 ] Email: mike@yahoo.com
+[ 17-Enero-2018  12:33:50 ] Password: password
+[ 17-Enero-2018  12:33:50 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  12:33:50 ] ID USER: 5a5f96ff70fb77298087ddcd
+[ 17-Enero-2018  12:33:50 ] LOADBUSINESS: 0
+[ 17-Enero-2018  12:33:50 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:50 ] M001 GET "/ principal"
+[ 17-Enero-2018  12:33:52 ] -----------------------------------------------------
+[ 17-Enero-2018  12:33:52 ] M001 GET "/services"
+[ 17-Enero-2018  12:33:52 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:33:52 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:48:56 ] M001 - GET "/"
+[ 17-Enero-2018  12:50:32 ] -----------------------------------------------------
+[ 17-Enero-2018  12:50:32 ] M001 - GET "/signup"
+[ 17-Enero-2018  12:50:35 ] -----------------------------------------------------
+[ 17-Enero-2018  12:50:35 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  12:50:35 ] nameusercheck: m
+[ 17-Enero-2018  12:50:35 ] -----------------------------------------------------
+[ 17-Enero-2018  12:50:35 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  12:50:35 ] nameusercheck: mi
+[ 17-Enero-2018  12:50:35 ] -----------------------------------------------------
+[ 17-Enero-2018  12:50:35 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  12:50:35 ] nameusercheck: mik
+[ 17-Enero-2018  12:50:35 ] -----------------------------------------------------
+[ 17-Enero-2018  12:50:35 ] M001 GET "/availablename/variable"
+[ 17-Enero-2018  12:50:35 ] nameusercheck: mike
+[ 17-Enero-2018  12:50:42 ] -----------------------------------------------------
+[ 17-Enero-2018  12:50:42 ] M001 GET "/availableemail/emailcheck"
+[ 17-Enero-2018  12:50:42 ] Emailcheck: mike@yahoo.com
+[ 17-Enero-2018  12:51:01 ] -----------------------------------------------------
+[ 17-Enero-2018  12:51:01 ] M001 - GET "/login"
+[ 17-Enero-2018  12:51:01 ] ID user: 5a5f96ff70fb77298087ddcd
+[ 17-Enero-2018  12:51:01 ] -----------------------------------------------------
+[ 17-Enero-2018  12:51:01 ] M001 GET "/ principal"
+[ 17-Enero-2018  12:51:10 ] -----------------------------------------------------
+[ 17-Enero-2018  12:51:10 ] M001 GET "/services"
+[ 17-Enero-2018  12:51:10 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:51:10 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:51:38 ] -----------------------------------------------------
+[ 17-Enero-2018  12:51:38 ] M001 GET "/services"
+[ 17-Enero-2018  12:51:38 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:51:38 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:51:58 ] -----------------------------------------------------
+[ 17-Enero-2018  12:51:58 ] M001 GET "/services"
+[ 17-Enero-2018  12:51:58 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:51:58 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:52:42 ] -----------------------------------------------------
+[ 17-Enero-2018  12:52:42 ] M001 - POST "/addService"
+[ 17-Enero-2018  12:52:42 ] idbusiness: 5a5f96fe70fb77298087ddcc
+[ 17-Enero-2018  12:52:42 ] El servicio se ha agregado con éxito
+[ 17-Enero-2018  12:52:42 ] -----------------------------------------------------
+[ 17-Enero-2018  12:52:42 ] M001 GET "/ principal"
+[ 17-Enero-2018  12:52:45 ] -----------------------------------------------------
+[ 17-Enero-2018  12:52:45 ] M001 GET "/services"
+[ 17-Enero-2018  12:52:45 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:52:45 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  12:55:46 ] -----------------------------------------------------
+[ 17-Enero-2018  12:55:46 ] M001 GET "/services"
+[ 17-Enero-2018  12:55:46 ] Cargará los datos por primera vez
+[ 17-Enero-2018  12:55:46 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  13:06:49 ] -----------------------------------------------------
+[ 17-Enero-2018  13:06:49 ] M001 GET "/services"
+[ 17-Enero-2018  13:06:49 ] Cargará los datos por primera vez
+[ 17-Enero-2018  13:06:49 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  16:21:52 ] -----------------------------------------------------
+[ 17-Enero-2018  16:21:52 ] M001 GET "/signout"
+[ 17-Enero-2018  16:21:52 ] -----------------------------------------------------
+[ 17-Enero-2018  16:21:52 ] M001 - GET "/login"
+[ 17-Enero-2018  16:21:52 ] El id user no tiene ningún id
+[ 17-Enero-2018  16:23:03 ] -----------------------------------------------------
+[ 17-Enero-2018  16:23:03 ] M001 - GET "/login"
+[ 17-Enero-2018  16:23:03 ] El id user no tiene ningún id
+[ 17-Enero-2018  16:23:15 ] -----------------------------------------------------
+[ 17-Enero-2018  16:23:15 ] M001 - POST "/validation"
+[ 17-Enero-2018  16:23:15 ] Email: mike@yahoo.com
+[ 17-Enero-2018  16:23:15 ] Password: password
+[ 17-Enero-2018  16:23:15 ] Esto se guardara en las variables de sesion: 
+[ 17-Enero-2018  16:23:15 ] ID USER: 5a5f96ff70fb77298087ddcd
+[ 17-Enero-2018  16:23:15 ] LOADBUSINESS: 0
+[ 17-Enero-2018  16:23:15 ] -----------------------------------------------------
+[ 17-Enero-2018  16:23:15 ] M001 GET "/ principal"
+[ 17-Enero-2018  16:23:23 ] -----------------------------------------------------
+[ 17-Enero-2018  16:23:23 ] M001 GET "/business"
+[ 17-Enero-2018  16:23:23 ] Cargará los datos por primera vez
+[ 17-Enero-2018  16:23:23 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 17-Enero-2018  16:23:41 ] -----------------------------------------------------
+[ 17-Enero-2018  16:23:41 ] M001 - GET "/login"
+[ 17-Enero-2018  16:23:41 ] El id user no tiene ningún id
+[ 17-Enero-2018  16:24:08 ] -----------------------------------------------------
+[ 17-Enero-2018  16:24:08 ] M001 - GET "/login"
+[ 17-Enero-2018  16:24:08 ] El id user no tiene ningún id

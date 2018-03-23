@@ -1,0 +1,509 @@
+/*Phestee Home styles*/
+/*Previous update: 12042017 - Benjamin Castro*/
+/*Last update:03042018 - Benjamin Castro*/
+/*Defaults*/
+html,body{
+	height: 100%;
+    max-width: 100%;
+    width: auto;
+	font-family: 'Muli', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    box-shadow: none;
+    background-color: #F5F5F5;
+    text-decoration: none;
+    outline: none;
+    color: #111825;
+}
+.phinput{
+    box-shadow: none;
+    outline:none;
+    border-bottom-style: solid;
+    border-bottom-color: #4586ff;
+    border-bottom-width:thin;
+}
+.phinput:focus{
+    background-color: white;
+    border: 0;
+    box-shadow: none;
+    outline:none;
+    border-bottom-style: solid;
+    border-bottom-color: #4586ff;
+    border-bottom-width: medium;
+}
+.sticky{
+    position: sticky;
+    top:70px;
+}
+.map{
+    width:100%;height:200px;
+}
+.navbar-brand{
+    font-size: 1.4rem;
+}
+.phoverflow{
+    overflow:scroll;
+}
+/*Box Shadow, Text, Fonts, Buttons, Backgrounds*/
+.phborder-bold-white{
+    border-style: solid;
+    border-color: white;
+    border-width: medium;
+}
+.phborder-bold-blue{
+    border-style: solid;
+    border-color: #4586ff;
+    border-width: medium;
+}
+.phbox-shadow-blue{
+    -webkit-box-shadow: 0px 10px 80px -11px rgba(188,194,193,1);
+    -moz-box-shadow: 0px 10px 80px -11px rgba(188,194,193,1);
+    box-shadow: 0px 10px 80px -11px rgba(188,194,193,1);
+}
+
+.phtext-blue{
+    color:#4586ff;
+}
+a.phtext-blue{
+    text-decoration: none;
+    color:#4586ff;
+}
+.phtext-green{
+    color:#5acfbf;
+}
+a.phtext-green{
+    text-decoration: none;
+    color:#5acfbf;
+}
+.phtext-red{
+    color:#f95959;
+}
+a.phtext-red{
+    text-decoration: none;
+    color:#f95959;
+}
+.phtext-purple{
+    color:#b760e6;
+}
+a.phtext-purple{
+    text-decoration: none;
+    color:#b760e6;
+}
+.phtext-dark{
+    color:#111825;
+}
+a.phtext-dark{
+    text-decoration: none;
+    color:#111825;
+}
+.phtext-light{
+    color:#dde4f1;
+}
+a.phtext-light{
+    text-decoration: none;
+    color:#dde4f1;
+}
+.phtext-muted{
+    color: #b0b6c0;
+}
+.phtext-mutedhover{
+    color:#b0b6c0;
+}
+a.phtext-mutedhover{
+    text-decoration: none;
+    color:#b0b6c0;
+}
+.phtext-mutedhover:hover{
+    color:#4586ff;
+}
+.phtext-lighthover{
+    color:#dde4f1;
+}
+a.phtext-lighthover{
+    text-decoration: none;
+    color:#dde4f1;
+}
+.phtext-lighthover:hover{
+    color:#4586ff;
+}
+.phtext-aqua{
+    color: #08d9d6;
+}
+.phfont-opensans{
+    font-family: 'Open Sans', sans-serif;
+}
+.phfont-ubuntu{
+    font-family: 'Ubuntu', sans-serif;
+}
+.phfont-muli{
+    font-family: 'Muli', sans-serif;
+}
+.phfont-lato{
+    font-family: 'Lato', sans-serif;
+}
+.phbtn-blue{
+    background-color: #4586ff;
+    border-style: solid;
+    border-color: #4586ff;
+    border-width:thin;
+    color:#FFFFFF;  
+    border-radius: 100px;
+}
+.phbtn-blue:hover{
+    color:#FFFFFF;  
+    background-color: #5792ff;
+    border-color: #5792ff;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-green{
+    background-color: #5acfbf;
+    border-style: solid;
+    border-color: #5acfbf;
+    border-width:thin;
+    color:#FFFFFF;  
+    border-radius: 100px;
+}
+.phbtn-green:hover{
+    color:#FFFFFF;  
+    background-color: #6ad3c5;
+    border-color: #6ad3c5;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-red{
+    background-color: #f95959;
+    border-style: solid;
+    border-color: #f95959;
+    border-width:thin;
+    color:#FFFFFF;  
+    border-radius: 100px;
+}
+.phbtn-red:hover{
+    color:#FFFFFF;  
+    background-color: #f96969;
+    border-color: #f96969;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-purple{
+    background-color: #b760e6;
+    border-style: solid;
+    border-color: #b760e6;
+    border-width:thin;
+    color:#FFFFFF;  
+    border-radius: 100px;
+}
+.phbtn-purple:hover{
+    color:#FFFFFF;  
+    background-color: #be6fe8;
+    border-color: #be6fe8;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-dark{
+    background-color: #111825;
+    border-style: solid;
+    border-color: #111825;
+    border-width:thin;
+    color:#FFFFFF;  
+    border-radius: 100px;
+}
+.phbtn-dark:hover{
+    color:#FFFFFF;  
+    background-color: #384554;
+    border-color: #384554;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-light{
+    background-color: #dde4f1;
+    border-style: solid;
+    border-color: #dde4f1;
+    border-width:thin;
+    color:#111825;  
+    border-radius: 100px;
+}
+.phbtn-light:hover{
+    color:#111825;  
+    background-color: #dde4f1;
+    border-color: #dde4f1;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-outline-blue{
+    background-color:transparent;
+    border-style: solid;
+    border-color: #4586ff;
+    border-width:thin;
+    color:#4586ff;  
+    border-radius: 100px;
+}
+.phbtn-outline-blue:hover{
+    color:#FFFFFF;  
+    background-color: #4586ff;
+    border-color: #4586ff;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-outline-green{
+    background-color:transparent;
+    border-style: solid;
+    border-color: #5acfbf;
+    border-width:thin;
+    color:#5acfbf;  
+    border-radius: 100px;
+}
+.phbtn-outline-green:hover{
+    color:#FFFFFF;  
+    background-color: #5acfbf;
+    border-color: #5acfbf;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-outline-red{
+    background-color:transparent;
+    border-style: solid;
+    border-color: #f95959;
+    border-width:thin;
+    color:#f95959;  
+    border-radius: 100px;
+}
+.phbtn-outline-red:hover{
+    color:#FFFFFF;  
+    background-color: #f95959;
+    border-color: #f95959;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-outline-purple{
+    background-color:transparent;
+    border-style: solid;
+    border-color: #b760e6;
+    border-width:thin;
+    color:#b760e6;  
+    border-radius: 100px;
+}
+.phbtn-outline-purple:hover{
+    color:#FFFFFF;  
+    background-color: #b760e6;
+    border-color: #b760e6;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-outline-dark{
+    background-color:transparent;
+    border-style: solid;
+    border-color: #111825;
+    border-width:thin;
+    color:#111825;  
+    border-radius: 100px;
+}
+.phbtn-outline-dark:hover{
+    color:#FFFFFF;  
+    background-color: #111825;
+    border-color: #111825;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbtn-outline-light{
+    background-color:transparent;
+    border-style: solid;
+    border-color: #dde4f1;
+    border-width:thin;
+    color:#dde4f1;  
+    border-radius: 100px;
+}
+.phbtn-outline-light:hover{
+    color:#111825;  
+    background-color: #dde4f1;
+    border-color: #dde4f1;
+    border-width:thin;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.phbgn-blue{
+    background-color: #4586ff;
+    color: white;
+}
+.phbgn-darkblue{
+    background-color: #455d7a;
+    color: white;
+}
+.phbgn-green{
+    background-color: #5acfbf;
+    color: white;
+}
+.phbgn-red{
+    background-color: #f95959;
+    color: white;
+}
+.phbgn-purple{
+    background-color: #b760e6;
+    color: white;
+}
+.phbgn-dark{
+    background-color: #111825;
+    color: white;
+}
+.phbgn-f5{
+    background-color: #F5F5F5;
+    color: #111825;
+}
+.phbgn-fa{
+    background-color: #fafbfd;
+    color: #111825;
+}
+.phbgn-light{
+    background-color: #dde4f1;
+    color: #111825;
+}
+.phbgn-transparent{
+    background-color: transparent;
+}
+.phbgn-50transparent{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.phbgn-gradient-white{
+    background: linear-gradient(to bottom, #fafbfd,#FFFFFF);
+}
+.phbgn-gradient-white-down{
+    background: linear-gradient(to bottom, #FFFFFF,#fafbfd);
+}
+.phbgn-gradient-blue{
+    background: linear-gradient(to bottom right, #3AA3CF,#8968FE);
+}
+.phbgn-gradient-purple{
+    background: linear-gradient(to bottom right, #AE31E1,#5939CF);
+}
+.phbgn-gradient-aqua{
+    background: linear-gradient(to bottom right, #67D2FF,#46B39E);
+}
+.phbgn-gradient-green{
+    background: linear-gradient(to bottom right, #74E1C9,#69BF4D);
+}
+.phtext-gradient-blue{
+    color: #3AA3CF;
+}
+.phtext-gradient-purple{
+    color: #5939CF;
+}
+.phtext-gradient-aqua{
+    color: #08d9d6;
+}
+.phtext-gradient-green{
+    color: #69BF4D;
+}
+.phtext-gradient-yellow{
+    color: #ffcc5c;
+}
+.phtext-gradient-grey{
+    color: #656e7a;
+}
+.phtext-gradient-orange{
+    color: #FF9249;
+}
+.phtext-gradient-red{
+    color: #ff6f69;
+}
+
+/* heights, background for canvas*/
+.phhgt-cover{
+    height: 100vh;
+}
+.phhgt-3-4{
+    height: 85vh;
+    overflow-x: hidden;
+}
+.phhgt-middle{
+    height: 70vh;
+    overflow   : auto;
+    overflow-x : hidden;
+    overflow-y : auto;
+}
+.phhgt-half{
+    height: 50vh;
+    overflow-x: hidden;
+}
+.phhgt-1-4{
+    height: 35vh;
+    overflow-x: hidden;
+}
+.phhgt-1-8{
+    height: 30vh;
+    overflow-x: hidden;
+}
+.phcanvashome{
+	background: url('../img/system/phindex1.jpeg') center center no-repeat;
+	background-size:cover;
+	height: 90vh;
+	width: 100%;
+}
+.phcanvasexperience{
+    background-color: white;
+	background-size:cover;
+	height: 100vh;
+	width: 100%;
+}
+.phcanvaswhatis{
+	background: url('../img/system/phlandbgndright.jpeg') center center no-repeat;
+	background-size:cover;
+	height: 100vh;
+	width: 100%;	
+}
+.phbgn-foto-tablero{
+    background: url('../img/system/phUser.jpeg') center center no-repeat;
+	background-size:cover;
+    color:#FAFAFA;
+}
+.phfield-post{
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width:thin;    
+    box-shadow: none;
+}
+.phfield-post:focus{
+    background-color:0;
+    border-style: solid;
+    border-width: thin;
+    border-color: #4586ff;
+    box-shadow: 0 4px 8px 0 rgba(240,240,240, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.phfield{
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width:thin;    
+    box-shadow: none;
+}
+.phfield:focus{
+    background-color:0;
+    border-style: solid;
+    border-width: thin;
+    border-color: #4586ff;
+    box-shadow: none;
+}
+.ph-pointer{
+    cursor: pointer;
+}
+.phborder-left-green{
+    border-left-style: solid;
+    border-left-color: #08d9d6;
+    border-left-width:medium;
+}
+.phborder-left-blue{
+    border-left-style: solid;
+    border-left-color: #4586ff;
+    border-left-width:medium;
+}

@@ -1,0 +1,570 @@
+/*Phestee Home styles*/
+/*Last update: 12042017 - Benjamin Castro*/
+/*Defaults*/
+html,body{
+	height: 100%;
+    max-width: 100%;
+    width: auto;
+	background-color:#233c56;
+	font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    box-shadow: none;
+    color:#030809;
+}
+body{
+	-webkit-font-smoothing:antialiased;
+	text-rendering: optimizeLegibility;
+}
+img{
+	max-width: 100%;
+    background-size:cover;
+}
+/*----------*/
+/*NavBar*/
+.phNav{
+	background-color:rgba(3,8,9, .0);/*rgba(3,8,9, .5 250,250,250,.96);*/
+	color:#e6e6e7;
+}
+
+/*----------*/
+/*Containers*/
+.bgrndPst{
+    background-color:#FFFFFF;/* #e6e6e7;*/
+    color:#383c40;
+    border-radius: 3px;
+    border:0;
+}
+
+.bgrndTblro{
+    background-color: rgba(1,3, 5, .2);
+    color:#bdc4cc;
+}
+
+.bgrndPhotoTblr{
+    background: url('phUser.jpeg') center center no-repeat;
+	background-size:cover;
+    color:#FAFAFA;
+}
+
+.bgrndModal{
+    background-color: #FFFFFF;
+}
+.indxFrnt{
+    z-index: 9999999;
+}
+.indxFrnt-1{
+    z-index: 999;
+}
+.bgrndIcnHmLstPg{
+    /*background-color:#F2F2F2;*/
+    height: 20%;
+}
+.bgrndIcnHmLstPg1{
+    height: 40%;
+}
+.rowhbgrnd{
+    height: 100%;
+}
+.rowh{
+    height: 100vh;
+}
+.rowhlf{
+    height: 80vh;
+}
+.ovrFlw{
+    overflow:scroll;
+    overflow-x: hidden;
+}
+
+/*----------*/
+/*fields*/
+.form-control:active {
+    border: 0;
+}
+.fldsMdl{
+    background-color: #FAFAFA;
+    
+}
+.fldsMdl:active{
+    background-color: white;
+    border: 0;
+    box-shadow: none;
+}
+
+/*----------*/
+/*buttons*/
+.btnptr{
+    cursor: pointer;
+}
+.btnSocial{
+    width: 12%;
+    cursor: pointer;
+}
+.btnMdlEntr{
+    width: 50%;
+    cursor: pointer;
+    color:white;
+    border-style: none;
+    background: #5F84AB; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, #5fccf1, #5F84AB); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #5fccf1, #5F84AB); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #5fccf1, #5F84AB); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #5fccf1, #5F84AB); /* Standard syntax */
+}
+.btnMdlEntr:hover{
+    box-shadow: 0px 3px 10px gray;
+}
+.btnScl{
+    border-radius: 100%;
+    cursor: pointer;
+}
+.btnEntr{
+	background-color:#5F84AB;
+	color:#FAFAFA;
+	font-weight: 300;
+	font-family: 'Barlow', sans-serif;
+	cursor: pointer;
+	border-radius: 0px;
+	border-style: none;
+}
+.btnEntr:hover{
+	background-color:#557699;/*#233c56;*/
+	color:#FAFAFA;
+}
+.btnRg{
+	background-color:#5fccf1;/*#FF5C5C;*/
+	color:#FAFAFA;
+	font-weight: 300;
+	font-family: 'Barlow', sans-serif;
+	cursor: pointer;
+	border-radius: 0px;
+	border-style: none;
+}
+.btnRg:hover{
+	background-color:#55b7d8;
+	color:#FAFAFA;
+}
+
+.btnHm{
+	background-color:#5F84AB;/*#5F84AB;/*#486481;*/
+	color:#FAFAFA;
+	width: 12rem;
+	font-weight: 300;
+	cursor: pointer;
+	border-style: none;
+    
+}
+.btnHm:hover{
+	background-color:#557699;/*#233c56;*/
+	color:#FAFAFA;
+    cursor: pointer;
+    border-style: none;
+}
+/*----------*/
+/*Utilities*/
+.icnMdl{
+    color:#383c40;  
+}
+.icn{
+    color:#383c40;
+    
+}
+.icn:hover{
+    color:#838588;
+    cursor: pointer;
+}
+.icn:active{
+    color:#40b287;
+    
+}
+.icnHnd{
+    color:#40a4b2;
+    
+}
+.icnHnd:hover{
+    color:#838588;
+    cursor: pointer;
+}
+.icnHnd:active{
+    color:#40b287;
+    
+}
+.icnHrt{
+    color:#FF5C5C;
+    
+}
+.icnHrt:hover{
+    color:#ff7c7c;
+    cursor: pointer;
+}
+.icnShre{
+    color:#40b287;
+    
+}
+.icnShre:hover{
+    color:#838588;
+    cursor: pointer;
+}
+.icnShre:active{
+    color:#40b287;
+    
+}
+.icnRepst{
+    color:#3e404c;
+    
+}
+.icnRepst:hover{
+    color:#838588;
+    cursor: pointer;
+}
+.icnRepst:active{
+    color:#40b287;
+    
+}
+.icnDscvr{
+    color:#1c3044;
+}
+.icnDscvrBlue{
+    color:#5fccf1;/*#5F84AB;*/
+}
+.icnDscvrGrn{
+    color:#5cffc1;/*#5BAF93;*/
+}
+.icnDscvrPrpl{
+    color:#b760e6;/*#806BB6;*/
+}
+.icnDscvrYllw{
+    color:#ffbd4a;/*#FFCE84;*/
+}
+.icnDscvrRed{
+    color:#ff5c5c;
+}
+
+.icnStr{
+    color:#FFB000;/*62Ac64*/
+    cursor: pointer;
+}
+.icnTblro{
+    color:#738EAB;
+    cursor: pointer;
+}
+.icnTblroEdt{
+    color:#738EAB;
+    cursor: pointer;
+}
+.icnTblroEdt:hover{
+    color:#b2bbc4;
+    cursor: pointer;
+}
+ 
+/*----------*/
+/*Body*/
+.phHm{
+	background: url('phLand6v3.jpeg') center center no-repeat;
+	background-size:cover;
+	color:#FAFAFA;/*#c7d8ea;*/
+	height: 100vh;
+	width: 100%;	
+}
+.phHmAncr1{
+    color:#FAFAFA;
+}
+.phHmAncr1:hover{
+    font-weight: 600;
+    cursor: pointer; 
+}
+.phHmAncr{
+    color:#5FCCF1;  
+}
+.phHmAncr:hover{
+    font-weight: 600;
+    cursor: pointer; 
+}
+.phHmDscvr{
+	/*background: url('discover.jpeg') center center no-repeat;*/
+    background-color: #233c56;/* #4678ac*/
+	background-size:cover;
+	color:#c7d8ea;
+	height: 100%;
+	width: 100%;
+}
+.phHmRsHnd{
+	background-color: #2A2845; /*#40b287;*/
+	background-size:cover;
+	color:#b9e7d8;
+	height: 100%;
+	width: 100%;	
+}
+.phHmRsHndTxt{
+    color:#9493a2;
+    
+}
+
+.phHmBrd{
+	background-color:#0B2138;/*#1F5845;#0A302A*/
+	background-size:cover;
+	color:#bab6e5;
+	height: 100%;
+	width: 100%;	
+}
+.phHmBrdTxt{
+    color:#9da6af;
+}
+.phHmBsns{
+	background: url('business.jpeg') center center no-repeat;
+	background-size:cover;
+	color:#FAFAFA;
+	height: 100%;
+	width: 100%;
+}
+.phHmCnct{
+	background-color: #F2F2F2;
+	background-size:cover;
+	color:#FAFAFA;
+	height: 90%;
+	width: 100%;	
+}
+
+/*----------*/
+/*Footer*/
+.hmFtr{
+	display: flex;
+	align-items: center;
+	padding: 2rem 0;
+	font-size: 0.8rem;
+}
+
+.hmFtr h6{
+	color:#030809;
+}
+.hmFtr a{
+	color:#818384;
+}
+.main-footer{
+	align-items: center;
+	padding: 1rem 0;
+	font-size: 0.8rem;
+	background: #030809;
+	color:#818384;
+}
+.btnSnd{
+	background-color:#030809;
+	color:#FAFAFA;
+	cursor:pointer;
+	border-radius: 0px;
+	font-weight: 100;
+}
+
+::-webkit-scrollbar{
+        width: 0px;
+    }
+::-webkit-scrollbar-track {
+      background-color: #c5c5c9;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); 
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #64666f;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+-------------------------
+/*App*/
+.rowHapp{
+    height: 100vh;
+}
+.phNavApp{
+	background-color:#233c56;
+	color:#e6e6e7;
+}
+ .srchNavFld2[type="search"] {
+    background: #1c3044;
+    border-style: none;
+    width:16rem;
+    padding: 6px 15px 6px 35px;
+    margin:3px 12px;
+}
+
+.srchNavFld2[type="search"]:focus {
+    background:#0e1822;
+    color:#7b8a99;
+    outline: none;
+    box-shadow: 0;
+}
+
+
+.pstFldbrnd{
+    background: url('1a.png') center center no-repeat;
+	background-size:cover; 
+    height: 8rem;
+    border:0;
+}
+.phAppBgnd{
+    background-color: #233c56;/* #4678ac*/ 
+	background-size:cover;
+	color:#c7d8ea;
+	width: 100%;
+}
+.bgrndTblroApp{
+    background-color: rgba(1,3, 5, .0);
+    color:#bdc4cc;/*#738EAB;*/
+}
+.bgrndTblroAppBrnd{
+    background-color: rgba(1,3, 5, .2);
+    color:#bdc4cc;/*#738EAB;*/
+}
+.bgrndTblroAppSvs{
+    background-color: rgba(1,3, 5, .4);
+    color:#bdc4cc;/*#738EAB;*/
+    border:0;
+}
+.bgrndPhotoTblrApp{
+    background: url('...') center center no-repeat;
+	background-size:cover;
+    color:#FAFAFA;
+}
+tblFxdApp{
+    position: fixed;
+}
+.rowHgtFeed{
+    height: 100vh;
+}
+.rowHgtTblr{
+    height: 30vh;
+}
+.rowHgtSeeServices{
+    height: 60vh;
+}
+.rowhlfSvs{
+    max-height: 15%;
+}
+.rowhApp{
+    height: 20vh;
+}
+.ovrFlwApp{
+    overflow:scroll;
+    overflow-x: hidden;
+}
+.icnPstActnBlue{
+    color:#5fccf1;/*#5F84AB;*/
+    cursor: pointer;
+}
+.icnPstActnGrn{
+    color:#5cffc1;/*#5BAF93;*/
+    cursor: pointer;
+}
+.icnPstActnPrpl{
+    color:#b760e6;/*#806BB6;*/
+    cursor: pointer;
+}
+.icnPstActnYllw{
+    color:#ffbd4a;/*#FFCE84;*/
+    cursor: pointer;
+}
+.icnPstActnLft{
+    color:#233c56;/*#FFCE84;*/
+    cursor: pointer;
+    border-left-style: none;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-right-style: solid;
+    border-right-width: thin;
+    border-right-color: #c7d8ea;
+}
+.icnPstActnLft:hover{
+    background-color: #eef3f8;/*#5cffc1;*/
+}    
+.icnPstActnRight{   
+    color:#233c56;/*#FFCE84;*/
+    cursor: pointer;
+}
+.icnPstActnRight:hover{
+    background-color: #eef3f8;/*#5cffc1;*/
+} 
+.appTblrStyle{
+    background: none;
+    border: 0;
+    color:#e6e6e7;  
+    text-decoration: none;
+}
+.appTblrStyle:hover{
+    color:#FAFAFA;  
+    text-decoration: none;
+}
+.usrTblrHdr{
+	height: 15%;
+}
+.bgndPostIcns{
+    background-color: #FAFAFA;
+    color: #233c56;
+}
+
+.slctaPstFld{
+    background-color:#FAFAFA;
+    border: 0;
+}
+.slctaPstFld:focus{
+    background-color:#FAFAFA;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: none;
+}
+.slctaPstFld2{
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: none;
+}
+.slctaPstFld2:focus{
+    background-color:0;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: none;
+}
+.tagAtBgn{
+    background-color:#FAFAFA;
+    color: #919EAB;
+}
+.tagPstFld:focus{
+    background-color:#F5F5F5;
+    border-style: solid;
+    border-width: thin;
+    border-color: #233c56;
+    box-shadow: none;
+}
+.tagAtBgnOwn{
+    background-color:#1c3044;
+    color: #919EAB;
+    border-style: solid;
+    border-width: thin;
+    border-color: #0e1822;
+    box-shadow: none;
+}
+.tagPstFldOwn:focus{
+    background-color:#0e1822;
+    box-shadow: none;
+    color:#bdc4cc;
+}
+.bgrndPstOffrs{    
+    background-color:#233c56;/* #e6e6e7;*/
+    color:#bdc4cc;
+    border-style: none none none solid;
+    border-color: #384f66;
+    border-width:medium;
+    border-radius: 3px;
+}
+.bgrndListServices{
+    background-color:#F5F5F5;/* #e6e6e7;*/
+    color:#383c40;
+    border-radius: 3px;
+    border-width: thin;
+    border-style: none none solid;
+    border-color: #d3d8dd;
+    
+}

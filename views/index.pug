@@ -1,0 +1,32 @@
+extends layout.pug
+block contenido
+  include landingPage/topBar
+  //::::::::::::::::->Login Modal template loaded
+  include landingPage/modals/login
+  //::::::::::::::::->Signup Modl template loaded
+  include landingPage/modals/signup
+  //::::::::::::::::->Contact Modl template loaded
+  include landingPage/modals/contact
+  // Main Container
+  //::::::::::::::::::::::::::::::->phHm
+  include landingPage/landing/xs
+  include landingPage/landing/md
+  include landingPage/landing/xl
+  //::::::::::::::::::::::::::::::-> Experiences
+  include landingPage/experience/xs
+  include landingPage/experience/md
+  include landingPage/experience/xl
+  //::::::::::::::::::::::::::::::-> What is
+  include landingPage/whatIs/xs
+  include landingPage/whatIs/md
+  include landingPage/whatIs/xl
+  //::::::::::::::::::::::::::::::-> Board
+  include landingPage/board/xs
+  include landingPage/board/md
+  include landingPage/board/xl
+  //::::::::::::::::::::::::::::::-> Admin
+  include landingPage/admin/xs
+  include landingPage/admin/md
+  include landingPage/admin/xl
+  //::::::::::::::::::::::::::::::-> Script
+  include landingPage/endScripts

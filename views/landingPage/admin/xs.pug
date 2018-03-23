@@ -1,0 +1,124 @@
+// --
+// phHmAdmin Container - Landing page visible on xs only
+#phHmAdmin-xs.container-fluid.d-block.d-sm-none
+  .row.bg-white.align-items-start.justify-content-center.animatedParent
+    .col-12.mt-5
+      .container-fluid
+        .col-12
+          p.h5.animated.fadeIn.delay-250.font-weight-bold.phtext-dark.phfont-lato
+            i.fas.fa-th.phtext-aqua
+            |  Tus experiencias en un lugar
+          small.p.animated.fadeIn.delay-250.text-muted.phfont-muli
+            | Cuando terminas una 
+            b experiencia
+            |  dentro de Phestee, los detalles se guardan en tu 
+            b Perfil
+            |  para que los revises cuando quieras.
+      .col-12.mt-4.phfont-muli.d-flex.align-items-center.justify-content-between
+        .animated.fadeIn.delay-250.text-center
+          .fa-2x
+            span.fa-layers.fa-fw
+              i.fas.fa-square.phtext-gradient-purple
+              i.text-white.fas.fa-shopping-bag(data-fa-transform='shrink-9')
+          p.phfont-lato
+            small Compras
+        .animated.fadeIn.delay-500.text-center
+          .fa-2x
+            span.fa-layers.fa-fw
+              i.fas.fa-square.phtext-gradient-grey
+              i.text-white.fas.fa-wrench(data-fa-transform='shrink-9')
+          p.phfont-lato
+            small Técnicos
+        .animated.fadeIn.delay-750.text-center
+          .fa-2x
+            span.fa-layers.fa-fw
+              i.fas.fa-square.phtext-gradient-aqua
+              i.text-white.fas.fa-plane(data-fa-transform='shrink-9 rotate-340')
+          p.phfont-lato
+            small Viajes
+      .col-12.phfont-muli.d-flex.align-items-center.justify-content-between
+        .animated.fadeIn.delay-1000.text-center
+          .fa-2x
+            span.fa-layers.fa-fw
+              i.fas.fa-square.phtext-gradient-yellow
+              i.text-white.fas.fa-utensils(data-fa-transform='shrink-9')
+          p.phfont-lato
+            small Comida
+        .animated.fadeIn.delay-1250.text-center
+          .fa-2x
+            span.fa-layers.fa-fw
+              i.fas.fa-square.phtext-gradient-blue
+              i.text-white.fas.fa-coffee(data-fa-transform='shrink-9')
+          p.phfont-lato
+            small Cafeterías
+        .animated.fadeIn.delay-1500.text-center
+          .fa-2x
+            span.fa-layers.fa-fw
+              i.fas.fa-square.phtext-gradient-red
+              i.text-white.fas.fa-bicycle(data-fa-transform='shrink-9')
+          p.phfont-lato
+            small Envíos
+      .col-12.text-center.mb-5
+        p.p.mt-3.text-center.phfont-lato.phtext-dark.animated.fadeIn.delay-1500
+          | Deja de buscar y déjate encontrar. 
+          b
+            br
+            | ¡Es gratis!
+        button.btn.phbtn-blue.mt-2.ml-auto.font-weight-light.animated.fadeIn.delay-1500.phfont-muli(data-toggle='modal', data-target='#phRegMdl', style='width: 10rem;') Empezar
+        button.btn.phbtn-outline-blue.mt-4.font-weight-light.animated.fadeIn.delay-1500.phfont-muli(data-toggle='modal', data-target='#phLoginMdl', style='width: 10rem;') Inicia sesión
+  .container-fluid.py-4.phfont-muli
+    .row
+      .col-12
+        .form
+          label.mr-sm-2(for='inlineFormCustomSelect')
+            small Me interesa
+          small
+            select#inlineFormCustomSelect.form-control.form-control-sm.custom-select.mb-2.mr-sm-2.mb-sm-0.phtext-dark
+              option(selected='') Recibir noticias
+              option(value='2') Fondear el proyecto
+              option(value='3') Trabajar en el proyecto
+          input#inlineFormInputName2.form-control.form-control-sm.mb-2.mr-sm-2.mb-sm-0.mt-2(type='text', placeholder='Ingresa tu e-mail')
+          button.btn.btn-sm.phbtn-dark.mt-2(type='submit') Enviar
+      .col.mt-3
+        h6 Producto
+        ul.list-unstyled.phtext-dark
+          li
+            a.phtext-dark(href='#phLoginMdl', data-toggle='modal', data-target='#phLoginMdl')
+              small Entrar
+          li
+            a.phtext-dark(href='')
+              small Políticas de Privacidad
+          li
+            a.phtext-dark(href='')
+              small Términos de Servicio
+      .col.mt-3
+        h6 Contacto
+        ul.list-unstyled
+          li
+            a.phtext-dark(href='', data-toggle='modal', data-target='#phContact')
+              small Contacto
+          li
+            a.phtext-dark(href='')
+              small FAQ
+      .col.mt-3
+        h6 Equipo
+        ul.list-unstyled
+          li
+            a.phtext-dark(href='phconocenos.html')
+              small Conócenos
+          li.mt-3
+            a(href='https://www.facebook.com/phestee/', target='_blank')
+              i.fab.fa-facebook.text-muted.fa-sm
+            a.ml-2(href='https://twitter.com/phesteeapp', target='_blank')
+              i.fab.fa-twitter.text-muted.fa-sm
+            a.ml-2(href='https://www.youtube.com/channel/UCiPsGwc99M1dqPjNIZ7OsCQ', target='_blank')
+              i.fab.fa-youtube.text-muted.fa-sm
+  .main-footer.phbgn-dark.text-center
+    .container
+      small
+        .col-12.p-3.d-flex.justify-content-center.phtext-light
+          | © 2018 Phestee.
+          br
+          |                                                 Todos los derechos reservados.
+          br
+          |                                                 Puesto en marcha en Guadalajara, Jalisco, México.

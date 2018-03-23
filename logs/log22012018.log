@@ -1,0 +1,233 @@
+[ 22-Enero-2018  12:43:41 ] M001 - GET "/"
+[ 22-Enero-2018  12:43:45 ] -----------------------------------------------------
+[ 22-Enero-2018  12:43:45 ] M001 - GET "/login"
+[ 22-Enero-2018  12:43:45 ] El id user no tiene ningún id
+[ 22-Enero-2018  12:43:56 ] -----------------------------------------------------
+[ 22-Enero-2018  12:43:56 ] M001 - POST "/validation"
+[ 22-Enero-2018  12:43:56 ] Email: mike@yahoo.com
+[ 22-Enero-2018  12:43:56 ] Password: password
+[ 22-Enero-2018  12:43:56 ] Esto se guardara en las variables de sesion: 
+[ 22-Enero-2018  12:43:56 ] ID USER: 5a5f96ff70fb77298087ddcd
+[ 22-Enero-2018  12:43:56 ] LOADBUSINESS: 0
+[ 22-Enero-2018  12:43:56 ] -----------------------------------------------------
+[ 22-Enero-2018  12:43:56 ] M001 GET "/ principal"
+[ 22-Enero-2018  12:43:58 ] -----------------------------------------------------
+[ 22-Enero-2018  12:43:58 ] M001 - GET "/login"
+[ 22-Enero-2018  12:43:58 ] ID user: 5a5f96ff70fb77298087ddcd
+[ 22-Enero-2018  12:43:58 ] -----------------------------------------------------
+[ 22-Enero-2018  12:43:58 ] M001 GET "/ principal"
+[ 22-Enero-2018  12:44:13 ] -----------------------------------------------------
+[ 22-Enero-2018  12:44:13 ] M001 GET "/services"
+[ 22-Enero-2018  12:44:13 ] Cargará los datos por primera vez
+[ 22-Enero-2018  12:44:14 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  12:44:22 ] -----------------------------------------------------
+[ 22-Enero-2018  12:44:22 ] M001 - PUT "/editService"
+[ 22-Enero-2018  12:53:27 ] -----------------------------------------------------
+[ 22-Enero-2018  12:53:27 ] M001 GET "/services"
+[ 22-Enero-2018  12:53:27 ] Cargará los datos por primera vez
+[ 22-Enero-2018  12:53:27 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  12:53:39 ] -----------------------------------------------------
+[ 22-Enero-2018  12:53:39 ] M001 - PUT "/editService"
+[ 22-Enero-2018  12:53:39 ] Id servicio: undefined
+[ 22-Enero-2018  12:53:40 ] -----------------------------------------------------
+[ 22-Enero-2018  12:53:40 ] M001 GET "/ principal"
+[ 22-Enero-2018  12:54:31 ] -----------------------------------------------------
+[ 22-Enero-2018  12:54:31 ] M001 GET "/services"
+[ 22-Enero-2018  12:54:31 ] Cargará los datos por primera vez
+[ 22-Enero-2018  12:54:31 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  12:54:37 ] -----------------------------------------------------
+[ 22-Enero-2018  12:54:37 ] M001 - PUT "/editService"
+[ 22-Enero-2018  12:54:37 ] Id servicio: { _id: 5a5f96fe70fb77298087ddcc,
+  isHeadBusiness: true,
+  name: 'Freelance',
+  __v: 0,
+  services: 
+   [ { isMovilOffering: false,
+       homeservice: true,
+       description: 'wefwefwfwsd',
+       cost: 123,
+       name: 'mike',
+       type: 'service',
+       _id: [Object],
+       imgs: [],
+       hshtgs: [Object] } ],
+  address: 
+   { country: '',
+     state: '',
+     city: '',
+     zipCode: '',
+     aditional: '',
+     number: '0',
+     street: '' },
+  branches: [],
+  delegatedUsers: [],
+  telephone: { number: '0', typeTel: '' },
+  licenseType: 'Freemium',
+  businessType: 'Freelance',
+  isActive: false }
+[ 22-Enero-2018  12:54:38 ] -----------------------------------------------------
+[ 22-Enero-2018  12:54:38 ] M001 GET "/ principal"
+[ 22-Enero-2018  12:55:07 ] -----------------------------------------------------
+[ 22-Enero-2018  12:55:07 ] M001 GET "/services"
+[ 22-Enero-2018  12:55:07 ] Cargará los datos por primera vez
+[ 22-Enero-2018  12:55:07 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  12:55:15 ] -----------------------------------------------------
+[ 22-Enero-2018  12:55:15 ] M001 - PUT "/editService"
+[ 22-Enero-2018  12:55:15 ] Id servicio: undefined
+[ 22-Enero-2018  12:55:16 ] -----------------------------------------------------
+[ 22-Enero-2018  12:55:16 ] M001 GET "/ principal"
+[ 22-Enero-2018  12:56:56 ] -----------------------------------------------------
+[ 22-Enero-2018  12:56:56 ] M001 GET "/services"
+[ 22-Enero-2018  12:56:56 ] Cargará los datos por primera vez
+[ 22-Enero-2018  12:56:56 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  12:57:00 ] -----------------------------------------------------
+[ 22-Enero-2018  12:57:00 ] M001 - PUT "/editService"
+[ 22-Enero-2018  12:57:00 ] Id servicio: undefined
+[ 22-Enero-2018  12:57:01 ] -----------------------------------------------------
+[ 22-Enero-2018  12:57:01 ] M001 GET "/ principal"
+[ 22-Enero-2018  12:59:06 ] -----------------------------------------------------
+[ 22-Enero-2018  12:59:06 ] M001 GET "/services"
+[ 22-Enero-2018  12:59:06 ] Cargará los datos por primera vez
+[ 22-Enero-2018  12:59:06 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  12:59:12 ] -----------------------------------------------------
+[ 22-Enero-2018  12:59:12 ] M001 - PUT "/editService"
+[ 22-Enero-2018  12:59:12 ] Id servicio: undefined
+[ 22-Enero-2018  12:59:12 ] -----------------------------------------------------
+[ 22-Enero-2018  12:59:12 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:01:32 ] -----------------------------------------------------
+[ 22-Enero-2018  13:01:32 ] M001 GET "/services"
+[ 22-Enero-2018  13:01:32 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:01:32 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:01:38 ] -----------------------------------------------------
+[ 22-Enero-2018  13:01:38 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:01:38 ] Id servicio: true
+[ 22-Enero-2018  13:01:38 ] -----------------------------------------------------
+[ 22-Enero-2018  13:01:38 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:02:36 ] -----------------------------------------------------
+[ 22-Enero-2018  13:02:36 ] M001 GET "/services"
+[ 22-Enero-2018  13:02:36 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:02:36 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:02:41 ] -----------------------------------------------------
+[ 22-Enero-2018  13:02:41 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:02:41 ] Id servicio: { hshtgs: [ 'werwerwerw #werwer #GHDFGDF #DFSWDFw' ],
+  imgs: [],
+  _id: [ 5a5f9b7a70fb77298087ddce ],
+  type: 'service',
+  name: 'mike',
+  cost: 123,
+  description: 'wefwefwfwsd',
+  homeservice: true,
+  isMovilOffering: false }
+[ 22-Enero-2018  13:02:41 ] -----------------------------------------------------
+[ 22-Enero-2018  13:02:41 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:04:22 ] M001 - GET "/"
+[ 22-Enero-2018  13:06:28 ] -----------------------------------------------------
+[ 22-Enero-2018  13:06:28 ] M001 - GET "/login"
+[ 22-Enero-2018  13:06:29 ] ID user: 5a5f96ff70fb77298087ddcd
+[ 22-Enero-2018  13:06:29 ] -----------------------------------------------------
+[ 22-Enero-2018  13:06:29 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:06:32 ] -----------------------------------------------------
+[ 22-Enero-2018  13:06:32 ] M001 GET "/services"
+[ 22-Enero-2018  13:06:32 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:06:32 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:06:39 ] -----------------------------------------------------
+[ 22-Enero-2018  13:06:39 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:06:39 ] id servicio: undefined
+[ 22-Enero-2018  13:06:40 ] -----------------------------------------------------
+[ 22-Enero-2018  13:06:40 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:07:13 ] -----------------------------------------------------
+[ 22-Enero-2018  13:07:13 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:07:15 ] -----------------------------------------------------
+[ 22-Enero-2018  13:07:15 ] M001 GET "/services"
+[ 22-Enero-2018  13:07:15 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:07:15 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:07:20 ] -----------------------------------------------------
+[ 22-Enero-2018  13:07:20 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:10:19 ] -----------------------------------------------------
+[ 22-Enero-2018  13:10:19 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:10:21 ] -----------------------------------------------------
+[ 22-Enero-2018  13:10:21 ] M001 GET "/services"
+[ 22-Enero-2018  13:10:21 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:10:21 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:10:27 ] -----------------------------------------------------
+[ 22-Enero-2018  13:10:27 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:10:27 ] id servicio: 5a5f9b7a70fb77298087ddce
+[ 22-Enero-2018  13:10:27 ] -----------------------------------------------------
+[ 22-Enero-2018  13:10:27 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:20:32 ] -----------------------------------------------------
+[ 22-Enero-2018  13:20:32 ] M001 GET "/services"
+[ 22-Enero-2018  13:20:32 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:20:32 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:20:38 ] -----------------------------------------------------
+[ 22-Enero-2018  13:20:38 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:20:38 ] dataservices: 5a5f9b7a70fb77298087ddce
+[ 22-Enero-2018  13:20:38 ] requestidservice: 5a5f9b7a70fb77298087ddce
+[ 22-Enero-2018  13:20:38 ] No entro en la condicion
+[ 22-Enero-2018  13:20:39 ] -----------------------------------------------------
+[ 22-Enero-2018  13:20:39 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:25:58 ] -----------------------------------------------------
+[ 22-Enero-2018  13:25:58 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:26:09 ] -----------------------------------------------------
+[ 22-Enero-2018  13:26:09 ] M001 GET "/services"
+[ 22-Enero-2018  13:26:09 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:26:09 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:26:24 ] -----------------------------------------------------
+[ 22-Enero-2018  13:26:24 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:26:24 ] dataservices: 5a5f9b7a70fb77298087ddce
+[ 22-Enero-2018  13:26:24 ] requestidservice: 5a5f9b7a70fb77298087ddce
+[ 22-Enero-2018  13:26:24 ] Entro en la condicion
+[ 22-Enero-2018  13:26:25 ] -----------------------------------------------------
+[ 22-Enero-2018  13:26:25 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:27:26 ] -----------------------------------------------------
+[ 22-Enero-2018  13:27:26 ] M001 GET "/services"
+[ 22-Enero-2018  13:27:26 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:27:26 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:32:29 ] -----------------------------------------------------
+[ 22-Enero-2018  13:32:29 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:32:29 ] dataservices: 5a5f9b7a70fb77298087ddce
+[ 22-Enero-2018  13:32:29 ] requestidservice: 5a5f9b7a70fb77298087ddce
+[ 22-Enero-2018  13:32:29 ] Entro en la condicion
+[ 22-Enero-2018  13:32:29 ] -----------------------------------------------------
+[ 22-Enero-2018  13:32:29 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:49:40 ] -----------------------------------------------------
+[ 22-Enero-2018  13:49:40 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:49:50 ] -----------------------------------------------------
+[ 22-Enero-2018  13:49:50 ] M001 GET "/services"
+[ 22-Enero-2018  13:49:50 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:49:50 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:49:59 ] -----------------------------------------------------
+[ 22-Enero-2018  13:49:59 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:49:59 ] Se modificaron los datos con éxito
+[ 22-Enero-2018  13:50:00 ] -----------------------------------------------------
+[ 22-Enero-2018  13:50:00 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:50:01 ] -----------------------------------------------------
+[ 22-Enero-2018  13:50:01 ] M001 GET "/services"
+[ 22-Enero-2018  13:50:01 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:50:01 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:50:12 ] -----------------------------------------------------
+[ 22-Enero-2018  13:50:12 ] M001 - POST "/addService"
+[ 22-Enero-2018  13:50:12 ] idbusiness: 5a5f96fe70fb77298087ddcc
+[ 22-Enero-2018  13:50:12 ] El servicio se ha agregado con éxito
+[ 22-Enero-2018  13:50:15 ] -----------------------------------------------------
+[ 22-Enero-2018  13:50:15 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:50:17 ] -----------------------------------------------------
+[ 22-Enero-2018  13:50:17 ] M001 GET "/services"
+[ 22-Enero-2018  13:50:17 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:50:17 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  13:50:56 ] -----------------------------------------------------
+[ 22-Enero-2018  13:50:56 ] M001 - PUT "/editService"
+[ 22-Enero-2018  13:50:56 ] Se modificaron los datos con éxito
+[ 22-Enero-2018  13:50:57 ] -----------------------------------------------------
+[ 22-Enero-2018  13:50:57 ] M001 GET "/ principal"
+[ 22-Enero-2018  13:50:59 ] -----------------------------------------------------
+[ 22-Enero-2018  13:50:59 ] M001 GET "/services"
+[ 22-Enero-2018  13:50:59 ] Cargará los datos por primera vez
+[ 22-Enero-2018  13:50:59 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  17:21:23 ] -----------------------------------------------------
+[ 22-Enero-2018  17:21:23 ] M001 GET "/services"
+[ 22-Enero-2018  17:21:23 ] Cargará los datos por primera vez
+[ 22-Enero-2018  17:21:23 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 22-Enero-2018  17:27:15 ] -----------------------------------------------------
+[ 22-Enero-2018  17:27:15 ] M001 GET "/services"
+[ 22-Enero-2018  17:27:15 ] Cargará los datos por primera vez
+[ 22-Enero-2018  17:27:15 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.

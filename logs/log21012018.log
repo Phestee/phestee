@@ -1,0 +1,26 @@
+[ 21-Enero-2018  16:17:00 ] M001 - GET "/"
+[ 21-Enero-2018  16:17:04 ] -----------------------------------------------------
+[ 21-Enero-2018  16:17:04 ] M001 - GET "/login"
+[ 21-Enero-2018  16:17:04 ] El id user no tiene ningún id
+[ 21-Enero-2018  16:17:15 ] -----------------------------------------------------
+[ 21-Enero-2018  16:17:15 ] M001 - POST "/validation"
+[ 21-Enero-2018  16:17:15 ] Email: mike@yahoo.com
+[ 21-Enero-2018  16:17:15 ] Password: password
+[ 21-Enero-2018  16:17:15 ] Esto se guardara en las variables de sesion: 
+[ 21-Enero-2018  16:17:15 ] ID USER: 5a5f96ff70fb77298087ddcd
+[ 21-Enero-2018  16:17:15 ] LOADBUSINESS: 0
+[ 21-Enero-2018  16:17:16 ] -----------------------------------------------------
+[ 21-Enero-2018  16:17:16 ] M001 GET "/ principal"
+[ 21-Enero-2018  16:17:18 ] -----------------------------------------------------
+[ 21-Enero-2018  16:17:18 ] M001 GET "/services"
+[ 21-Enero-2018  16:17:18 ] Cargará los datos por primera vez
+[ 21-Enero-2018  16:17:18 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
+[ 21-Enero-2018  16:19:33 ] -----------------------------------------------------
+[ 21-Enero-2018  16:19:33 ] M001 - PUT "/editService"
+[ 21-Enero-2018  16:19:33 ] El servicio se ha modificado con éxito
+[ 21-Enero-2018  16:19:34 ] -----------------------------------------------------
+[ 21-Enero-2018  16:19:34 ] M001 GET "/ principal"
+[ 21-Enero-2018  16:19:37 ] -----------------------------------------------------
+[ 21-Enero-2018  16:19:37 ] M001 GET "/services"
+[ 21-Enero-2018  16:19:37 ] Cargará los datos por primera vez
+[ 21-Enero-2018  16:19:37 ] Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.
