@@ -1,0 +1,242 @@
+extends ../leftPanel/xl
+block pannel
+  // content start
+  .col-7.mt-5.pt-5.mb-5
+    .row
+      .col-12
+        h6.phtext-muted.text-uppercase.font-weight-bold.my-auto
+          i.fas.fa-edit
+          |  Editar Tablero
+          a(href='pheditbusiness.html')
+            small.phfont-opensans.phtext-blue.ml-3.my-auto.text-capitalize  1 Negocio registrado
+        .dropdown-divider(role='separator')
+        .form-row.my-auto
+          .col-8.mt-3.d-flex.justify-content-start.ph-pointer(data-toggle='collapse', href='#expandEdtItms', aria-expanded='false', aria-controls='expandEdtItms')
+            img.my-auto.rounded-circle(src='img/PhesteeUser.jpg', width='50', height='50')
+            p.my-auto.ml-3.p.text-dark.my-auto Freelance
+            small.my-auto
+              i.fas.fa-caret-down.ml-3.fa-lg.my-auto
+        form#expandEdtItms.collapse
+          button.close(type='button', aria-label='Close', data-toggle='collapse', href='#expandEdtItms', aria-expanded='false', aria-controls='expandEdtItms')
+            span(aria-hidden='true')
+              small ×
+          small.text-left.text-dark
+            p.p.mt-2  Tus Productos y/o Servicios
+          .row
+            #phFeed.col-12
+              .card-deck
+                .card.phbgn-f5
+                  p.text-center.mt-5
+                    i.far.fa-images.fa-4x.phtext-muted
+                  .card-body
+                    input.form-control.form-control-sm.border.card-title(type='text', placeholder='Producto o Servicio')
+                    textarea.form-control.form-control-sm.card-title.border(placeholder='Descripción', rows='2')
+                    input.form-control.form-control-sm.card-title.card-text.border(type='text', placeholder='#hashtags')
+                    input.form-control.form-control-sm.card-title.border(type='text', placeholder='Precio')
+                  .card-footer.d-flex.justify-content-end
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(href='phexperiences.html')
+                      i.fas.fa-save.fa-1x
+                      |  Guardar
+                .card
+                  img.card-img-top(src='img/discover2.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+              .card-deck.mt-3
+                .card
+                  img.card-img-top(src='img/discover3.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+                .card
+                  img.card-img-top(src='img/discover.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+              .card-deck.mt-3
+                .card
+                  img.card-img-top(src='img/discover3.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+                .card
+                  img.card-img-top(src='img/discover.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+              .card-deck.mt-3
+                .card
+                  .card-body.text-center.phbgn-f5
+                    a(href='#topFeed')
+                      i.fas.fa-sign-out-alt.fa-lg.phtext-muted(data-fa-transform='rotate-270')
+        .dropdown-divider.mt-3(role='separator')
+        .form-row.my-auto
+          .col-8.mt-3.d-flex.justify-content-start.ph-pointer(data-toggle='collapse', href='#expandEdtItms1', aria-expanded='false', aria-controls='expandEdtItms1')
+            img.my-auto.rounded-circle(src='img/mecanicos.jpeg', width='50', height='50')
+            p.my-auto.ml-3.p.text-dark.my-auto Lava Autos Mx
+            small.my-auto
+              i.fas.fa-caret-down.ml-3.fa-lg.my-auto
+        form#expandEdtItms1.collapse
+          button.close(type='button', aria-label='Close', data-toggle='collapse', href='#expandEdtItms1', aria-expanded='false', aria-controls='expandEdtItms1')
+            span(aria-hidden='true')
+              small ×
+          small.text-left.text-dark
+            p.p.mt-2  Tus Productos y/o Servicios
+          .row
+            #phFeed.col-12
+              .card-deck
+                .card.phbgn-f5
+                  p.text-center.mt-5
+                    i.far.fa-images.fa-4x.phtext-muted
+                  .card-body
+                    input.form-control.form-control-sm.border.card-title(type='text', placeholder='Producto o Servicio')
+                    textarea.form-control.form-control-sm.card-title.border(placeholder='Descripción', rows='2')
+                    input.form-control.form-control-sm.card-title.card-text.border(type='text', placeholder='#hashtags')
+                    input.form-control.form-control-sm.card-title.border(type='text', placeholder='Precio')
+                  .card-footer.d-flex.justify-content-end
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(href='phexperiences.html')
+                      i.fas.fa-save.fa-1x
+                      |  Guardar
+                .card
+                  img.card-img-top(src='img/discover2.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+              .card-deck.mt-3
+                .card
+                  img.card-img-top(src='img/discover3.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+                .card
+                  img.card-img-top(src='img/discover.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+              .card-deck.mt-3
+                .card
+                  img.card-img-top(src='img/discover3.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+                .card
+                  img.card-img-top(src='img/discover.jpeg', alt='Card image cap')
+                  .card-body
+                    h5.card-title Producto o Servicio
+                    p.card-text
+                      | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+                    p.card-text.text-truncate.text-muted #Lorem, #ipsum, #dolor, #sit amet, #consectetuer #adipiscing #elit
+                    h5.card-title $5,500,00
+                  .card-footer.bg-white.d-flex.justify-content-between
+                    p.text-primary.phfont-muli.my-auto
+                      i.far.fa-handshake.phtext-blue
+                      |  300 acuerdos
+                    a.btn.phbtn-blue.btn-sm.phfont-muli(data-toggle='modal', href='#phAnncPst', data-target='#phAnncPst')
+                      i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                      |  Crea un anuncio
+              .card-deck.mt-3
+                .card
+                  .card-body.text-center.phbgn-f5
+                    a(href='#topFeed')
+                      i.fas.fa-sign-out-alt.fa-lg.phtext-muted(data-fa-transform='rotate-270')
+        .dropdown-divider.mt-3(role='separator')
+    .form-row.my-auto
+      .col-12.d-flex.justify-content-between.mt-2
+        button.my-auto.btn.btn-md.phbtn-outline-blue
+          i.fas.fa-gift.my-auto
+          |  Obten una cuenta Premium para agregar más Productos o Servicios a tu tablero
+        button.btn.phbtn-blue
+          i.fas.fa-save
+          |  Guardar Cambios
+  // End of content
+  include ../../endScripts

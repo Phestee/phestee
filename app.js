@@ -85,7 +85,7 @@ app.get("/", function(request,response){
    if(request.session.user_id != undefined && request.session.user_id != null)
   {
     logger.info('ID user: '+request.session.user_id);
-    response.render("app");
+    response.render("appv2");
   }
   else
   {
@@ -106,7 +106,7 @@ app.get("/login", function(request,response){
     logger.info("___________________________________________");
     logger.info(request);
 
-    response.redirect("/app");
+    response.redirect("/appv2");
   }
   else
   {
@@ -569,6 +569,11 @@ app.get("/rtm", function(request,response){
   response.render("rtm_index");
 });
 
+app.get("/tstVw", function(request,response){
+  response.render("appv2/settings/board/xl");
+});
+
+
 
 module.exports = function (socket) {
   var name = userNames.getGuestName();
@@ -628,9 +633,9 @@ io.on('connection', require('./socket'));
 
 //app.post("/uploadImage",multipartymiddleware,FileUploadController.uploadFile);
   /* Agregar en el app el middleware */
-app.use("/app",sessionmiddleware);
+app.use("/appv2",sessionmiddleware);
 app.use("/",sessionmiddleware);
-app.use("/app",router_app);
+app.use("/appv2",router_app);
 app.use("/nuevopassword",tokenmiddleware);
 
 /* Asignamos a que puerto se vera nuestra pagina.*/

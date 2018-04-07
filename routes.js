@@ -120,7 +120,7 @@ router.get("/", function(request,response){
                         "email": data['mail']
 
                       };
-                      response.render("app/home",{user: responseuserjson});
+                      response.render("appv2",{user: responseuserjson});
                 }
                 else {
                       response.send('{"error":1,"message":"No se encuentran los datos del usuario."}');

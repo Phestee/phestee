@@ -1,6 +1,6 @@
 // ------
 // Modal Sign in - Activated by "Registrate" in NavBar and "Crear mi Tablero" in Landing Page and phHmBsns Container (AKA "Administra" in navBar
-#phRegMdl.modal.fade.inxFrnt(tabindex='-1', role='dialog', aria-labelledby='phRegMdl', aria-hidden='true')
+#phRegMdl.modal.fade.inxFrnt(tabindex='-1', role='dialog', aria-labelledby='phRegMdl', aria-hidden='true' ng-controller='signup')
   .modal-dialog.modal-dialog-centered(role='document')
     .modal-content.phfont-muli.bgrndModal
       .modal-header
@@ -19,28 +19,47 @@
             i.fab.fa-facebook-f.fa-fw.fa-1x(aria-hidden='true')
             |  facebook
           p.form-text.text-dark.mt-3 O bien, crea una cuenta
-        form
-          //
-            <div class="form-group d-flex">
-            <i class="fas fa-user fa-sm my-auto text-dark"></i><input type="text" class="ml-2 form-control fldsMdl" id="phUsrNm" placeholder="Crea un nombre de usuario">
-          // -Activated by condition--
-          //
-            <small class="form-text text-danger">¡Ouch! El nombre de usuario no está disponible <i class="fa fa-frown-o fa-1x text-danger" aria-hidden="true"></i></small>
-            <small class="form-text text-info">¡El nombre de usuario está disponible! <i class="fa fa-child fa-1x text-info" aria-hidden="true"></i></small>
-            </div>
+        form(name="frmsignup" id="frmsignup")
           .form-group.d-flex
             i.fas.fa-envelope.fa-sm.my-auto.text-muted
-            input#phMail.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='email', aria-describedby='emailHelp', placeholder='Ingresa tu correo electrónico')
+            input#iptEmail.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='email', aria-describedby='emailHelp', placeholder='Ingresa tu correo electrónico', name="iptEmail" ng-model="iptEmail" ng-required="true")
+            input(type="button" id="btnCheckEmail" name="btnCheckEmail" ng-model="btnCheckEmail" ng-click="checkemail()" ng-disabled="frmsignup.iptEmail.$error.email || frmsignup.iptEmail.$invalid" value="Checar correo.")
           .form-group
             small#emailHelp.mx-auto.form-text.text-dark.ml-1
               i.fas.fa-shield-alt.fa-1x.text-muted(aria-hidden='true')
               |  No te preocupes, jamás compartiremos tu correo con terceros.
+            small.form-text.text-danger(ng-show="frmsignup.iptEmail.$error.required && frmsignup.iptEmail.$dirty")
+              | El correo es requerido
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
+            small.form-text.text-info(ng-show="emailavailable && frmsignup.iptEmail.$dirty")
+              | EL email esta disponible
+              i.fa.fa-child.fa-1x.text-info(aria-hidden='true')
+            small.form-text.text-danger(ng-show="frmsignup.iptEmail.$error.email && frmsignup.iptEmail.$dirty")
+              | El correo no es válido
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
+            small.form-text.text-danger(ng-show="emailnotavailable && frmsignup.iptEmail.$dirty")
+              | El email no se encuentra disponible.
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
           .form-group.d-flex
             i.fas.fa-key.fa-sm.my-auto.text-muted
-            input#phPwd.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Crea una contraseña')
+            input#iptPassword.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Crea una contraseña', name="iptPassword" ng-model="iptPassword" ng-required="true" ng-minlength="8")
+          .form-group
+            small.form-text.text-danger(ng-show="frmsignup.iptPassword.$error.required && frmsignup.iptPassword.$dirty")
+              | El password es requerido
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
+            small.form-text.text-danger(ng-show="frmsignup.iptPassword.$error.minlength && frmsignup.iptPassword.$dirty")
+              | El minimo del password son 8.
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
           .form-group.d-flex
             i.fas.fa-lock.fa-sm.my-auto.text-muted
-            input#phPwdConfr.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Repite la contraseña')
+            input#iptConfirmPassword.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Repite la contraseña', name="iptConfirmPassword" ng-model="iptConfirmPassword" ng-required="true")
+          .form-group
+            small.form-text.text-danger(ng-show="frmsignup.iptConfirmPassword.$error.required && frmsignup.iptConfirmPassword.$dirty")
+                | La confirmación del password es requerido.
+                i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
+            small.form-text.text-danger(ng-show="mostrarmsj && frmsignup.iptConfirmPassword.$dirty")
+              | Las contraseñas no coinciden.
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
             // -Activated by condition--
             // <small class="form-text text-danger">¡Oops! La contraseña no coincide <i class="fa fa-ban fa-1x text-danger" aria-hidden="true"></i></small>
           .form-check.text-dark
@@ -49,7 +68,7 @@
                 input(type='checkbox')
                 |                               Mantener la sesión iniciada
           .form-group.text-center
-            button.btn.phbtn-blue.font-weight-light(type='button')
+            button.btn.phbtn-blue.font-weight-light(type='button' name="btnRegister", id="btnRegister" ng-click="registerUser()" ng-disabled="frmsignup.$invalid")
               | Registrarme 
               i.fas.fa-arrow-circle-right.fa-sm
           .form-group.text-center

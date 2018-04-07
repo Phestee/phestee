@@ -1,0 +1,71 @@
+extends ../leftPanel/xl
+block pannel
+  // Mid panel. Feed
+  .col-7.mt-5.pt-5.mb-5
+    .row.rounded.justify-content-center.bgndAdmn
+      .col-12
+        h6.phtext-muted.text-uppercase.font-weight-bold.my-auto
+          i.fas.fa-edit
+          |  Editar Cuenta
+          a(href='pheditbusiness.html')
+            small.phfont-opensans.phtext-blue.ml-3.my-auto.text-capitalize  1 Negocio registrado
+        .dropdown-divider(role='separator')
+        .form-row.my-auto
+          .col-8.mt-3.d-flex.justify-content-start
+            img.my-auto.rounded-circle(src='img/PhesteeUser.jpg', width='50', height='50')
+            p.my-auto.ml-3.h6.my-auto Benjamin Castro
+        form
+          small.text-left.text-uppercase
+            p.p.mt-4  Tipo de cuenta
+          .form-row.my-auto
+            .col-12.mt-3.d-flex.justify-content-between
+              p.p.phtext-muted.font-weight-bold.my-auto
+                i.fas.phtext-muted.fa-check
+                |  Freemium
+              button.my-auto.btn.btn-sm.phbtn-blue.ml-5
+                i.fas.fa-gift.my-auto
+                |  Obten una cuenta Premium
+          .form-row.my-auto
+            .col-12.mt-3.d-flex.justify-content-end
+              a.phtext-blue.my-auto(href='#')
+                small.phtext-blue  Más información
+          .dropdown-divider.mt-4(role='separator')
+          small.text-left.text-uppercase
+            p.p.mt-3  Ligar Cuentas
+          .form-row.my-auto
+            .col-12.mt-3.d-flex.justify-content-start
+              button.my-auto.btn.phbtn-outline-blue.btn-sm
+                i.fab.fa-facebook-square.my-auto
+                |  Sincronizar con Facebook
+          .dropdown-divider.mt-4(role='separator')
+          small.text-left.text-uppercase
+            p.p.mt-3  Cambiar una contraseña
+          .form-row.my-auto
+            .col-6.mt-3.d-flex.justify-content-between
+              small.my-auto
+                p.p.ml-3.my-auto Contraseña
+              input.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='')
+            .col-6.mt-3.d-flex.justify-content-between
+              small.my-auto
+                p.p.ml-3.my-auto Repite contraseña
+              input.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='')
+          .dropdown-divider.mt-4(role='separator')
+          small.text-left.text-uppercase
+            p.p.mt-3  Borrar Cuenta
+          .form-row.my-auto
+            .col-12.mt-3.d-flex.justify-content-center
+              small
+                p.p.ml-3.font-weight-bold.my-auto.text-center
+                  | ¡Cuidado! Esta acción borarrá permanentemente tu cuenta. No podrás conectarte a Phestee después de esto.
+            .col-12.mt-3.d-flex.justify-content-center
+              button.my-auto.btn.phbtn-red.btn-sm
+                i.fas.fa-eraser
+                |  Borrar Cuenta
+          .dropdown-divider.mt-4(role='separator')
+    .row.my-auto.text-right
+      .col-12.justify-content-end.mt-2
+        button.btn.phbtn-blue
+          i.fas.fa-save
+          |  Guardar Cambios
+  // End of Mid panel, Feed
+  include ../../endScripts

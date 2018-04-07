@@ -1,7 +1,7 @@
 // ------
 // Modales
 // Modal Login - Activated by "Inicia Sesión" in NavBar and "Entrar" in Footer section
-#phLoginMdl.modal.fade.inxFrnt(tabindex='-1', role='dialog', aria-labelledby='phLoginMdl', aria-hidden='true')
+#phLoginMdl.modal.fade.inxFrnt(tabindex='-1', role='dialog', aria-labelledby='phLoginMdl', aria-hidden='true' ng-controller="login")
   .modal-dialog.modal-dialog-centered(role='document')
     .modal-content.phfont-muli
       .modal-header
@@ -11,7 +11,7 @@
         button.close(type='button', data-dismiss='modal', aria-label='Close')
           span(aria-hidden='true') ×
       .modal-body
-        form
+        form#frmLogin(name="frmLogin")
           .form-group.text-center
             p.form-text.text-dark Entrar con 
             //
@@ -23,27 +23,41 @@
             p.form-text.text-dark.mt-3 Entrar con mi cuenta
           .form-group.d-flex
             i.fas.fa-envelope.fa-sm.my-auto.text-muted
-            input#phUsrNm.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='email', placeholder='Correo electrónico', required='')
+            input#iptEmail.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(name="iptEmail", type='email', placeholder='Correo electrónico', ng-model="iptEmail" ng-required="true")
             // -Activated by condition--
             // <small class="form-text phtext-danger">El correo electrónico no está registrado <i class="fa fa-frown-o fa-1x text-danger" aria-hidden="true"></i></small>
+          .form-group
+            small.form-text.text-danger(ng-show="frmLogin.iptEmail.$error.required && frmLogin.iptEmail.$dirty")
+              | El correo es requerido
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
+            small.form-text.text-danger(ng-show="frmLogin.iptEmail.$error.email && frmLogin.iptEmail.$dirty")
+              | Correo Inválido
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
           .form-group.d-flex
             i.fas.fa-lock.fa-sm.my-auto.text-muted
-            input#phPwdConfr.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Contraseña')
+            input#iptPassword.phinput.phtext-blue.ml-2.form-control.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='Contraseña', name="iptPassword", ng-model="iptPassword" ng-required="true" maxlength="30")
             // -Activated by condition--
             // <small class="form-text phtext-red">¡Ouch! La contraseña no coincide <i class="fa fa-ban fa-1x text-danger" aria-hidden="true"></i></small>
+          .form-group
+            small.form-text.text-danger(ng-show="frmLogin.iptPassword.$error.required && frmLogin.iptPassword.$dirty")
+              | La contraseña es requerida.
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
+            small.form-text.text-danger(ng-show="frmLogin.iptPassword.$error.maxlength && frmLogin.iptPassword.$dirty")
+              | La contraseña no debe ser mayor a 30 caracteres.
+              i.fa.fa-ban.fa-1x.text-danger(aria-hidden='true')
           .form-check.text-dark
             small
               label.text-dark
                 input(type='checkbox')
                 |                                   Mantener la sesión iniciada
           .form-group.text-center
-            a.btn.phbtn-blue.text-white.font-weight-light(href='phlayout.html')
+            button.btn.phbtn-blue.text-white.font-weight-light( ng-click="loginUser()" ng-disabled="frmLogin.$invalid")
               | Entrar  
               i.fas.fa-arrow-circle-right.fa-sm
           .form-group.text-center
             small#emailHelp.form-text.text-dark
               | ¿Aún no tienes una cuenta? 
-              a(href='') Regístrate
+              a(href='/signup') Regístrate
             small#emailHelp.form-text.text-dark
               | Recuerda que al registrarte aceptas nuestra 
               a(href='#') política de privacidad

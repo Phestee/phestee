@@ -1,0 +1,18 @@
+// ---
+// Modal Sign out - Activated by "Salir" in NavBar
+#phLogOutMdl.modal.fade(tabindex='-1', role='dialog', aria-labelledby='phLogOutMdl', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        h5#phLoginMdl.h5.modal-title.text-center
+          img.d-inline-block.align-top.my-auto(src='img/phesteelogox2.png', width='30', height='30', alt='Logo Phestee')
+          |  Cerrar Sesión
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        form
+          .form-group.phfont-muli.text-center.my-auto
+            button.btn.phbtn-blue.px-3.my-2.btn-sm(type='button', data-dismiss='modal', aria-label='Close')
+              | Cancelar
+            button.btn.phbtn-outline-dark.my-2.btn-sm.ml-3(type='button' ng-click="signout()")
+              | Si, deseo salir

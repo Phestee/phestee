@@ -1,0 +1,1218 @@
+// Modal Announce - Activated by "Anuncia" in Feed
+#phAnncPst.modal.fade(tabindex='-1', role='dialog', aria-labelledby='phAnncPst', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .card
+        .card-body
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true')
+              small ×
+          p.phtext-muted
+            i.fas.fa-bullhorn(data-fa-transform='rotate-340')
+            |  Crea un anuncio desde tu tablero
+          .d-flex.align-content-center.justify-content-start
+            img.rounded-circle(src='../img/system/PhesteeUser.jpg', height='40', width='40')
+            .nav-item.dropdown
+              a#navbarDropdown.nav-link.dropdown-toggle.phtext-blue(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                | @benjaminc
+              .dropdown-menu(aria-labelledby='navbarDropdown')
+                a.dropdown-item(href='#')
+                  small @mecánicosMX
+                .dropdown-divider
+                a.dropdown-item(href='#')
+                  small Agregar un negocio
+          textarea#exampleFormControlTextarea1.form-control.phfield.mt-3(rows='3', placeholder='Escribe el texto de tu anuncio')
+          .col-12.mt-4.d-flex.align-content-center.justify-content-between
+            .d-flex.align-content-center.justify-content-start
+              a(href='#')
+                i.fas.fa-camera.phtext-muted
+              a(href='#')
+                i.fas.fa-video.phtext-muted.ml-5
+            button.btn.phbtn-outline-dark.btn-sm.font-weight-light.phfont-muli(data-toggle='collapse', href='#expndSrvs4Offer', aria-expanded='false', aria-controls='expndSrvs4Offer')
+              i.fas.fa-tag
+              |  Agregar una oferta
+            button.btn.phbtn-outline-blue.btn-sm.font-weight-light.phfont-muli(data-dismiss='modal', aria-label='Close')
+              i.fas.fa-bullhorn(data-fa-transform='rotate-340')
+              |  Anunciar
+      #expndSrvs4Offer.collapse.card-body
+        .modal-content
+          .row.d-flex.justify-content-center
+            .col-12
+              .card.border-0
+                .card-body
+                  small
+                    p.text-center.font-weight-bold Puedes agregar productos o servicios desde tu tablero
+                  ul.list-group
+                    .card-header.border-dark.d-flex.justify-content-around.align-items-center
+                      small
+                        span.my-auto.font-weight-bold.text-center Descripción
+                      small
+                        span.my-auto.font-weight-bold.text-center Precio (MXN)
+                    li.list-group-item.rounded-0.rowHgtTblrOffr.ovrFlwApp
+                      small
+                        .d-flex.justify-content-around.align-items-center
+                          label.custom-control.custom-checkbox
+                            input.custom-control-input.ml-1.my-auto(type='checkbox')
+                            span.custom-control-indicator
+                            span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                          p $250.00
+                      small
+                        .d-flex.justify-content-around.align-items-center
+                          label.custom-control.custom-checkbox
+                            input.custom-control-input.ml-1.my-auto(type='checkbox')
+                            span.custom-control-indicator
+                            span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                          p $250.00
+                      small
+                        .d-flex.justify-content-around.align-items-center
+                          label.custom-control.custom-checkbox
+                            input.custom-control-input.ml-1.my-auto(type='checkbox')
+                            span.custom-control-indicator
+                            span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                          p $250.00
+                      small
+                        .d-flex.justify-content-around.align-items-center
+                          label.custom-control.custom-checkbox
+                            input.custom-control-input.ml-1.my-auto(type='checkbox')
+                            span.custom-control-indicator
+                            span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General weifjowejf woifjewjf oweifjoewjf woefjowejf owejfowej
+                          p $250.00
+                      .card-body.phfont-muli.mt-1.d-flex.justify-content-center.align-items-center
+                        button.btn.btn-sm.phbtn-outline-dark(type='button', href='editdashboard.html')
+                          i.fas.fa-list-ul
+                          |  Editar tablero
+                  small
+                    p.text-center.mt-3.font-weight-bold Puedes hacer un descuento aquí
+                  .col-12.d-flex.mt-2.justify-content-around
+                    small
+                      .input-group.input-group-sm
+                        span.input-group-addon %
+                        input.form-control(type='text', aria-label='Text input with checkbox', placeholder='Por porcentaje')
+                    small
+                      .input-group.input-group-sm.ml-1
+                        span.input-group-addon $
+                        input.form-control(type='text', aria-label='Text input with checkbox', placeholder='O precio fijo')
+                  .col-12.mt-2.d-flex.align-items-center.justify-content-between
+                    p.h6.font-weight-bold.my-auto Neto
+                    p.h6.ml-2.font-weight-bold.my-auto $54,203.00
+                    p.h6.my-auto
+                      small
+                        i.far.fa-clock
+                        |  Expira
+                    select.custom-select.custom-select-sm.ml-1
+                      option(selected='') Nunca
+                      option(value='1') 1hr
+                      option(value='2') 2hr
+                      option(value='2') 3hr
+                      option(value='3') 6hr
+                      option(value='3') 9hr
+                      option(value='3') 12hr
+                      option(value='3') 15hr
+                      option(value='3') 18hr
+                      option(value='3') 1 día
+                      option(value='3') 2 días
+                      option(value='3') 3 días
+                      option(value='3') 4 días
+                      option(value='3') 1 semana
+                      option(value='3') 2 semanas
+                      option(value='3') 3 semanas
+                      option(value='3') 1 mes
+                      option(value='3') 2 meses
+                      option(value='3') 4 meses
+                      option(value='3') 8 meses
+                      option(value='3') 12 meses
+                      option(value='3') 2 años
+                      option(value='3') 3 años
+                      option(value='3') 5 años
+                      option(value='3') 10 años
+                  .col-12.phfont-muli.mt-4.text-right
+                    a.btn.phbtn-blue.btn-sm.my-auto(href='#expndSrvs4Offer', data-toggle='collapse', aria-expanded='false', aria-controls='expndSrvs4Offer')
+                      i.fas.fa-check-circle
+                      |  Confirmar
+// End of Modal Announce - Activated by "Anuncia" in NavBar
+// Modal Start Experience - Activated by offers in Feed
+#strtUX.modal.fade(tabindex='-1', role='dialog', aria-labelledby='strtUX', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        p.h6.modal-text.phtext-muted
+          i.fas.fa-bolt.phtext-muted
+          |  Estás iniciando una experiencia con 
+          a(href='#') @masajesadom
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true')
+            small ×
+      .card
+        .card-body
+          .row
+            .col.d-flex.justify-content-between.my-auto
+              small.phfont-muli.phtext-muted.my-auto Hoy a las 9:30
+              span
+                i.far.fa-images.phtext-muted.mr-2
+                i.far.fa-bookmark.phtext-muted.mr-2
+                i.far.fa-trash-alt.phtext-muted.mr-2
+          .row.mt-3
+            .col-12
+              a.phtext-blue(href='profile.html') @benjaminc
+              a.phtext-dark  Me duele la espalda
+            .col-12.mt-2
+              a.phtext-blue(href='phprofile.html') @masajesadom
+              a.phtext-dark Masaje Relajante. Cuerpo completo
+          #accordion
+            .col-12.phfont-muli.d-flex.justify-content-between.mt-3
+              .col.rounded.phbgn-light.my-auto
+                small.ml-auto.phfont-lato.h6.phtext-dark.font-weight-bold.my-auto $520.00
+              #headingWhen.col
+                button.btn.phbtn-outline-dark.border-0.btn-sm(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  i.fas.fa-clock
+                  |  ¿Cuándo?
+                .dropdown-menu
+                  a.dropdown-item(href='#')
+                    small A partir de este momento
+                  a.dropdown-item(href='#')
+                    small Mañana a esta hora
+                  a.dropdown-item(href='#')
+                    small En una semana a esta hora
+                  a#expandcalendar.dropdown-item(data-toggle='collapse', href='#showcalendar', role='button', aria-expanded='false', aria-controls='showcalendar')
+                    small Otra fecha y hora
+              #headingWhere.col
+                button.btn.phbtn-outline-dark.border-0.btn-sm(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  i.fas.fa-map-marker-alt
+                  |  ¿Dónde?
+                .dropdown-menu
+                  a.dropdown-item(href='#')
+                    small @benjaminc
+                  a.dropdown-item(href='#')
+                    small @mecanicosMX
+                  a.dropdown-item(href='#')
+                    small @masajesdom
+                  a.dropdown-item(data-toggle='collapse', href='#showmap1', role='button', aria-expanded='false', aria-controls='showmap1')
+                    small Ubicación actual
+                  a.dropdown-item(data-toggle='collapse', href='#showmap1', role='button', aria-expanded='false', aria-controls='showmap1')
+                    small Ver mapa
+              #headingMsgs.col
+                button.btn.phbtn-outline-dark.border-0.btn-sm(type='button', data-toggle='collapse', href='#msguxp', role='button', aria-expanded='false', aria-controls='msguxp')
+                  i.fas.fa-comments
+                  |  Mensajes
+              #showcalendar.collapse(data-parent='#accordion', aria-labelledby='headingWhen')
+                .col
+                  .mt-3.datepicker-here(data-timepicker='true', data-language='es')
+              #showmap1.collapse(data-parent='#accordion', aria-labelledby='headingWhere')
+                .col
+                  #map.col-12.mt-3.map
+              #msguxp.collapse(data-parent='#accordion', aria-labelledby='headingMsgs')
+                .col.phbgn-fa.mt-3.phhgt-1-4.phoverflow.collapse
+                  .card-body.rounded
+                    .row.mt-3
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/PhesteeUser.jpg', width='40', height='40')
+                      .col.phbgn-blue.ml-2.rounded.my-auto
+                        small
+                          a.card-text.text-justify
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat ma.
+                        p.fUbuntu
+                          small.text-muted Hoy, a las 09:30 am
+                    .row.mt-3
+                      .col.phbgn-light.mr-2.rounded.my-auto
+                        small
+                          a.card-text.text-justify
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat ma.
+                        p.fUbuntu.text-right
+                          small.text-muted.text-right Hoy, a las 14:30 am
+                      .d-flex.justify-content-end
+                        a(href='#')
+                          img.rounded-circle(src='../img/system/discover.jpeg', width='40', height='40')
+                    .row
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/PhesteeUser.jpg', width='40', height='40')
+                      .col.my-auto
+                        small
+                          a.card-text.text-justify
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat ma.
+                        p.fUbuntu
+                          small.text-muted Hoy, a las 09:30 am
+                        img.card-img-top.rounded.mb-4(src='../img/system/discover2.jpeg', alt='Card image cap')
+                    .row
+                      .col.my-auto
+                        small
+                          a.card-text.text-justify
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat ma.
+                        p.fUbuntu.text-right
+                          small.text-muted.text-right Hoy, a las 14:30 am
+                      .d-flex.justify-content-end
+                        a(href='#')
+                          img.rounded-circle(src='../img/system/discover.jpeg', width='40', height='40')
+                    .row
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/PhesteeUser.jpg', width='40', height='40')
+                      .col.my-auto
+                        small
+                          a.card-text.text-justify
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat ma.
+                        p.fUbuntu
+                          small.text-muted Hoy, a las 09:30 am
+                        img.card-img-top.rounded.mb-4(src='../img/system/discover3.jpeg', alt='Card image cap')
+                    .row
+                      .col.my-auto
+                        small
+                          a.card-text.text-justify
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat ma.
+                        p.fUbuntu.text-right
+                          small.text-muted.text-right Hoy, a las 14:30 am
+                      .d-flex.justify-content-end
+                        a(href='#')
+                          img.rounded-circle(src='../img/system/discover.jpeg', width='40', height='40')
+                    .row
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/PhesteeUser.jpg', width='40', height='40')
+                      .col.my-auto
+                        small
+                          a.card-text.text-justify
+                            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat ma.
+                        p.fUbuntu
+                          small.text-muted Hoy, a las 09:30 am
+                    .row
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/PhesteeUser.jpg', width='40', height='40')
+                      .col.my-auto
+                        p.fUbuntu
+                          small.text-muted Hoy, a las 09:30 am
+                        img.card-img-top.rounded.mb-4(src='../img/system/discover3.jpeg', alt='Card image cap')
+          .row
+            .col.d-flex.justify-content-around.mt-3
+              textarea#exampleFormControlTextarea1.form-control.phfield.form-control-sm.rounded(rows='1', placeholder='Escribe un mensaje')
+              i.fas.fa-camera.fa-lg.phtext-muted.ml-2.my-auto
+            .col-12.phfont-muli.d-flex.justify-content-end.align-items-center.mt-3
+              button.btn.phbtn-blue.btn-sm(type='button')
+                i.far.fa-handshake
+                |  Iniciar acuerdo
+// End of Modal Start Experience - Activated by offers in Feed
+// Main Container
+// phAppBgnd Container - Board and Feed
+.container-fluid.phbgn-f5.phfont-lato
+  .container
+    #topFeed.row.justify-content-start
+      // Left panel. Feed
+      .col-2.mt-5.pt-5
+        .card-deck.border-0.sticky
+          .card.border-0
+            .card-body.border
+              p.text-center.font-weight-bold
+                i.fas.fa-bolt.phtext-red
+                |  Experiencias recientes
+              .row.mt-2
+                .col-12.d-flex.justify-content-start
+                  .col.d-flex.justify-content-start
+                    small
+                      | Aún no has iniciado experiencias. Solicita algo o levanta la mano en una publicación para comenzar.
+              //
+                <div class="row mt-4">
+                <div class="col-12 d-flex justify-content-start">
+                <img src="../img/system/benjamincastro.jpg" height="35" width="35" class="rounded-circle borderPic border-primary">
+                <div class="col d-flex justify-content-start">
+                <a href="#" class="text-truncate" style="max-width: 70px;"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud  </small></a>
+                </div>
+                </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col-12 d-flex justify-content-start">
+                <img src="../img/system/ramongama.jpg" height="35" width="35" class="rounded-circle borderPic border-primary">
+                <div class="col d-flex justify-content-start">
+                <a href="#" class="text-truncate" style="max-width: 70px;"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud  </small></a>
+                </div>
+                </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col-12 d-flex justify-content-start">
+                <img src="../img/system/raymundocastellanos.jpg" height="35" width="35" class="rounded-circle borderPic border-primary">
+                <div class="col d-flex justify-content-start">
+                <a href="#" class="text-truncate" style="max-width: 70px;"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud  </small></a>
+                </div>
+                </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col-12 d-flex justify-content-start">
+                <img src="../img/system/jcdiaz.jpg" height="35" width="35" class="rounded-circle borderPic border-primary">
+                <div class="col d-flex justify-content-start">
+                <a href="#" class="text-truncate" style="max-width: 70px;"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud  </small></a>
+                </div>
+                </div>
+                </div>
+                <div class="row mt-3">
+                <div class="col-12 d-flex justify-content-start">
+                <img src="../img/system/mikehernandez.jpg" height="35" width="35" class="rounded-circle borderPic border-primary">
+                <div class="col d-flex justify-content-start">
+                <a href="#" class="text-truncate" style="max-width: 70px;"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud  </small></a>
+                </div>
+                </div>
+                </div>
+            .card-footer.border-0.phbgn-f5.text-center
+              a(href='experiences.html')
+                i.fas.fa-ellipsis-h.phtext-muted.fa-lg
+      // end of left panel. Feed
+      // Mid panel. Feed
+      .col-6.mt-5.pt-5
+        .row.d-flex.justify-content-start
+          .col-12.d-flex.justify-content-between
+            textarea.form-control.phfield-post(rows='3', placeholder='Hola Benjamín, cuéntanos ¿qué pasa?')
+          .col-12.mt-3.d-flex.align-item-center.justify-content-end
+            i.fas.fa-image.phtext-muted.mr-5.my-auto
+            i.fas.fa-microphone.phtext-muted.mr-5.my-auto
+            button.btn.phbtn-blue.btn-sm.phfont-muli.font-weight-light.px-3
+              i.fas.fa-pencil-alt.fa-1x
+              |  Solicitar
+        .row
+          #phFeed.col-12
+            .card-deck.mt-5
+              .card.border
+                .card-body
+                  p.card-title.phtext-muted  Alguien solicitó esto a 3km. Hoy, a las 11:30 am
+                  p.card-text
+                    | Necesito un Doctor. Me duele la panza bien gacho y nadie me quiere llevar al hospital. Es una urgencia, creo que me voy a morir! x.x
+                  .row.mt-4
+                    .col-12.d-flex.justify-content-start.align-content-center
+                      .col-3.btn-group.btn-outline-light.ml-1.py-2.px-2.ph-pointer(data-toggle='collapse', data-parent='#accordion', href='#expand5', aria-expanded='false', aria-controls='expand5')
+                        small
+                          a.phtext-muted.font-weight-bold
+                            i.fa-lg.far.fa-hand-paper.phtext-muted(data-fa-transform='flip-h rotate-20')
+                            b.phtext-muted.ml-1 Ofrecer algo
+                      .col-3.btn-group.btn-outline-light.ml-1.py-2.px-2.ph-pointer
+                        small
+                          a.phtext-muted.font-weight-bold
+                            i.fa-lg.far.fa-heart.phtext-muted
+                            b.phtext-muted.ml-1  Me gusta
+                      .col-3.btn-group.btn-outline-light.ml-1.py-2.px-2.ph-pointer
+                        small
+                          a.phtext-muted.font-weight-bold
+                            i.fa-lg.fas.fa-retweet.phtext-muted
+                            b.phtext-muted.ml-1  Solicítalo
+                  .row.mt-1
+                    .col-12.justify-content-around.align-content-center.mt-3
+                      .input-group.input-group-sm
+                        span#basic-addon1.input-group-addon @
+                        input.form-control.phfield.phtext-blue(type='text', placeholder='Etiqueta a alguien que pueda ayudar', aria-label='Tab', aria-describedby='basic-addon1')
+                #expand5.collapse
+                  .card.mb-3
+                    .card-body.phbgn-f5
+                      .col-12
+                        small.h6.phtext-dark ¡Ouch! No hay coincidencias con tu tablero
+                        button.close(type='button', data-toggle='collapse', data-parent='#accordion', href='#expand5', aria-expanded='false', aria-controls='expand5')
+                          span(aria-hidden='true')
+                            small.text-dark.font-weight-bold ×
+                      .col-12.mt-3
+                        .form-group.mt-1
+                          small
+                            textarea#exampleFormControlTextarea1.form-control.phfield.form-control-sm(rows='3', placeholder='Agrega un comentario')
+                      .col-12.mt-3
+                        a(href='editdashboard.html')
+                          small Más información
+            .card-deck.mt-5
+              .card.border
+                .card-body
+                  p.card-title.phtext-muted Alguien solicitó esto a 1km. Hoy, a las 09:30 am
+                  p.card-text
+                    | Mi carro no quiere prender, no sé si necesito un electricista o un mecánico #valiendoversh
+                  .row.mt-4
+                    .col-12.d-flex.justify-content-start.align-content-center
+                      .col-3.btn-group.btn-outline-light.ml-1.py-2.px-2.ph-pointer(data-toggle='collapse', data-parent='#accordion', href='#expand1', aria-expanded='false', aria-controls='expand1')
+                        small
+                          a.phtext-muted.font-weight-bold
+                            i.fa-lg.far.fa-hand-paper.phtext-muted(data-fa-transform='flip-h rotate-20')
+                            b.phtext-muted.ml-1 Ofrecer algo
+                      .col-3.btn-group.btn-outline-light.ml-1.py-2.px-2.ph-pointer
+                        small
+                          a.phtext-muted.font-weight-bold
+                            i.fa-lg.far.fa-heart.phtext-muted
+                            b.phtext-muted.ml-1  Me gusta
+                      .col-3.btn-group.btn-outline-light.ml-1.py-2.px-2.ph-pointer
+                        small
+                          a.phtext-muted.font-weight-bold
+                            i.fa-lg.fas.fa-retweet.phtext-muted
+                            b.phtext-muted.ml-1  Solicítalo
+                  .row.mt-1
+                    .col-12.justify-content-around.align-content-center.mt-3
+                      .input-group.input-group-sm
+                        span#basic-addon1.input-group-addon @
+                        input.form-control.phfield.phtext-blue(type='text', placeholder='Etiqueta a alguien que pueda ayudar', aria-label='Tab', aria-describedby='basic-addon1')
+                #expand1.collapse
+                  .card.mb-3
+                    .card-body.phbgn-f5
+                      .col-12
+                        small.phtext-dark
+                          | Mejor coincidencia con tu tablero 
+                          a(href='profile.html') @mecanicosMX
+                        button.close(type='button', data-toggle='collapse', data-parent='#accordion', href='#expand1', aria-expanded='false', aria-controls='expand1')
+                          span(aria-hidden='true')
+                            small.text-dark ×
+                      .col-12.d-flex.justify-content-between.align-content-center.mt-3
+                        p.h6.text-truncate.my-auto.font-weight-light
+                          i.fas.fa-check.phtext-blue
+                          |   Revisión General
+                        p.h6.text-truncate $250.00
+                      .col-12.mt-3
+                        .form-group.mt-1
+                          small
+                            textarea#exampleFormControlTextarea1.form-control.phfield.form-control-sm(rows='3', placeholder='Agrega un comentario (Opcional)')
+                      .col-12.d-flex.phfont-muli.phfont-muli.justify-content-between.align-content-center
+                        a.btn.phbtn-dark.btn-sm.my-auto(href='#expand1', data-toggle='collapse', aria-expanded='false', aria-controls='expand1')
+                          i.fas.fa-hand-paper(data-fa-transform='flip-h rotate-20')
+                          |  Levantar la mano
+                        a.btn.phbtn-outline-dark.btn-sm.my-auto(href='#expand1Offr', data-toggle='modal', data-target='#expand1Offr')
+                          i.fas.fa-tag
+                          |  Modificar oferta
+                #expand1Offr.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalVerticalLabel', aria-hidden='true')
+                  .modal-dialog(role='document')
+                    .modal-content
+                      .row.d-flex.justify-content-center
+                        .col-12
+                          .card.border-0
+                            .card-body
+                              p.card-text.text-muted
+                                small  Alguien publicó esto a 1km. Hoy, a las 09:30 am
+                              h6.h5.card-title
+                                | Mi carro no quiere prender, no sé si necesito un electricista o un mecánico #valiendoversh
+                              .form-group.mt-3
+                                textarea#exampleFormControlTextarea1.form-control.phfield(rows='3', placeholder='Agrega un comentario')
+                              button.btn.btn-link.phtext-blue(data-toggle='collapse', data-target='#collapseTblro', aria-expanded='true', aria-controls='collapseTblro') Agregar productos o servicios desde mi tablero 
+                              #collapseTblro.collapse(aria-labelledby='headingOne', data-parent='#accordion')
+                                ul.list-group.mt-2
+                                  .card-header.border-dark.d-flex.justify-content-around.align-items-center
+                                    small
+                                      span.my-auto.font-weight-bold.text-center Descripción
+                                    small
+                                      span.my-auto.font-weight-bold.text-center Precio (MXN)
+                                  li.list-group-item.rounded-0.phhgt-1-4.phoverflow
+                                    small
+                                      .d-flex.justify-content-around.align-items-center
+                                        label.custom-control.custom-checkbox
+                                          input.custom-control-input.ml-1.my-auto(type='checkbox')
+                                          span.custom-control-indicator
+                                          span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                                        p $250.00
+                                    small
+                                      .d-flex.justify-content-around.align-items-center
+                                        label.custom-control.custom-checkbox
+                                          input.custom-control-input.ml-1.my-auto(type='checkbox')
+                                          span.custom-control-indicator
+                                          span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                                        p $250.00
+                                    small
+                                      .d-flex.justify-content-around.align-items-center
+                                        label.custom-control.custom-checkbox
+                                          input.custom-control-input.ml-1.my-auto(type='checkbox')
+                                          span.custom-control-indicator
+                                          span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                                        p $250.00
+                                    small
+                                      .d-flex.justify-content-around.align-items-center
+                                        label.custom-control.custom-checkbox
+                                          input.custom-control-input.ml-1.my-auto(type='checkbox')
+                                          span.custom-control-indicator
+                                          span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General weifjowejf woifjewjf oweifjoewjf woefjowejf owejfowej
+                                        p $250.00
+                                    .card-body.phfont-muli.mt-1.d-flex.justify-content-center.align-items-center
+                                      button.btn.btn-sm.phbtn-outline-dark(type='button', href='editdashboard.html')
+                                        i.fas.fa-list-ul
+                                        |  Editar tablero
+                                small
+                                  p.h6.phtext-blue.text-center.mt-2 Hacer un descuento
+                                .col-12.d-flex.mt-2.justify-content-around
+                                  small
+                                    .input-group.input-group-sm
+                                      span.input-group-addon %
+                                      input.form-control.phfield(type='text', aria-label='Text input with checkbox', placeholder='Por porcentaje')
+                                  small
+                                    .input-group.input-group-sm.ml-1
+                                      span.input-group-addon $
+                                      input.form-control.phfield(type='text', aria-label='Text input with checkbox', placeholder='O precio fijo')
+                                .col-12.mt-2.d-flex.align-items-center.justify-content-between
+                                  p.h6.font-weight-bold.my-auto Neto
+                                  p.h6.ml-2.font-weight-bold.my-auto $54,203.00
+                                  p.h6.my-auto
+                                    small
+                                      i.far.fa-clock
+                                      |  Expira
+                                  select.custom-select.custom-select-sm.ml-1
+                                    option(selected='') Nunca
+                                    option(value='1') 1hr
+                                    option(value='2') 2hr
+                                    option(value='2') 3hr
+                                    option(value='3') 6hr
+                                    option(value='3') 9hr
+                                    option(value='3') 12hr
+                                    option(value='3') 15hr
+                                    option(value='3') 18hr
+                                    option(value='3') 1 día
+                                    option(value='3') 2 días
+                                    option(value='3') 3 días
+                                    option(value='3') 4 días
+                                    option(value='3') 1 semana
+                                    option(value='3') 2 semanas
+                                    option(value='3') 3 semanas
+                                    option(value='3') 1 mes
+                                    option(value='3') 2 meses
+                                    option(value='3') 4 meses
+                                    option(value='3') 8 meses
+                                    option(value='3') 12 meses
+                                    option(value='3') 2 años
+                                    option(value='3') 3 años
+                                    option(value='3') 5 años
+                                    option(value='3') 10 años
+                              .col-12.phfont-muli.mt-4.text-right
+                                a.btn.phbtn-dark.btn-sm.my-auto(href='#expand1', data-toggle='collapse', data-dismiss='modal', aria-expanded='false', aria-controls='expand1')
+                                  i.fas.fa-hand-paper(data-fa-transform='flip-h rotate-20')
+                                  |  Enviar oferta
+            .card-deck.mt-5
+              .card.border
+                img.card-img-top(src='../img/system/cleanhouse.jpeg', alt='Card image cap')
+                .card-body
+                  p.card-title.phtext-muted Alguien solicitó esto a 3km. Hoy, a las 11:30 am
+                  p.card-text ¿Alguien que quiera limpiar mi casa? #estuvobuenalafiesta #quiendiceyo
+                  .row.mt-4
+                    .col-12.d-flex.justify-content-start.align-content-center
+                      .col-3.btn-group.btn-outline-light.py-2.px-2.ph-pointer(data-toggle='collapse', href='#expand2', aria-expanded='false', aria-controls='expand2')
+                        small
+                          i.fa-lg.far.fa-hand-paper.phtext-blue(data-fa-transform='flip-h rotate-20', data-toggle='tooltip', data-placement='top', title='Ofreciste algo')
+                        small.p.font-weight-bold.phtext-dark.text-truncated.ml-2 9,9K
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-heart.phtext-red(data-toggle='tooltip', data-placement='top', title='Me gusta')
+                        small.p.font-weight-bold.phtext-dark.text-truncated.ml-2 200M
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-retweet.phtext-muted(data-toggle='tooltip', data-placement='top', title='Solicitarlo también')
+                        small.p.font-weight-bold.phtext-dark.text-truncated.ml-2 10,9K
+                  .row.mt-1
+                    .col-12.justify-content-around.align-content-center.mt-3
+                      .input-group.input-group-sm
+                        span#basic-addon1.input-group-addon @
+                        input.form-control.phfield.phtext-blue(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+                #expand2.collapse
+                  .card.mb-3
+                    .card-body.phbgn-f5
+                      .col-12
+                        small.text-dark
+                          | Hiciste una oferta desde tu tablero 
+                          a(href='profile.html') @benjaminc
+                        button.close(type='button', data-toggle='collapse', data-parent='#accordion', href='#expand2', aria-expanded='false', aria-controls='expand2')
+                          span(aria-hidden='true')
+                            small.text-dark ×
+                      .col-12.d-flex.justify-content-between.align-content-center.mt-3
+                        p.h6.text-truncate.my-auto
+                          i.fas.fa-check.phtext-blue
+                          |   Housekeeping
+                        p.h6.text-truncate.my-auto $500.00
+                      .col-12.mt-3
+                        .form-group.mt-1
+                          small
+                            textarea#exampleFormControlTextarea1.form-control.phfield.form-control-sm(rows='3', placeholder='Escribe un comentario (Opcional)')
+                      .d-flex.justify-content-between.phfont-muli.align-content-center
+                        a.btn.phbtn-dark.btn-sm.my-auto(href='#expand2', data-toggle='collapse', aria-expanded='false', aria-controls='expand2')
+                          i.fas.fa-hand-paper(data-fa-transform='flip-h rotate-20')
+                          |  Levantar la mano
+                        a.btn.phbtn-outline-dark.btn-sm.my-auto(href='#expand1Offr', data-toggle='modal', data-target='#expand2Offr')
+                          i.fas.fa-tag
+                          |  Modificar oferta
+                #expand2Offr.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalVerticalLabel', aria-hidden='true')
+                  .modal-dialog(role='document')
+                    .modal-content
+                      .row.d-flex.justify-content-center
+                        .col-12
+                          .card.border-0
+                            .card-body
+                              p.card-text.text-muted
+                                small  Alguien publicó esto a 3km. Hoy, a las 11:30 am
+                              h6.h5.card-title ¿Alguien que quiera limpiar mi casa? #estuvobuenalafiesta #quiendiceyo
+                              img.card-img-top.rounded-0(src='../img/system/cleanhouse.jpeg', alt='Card image cap')
+                              .form-group.mt-3
+                                textarea#exampleFormControlTextarea1.form-control.phfield(rows='3', placeholder='Agrega un comentario')
+                              button.btn.btn-link.phtext-blue(data-toggle='collapse', data-target='#collapseTblro2', aria-expanded='true', aria-controls='collapseTblro2') Agregar productos o servicios desde mi tablero 
+                              #collapseTblro2.collapse(aria-labelledby='headingOne', data-parent='#accordion')
+                                ul.list-group.mt-2
+                                  .card-header.border-dark.d-flex.justify-content-around.align-items-center
+                                    small
+                                      span.my-auto.font-weight-bold.text-center Descripción
+                                    small
+                                      span.my-auto.font-weight-bold.text-center Precio (MXN)
+                                  li.list-group-item.rounded-0.phhgt-1-4.phoverflow
+                                    small
+                                      .d-flex.justify-content-around.align-items-center
+                                        label.custom-control.custom-checkbox
+                                          input.custom-control-input.ml-1.my-auto(type='checkbox')
+                                          span.custom-control-indicator
+                                          span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                                        p $250.00
+                                    small
+                                      .d-flex.justify-content-around.align-items-center
+                                        label.custom-control.custom-checkbox
+                                          input.custom-control-input.ml-1.my-auto(type='checkbox')
+                                          span.custom-control-indicator
+                                          span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                                        p $250.00
+                                    small
+                                      .d-flex.justify-content-around.align-items-center
+                                        label.custom-control.custom-checkbox
+                                          input.custom-control-input.ml-1.my-auto(type='checkbox')
+                                          span.custom-control-indicator
+                                          span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General
+                                        p $250.00
+                                    small
+                                      .d-flex.justify-content-around.align-items-center
+                                        label.custom-control.custom-checkbox
+                                          input.custom-control-input.ml-1.my-auto(type='checkbox')
+                                          span.custom-control-indicator
+                                          span.custom-control-description.my-auto.text-truncate(style='max-width: 150px; min-width: 150px;') Revisión General weifjowejf woifjewjf oweifjoewjf woefjowejf owejfowej
+                                        p $250.00
+                                    .card-body.phfont-muli.mt-1.d-flex.justify-content-center.align-items-center
+                                      button.btn.btn-sm.phbtn-outline-dark(type='button', href='editdashboard.html')
+                                        i.fas.fa-list-ul
+                                        |  Editar tablero
+                                small
+                                  p.h6.phtext-blue.text-center.mt-2 Hacer un descuento
+                                .col-12.d-flex.mt-2.justify-content-around
+                                  small
+                                    .input-group.input-group-sm
+                                      span.input-group-addon %
+                                      input.form-control.phfield(type='text', aria-label='Text input with checkbox', placeholder='Por porcentaje')
+                                  small
+                                    .input-group.input-group-sm.ml-1
+                                      span.input-group-addon $
+                                      input.form-control.phfield(type='text', aria-label='Text input with checkbox', placeholder='O precio fijo')
+                                .col-12.mt-2.d-flex.align-items-center.justify-content-between
+                                  p.h6.font-weight-bold.my-auto Neto
+                                  p.h6.ml-2.font-weight-bold.my-auto $54,203.00
+                                  p.h6.my-auto
+                                    small
+                                      i.far.fa-clock
+                                      |  Expira
+                                  select.custom-select.custom-select-sm.ml-1
+                                    option(selected='') Nunca
+                                    option(value='1') 1hr
+                                    option(value='2') 2hr
+                                    option(value='2') 3hr
+                                    option(value='3') 6hr
+                                    option(value='3') 9hr
+                                    option(value='3') 12hr
+                                    option(value='3') 15hr
+                                    option(value='3') 18hr
+                                    option(value='3') 1 día
+                                    option(value='3') 2 días
+                                    option(value='3') 3 días
+                                    option(value='3') 4 días
+                                    option(value='3') 1 semana
+                                    option(value='3') 2 semanas
+                                    option(value='3') 3 semanas
+                                    option(value='3') 1 mes
+                                    option(value='3') 2 meses
+                                    option(value='3') 4 meses
+                                    option(value='3') 8 meses
+                                    option(value='3') 12 meses
+                                    option(value='3') 2 años
+                                    option(value='3') 3 años
+                                    option(value='3') 5 años
+                                    option(value='3') 10 años
+                              .col-12.phfont-muli.mt-4.text-right
+                                a.btn.phbtn-dark.btn-sm.my-auto(href='#expand2', data-toggle='collapse', data-dismiss='modal', aria-expanded='false', aria-controls='expand2')
+                                  i.fas.fa-hand-paper(data-fa-transform='flip-h rotate-20')
+                                  |  Enviar oferta
+            .card-deck.mt-5
+              .card.phborder-left-green
+                .card-body
+                  .row
+                    .ml-3.d-flex.justify-content-start
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/PhesteeUser.jpg', width='40', height='40')
+                    .col.my-auto
+                      small
+                        a.h6.phtext-dark(href='profile.html') Benjamin Castro
+                      p.phfont-lato
+                        small.phtext-muted Hoy, a las 09:30 am
+                  h6.h6.card-title.mt-2 Me duele la espalda
+                  .row.mt-4
+                    .col-12.d-flex.justify-content-start.align-content-center
+                      .col-3.btn-group.btn-outline-light.py-2.px-2.ph-pointer(data-toggle='collapse', href='#expand3', aria-expanded='false', aria-controls='expand3')
+                        small
+                          i.fa-lg.fas.fa-bolt.phtext-aqua(data-toggle='tooltip', data-placement='top', title='Ver respuestas')
+                        small.p.font-weight-bold.phtext-dark.text-truncated.ml-2 9,9K
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-heart.phtext-red(data-toggle='tooltip', data-placement='top', title='Me gusta')
+                        small.p.font-weight-bold.phtext-dark.text-truncated.ml-2 200M
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-share.phtext-muted(data-toggle='tooltip', data-placement='top', title='Compartir en redes')
+                        small.p.font-weight-bold.phtext-dark.text-truncated.ml-2 Compartir
+                  .row.mt-1
+                    .col-12.justify-content-around.align-content-center.mt-3
+                      .input-group.input-group-sm
+                        span#basic-addon1.input-group-addon @
+                        input.form-control.phfield.phtext-blue(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+                #expand3.collapse
+                  .card.phbgn-f5.border-0.rounded
+                    .row.rounded-0
+                      .card-body
+                        .col-12.d-flex.justify-content-between.align-content-center.mt-2.mb-2
+                          small
+                            select.custom-select
+                              option(selected='') Ordenar respuestas
+                              option(value='1') Más cercanos
+                              option(value='2') Mejor calificación
+                              option(value='3') Negocios certificados
+                              option(value='4') Negocios que sigo
+                              option(value='5') Mejor precio
+                              option(value='6') Por Ofertas
+                          button.close(type='button', data-toggle='collapse', href='#expand3', aria-expanded='false', aria-controls='expand3')
+                            span(aria-hidden='true')
+                              small.phtext-dark.font-weight-bold ×
+                      .col-12
+                        // rowHgtSeeServices ovrFlwApp
+                        .card.border.mt-2
+                          .card-body
+                            .row
+                              .ml-3.d-flex.justify-content-start
+                                a(href='#')
+                                  img.rounded-circle(src='../img/system/discover.jpeg', width='45', height='45')
+                              .col
+                                small
+                                  a.h6.phtext-blue(href='photherprofile.html') Masajes a Domicilio
+                                span.fa-layers.fa-fw
+                                  i.fas.fa-certificate.phtext-blue.fa-1x
+                                  i.fa-inverse.fas.fa-check(data-fa-transform='shrink-7')
+                                .row
+                                  .col.d-flex.justify-content-start.align-content-center
+                                    small
+                                      p.phtext-dark @masajesadom
+                                    small
+                                      p.phtext-dark.card-text.ml-2 A 1km
+                                    small
+                                      .d-flex.justify-content-start.mt-1.ml-2
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                              .col-2.d-flex.phfont-muli.justify-content-end
+                                a(href='#')
+                                  button.btn.phbtn-outline-blue.btn-sm
+                                    i.fas.fa-plus.fa-1x
+                                    |  Seguir
+                            .row
+                              .col-12.d-flex.justify-content-between
+                                p.p.font-weight-bold.phfont-muli.text-truncate Masaje Relajante. Cuerpo completo
+                                p.p.phtext-dark.font-weight-bold.phfont-muli.text-truncate $520.00
+                              .col-12
+                                small
+                                  p.p.phfont-muli.phtext-dark.card-text.text-justify
+                                    | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat ma.
+                            .row.mt-3
+                              .col-12.d-flex.justify-content-between
+                                p.text-muted
+                                  i.fas.fa-shopping-basket
+                                  small  Negocio con servicio a domicilio
+                                p.text-muted
+                                  i.fas.fa-users
+                                  small  350 personas lo han solicitado
+                            .row
+                              .col-12.d-flex.justify-content-between.align-items-center
+                                i.far.fa-heart.text-muted
+                                i.far.fa-images.text-muted
+                                a.text-muted(href='#')
+                                  small.font-weight-bold
+                                    i.fas.fa-exclamation.text-muted
+                                    |  Denunciar
+                                p.card-text
+                                  small.phtext-blue.font-weight-bold.text-right  Expira en 18:50:39
+                            .row.mt-3
+                              .col-12.d-flex.phfont-muli.justify-content-end
+                                a.btn.phbtn-blue.btn-sm(href='phexperiences.html')
+                                  i.fas.fa-bolt.fa-1x
+                                  |  Iniciar experiencia
+                        .card.border.mt-2
+                          .card-body
+                            .row
+                              .ml-3.d-flex.justify-content-start
+                                a(href='#')
+                                  img.rounded-circle(src='../img/system/discover2.jpeg', width='45', height='45')
+                              .col
+                                small
+                                  a.h6.phtext-blue(href='photherprofile.html') SPA Chante
+                                span.fa-layers.fa-fw
+                                  i.fas.fa-certificate.phtext-blue.fa-1x
+                                  i.fa-inverse.fas.fa-check(data-fa-transform='shrink-7')
+                                .row
+                                  .col.d-flex.justify-content-start.align-content-center
+                                    small
+                                      p.phtext-dark @spachante
+                                    small
+                                      p.phtext-dark.card-text.ml-2 A 3km
+                                    small
+                                      .d-flex.justify-content-start.mt-1.ml-2
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                              .col-2.d-flex.phfont-muli.justify-content-end
+                                a(href='#')
+                                  button.btn.phbtn-outline-blue.btn-sm
+                                    i.fas.fa-plus.fa-1x
+                                    |  Seguir
+                            .row.phfont-muli
+                              .col-12.d-flex.justify-content-between
+                                p.font-weight-light.text-truncate Masaje Relajante de Caché
+                                p.font-weight-light $500.00
+                              .col-12.d-flex.justify-content-between
+                                p.font-weight-light.text-truncate Aceite de Coco
+                                p.font-weight-light $300.00
+                              .col-12.d-flex.justify-content-between
+                                p.font-weight-light.text-truncate Crema exfoliante
+                                p.font-weight-light $200.00
+                              .col-12.d-flex.justify-content-end
+                                p.font-weight-bold.text-truncate.mr-3 Total
+                                p.font-weight-bold $1000.00
+                            .row.mt-3
+                              .col-12.d-flex.justify-content-between
+                                p.text-muted
+                                  i.fas.fa-building
+                                  small  Negocio fijo
+                                p.text-muted
+                                  i.fas.fa-users
+                                  small  350 personas lo han solicitado
+                            .row
+                              .col-12.d-flex.justify-content-between.align-items-center
+                                i.far.fa-heart.text-muted
+                                i.far.fa-images.text-muted
+                                a.text-muted(href='#')
+                                  small.font-weight-bold
+                                    i.fas.fa-exclamation.text-muted
+                                    |  Denunciar
+                                p.card-text
+                                  small.phtext-blue.font-weight-bold.text-right  Expira en 18:50:39
+                            .row.mt-3
+                              .col-12.d-flex.phfont-muli.justify-content-end
+                                a.btn.phbtn-blue.btn-sm(href='phexperiences.html')
+                                  i.fas.fa-bolt.fa-1x
+                                  |  Iniciar experiencia
+                        .card.border.mt-2.mb-4
+                          .card-body
+                            .row
+                              .ml-3.d-flex.justify-content-start
+                                a(href='#')
+                                  img.rounded-circle(src='../img/system/discover3.jpeg', width='45', height='45')
+                              .col
+                                small
+                                  a.h6.phtext-blue(href='photherprofile.html') Spa XYZSUD
+                                span.fa-layers.fa-fw
+                                  i.fas.fa-certificate.phtext-blue.fa-1x
+                                  i.fa-inverse.fas.fa-check(data-fa-transform='shrink-7')
+                                .row
+                                  .col.d-flex.justify-content-start.align-content-center
+                                    small
+                                      p.p.phtext-dark @spaxyzsud
+                                    small
+                                      p.p.phtext-dark.card-text.ml-2 A 5km
+                                    small
+                                      .d-flex.justify-content-start.mt-1.ml-2
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                                        i.fas.fa-star.fa-xs.phtext-blue.ml-1(title='rate', aria-hidden='true')
+                              .col-2.d-flex.phfont-muli.justify-content-end
+                                a(href='#')
+                                  button.btn.phbtn-outline-blue.btn-sm
+                                    i.fas.fa-plus.fa-1x
+                                    |  Seguir
+                            .row.phfont-muli
+                              .col-12.d-flex.justify-content-between
+                                p.font-weight-bold.text-truncate Masaje Relajante de Caché
+                                p.font-weight-bold $500.00
+                            .row.mt-3
+                              .col-12.d-flex.justify-content-between
+                                p.text-muted
+                                  i.fas.fa-bicycle
+                                  small  Negocio móvil
+                                p.text-muted
+                                  i.fas.fa-users
+                                  small  350 personas lo han solicitado
+                            .row
+                              .col-12.d-flex.justify-content-between.align-items-center
+                                i.far.fa-heart.text-muted
+                                i.far.fa-images.text-muted
+                                a.text-muted(href='#')
+                                  small.font-weight-bold
+                                    i.fas.fa-exclamation.text-muted
+                                    |  Denunciar
+                                p.card-text
+                                  small.phtext-blue.font-weight-bold  Expira en 18:50:39
+                            .row.mt-3
+                              .col-12.d-flex.phfont-muli.justify-content-end
+                                a.btn.phbtn-blue.btn-sm(href='phexperiences.html')
+                                  i.fas.fa-bolt.fa-1x
+                                  |  Iniciar experiencia
+                        .row
+                          .col-12.mb-3.text-center
+                            a(href='#') Ver todo
+            .card-deck.mt-5
+              .card.phborder-left-green
+                .card-body
+                  .row
+                    .ml-3.d-flex.justify-content-start
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/PhesteeUser.jpg', width='40', height='40')
+                    .col.my-auto
+                      small
+                        a.h6.font-weight-light.phtext-dark(href='profile.html') Benjamin Castro
+                      p.card-text
+                        small.phtext-muted Hoy, a las 09:30 am
+                  img.card-img-top.rounded-0.mt-3(src='../img/system/Dipper-hm.gif', alt='Card image cap')
+                  h6.h6.mt-3.phtext-dark
+                    | Mi sobrino cumple años la próxima semana y me toca organizar la party. Alguna idea? #elmejortiodelmundo
+                  .row.mt-4
+                    .col-12.d-flex.justify-content-start.align-content-center
+                      .col-3.btn-group.btn-outline-light.py-2.px-2.ph-pointer(data-toggle='collapse', href='#expand4', aria-expanded='false', aria-controls='expand4')
+                        small
+                          i.fa-lg.fas.fa-bolt.phtext-muted
+                        small.p.font-weight-bold.phtext-muted.text-truncated.ml-2 Actividad
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.far.fa-heart.phtext-muted(data-toggle='tooltip', data-placement='top', title='Me gusta')
+                        small.p.font-weight-bold.phtext-muted.text-truncated.ml-2 Me gusta
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-share.phtext-muted(data-toggle='tooltip', data-placement='top', title='Compartir en redes')
+                        small.p.font-weight-bold.phtext-muted.text-truncated.ml-2 Compartir
+                  .row.mt-1
+                    .col-12.justify-content-around.align-content-center.mt-3
+                      .input-group.input-group-sm
+                        span#basic-addon1.input-group-addon @
+                        input.form-control.phfield.phtext-blue(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+                #expand4.collapse
+                  .card.mb-3
+                    .card-body
+                      .col-12
+                        small.h6.phtext-dark Aún no hay actividad en tu solicitud
+                        button.close(type='button', data-toggle='collapse', data-parent='#accordion', href='#expand4', aria-expanded='false', aria-controls='expand4')
+                          span(aria-hidden='true')
+                            small.text-dark.font-weight-bold ×
+                      .col-12.text-left.phfont-muli.mt-4
+                        button.btn.phbtn-outline-blue.btn-sm(href='#')
+                          i.fab.fa-facebook.fa-1x
+                          |   Compartir en Facebook
+            .card-deck.mt-5
+              .card.border
+                .card-body
+                  .row
+                    .ml-3.d-flex.justify-content-start
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/pexels-photo-106344.jpeg', width='40', height='40')
+                    .col.my-auto
+                      small
+                        a.h6.font-weight-light.phtext-dark(href='photherprofile.html') Masajes a Domicilio
+                        small.p.text-muted.ml-2.text-uppercase
+                          i.fas.fa-bullhorn.phtext-muted(data-fa-transform='rotate-340')
+                          |  Anuncio
+                      p.card-text
+                        small.phtext-muted Expira hoy, a las 09:30 am
+                  img.card-img-top.rounded-0.mt-3(src='../img/system/wellness-massage-relax-relaxing-56884.jpeg')
+                  h6.h6.phtext-dark.mt-3 Hoy tenemos descuento en faciales
+                  .row
+                    .col-12.d-flex.justify-content-between
+                      p.p.phtext-dark Masaje Relajante 1hr
+                      p.p.phtext-dark 20%
+                  .row.mt-4
+                    .col-12.d-flex.justify-content-start.align-content-center
+                      .col-3.btn-group.btn-outline-light.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-heart.phtext-red(data-toggle='tooltip', data-placement='top', title='Me gusta')
+                        small.p.font-weight-bold.phtext-dark.text-truncated.ml-2 200M
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-share.phtext-muted(data-toggle='tooltip', data-placement='top', title='Compartir en redes')
+                        small.p.font-weight-bold.phtext-dark.text-truncated.ml-2 Compartir
+                      .btn.btn-sm.d-flex.phfont-muli.ml-auto.align-content-center
+                        a.btn.phbtn-blue.btn-sm(href='phexperiences.html')
+                          i.fas.fa-bolt.fa-1x
+                          |  Iniciar experiencia
+                  .row.mt-1
+                    .col-12.justify-content-around.align-content-center.mt-3
+                      .input-group.input-group-sm
+                        span#basic-addon1.input-group-addon @
+                        input.form-control.phfield.phtext-blue(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+            .card-deck.mt-5
+              .card.phborder-left-blue
+                .card-body
+                  .row
+                    .ml-3.d-flex.justify-content-start
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/pexels-photo-114907.jpeg', width='40', height='40')
+                    .col.my-auto
+                      small
+                        a.h6.font-weight-light.phtext-dark(href='#') Mecánicos de MX
+                        small.p.text-muted.ml-2.text-uppercase
+                          i.fas.fa-bullhorn.phtext-muted(data-fa-transform='rotate-340')
+                          |  Tu anuncio
+                      p.card-text
+                        small.phtext-muted Expira hoy, a las 09:30 am
+                  img.card-img-top.rounded-0.mt-3(src='../img/system/mecanicos.jpeg')
+                  h6.h6.phtext-dark.mt-3
+                    | Hoy tenemos descuento en lavado de bujías. Inicia tu transacción ahora y obtén este beneficio
+                  .row
+                    .col-12.d-flex.justify-content-between
+                      p.p.phtext-dark Limpieza de bujías
+                      p.p.phtext-dark 30%
+                  .row.mt-4
+                    .col-12.d-flex.justify-content-start.align-content-center
+                      .col-3.btn-group.btn-outline-light.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.far.fa-heart.phtext-muted
+                        small.p.font-weight-bold.phtext-muted.text-truncated.ml-2 Me gusta
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-share.phtext-muted
+                        small.p.font-weight-bold.phtext-muted.text-truncated.ml-2 Compartir
+                  .row.mt-1
+                    .col-12.justify-content-around.align-content-center.mt-3
+                      .input-group.input-group-sm
+                        span#basic-addon1.input-group-addon @
+                        input.form-control.phfield.phtext-blue(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+            .card-deck.mt-3
+              .card.border
+                .card-body
+                  .row
+                    .ml-3.d-flex.justify-content-start
+                      a(href='#')
+                        img.rounded-circle(src='../img/system/pexels-photo-106344.jpeg', width='40', height='40')
+                    .col.my-auto
+                      small
+                        a.h6.font-weight-light.phtext-dark(href='photherprofile.html') Masajes a Domicilio
+                        small.p.text-muted.ml-2.text-uppercase
+                          i.far.fa-handshake.phtext-muted
+                          |  Cerró una transacción recientemente
+                      p.card-text
+                        small.phtext-muted Hoy, a las 09:30 am
+                  h6.h6.phtext-dark.mt-4 Masaje Relajante
+                  .row.mt-4
+                    .col-12.d-flex.justify-content-start.align-content-center
+                      .col-3.btn-group.btn-outline-light.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.far.fa-heart.phtext-muted
+                        small.p.font-weight-bold.ph-pointer.phtext-muted.text-truncated.ml-2 Me gusta
+                      .col-3.btn-group.btn-outline-light.ml-2.py-2.px-2.ph-pointer
+                        small
+                          i.fa-lg.fas.fa-share.phtext-muted.ph-pointer
+                        small.p.font-weight-bold.ph-pointer.phtext-muted.text-truncated.ml-2 Compartir
+                      .btn.btn-sm.d-flex.phfont-muli.ml-auto.align-content-center
+                        a.btn.phbtn-blue.btn-sm(href='phexperiences.html')
+                          i.fas.fa-bolt.fa-1x
+                          |  Iniciar experiencia
+                  .row.mt-1
+                    .col-12.justify-content-around.align-content-center.mt-3
+                      .input-group.input-group-sm
+                        span#basic-addon1.input-group-addon @
+                        input.form-control.phfield.phtext-blue(type='text', placeholder='Etiqueta a alguien', aria-label='Tab', aria-describedby='basic-addon1')
+            .card-deck.mt-3
+              .card
+                .card-body.text-center.phbgn-f5
+                  a(href='#topFeed')
+                    i.fas.fa-sign-out-alt.fa-lg.phtext-muted(data-fa-transform='rotate-270')
+      // End of Mid panel, Feed
+      // Right panel. Feed
+      .col-4.mt-5.pt-5
+        .card.border-0.sticky
+          .card-body.border
+            .row
+              a.ml-4(href='#')
+                img.rounded-circle(src='../img/system/PhesteeUser.jpg', width='55', height='55')
+              .col
+                a.p.phtext-dark.phfont-muli(href='phprofile.html') Benjamin Castro
+                p.phtext-blue
+                  span.my-auto
+                    i.fas.fa-star.fa-xs.phtext-aqua(title='rate', aria-hidden='true')
+                    i.fas.fa-star.fa-xs.phtext-aqua(title='rate', aria-hidden='true')
+                    i.fas.fa-star.fa-xs.phtext-aqua(title='rate', aria-hidden='true')
+                    i.fas.fa-star.fa-xs.phtext-aqua(title='rate', aria-hidden='true')
+                    i.far.fa-star.fa-xs.phtext-aqua(title='rate', aria-hidden='true')
+              span.fa-layers.fa-fw.mr-2
+                li.nav-item.dropdown.list-unstyled
+                  a.nav-link(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+                    i.fas.fa-ellipsis-h.phtext-mutedhover(aria-hidden='true')
+                  .dropdown-menu.text-muted
+                    a.dropdown-item(href='phprofile.html')
+                      small.text-muted  Ver Perfil
+                    a.dropdown-item(href='phtablero.html')
+                      small.text-muted  Ver Tablero
+                    a.dropdown-item(href='editprofile.html')
+                      small.text-muted  Agregar o editar negocio
+            .row.mt-3.phfont-muli
+              .col-12.d-flex.justify-content-left
+                button.btn.btn-sm.phbtn-outline-blue.my-auto(href='#phAnncPst', data-toggle='modal', data-target='#phAnncPst')
+                  i.fas.fa-bullhorn.fa-1x(data-fa-transform='rotate-340')
+                  |  Crea un anuncio
+          .card-footer.border-0.phbgn-f5
+            .row.d-flex.justify-content-start.ml-2
+              a(href='#')
+                small.phtext-muted Información 
+              a(href='#')
+                small.phtext-muted.ml-1  - Contacto 
+              a(href='#')
+                small.phtext-muted.ml-1  - Soporte 
+              a(href='#')
+                small.phtext-muted.ml-1  - FAQ's 
+            .row.d-flex.justify-content-start.mt-2.ml-2
+              a(href='#')
+                small.phtext-muted Privacidad 
+              a(href='#')
+                small.phtext-muted.ml-1  - Términos 
+              a(href='#')
+                small.phtext-muted.ml-1  - Feedback 
+            .row.d-flex.justify-content-start.mt-2.ml-2
+              p.phtext-muted
+                small © 2018 Phestee
+      // End of Right panel. Feed
+// End of main container
+// Footer
+// ---
+// Scripts
+script.
+  FontAwesomeConfig = { searchPseudoElements: true };
+script(defer='', src='/static/fontawesome/fontawesome-all.js')
+script(src='js/jquery-3.2.1.min.js')
+script(src='js/popper.min.js')
+script(src='js/bootstrap.min.js')
+script(src='js/typed.js')
+script(src='js/datepicker.min.js')
+script(src='js/datepicker.es.js')
+script(src='js/css3-animate-it.js')
+script(src='js/jquery.toolbar.js')
+script.
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+  $(function() {
+  $('#datetimepicker1').datetimepicker({
+  language: 'pt-BR'
+  });
+  });
+script.
+  function myMap() {
+  var uluru = {lat: 20.6736, lng: -103.344};
+  var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 15,
+  center: uluru,
+  });
+  var marker = new google.maps.Marker({
+  position: uluru,
+  map: map
+  });
+  }
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCTd7eS5elMfaiI97o_MGvN0WPx7zPELMY&callback=myMap')
+script.
+  document.addEventListener('DOMContentLoaded', function () {
+  $('button').on('click', function () {
+  $(this)
+  .find('[data-fa-i2svg]')
+  .toggleClass('fa-angle-down')
+  .toggleClass('fa-angle-right');
+  });
+  });

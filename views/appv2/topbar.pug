@@ -1,0 +1,46 @@
+// Header
+nav#navbar-phHome.navbar.navbar-expand-lg.border.border-bottom.fixed-top.bg-white
+  a.navbar-brand.phfont-lato.phtext-dark(href='phlayout.html')
+    img.d-inline-block.align-top.my-auto(src='../img/system/phesteelogox2.png', width='35', height='35', alt='Logo Phestee')
+    |  phestee
+  a.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  form.form-inline.ml-1.my-2.my-lg-0.phfont-muli
+    input.form-control.phfield.ml-5.form-control-sm.mr-sm-2(type='search', placeholder='Usuarios', aria-label='Search')
+    i.fas.fa-search.phtext-light
+  #navbarNavDropdown.collapse.navbar-collapse
+    ul.navbar-nav.ml-auto.phfont-muli
+      li.nav-item.mr-4
+        a.nav-link.d-flex(href='phlayout.html')
+          i.fas.fa-fw.fa-lg.fa-home.phtext-mutedhover(aria-hidden='true')
+          // <div class="rounded-circle phbgn-aqua" style="height: 12px; width: 12px;"></div>
+      li.nav-item.dropdown.mr-4
+        a.nav-link.d-flex(href='phexperiences.html')
+          i.fas.fa-fw.fa-lg.fa-bolt.phtext-lighthover(aria-hidden='true')
+          .rounded-circle.phbgn-aqua(style='height: 12px; width: 12px;')
+      li.nav-item.dropdown.mr-4
+        a.nav-link.d-flex(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+          i.far.fa-fw.fa-lg.fa-bell.phtext-lighthover(aria-hidden='true')
+          // <div class="rounded-circle phbgn-aqua" style="height: 12px; width: 12px;"></div>
+        .dropdown-menu.dropdown-menu-right
+          small
+            a.dropdown-item.text-muted
+              i.fas.fa-ban.text-muted.text-dark
+              |  No hay notificaciones
+      li.nav-item.dropdown
+        a.nav-link.d-flex(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+          i.far.fa-fw.fa-lg.fa-user.phtext-lighthover(aria-hidden='true')
+        .dropdown-menu.dropdown-menu-right.text-muted
+          a.dropdown-item(href='phprofile.html')
+            small.text-muted  Perfil
+          a.dropdown-item(href='phtablero.html')
+            small.text-muted  Tablero
+          a.dropdown-item(href='pheditprofile.html')
+            small.text-muted  Ajustes
+          a.dropdown-item(href='#')
+            small.text-muted  Certificación
+          a.dropdown-item(href='#')
+            small.text-muted  Feedback
+          .dropdown-divider(role='separator')
+          a.dropdown-item(href='#phLogOutMdl', data-toggle='modal', data-target='#phLogOutMdl')
+            small.text-muted  Salir
