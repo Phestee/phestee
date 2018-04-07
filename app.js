@@ -570,7 +570,7 @@ app.get("/rtm", function(request,response){
 });
 
 app.get("/tstVw", function(request,response){
-  response.render("appv2/settings/board/xl");
+  response.render("appv2/settings/profile/xl");
 });
 
 
