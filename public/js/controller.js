@@ -152,7 +152,7 @@ app.controller("login",function($scope, $http, $location){
           var resultsuc = angular.fromJson(responsesuc.data);
           if(resultsuc.error == 0){
               //window.location.href= '/app'; //test page after login
-              window.location.href= '/app';  //Pug based pafe after login
+              window.location.href= '/appv2';  //Pug based pafe after login
           }
           else {
             alert("Error: "+resultsuc.message);
@@ -241,7 +241,7 @@ app.controller("homeController",function($scope,$localStorage,$sessionStorage){
     if(confirm("¿Desea cerrar la sesion?"))
     {
       localStorage.clear();
-      window.location.href="/app/signout";
+      window.location.href="/appv2/signout";
     }
   };
 });
@@ -876,6 +876,77 @@ app.controller("editServicesController",function($scope,$http,Upload){
 }); // fin controller editServicesController
 
 
+app.controller("editAccountController",function($scope,$http){
+
+    $scope.saveChangeAccount = function(){
+
+        if($scope.iptPasswordAccount == '' && $scope.iptPasswordAccount == undefined)
+        {
+            alert("Por favor, ingrese la nueva contraseña y repitala en el siguiente campo para poder cambiar la contraseña");
+            return false;
+        }
+        else
+        {
+          if($scope.iptPasswordAccount == $scope.iptPassConfirmAccnt)
+          {
+              var objectaccount = {
+                "passwordchange":$scope.iptPasswordAccount
+              };
+
+              $http.put("/appv2/changePasswordAccount",objectaccount).then(function(responsesuc){
+                var result = angular.fromJson(responsesuc.data);
+                if(result.error == 0)
+                {
+                  alert("La contraseña se ha modificado con éxito");
+                }
+                else
+                {
+                  alert(result.message);
+                }
+
+              },function(response){
+
+                  alert("Error: "+response.statusText);
+              });
+          }
+          else
+          {
+            alert("La contraseña y su confirmación no coinciden.");
+            return false;
+          }
+        }
+    }; // fin saveChangeAccount
+
+
+    $scope.deleteaccount = function(){
+
+      if(confirm("¿Desea eliminar su cuenta definitivamente?"))
+      {
+          $http.put("/appv2/deleteaccount").then(function(responsesuc){
+            var result = angular.fromJson(responsesuc.data);
+            if(result.error == 0)
+            {
+              alert("La cuenta se ha eliminado con éxito");
+              localStorage.clear();
+              window.location.href="/appv2/signout";
+            }
+            else
+            {
+              alert(result.message);
+            }
+
+          },function(response){
+
+              alert("Error: "+response.statusText);
+          });
+      }
+    }; // fin deleteaccount
+
+}); // fin editAccountController
+
+
+
+
 app.controller("postController",function($scope, $http, socket){
 
 	socket.on('init', function (data) {
@@ -888,7 +959,7 @@ app.controller("postController",function($scope, $http, socket){
 	});
 
 
-	$scope.postRequest = function(){ 
+	$scope.postRequest = function(){
 	    var json =  {
 	                    "post" :  $scope.iptPost,
 	                    "session" : $scope.session,
@@ -902,10 +973,10 @@ app.controller("postController",function($scope, $http, socket){
 	        console.log(responseSuccess);
 	    },function error(response){
 	        console.log("wrong server transaction");
-	    });   
+	    });
 	}
 
-  $scope.updateFeed = function(){  
+  $scope.updateFeed = function(){
       var json =  {
                       "session" : $scope.session,
                       "id" : $scope.id
@@ -918,7 +989,7 @@ app.controller("postController",function($scope, $http, socket){
           console.log(responseSuccess.data);
       },function error(response){
           console.log("wrong server transaction");
-      });   
+      });
   }
 });
 
@@ -926,7 +997,7 @@ app.factory('socket', function ($rootScope) {
   var socket = io.connect();
   return {
     on: function (eventName, callback) {
-      socket.on(eventName, function () {  
+      socket.on(eventName, function () {
         var args = arguments;
         $rootScope.$apply(function () {
           callback.apply(socket, args);

@@ -39,7 +39,7 @@ var users_schema = new Schema ({
 
     folderImg:        {type: String},
 
-    location:         {                    
+    location:         {
                        latitude: {type: Number},
                        length:   {type: Number}
                       },
@@ -52,7 +52,8 @@ var users_schema = new Schema ({
                          endDate:    {type: Date}
 
                        }
-                      ]
+                     ],
+    active:          {type: Boolean}
 
 });
 

@@ -137,6 +137,11 @@ router.get("/", function(request,response){
    }
 });
 
+router.get("/tstVw", function(request,response){
+  response.render("appv2/settings/profile/xl");
+  //response.render('/settings/profile/xl');
+});
+
 router.get("/signout",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 GET "/signout"');
@@ -488,6 +493,102 @@ router.delete("/deleteService/:iddeleteservice",function(request,response){
   catch(e)
   {
     logger.info('Error 666: '+e);
+  }
+});
+
+router.put("/changePasswordAccount",function(request,response){
+    logger.info('-----------------------------------------------------');
+    logger.info('M001 - PUT "/changePasswordAccount"');
+    try{
+          if(request.body.passwordchange != '' && request.body.passwordchange != null)
+          {
+              users.findOne({_id:request.session.user_id},function(err,data){
+                if(!err)
+                {
+                    if(data)
+                    {
+                      data.password = bcrypt.hashSync(request.body.passwordchange);
+                      data.save(function(errSave){
+                        if(!errSave)
+                        {
+                            logger.info("Change password successfully");
+                            response.send('{"error":0,"message":""}');
+                        }
+                        else
+                        {
+                            logger.info("Error: Error to save the query in the database");
+                            response.send('{"error":1,"message":"Error al guardar la contraseña"}');
+                        }
+                      });
+                    }
+                    else
+                    {
+                      logger.info("Error: There is not data in the query.");
+                      response.send('{"error":1,"message":"Error al cambiar la contraseña"}');
+                    }
+                }
+                else
+                {
+                  logger.info("Error: "+err);
+                  response.send('{"error":1,"message":"Error al cambiar la contraseña"}');
+                }
+              });
+          }
+          else
+          {
+            logger.info("Error: There are missing data");
+            response.send('{"error":1,"message":"Error al guardar la contraseña"}');
+          }
+
+    }
+    catch(e){
+      logger.info('Error 666: '+e);
+      response.send('{"error":1,"message":"Error al guardar la contraseña"}');
+    };
+}); // fin changePasswordAccount
+router.put("/deleteaccount",function(request,response){
+  logger.info('-----------------------------------------------------');
+  logger.info('M001 - PUT "/deleteaacount"');
+  try{
+        users.findOne({_id:request.session.user_id},function(err,data){
+          if(!err)
+          {
+            if(data)
+            {
+                data.active = false;
+                data.save(function(errSave){
+
+                  if(!errSave)
+                  {
+                    logger.info("Delete account successfully");
+                    response.send('{"error":0,"message":""}');
+                  }
+                  else
+                  {
+                    logger.info("Error: Error to in the save process to delete the account");
+                    response.send('{"error":1,"message":"Error al eliminar la cuenta"}');
+                  }
+                });
+
+            }
+            else
+            {
+              logger.info("Error: There is not data in the query");
+              response.send('{"error":1,"message":"Error al eliminar la cuenta"}');
+            }
+          }
+          else
+          {
+            logger.info("Error: "+err);
+            response.send('{"error":1,"message":"Error al eliminar la cuenta"}');
+          }
+        });
+
+  }
+  catch(e)
+  {
+    logger.info("Error 666: "+e);
+    response.send('{"error":1,",message":"Error al eliminar la cuenta"}');
   }
 });
 

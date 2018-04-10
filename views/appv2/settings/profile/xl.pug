@@ -13,8 +13,8 @@ block pannel
         .form-row.my-auto
           .col-8.mt-3.d-flex.justify-content-start
             img.my-auto.rounded-circle(src='img/PhesteeUser.jpg', width='50', height='50')
-            p.my-auto.ml-3.h6.my-auto Benjamin Castro
-        form
+            p.my-auto.ml-3.h6.my-auto Benjamin "El diseñador grafico" Castro
+        form(id="frmEditAccount" name="frmEditAccount")
           small.text-left.text-uppercase
             p.p.mt-4  Tipo de cuenta
           .form-row.my-auto
@@ -40,31 +40,39 @@ block pannel
           .dropdown-divider.mt-4(role='separator')
           small.text-left.text-uppercase
             p.p.mt-3  Cambiar una contraseña
-          .form-row.my-auto
-            .col-6.mt-3.d-flex.justify-content-between
-              small.my-auto
-                p.p.ml-3.my-auto Contraseña
-              input.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='')
-            .col-6.mt-3.d-flex.justify-content-between
-              small.my-auto
-                p.p.ml-3.my-auto Repite contraseña
-              input.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='')
-          .dropdown-divider.mt-4(role='separator')
-          small.text-left.text-uppercase
-            p.p.mt-3  Borrar Cuenta
-          .form-row.my-auto
-            .col-12.mt-3.d-flex.justify-content-center
-              small
-                p.p.ml-3.font-weight-bold.my-auto.text-center
-                  | ¡Cuidado! Esta acción borarrá permanentemente tu cuenta. No podrás conectarte a Phestee después de esto.
-            .col-12.mt-3.d-flex.justify-content-center
-              button.my-auto.btn.phbtn-red.btn-sm
-                i.fas.fa-eraser
-                |  Borrar Cuenta
-          .dropdown-divider.mt-4(role='separator')
+          div(id="divPasswordAccount" name="divPasswordAccount" ng-controller="editAccountController")
+            .form-row.my-auto
+              .col-6.mt-3.d-flex.justify-content-between            
+                small.my-auto
+                  p.p.ml-3.my-auto Contraseña
+                input#iptPasswordAccount.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='' ng-model="iptPasswordAccount")                
+              .col-6.mt-3.d-flex.justify-content-between
+                small.my-auto
+                  p.p.ml-3.my-auto Repite contraseña
+                input#iptPassConfirmAccnt.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='password', placeholder='' ng-model="iptPassConfirmAccnt")
+              .col-6.mt-3.d-flex.justify-content-between                
+                small.my-auto                
+                  button.btn.phbtn-blue(type="button" ng-click="saveChangeAccount()")
+                    i.fas.fa-save
+                    |  Guardar Cambios
+                .col-6.mt-3.d-flex.justify-content-between
+              
+            .dropdown-divider.mt-4(role='separator')
+            small.text-left.text-uppercase
+              p.p.mt-3  Borrar Cuenta
+            .form-row.my-auto
+              .col-12.mt-3.d-flex.justify-content-center
+                small
+                  p.p.ml-3.font-weight-bold.my-auto.text-center
+                    | ¡Cuidado! Esta acción borarrá permanentemente tu cuenta. No podrás conectarte a Phestee después de esto.
+              .col-12.mt-3.d-flex.justify-content-center
+                button.my-auto.btn.phbtn-red.btn-sm(type="button" ng-click="deleteaccount()")
+                  i.fas.fa-eraser
+                  |  Borrar Cuenta
+            .dropdown-divider.mt-4(role='separator')
     .row.my-auto.text-right
       .col-12.justify-content-end.mt-2
-        button.btn.phbtn-blue
+      //  button.btn.phbtn-blue
           i.fas.fa-save
           |  Guardar Cambios
   // End of Mid panel, Feed

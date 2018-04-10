@@ -15,7 +15,7 @@ html(lang="es" ng-app="PhesteeApp")
     script(src="../js/controller.js")
     script(src="../js/ng-file-upload-shim.js")
     script(src="../js/ng-file-upload.js")
-  body(ng-controller="homeController" ng-init="getDataUser("+JSON.stringify(user)+","+JSON.stringify(businessUser)+","+dataLoad+")")
+  body(ng-controller="homeController")
     block contenido
   // End of main container
   // Footer
@@ -38,3 +38,5 @@ html(lang="es" ng-app="PhesteeApp")
     document.getElementById("slctaPstFld").value = "";
     document.getElementById("slctaPstFld").focus();
     }
+    
+    //body(ng-controller="homeController" ng-init="getDataUser("+JSON.stringify(user)+","+JSON.stringify(businessUser)+","+dataLoad+")")
