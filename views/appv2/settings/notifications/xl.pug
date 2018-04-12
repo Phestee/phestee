@@ -1,0 +1,63 @@
+extends ../leftPanel/xl
+block pannel
+  // content start
+  .col-7.mt-5.pt-5.mb-5
+    .row
+      .col-10
+        h6.phtext-muted.text-uppercase.font-weight-bold.my-auto
+          i.fas.fa-edit
+          |  Editar Notificaciones
+          a(href='editbusiness.html')
+            small.phfont-opensans.phtext-blue.ml-3.my-auto.text-capitalize 1 Negocio registrado
+        .dropdown-divider(role='separator')
+        form
+          small.text-left.text-uppercase
+            p.p.mt-4  Como Cliente
+          .form-row.justify-content-center.my-auto
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando un Proveedor levante la mano a mis solicitud
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando a alguien le guste mi Solicitud
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando un Proveedor realice algún cambio en su oferta
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando se etiquete a alguien en alguna de mis Solicitudes
+          .dropdown-divider.mt-3(role='separator')
+          small.text-left.text-uppercase
+            p.p.mt-5  Como Proveedor
+          .form-row.justify-content-center.my-auto
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando se inicie una transacción en mi Oferta
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando a alguien le guste mi Oferta
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando se comparte mi Oferta
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando un Cliente me envíe un mensaje
+            .col-11.d-flex.justify-content-start
+              input#defaultCheck1.form-check-input(type='checkbox', value='', checked='')
+              label.form-check-label(for='defaultCheck1')
+                | Cuando me etiqueten en alguna Solicitud
+    .row.my-auto.text-right
+      .col-12.justify-content-end.mt-2
+        button.btn.phbtn-blue
+          i.fas.fa-save
+          |  Guardar Cambios
+  // End of content
+  include ../../endScripts
