@@ -7,8 +7,6 @@ block pannel
         h6.text-uppercase.phtext-muted.font-weight-bold.my-auto
           i.fas.fa-edit
           |  Editar Perfil
-          a(href='pheditbusiness.html')
-            small.phfont-opensans.phtext-blue.ml-3.my-auto.text-capitalize  1 Negocio registrado
         .dropdown-divider(role='separator')
         form
           .form-row.my-auto
@@ -33,19 +31,14 @@ block pannel
               small.my-auto
                 p.p.phtext-muted.my-auto www.phestee.com/
           .row.my-auto
-            .col-12.mt-4.d-flex.justify-content-between
-              small Género
-              select#inputGroupSelect01.custom-select.custom-select-sm.rounded-0.border-top-0.border-left-0.border-right-0
+            .col-12.mt-4.d-flex.justify-content-start
+              small.p.my-auto Género
+              select#perfilGenero.custom-select.custom-select-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0
                 option(selected='') Selecciona
                 option(value='1') Hombre
                 option(value='2') Mujer
                 option(value='3') Prefiero no decirlo
-              small Fecha de Nacimiento
-              small.my-auto
-                input.my-auto.text-center.datepicker-here.rounded-0.border-top-0.border-left-0.border-right-0(type='text', data-language='es', placeholder='Selecciona')
-          .form-row.my-auto
-            .col-12.mt-3.d-flex.justify-content-between
-              small En qué Estado vives
+              small.ml-5.p.my-auto En qué Estado vives
               select#perfilState.custom-select.custom-select-sm.rounded-0.ml-2.border-top-0.border-left-0.border-right-0
                 option(selected='') Selecciona
                 option(value='1') Guadalajara, JAL
@@ -62,7 +55,7 @@ block pannel
                 option(value='11') Ciudad de México
                 option(value='11') Monterrey, NL
                 option(value='11') Mi ciudad no está listada
-              small En qué Ciudad vives  
+              small.ml-5.p.my-auto En qué Ciudad vives  
               select#perfilCity.custom-select.custom-select-sm.rounded-0.ml-2.border-top-0.border-left-0.border-right-0
                 option(selected='') Selecciona
                 option(value='1') Guadalajara, JAL
@@ -78,10 +71,15 @@ block pannel
                 option(value='10') Silao, GTO
                 option(value='11') Ciudad de México
                 option(value='11') Monterrey, NL
-                option(value='11') Mi ciudad no está listada
+                option(value='11') Mi ciudad no está listada            
+          .form-row.my-auto
+            .col-12.mt-4.d-flex.justify-content-start
+              small.p.my-auto Fecha de Nacimiento
+              small.ml-2.my-auto
+                input.form-control.phfield.form-control-sm.my-auto.text-center.datepicker-here.rounded-0.border-top-0.border-left-0.border-right-0(type='text', data-language='es', placeholder='Selecciona')
               small.my-auto
-                p.p.my-auto Email
-              input.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='')
+                p.p.ml-5.my-auto Email
+              input.col-5.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='')
           .row.my-auto
             .col-12.mt-4.d-flex.justify-content-between
               i.fab.phtext-muted.fa-twitter.my-auto
