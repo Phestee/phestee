@@ -40,6 +40,11 @@ block pannel
                 option(value='1') Hombre
                 option(value='2') Mujer
                 option(value='3') Prefiero no decirlo
+              small Fecha de Nacimiento
+              small.my-auto
+                input.my-auto.text-center.datepicker-here.rounded-0.border-top-0.border-left-0.border-right-0(type='text', data-language='es', placeholder='Selecciona')
+          .form-row.my-auto
+            .col-12.mt-3.d-flex.justify-content-between
               small En qué Estado vives
               select#perfilState.custom-select.custom-select-sm.rounded-0.ml-2.border-top-0.border-left-0.border-right-0
                 option(selected='') Selecciona
@@ -74,11 +79,6 @@ block pannel
                 option(value='11') Ciudad de México
                 option(value='11') Monterrey, NL
                 option(value='11') Mi ciudad no está listada
-              small Fecha de Nacimiento
-              small.my-auto
-                input.my-auto.text-center.datepicker-here.rounded-0.border-top-0.border-left-0.border-right-0(type='text', data-language='es', placeholder='Selecciona')
-          .form-row.my-auto
-            .col-12.mt-3.d-flex.justify-content-start
               small.my-auto
                 p.p.my-auto Email
               input.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='')
