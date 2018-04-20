@@ -18,8 +18,8 @@ var businesses_schema = new Schema ({
 
     telephone:
                     {
-                      typeTel: {type:String},
-                      number:  {type:String}
+                      number:  {type:String},
+                      cellphone: {type:String}
                     },
 
     delegatedUsers: [],
@@ -36,6 +36,7 @@ var businesses_schema = new Schema ({
                       city:       {type: String},
                       state:      {type: String},
                       country:    {type: String},
+                      neighborhood:  {type: String},
                       dtUpdated:  {type: Date}
                     },
     certification:  {
@@ -50,6 +51,7 @@ var businesses_schema = new Schema ({
                         cost:             {type: Number},
                         homeservice:      {type: Boolean},
                         isMovilOffering:  {type: Boolean},
+                        establishedbuss:  {type: Boolean},
                         hshtgs:           [String],
                         description:      {type: String},
                         type:             {type: String},
@@ -62,9 +64,23 @@ var businesses_schema = new Schema ({
                                             }
                                           ]
                       }
-                    ]
+                    ],
+    emailbusiness:    {type: String},
+    twitterbusiness:  {type: String},
+    instagramurl:     {type: String},
+    facebookurl:      {type: String},
+    webpage:          {type: String},
+    usernamebuss:     {type: String},
+    imgbusiness:      {type: String},
+    businessdynamic:  {type: String}
+
+
 
 });
 
 var business = mongoose.model("business",businesses_schema);
 module.exports.business = business;
+
+// homeservice = servicio a domicilio
+// isMovilOffering  = Negocio movil
+//

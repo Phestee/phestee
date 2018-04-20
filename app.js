@@ -21,7 +21,7 @@ var winston = require('winston');
 
 //**********  Importing Models *******************
 var users = require("./models/users").users;
-var postSchm = require("./models/posts").postSchm; 
+var postSchm = require("./models/posts").postSchm;
 var business = require("./models/businesses").business;
 
 //********** General Variables *******************
@@ -65,7 +65,7 @@ var io = require('socket.io')(server);
 app.use(express.static('public'));  //make public folder accesible
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.set("view engine","pug");     //Set PUG as View Engine 
+app.set("view engine","pug");     //Set PUG as View Engine
 app.set("view options", {layout:true});
 app.use(cookiesession({
   name: 'session',
@@ -290,14 +290,21 @@ app.post("/validation",function(request,response){
               {
                  if(bcrypt.compareSync(request.body.password,data['password']))
                  {
-
-                  logger.info('Esto se guardara en las variables de sesion: ');
-                  request.session.user_id = data._id;
-                  request.session.loadbusiness = 0;
-                  request.session.business = data.ownedBusinesses;
-                  logger.info('ID USER: '+request.session.user_id);
-                  logger.info('LOADBUSINESS: '+request.session.loadbusiness);
-                  response.send('{"error":0,"message":"Successful Login"}');
+                  if(data.active == true)
+                  {
+                      logger.info('Esto se guardara en las variables de sesion: ');
+                      request.session.user_id = data._id;
+                      request.session.loadbusiness = 0;
+                      request.session.business = data.ownedBusinesses;
+                      logger.info('ID USER: '+request.session.user_id);
+                      logger.info('LOADBUSINESS: '+request.session.loadbusiness);
+                      response.send('{"error":0,"message":"Successful Login"}');
+                   }
+                   else
+                   {
+                     logger.info("Error: The user is correct but the account is deleted");
+                     response.send('{"error":1,"message":"La cuenta se encuentra eliminada."}');
+                   }
                  }
                  else{
                     logger.info('Error: Por favor ingrese el usuario y/o contraseña correctamente');
@@ -349,6 +356,7 @@ app.post("/users", function(request,response){
               businessData.address.city = "";
               businessData.address.state = "";
               businessData.address.country = "";
+              businessData.address.neighborhood= "";
               businessData.save(function(err,businessdataresult){
                   if(!err)
                   {
@@ -629,7 +637,7 @@ module.exports = function (socket) {
 
 // When a client connects, we note it in the console
 io.on('connection', require('./socket'));
-  
+
 
 //app.post("/uploadImage",multipartymiddleware,FileUploadController.uploadFile);
   /* Agregar en el app el middleware */
@@ -645,5 +653,6 @@ GET:    Para mostrar vistas al usuario y hacer consultas.
 POST:   Para crear y mandar datos
 PUT:    Modificar
 DELETE: lo tengo que decir?
+
 
 */

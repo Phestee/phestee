@@ -1,132 +1,94 @@
 extends ../leftPanel/xl
 block pannel
-  // content start
-  .col-7.mt-5.pt-5.mb-5
+  // content start  
+  .col-7.mt-5.pt-5.mb-5(ng-controller="editBusinessController" ng-init="loadBusinessUser()")
     .row.rounded.justify-content-center
-      .col-12
+      .col-12        
         h6.text-uppercase.phtext-muted.font-weight-bold.my-auto
           i.fas.fa-edit
           |  Editar Negocio
-          a(href='pheditbusiness.html')
-            small.phfont-opensans.phtext-blue.ml-3.my-auto.text-capitalize  1 Negocio registrado
-        .dropdown-divider(role='separator')
-        .form-row.my-auto
-          .col-8.mt-3.d-flex.justify-content-start.ph-pointer(data-toggle='collapse', href='#expandEdtBsns', aria-expanded='false', aria-controls='expandEdtBsns')
-            img.my-auto.rounded-circle(src='img/PhesteeUser.jpg', width='50', height='50')
-            p.my-auto.ml-3.p Freelance
+          a(href='pheditbusiness.html')            
+            small.phfont-opensans.phtext-blue.ml-3.my-auto.text-capitalize  {{limitbusiness}} Negocio(s) registrado(s)
+        .dropdown-divider(role='separator')          
+        .form-row.my-auto(ng-repeat="datahtml in dataBusinessUser")
+          .col-8.mt-3.d-flex.justify-content-start.ph-pointer(data-toggle='collapse', href='#expandEdtBsns{{$index}}', aria-expanded='false', aria-controls='expandEdtBsns{{$index}}')          
+            img.my-auto.rounded-circle(src='../../../../img/system/User.png', width='50', height='50')
+            p.my-auto.ml-3.p {{datahtml.name}}
             small.my-auto
-              i.fas.fa-caret-down.ml-3.fa-lg.my-auto
-        form#expandEdtBsns.collapse
-          button.close(type='button', aria-label='Close', data-toggle='collapse', href='#expandEdtBsns', aria-expanded='false', aria-controls='expandEdtBsns')
-            span(aria-hidden='true')
-              small ×
-          //
-            <div class="form-row my-auto">
-            <div class="col-12 mt-3 d-flex justify-content-start">
-            <small class="my-auto"><p class="p text-dark my-auto">Avatar de Negocio</p></small>
-            <img src="img/phuser.jpeg" width="50" height="50" class="ml-5 my-auto rounded-circle">
-            <label class="btn btn-outline btn-sm rounded-0 ml-3 my-auto">
-            <small>Modificar una foto</small><input type="file" style="display: none;">
-            </label>
-            </div>
-            <div class="col-12 text-left">
-            <small><div class="form-check my-auto">
-            <input type="checkbox" aria-label="Checkbox for following text input">
-            <small><label class="form-check-label text-muted" for="defaultCheck1">
-            Usar Avatar de Perfil
-            </label></small>
-            </div></small>
-            </div>
-            </div>
-            <div class="form-row my-auto">
-            <div class="col-12 mt-3 d-flex justify-content-start">
-            <small class="my-auto"><p class="p text-dark my-auto">Nombre</p></small>
-            <input type="text" class="form-control bgndAdmnFlds form-control-sm ml-2 rounded-0 border-top-0 border-left-0 border-right-0" placeholder="¿Cómo identificamos a tu Negocio?">
-            </div>
-            <div class="col-12 mt-2 text-left">
-            <small><div class="form-check my-auto">
-            <input type="checkbox" aria-label="Checkbox for following text input">
-            <small><label class="form-check-label text-muted" for="defaultCheck1">
-            Usar Nombre de Perfil
-            </label></small>
-            </div></small>
-            </div>
-            </div>
-            <div class="form-row my-auto">
-            <div class="col-12 mt-3 d-flex justify-content-start">
-            <small class="my-auto"><p class="p text-dark my-auto ">Nombre de Usuario</p></small>
-            <input type="text" class="form-control bgndAdmnFlds form-control-sm ml-3 rounded-0 border-top-0 border-left-0 border-right-0" placeholder="@">
-            </div>
-            </div>
-          .form-row.my-auto
-            .col-6.mt-3.d-flex.justify-content-between
-              small.my-auto
-                p.p.my-auto Calle
-              input.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0.ml-2(type='text', placeholder='')
-            .col-6.mt-3.d-flex.justify-content-between
-              small.my-auto
-                p.p.my-auto Exterior
-              input.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0.ml-2(type='text', placeholder='')
-              small.my-auto
-                p.p.my-auto Interior
-              input.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0.ml-2(type='text', placeholder='')
-          .form-row.my-auto
-            .col-12.mt-3.d-flex.justify-content-around
-              small.my-auto
-                p.p.my-auto Colonia
-              input.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text')
-          .form-row.my-auto
-            .col-12.mt-3.d-flex.justify-content-around
-              small.my-auto
-                p.p.my-auto Ciudad
-              input.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text')
-              small.my-auto
-                p.p.my-auto Estado
-              input.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text')
-              small.my-auto
-                p.p.my-auto País
-              input.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text')
-          .form-row.my-auto
-            .col-12.mt-3.d-flex.justify-content-between
-              i.fas.text-dark.my-auto.fa-mobile-alt
-              input.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='# Celular / WhatsApp')
-              i.fas.text-dark.my-auto.ml-2.fa-phone
-              input.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='# Fijo')
-          .form-row.my-auto
-            .col-6.mt-3.d-flex.justify-content-left
-              select#inputGroupSelect01.custom-select.phfield.custom-select-sm.rounded-0
-                option(selected='') Rol
-                option(value='1') Freelance
-                option(value='2') Negocio
-                option(value='3') Empresa
-            .col-6.mt-3.d-flex.justify-content-left
-              select#inputGroupSelect01.custom-select.phfield.custom-select-sm.rounded-0
-                option(selected='') Dinámica
-                option(value='1') Negocio Fijo
-                option(value='2') Negocio Móvil
-                option(value='3') Fijo con Servicio a Domicilio
-          .form-row.my-auto
-            .col-12.mt-3.d-flex.justify-content-start
-              small.my-auto
-                p.p.my-auto Email
-              input.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(disabled='', type='text', placeholder='Un correo para recibir notificaciones de tus clientes')
-          .row.my-auto
-            .col-12.mt-3.d-flex.justify-content-between
-              i.fab.phtext-muted.fa-twitter.my-auto
-              input.form-control.phfield.form-control-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0(disabled='', type='text', placeholder='@Twitter')
-              i.fab.phtext-muted.fa-facebook-square.ml-3.my-auto
-              input.form-control.phfield.form-control-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0(disabled='', type='text', placeholder='URL de Facebook')
-          .form-row.my-auto
-            .col-12.mt-3.d-flex.justify-content-between
-              i.fab.phtext-muted.fa-instagram.my-auto
-              input.form-control.phfield.form-control-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0(disabled='', type='text', placeholder='URL de Instagram')
-              i.fas.phtext-muted.fa-globe.my-auto
-              input.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0(disabled='', type='text', placeholder='Página Web')
-        .dropdown-divider.mt-3(role='separator')
-        .col-12.mt-4.d-flex.justify-content-start
-          a.phtext-blue(data-toggle='collapse', href='#expndAddBsns', aria-expanded='false', aria-controls='expndAddBsns')
-            i.fas.fa-plus-square.phtext-blue.my-auto.fa-lg.my-auto.ph-pointer
-            |  Agregar Negocio
+              i.fas.fa-caret-down.ml-3.fa-lg.my-auto      
+          form.collapse(id='expandEdtBsns{{$index}}')            
+            button.close(type='button', aria-label='Close', data-toggle='collapse', href='#expandEdtBsns{{$index}}', aria-expanded='false', aria-controls='expandEdtBsns{{$index}}')
+              span(aria-hidden='true')
+                small 
+            .form-row.my-auto
+              .col-6.mt-3.d-flex.justify-content-between
+                small.my-auto
+                  p.p.my-auto Calle
+                input#iptStreet.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0.ml-2(type='text', placeholder='' ng-model="iptStreet[$index]")
+              .col-6.mt-3.d-flex.justify-content-between
+                small.my-auto
+                  p.p.my-auto Exterior
+                input#iptNumber.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0.ml-2(type='text', placeholder='' ng-model="iptNumber[$index]")
+                small.my-auto
+                  p.p.my-auto Interior
+                input#iptAditional.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0.ml-2(type='text', placeholder='' ng-model="iptAditional[$index]")
+            .form-row.my-auto
+              .col-12.mt-3.d-flex.justify-content-around
+                small.my-auto
+                  p.p.my-auto Colonia
+                input#iptNeighborhood.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text' ng-model="iptNeighborhood[$index]")
+            .form-row.my-auto
+              .col-12.mt-3.d-flex.justify-content-around
+                small.my-auto
+                  p.p.my-auto Ciudad
+                input#iptCity.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text' ng-model="iptCity[$index]")
+                small.my-auto
+                  p.p.my-auto Estado
+                input#iptState.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text' ng-model="iptState[$index]")
+                small.my-auto
+                  p.p.my-auto País
+                input#iptCountry.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text' ng-model="iptCountry[$index]")
+            .form-row.my-auto
+              .col-12.mt-3.d-flex.justify-content-between
+                i.fas.text-dark.my-auto.fa-mobile-alt
+                input#iptCellPhone.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='# Celular / WhatsApp' ng-model="iptCellPhone[$index]")
+                i.fas.text-dark.my-auto.ml-2.fa-phone
+                input#iptPhoneNumberBusiness.form-control.phfield.ml-2.form-control-sm.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='# Fijo' ng-model="iptPhoneNumberBusiness[$index]")
+            .form-row.my-auto
+              .col-6.mt-3.d-flex.justify-content-left
+                select#businesstypeselect.custom-select.phfield.custom-select-sm.rounded-0(ng-model="businesstypeselect[$index]")
+                  option(selected='') Rol
+                  option(value='Freelance') Freelance
+                  option(value='Negocio') Negocio
+                  option(value='Empresa') Empresa
+              .col-6.mt-3.d-flex.justify-content-left
+                select#slcDynamicBusiness.custom-select.phfield.custom-select-sm.rounded-0(ng-model="slcDynamicBusiness[$index]")
+                  option(selected='') Dinámica
+                  option(value='Negocio Fijo') Negocio Fijo
+                  option(value='Negocio Móvil') Negocio Móvil
+                  option(value='FijoDom') Fijo con Servicio a Domicilio
+            .form-row.my-auto
+              .col-12.mt-3.d-flex.justify-content-start
+                small.my-auto
+                  p.p.my-auto Email
+                input#iptEmailBusiness.form-control.phfield.form-control-sm.ml-3.rounded-0.border-top-0.border-left-0.border-right-0(ng-disabled="{{disabledfield[$index]}}" type='text', placeholder='Un correo para recibir notificaciones de tus clientes' ng-model="iptEmailBusiness[$index]")
+            .row.my-auto
+              .col-12.mt-3.d-flex.justify-content-between
+                i.fab.phtext-muted.fa-twitter.my-auto
+                input#iptTwitter.form-control.phfield.form-control-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0(ng-disabled="{{disabledfield[$index]}}", type='text', placeholder='@Twitter' ng-model="iptTwitter[$index]")
+                i.fab.phtext-muted.fa-facebook-square.ml-3.my-auto
+                input#iptFacebook.form-control.phfield.form-control-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0(ng-disabled="{{disabledfield[$index]}}", type='text', placeholder='URL de Facebook' ng-model="iptFacebook[$index]")
+            .form-row.my-auto
+              .col-12.mt-3.d-flex.justify-content-between
+                i.fab.phtext-muted.fa-instagram.my-auto
+                input#iptInstagram.form-control.phfield.form-control-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0(ng-disabled='{{disabledfield[$index]}}', type='text', placeholder='URL de Instagram' ng-model="iptInstagram[$index]")
+                i.fas.phtext-muted.fa-globe.my-auto
+                input#iptWebpage.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0(ng-disabled='{{disabledfield[$index]}}', type='text', placeholder='Página Web' ng-model="iptWebpage[$index]")                
+          .dropdown-divider.mt-3(role='separator')
+          .col-12.mt-4.d-flex.justify-content-start            
+            //a.phtext-blue(data-toggle='collapse', href='#expndAddBsns', aria-expanded='false', aria-controls='expndAddBsns')
+              i.fas.fa-plus-square.phtext-blue.my-auto.fa-lg.my-auto.ph-pointer 
+              |  Agregar Negocio
         form#expndAddBsns.collapse
           button.close(type='button', aria-label='Close', data-toggle='collapse', href='#expndAddBsns', aria-expanded='false', aria-controls='expndAddBsns')
             span(aria-hidden='true')
@@ -216,10 +178,15 @@ block pannel
         .dropdown-divider.mt-3(role='separator')
     .form-row.my-auto
       .col-12.d-flex.justify-content-between.mt-2
+        a.phtext-blue(data-toggle='collapse', href='#', aria-expanded='false', aria-controls='expndAddBsns' ng-click="addBusiness()")
+          i.fas.fa-plus-square.phtext-blue.my-auto.fa-lg.my-auto.ph-pointer
+          |  Agregar Negocio
+    .form-row.my-auto
+      .col-12.d-flex.justify-content-between.mt-2
         button.my-auto.btn.btn-md.phbtn-outline-blue
           i.fas.fa-gift.my-auto
           |  Obten una cuenta Premium para agregar más Negocios
-        button.btn.phbtn-blue
+        button.btn.phbtn-blue(ng-click="saveBusiness()")
           i.fas.fa-save
           |  Guardar Cambios
   // End of content

@@ -53,7 +53,7 @@ var users_schema = new Schema ({
 
                        }
                      ],
-    active:          {type: Boolean}
+    active:          {type: Boolean,default: true}
 
 });
 

@@ -15,17 +15,19 @@ block contenido
                 |  Ajustes
               ul.nav.nav-tabs(style='display: block;')
                 li.nav-item
-                  a.nav-link.text-dark.phbox-hover.rounded-0(href='pheditprofile.html') Editar Perfil
+                  a.nav-link.text-dark.phbox-hover.rounded-0(href='/appv2/profile') Editar Perfil
                 li.nav-item
-                  a.nav-link.text-dark.phbox-hover.rounded-0(href='pheditbusiness.html') Editar Negocio
+                  a.nav-link.text-dark.phbox-hover.rounded-0(href='/appv2/business') Editar Negocio
                 li.nav-item
-                  a.nav-link.text-dark.phbox-hover.rounded-0(href='pheditboard.html') Editar Tablero
+                  a.nav-link.text-dark.phbox-hover.rounded-0(href='/appv2/services') Editar Tablero
                 li.nav-item
-                  a.nav-link.phbgn-fa.phtext-blue.rounded-0(href='#') Cuenta
+                  a.nav-link.phbgn-fa.phtext-blue.rounded-0(href='/appv2/account') Cuenta
                 li.nav-item
                   a.nav-link.text-dark.phbox-hover.rounded-0(href='pheditnotifications.html') Ajuste de Notificaciones
                 li.nav-item
                   a.nav-link.text-dark.phbox-hover.rounded-0(href='#') Certificación
+                li.nav-item
+                  a.nav-link.text-dark.phbox-hover.rounded-0(ng-click="signout()") Cerrar sesion
                 //
                   <li class="nav-item">
                   <a class="nav-link text-dark phbox-hover rounded-0" href="#">Dashboard</a>

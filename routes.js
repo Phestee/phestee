@@ -1,4 +1,4 @@
-var users = require("./models/users").users;
+    var users = require("./models/users").users;
 var business = require("./models/businesses").business;
 var express = require("express");
 var bcrypt = require('bcrypt-nodejs');
@@ -50,95 +50,24 @@ var logger = new (winston.Logger)({
 router.get("/services",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 GET "/services"');
-  try{
-    if(request.session.loadbusiness == 0)
-    {
-          logger.info('Cargará los datos por primera vez');
-          users.findOne({_id:request.session.user_id},function(err,data){
-              if(!err)
-              {
-                  if(data)
-                  {
-                      business.find({_id: {$in: data.ownedBusinesses}},function(errB,dataB){
-                        if(!errB)
-                        {
-                          if(dataB)
-                          {
-                              logger.info('Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.');
-                              //request.session.loadbusiness = 1;
-                              response.render('app/editservices',{databusiness: dataB});
-                          }
-                          else
-                          {
-                              logger.info('Error: No hay negocios en este usuario');
-                              response.send('{"error":1,"message":"Hubo un error al cargar los datos del negocio del usuario."}');
-                          }
-                        }
-                        else
-                        {
-                          logger.info('Error: '+errB);
-                          response.send('{"error":1,"message":"Hubo un error al buscar los negocios"}');
-                        }
-                      });
-                  }
-                  else {
-                    logger.info('Error: No se encuentran datos');
-                    response.send('{"error":1,"message":"No se encontraron datos"}');
-                  }
-              }
-              else {
-                logger.info('Error: '+err)
-                response.send('{"error":1,"message":"Hubo un error al cargar el usuario."}');
-              }
-          });
-    }
-    else
-    {
-        logger.info('Se cargara editar negocios pero los datos los cargara el cliente.');
-        response.render('app/editservices',{databusiness: 1});
-    }
-  }
-  catch(e)
-  {
-    logger.info('Error 666: '+e);
-  }
+  response.render("appv2/settings/board/xl");
+});
+
+router.get("/account",function(request,response){
+  logger.info('------------------------------------------------------');
+  logger.info('M001 GET "/account"');
+  response.render("appv2/settings/account/xl");
+
 });
 
 router.get("/", function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 GET "/ principal"');
-  try{
-        users.findOne({_id:request.session.user_id},function(err,data){
-          var responseuserjson = ''
-          if(!err)
-          {
-                if(data)
-                {
-                       responseuserjson = {
-                        "error":0,
-                        "username": data['name'],
-                        "email": data['mail']
-
-                      };
-                      response.render("appv2",{user: responseuserjson});
-                }
-                else {
-                      response.send('{"error":1,"message":"No se encuentran los datos del usuario."}');
-                }
-          }
-          else {
-              response.send('{"error":1,"message":"'+err+'"}')
-          }
-        });
-   }
-   catch(e)
-   {
-     logger.info('Error 666: '+e);
-   }
+  response.render("appv2");
 });
 
 router.get("/tstVw", function(request,response){
-  response.render("appv2/settings/profile/xl");
+  //response.render("appv2/settings/profile/xl");
   //response.render('/settings/profile/xl');
 });
 
@@ -146,71 +75,22 @@ router.get("/signout",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 GET "/signout"');
   request.session = null;
-  response.redirect('/login');
+  response.redirect('/');
 });
 
 
 router.get("/profile",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 GET "/profile"');
-  response.render("app/editprofile");
+  //response.render("app/editprofile");
+  response.render("appv2/settings/profile/xl");
 });
+
 
 router.get("/business",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 GET "/business"');
-  try{
-        if(request.session.loadbusiness == 0)
-        {
-          logger.info('Cargará los datos por primera vez');
-          users.findOne({_id:request.session.user_id},function(err,data){
-              if(!err)
-              {
-                  if(data)
-                  {
-                      business.find({_id: {$in: data.ownedBusinesses}},function(errB,dataB){
-                        if(!errB)
-                        {
-                          if(dataB)
-                          {
-                              logger.info('Se redireccionará a editar negocio pero ya mandara a llamar los datos locales.');
-                              request.session.loadbusiness = 1;
-                              response.render('app/editbusiness',{databusiness: dataB});
-                          }
-                          else
-                          {
-                              logger.info('Error: No hay negocios en este usuario');
-                              response.send('{"error":1,"message":"Hubo un error al cargar los datos del negocio del usuario."}');
-                          }
-                        }
-                        else
-                        {
-                          logger.info('Error: '+errB);
-                          response.send('{"error":1,"message":"Hubo un error al buscar los negocios"}');
-                        }
-                      });
-                  }
-                  else {
-                    logger.info('Error: No se encuentran datos');
-                    response.send('{"error":1,"message":"No se encontraron datos"}');
-                  }
-              }
-              else {
-                logger.info('Error: '+err)
-                response.send('{"error":1,"message":"Hubo un error al cargar el usuario."}');
-              }
-          });
-        }
-        else
-        {
-            logger.info('Se cargara editar negocios pero los datos los cargara el cliente.');
-            response.render('app/editbusiness',{databusiness: 1});
-        }
-  }
-  catch(e)
-  {
-      logger.info('Error 666: '+e);
-  }
+  response.render("appv2/settings/business/xl");
 });
 
 
@@ -219,54 +99,64 @@ router.put("/uploadImage",multipartymiddleware,FileUploadController.uploadFile);
 router.put("/editBusiness",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 PUT "/editBusiness"');
-  try{
-      business.findOne({_id:request.body.idbusiness},function(err,data){
-        if(!err)
-        {
-          if(data)
-          {
-            data.name = (request.body.businessname != undefined) ? request.body.businessname : "";
-            data.businessType = request.body.businesstype;
-            data.telephone.typeTel = (request.body.typephone != undefined) ? request.body.typephone : "";
-            data.telephone.number = (request.body.phonenumberbusiness != undefined) ? request.body.phonenumberbusiness : "";
-            data.isHeadBusiness = request.body.mainbusiness;
-            data.address.street = (request.body.addressstreet != undefined) ? request.body.addressstreet : "";
-            data.address.number = (request.body.addressnumber != undefined) ? request.body.addressnumber : "";
-            data.address.aditional = (request.body.addressaditional != undefined) ? request.body.addressaditional : "";
-            data.address.zipCode = (request.body.addresszipcode != undefined) ? request.body.addresszipcode : "";
-            data.address.city = (request.body.addresscity != undefined) ? request.body.addresscity : "";
-            data.address.state = (request.body.addressstate != undefined) ? request.body.addressstate : "";
-            data.address.country = (request.body.addresscountry != undefined) ? request.body.addresscountry : "";
-            logger.info('Datos negocios: '+JSON.stringify(data));
-            data.save(function(err){
-              if(!err)
+
+  var negocios = request.body;  
+  negocios.forEach(function(element)
+  {
+      try{
+          business.findOne({_id:element.idbusiness},function(err,data){
+            if(!err)
+            {
+              if(data)
               {
-                 response.send('{"error":0,"message":""}');
+                data.name = (element.businessname != undefined) ? element.businessname : "";
+                data.businessType = element.businesstype;
+                data.telephone.number = (element.phone != undefined) ? element.phone : "";
+                data.telephone.cellphone = (element.cellphone != undefined) ? element.cellphone : "";
+                data.address.street = (element.street != undefined) ? element.street : "";
+                data.address.number = (element.number != undefined) ? element.number : "";
+                data.address.aditional = (element.aditional != undefined) ? element.aditional : "";
+                data.address.city = (element.city != undefined) ? element.city : "";
+                data.address.state = (element.state != undefined) ? element.state : "";
+                data.address.country = (element.country != undefined) ? element.country : "";
+                data.emailbusiness = (element.emailbusiness != undefined) ? element.emailbusiness : "";
+                data.twitterbusiness = (element.twitter != undefined) ? element.twitter : "";
+                data.instagramurl = (element.instagram != undefined) ? element.instagram : "";
+                data.facebookurl = (element.facebook != undefined) ? element.facebook : "";
+                data.webpage = (element.webpage != undefined) ? element.webpage : "";
+                data.businessdynamic = (element.businessdynamic != undefined) ? element.businessdynamic : "";
+                data.address.neighborhood = (element.neighborhood != undefined) ? element.neighborhood : "";
+                data.save(function(err){
+                    if(err)
+                    {
+                        logger.info('Error: '+err);
+                        response.send('{"error":1,"message":"Error al guardar el negocio"}');
+                    }
+                });
               }
               else
               {
-                  logger.info('Error: '+err);
-                  response.send('{"error":1,"message":"'+err+'"}');
+                logger.info('Error: There is not business in the query');
+                response.send('{"error":1,"message":"No se encontro ningun negocio."}');
               }
-            });
-          }
-          else
-          {
-            logger.info('Error: No se encontró ningún negocio');
-            response.send('{"error":1,"message":"No se encontro ningun negocio."}');
-          }
+            }
+            else
+            {
+                logger.info('Error: '+err);
+                response.send('{"error":1,"message":"'+err+'"}');
+            }
+          });
         }
-        else
+        catch(e)
         {
-            logger.info('Error: '+err);
-            response.send('{"error":1,"message":"'+err+'"}');
+          logger.info('Error 666: '+e);
+          response.send('{"error":1,"message":"Error al guardar el negocio"}');
         }
-      });
-    }
-    catch(e)
-    {
-      logger.info('Error 666: '+e);
-    }
+   }); // fin for
+   console.log("Saldre de inmediato");
+   response.send('{"error":0,"message":""}');
+
+
 });
 
 router.post("/addService",multipartymiddleware,function(request,response){
@@ -590,6 +480,103 @@ router.put("/deleteaccount",function(request,response){
     logger.info("Error 666: "+e);
     response.send('{"error":1,",message":"Error al eliminar la cuenta"}');
   }
+});
+
+router.post("/getEmergencyData",function(request,response){
+    logger.info('-----------------------------------------------------');
+    logger.info('M001 - POST "/getEmergencyData"');
+    users.findOne({_id:request.session.user_id},function(err,data){
+      if(!err)
+      {
+          if(data)
+          {
+                userJson = {
+                  name: data['name'],
+                  mail: data['mail'],
+                  profileImage: data['profileImage'],
+                  gender: data['gender'],
+                  folderImg: data['folderImg'],
+                  location:{
+                      latitude: data['location']['latitude'],
+                      length: data['location']['length']
+                  },
+                  ownedBusinesses: data['ownedBusinesses']
+                };
+                business.find({_id: {$in: data.ownedBusinesses}},function(errB,dataB){
+                  if(!errB)
+                  {
+                      if(dataB)
+                      {
+                        var objectBus;
+                        var dataBusinessServer = [];
+                        for(var i = 0;i<dataB.length;i++)
+                        {
+                            objectBus = {
+                              _id: dataB[i]._id,
+                              name: dataB[i].name,
+                              isActive: dataB[i].isActive,
+                              businessType: dataB[i].businessType,
+                              isHeadBusiness: dataB[i].isHeadBusiness,
+                              telephone: {
+                                      cellphone: dataB[i].telephone.cellphone,
+                                      number:  dataB[i].telephone.number
+                              },
+                              address: {
+                                street: dataB[i].address.street,
+                                number: dataB[i].address.number,
+                                aditional: dataB[i].address.aditional,
+                                zipCode: dataB[i].address.zipCode,
+                                city: dataB[i].address.city,
+                                state: dataB[i].address.state,
+                                country: dataB[i].address.country,
+                                dtUpdate: dataB[i].address.dtUpdate,
+                                neighborhood: dataB[i].address.neighborhood
+                              },
+                              services: dataB[i].services,
+                              emailbusiness: dataB[i].emailbusiness,
+                              twitterbusiness: dataB[i].twitterbusiness,
+                              instagramurl: dataB[i].instagramurl,
+                              facebookurl: dataB[i].facebookurl,
+                              webpage: dataB[i].webpage,
+                              usernamebuss: dataB[i].usernamebuss,
+                              imgbusiness: dataB[i].imgbusiness,
+                              businessdynamic: dataB[i].businessdynamic
+                            };
+
+                            dataBusinessServer.push(objectBus);
+                        }
+                        logger.info('Sending data to the client...');
+                        console.log("Negocio cliente: "+JSON.stringify(dataBusinessServer));
+                        response.send(JSON.stringify({error:0,userjson: userJson,databusinessServer: dataBusinessServer}));
+
+                    }
+                    else
+                    {
+                        logger.info('Error: No hay negocios en este usuario');
+                        response.send('{"error":1,"message":"Hubo un error al cargar los datos del negocio del usuario."}');
+                    }
+                  }
+                  else
+                  {
+                    logger.info('Error: '+errB);
+                    response.send('{"error":1,"message":"Hubo un error al buscar los negocios"}');
+                  }
+                });
+          }
+          else
+          {
+              logger.info("There is not users in the database");
+              response.send('{"error":1,"message":"Error al cargar los datos"}');
+          }
+      }
+      else
+      {
+          logger.info("Error: "+err);
+          response.send('{"error":1,"message":"Error al cargar los datos"}');
+      }
+    });// fin users findOne
+
+
 });
 
 

@@ -226,15 +226,32 @@ app.controller("changePasswordController",function($scope,$http){
   }
 });
 
-app.controller("homeController",function($scope,$localStorage,$sessionStorage){
+app.controller("homeController",function($scope,$localStorage,$sessionStorage,$http){
 
-  $scope.getDataUser = function(user){
+  $scope.getDataUser = function(){
+          var check = JSON.parse(localStorage.getItem("BusinessData"));
+          if(check == undefined || check == null)
+          {
+                $http.post("/appv2/getEmergencyData").then(function(responsesuc){
+                  var result = angular.fromJson(responsesuc.data);
+                  if(result.error == 0)
+                  {
+                    localStorage.setItem("UserData",JSON.stringify(result.userjson));
+                    localStorage.setItem("BusinessData",JSON.stringify(result.databusinessServer));
+                  }
+                  else {
+                    alert("Error al cargar los datos. Se regresará al login de la aplicación");
+                    localStorage.clear();
+                    window.location.href="/app/signout";
+                  }
 
-      $scope.name = user.username;
-      $localStorage.name = user.username;
-      $localStorage.email = user.email;
-
-  }
+                },function(response){
+                    alert("Error: "+response.statusText);
+                    localStorage.clear();
+                    window.location.href="/app/signout";
+                });
+          }
+  }// fin funcion getDataUser
 
   $scope.signout = function(){
 
@@ -547,97 +564,148 @@ app.controller("editProfileController",function($scope,$http,$localStorage,$sess
 app.controller("editBusinessController",function($scope,$localStorage,$http){
 
     $scope.dataBusinessUser = [];
-    $scope.iptNameBusiness = [];
-    $scope.slcBusinessType = [];
-    $scope.slcTypePhone = [];
+    $scope.iptNeighborhood = [];
     $scope.iptPhoneNumberBusiness = [];
-    $scope.chbxMainBusiness = [];
     $scope.iptStreet = [];
     $scope.iptNumber = [];
-    $scope.iptAdditionalInfo = [];
-    $scope.iptZipCode = [];
     $scope.iptCity = [];
     $scope.iptState = [];
     $scope.iptCountry = [];
     $scope.idbusiness = [];
-    $scope.businesstypeselect = [
-      {value:"Freelance", label:"Freelance"},
-      {value:"Business",label:"Business"},
-      {value:"Enterprise",label:"Enterprise"}
-    ];
-    $scope.typecelselect = [
-      {value:"Celular",label:"Celular"},
-      {value:"Privado",label:"Privado"}
-    ];
+    $scope.iptAditional = [];
+    $scope.iptCellPhone = [];
+    $scope.slcDynamicBusiness = [];
+    $scope.limitbusiness = "";
+    $scope.businesstypeselect = [];
+    $scope.iptEmailBusiness = [];
+    $scope.iptTwitter = [];
+    $scope.iptInstagram = [];
+    $scope.iptFacebook = [];
+    $scope.iptWebpage = [];
+    $scope.iptEmailBusiness = [];
+    $scope.iptNameBuss = [];
+    $scope.disabledfield = [];
 
+    $scope.loadBusinessUser = function(){
 
-    $scope.loadBusinessUser = function(business){
-        var businessdatalocal = JSON.parse(localStorage.getItem("business"));
-        if(businessdatalocal == undefined || businessdatalocal == null)
-        {
-          $scope.dataBusinessUser = business;
-          for(var x=0;x<business.length;x++)
+      $scope.dataBusinessUser = [];
+
+      var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+      if(businessdatalocal == undefined || businessdatalocal == null)
+      {
+            $http.post("/appv2/getEmergencyData").then(function(responsesuc){
+              var result = angular.fromJson(responsesuc.data);
+              if(result.error == 0)
+              {
+                localStorage.setItem("UserData",JSON.stringify(result.userjson));
+                localStorage.setItem("BusinessData",JSON.stringify(result.databusinessServer));
+                businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+              }
+              else {
+                alert("Error al cargar los datos. Se regresará al login de la aplicación");
+                localStorage.clear();
+                window.location.href="/appv2/signout";
+              }
+
+            },function(response){
+                alert("Error: "+response.statusText);
+                localStorage.clear();
+                window.location.href="/appv2/signout";
+            });
+      }
+
+      $scope.dataBusinessUser = businessdatalocal;
+      $scope.limitbusiness = businessdatalocal.length;
+      for(var i=0; i<$scope.limitbusiness;i++)
+      {
+          $scope.idbusiness[i] = businessdatalocal[i]._id;
+          $scope.iptNameBuss[i] = businessdatalocal[i].name;
+          $scope.iptStreet[i] = (businessdatalocal[i].address.street != undefined ? businessdatalocal[i].address.street : "");
+          $scope.iptNumber[i] = (businessdatalocal[i].address.number != undefined ? businessdatalocal[i].address.number : "");
+          $scope.iptAditional[i] = (businessdatalocal[i].address.aditional != undefined ? businessdatalocal[i].address.aditional : "");
+          $scope.iptNeighborhood[i] = (businessdatalocal[i].address.neighborhood != undefined ? businessdatalocal[i].address.neighborhood : "");
+          $scope.iptCity[i] = (businessdatalocal[i].address.city != undefined ? businessdatalocal[i].address.city : "");
+          $scope.iptState[i] = (businessdatalocal[i].address.state != undefined ? businessdatalocal[i].address.state : "");
+          $scope.iptCountry[i] = (businessdatalocal[i].address.country != undefined ? businessdatalocal[i].address.country : "" );
+          $scope.iptCellPhone[i] = (businessdatalocal[i].telephone.cellphone != undefined ? businessdatalocal[i].telephone.cellphone : "" );
+          $scope.iptPhoneNumberBusiness[i] = (businessdatalocal[i].telephone.number != undefined ? businessdatalocal[i].telephone.number : "");
+          $scope.businesstypeselect[i] = (businessdatalocal[i].businessType != undefined ? businessdatalocal[i].businessType : "");
+          $scope.slcDynamicBusiness[i] = (businessdatalocal[i].businessdynamic != undefined ? businessdatalocal[i].businessdynamic : "");
+          if(businessdatalocal[i].name == "Freelance")
           {
-            $scope.idbusiness[x] = business[x]._id;
-            $scope.iptNameBusiness[x] = business[x].name;
-            $scope.slcBusinessType[x] = business[x].businessType;
-            $scope.slcTypePhone[x] = business[x].telephone.typeTel;
-            $scope.iptPhoneNumberBusiness[x] = business[x].telephone.number;
-            $scope.chbxMainBusiness[x] = business[x].isHeadBusiness;
-            $scope.iptStreet[x] = business[x].address.street;
-            $scope.iptNumber[x] = business[x].address.number;
-            $scope.iptAdditionalInfo[x] = business[x].address.aditional;
-            $scope.iptZipCode[x] = business[x].address.zipCode;
-            $scope.iptCity[x] = business[x].address.city;
-            $scope.iptState[x] = business[x].address.state;
-            $scope.iptCountry[x] = business[x].address.country;
+            //Aqui se van a cargar el correo y las redes sociales de la parte del usuario, entonces tengo que cargar el usuario para cargar estos datos.
+            $scope.disabledfield[i] = true;
           }
-        }
-        else
-        {
-           $scope.dataBusinessUser.push(businessdatalocal);
-           $scope.idbusiness[0] = businessdatalocal.idbusiness;
-           $scope.iptNameBusiness[0] = businessdatalocal.businessname;
-           $scope.slcBusinessType[0] = businessdatalocal.businesstype;
-           $scope.slcTypePhone[0] = businessdatalocal.typephone;
-           $scope.iptPhoneNumberBusiness[0] = businessdatalocal.phonenumberbusiness;
-           $scope.chbxMainBusiness[0] = businessdatalocal.mainbusiness;
-           $scope.iptStreet[0] = businessdatalocal.addressstreet;
-           $scope.iptNumber[0] = businessdatalocal.addressnumber;
-           $scope.iptAdditionalInfo[0] = businessdatalocal.addressaditional;
-           $scope.iptZipCode[0] = businessdatalocal.addresszipcode;
-           $scope.iptCity[0] = businessdatalocal.addresscity;
-           $scope.iptState[0] = businessdatalocal.addressstate;
-           $scope.iptCountry[0] = businessdatalocal.addresscountry;
-        }
+          else
+          {
+            $scope.disabledfield[i] = false;
+            $scope.iptEmailBusiness[i] = (businessdatalocal[i].emailbusiness != undefined ? businessdatalocal[i].emailbusiness : "");
+            $scope.iptTwitter[i] = (businessdatalocal[i].twitterbusiness != undefined ? businessdatalocal[i].twitterbusiness : "");
+            $scope.iptInstagram[i] = (businessdatalocal[i].instagramurl != undefined ? businessdatalocal[i].instagramurl : "");
+            $scope.iptFacebook[i] = (businessdatalocal[i].facebookurl != undefined ? businessdatalocal[i].facebookurl : "");
+            $scope.iptWebpage[i] = (businessdatalocal[i].webpage != undefined ? businessdatalocal[i].webpage : "");
+          }
+      }
     }; // fin loadBusinessUser
 
-    $scope.saveBusiness =  function(numberbusiness){
+    $scope.saveBusiness =  function(){
 
-      var objectbusiness = {
-            "idbusiness": $scope.idbusiness[numberbusiness],
-            "businessname": $scope.iptNameBusiness[numberbusiness],
-            "businesstype": $scope.slcBusinessType[numberbusiness],
-            "typephone": $scope.slcTypePhone[numberbusiness],
-            "phonenumberbusiness":$scope.iptPhoneNumberBusiness[numberbusiness],
-            "mainbusiness": $scope.chbxMainBusiness[numberbusiness],
-            "addressstreet": $scope.iptStreet[numberbusiness],
-            "addressnumber": $scope.iptNumber[numberbusiness],
-            "addressaditional": $scope.iptAdditionalInfo[numberbusiness],
-            "addresszipcode": $scope.iptZipCode[numberbusiness],
-            "addresscity": $scope.iptCity[numberbusiness],
-            "addressstate": $scope.iptState[numberbusiness],
-            "addresscountry": $scope.iptCountry[numberbusiness]
-      }; // objecto business
+      var objectbusiness = '';
+      var objectsend = [];
+      for(var i=0;i<$scope.limitbusiness;i++)
+      {
+        objectbusiness = {
+          "idbusiness": $scope.idbusiness[i],
+          "street": $scope.iptStreet[i],
+          "number": $scope.iptNumber[i],
+          "aditional": $scope.iptAditional[i],
+          "neighborhood": $scope.iptNeighborhood[i],
+          "city": $scope.iptCity[i],
+          "state": $scope.iptState[i],
+          "country": $scope.iptCountry[i],
+          "cellphone": $scope.iptCellPhone[i],
+          "phone": $scope.iptPhoneNumberBusiness[i],
+          "businesstype": $scope.businesstypeselect[i],
+          "businessdynamic": $scope.slcDynamicBusiness[i],
+          "emailbusiness": $scope.iptEmailBusiness[i],
+          "twitter": $scope.iptTwitter[i],
+          "instagram": $scope.iptInstagram[i],
+          "facebook": $scope.iptFacebook[i],
+          "webpage": $scope.iptWebpage[i],
+          "businessname": $scope.iptNameBuss[i]
+        }
+        objectsend.push(objectbusiness);
 
-        $http.put("/app/editBusiness",objectbusiness).then(function(responsesuc){
+
+      }
+        $http.put("/appv2/editBusiness",objectsend).then(function(responsesuc){
           var result = angular.fromJson(responsesuc.data);
           if(result.error == 0)
           {
+            var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+            for(var j=0;j<businessdatalocal.length;j++)
+            {
+                businessdatalocal[j]._id = $scope.idbusiness[j];
+                businessdatalocal[j].address.street = $scope.iptStreet[j];
+                businessdatalocal[j].address.number = $scope.iptNumber[j];
+                businessdatalocal[j].address.aditional = $scope.iptAditional[j];
+                businessdatalocal[j].address.neighborhood = $scope.iptNeighborhood[j];
+                businessdatalocal[j].address.city = $scope.iptCity[j];
+                businessdatalocal[j].address.state = $scope.iptState[j];
+                businessdatalocal[j].address.country = $scope.iptCountry[j];
+                businessdatalocal[j].telephone.cellphone = $scope.iptCellPhone[j];
+                businessdatalocal[j].telephone.number = $scope.iptPhoneNumberBusiness[j];
+                businessdatalocal[j].businessType = $scope.businesstypeselect[j];
+                businessdatalocal[j].businessdynamic = $scope.slcDynamicBusiness[j];
+                businessdatalocal[j].emailbusiness = $scope.iptEmailBusiness[j];
+                businessdatalocal[j].twitterbusiness = $scope.iptTwitter[j];
+                businessdatalocal[j].instagramurl = $scope.iptInstagram[j];
+                businessdatalocal[j].facebookurl = $scope.iptFacebook[j];
+                businessdatalocal[j].webpage = $scope.iptWebpage[j];
+                businessdatalocal[j].name = $scope.iptNameBuss[j];
+            }
+            localStorage.setItem("BusinessData",JSON.stringify(businessdatalocal));
             alert("El negocio se ha modificado con éxito");
-            localStorage.setItem("business",JSON.stringify(objectbusiness));
-            $scope.dataBusinessUser = [];
-            window.location.href="/app";
           }
           else
           {
@@ -649,6 +717,13 @@ app.controller("editBusinessController",function($scope,$localStorage,$http){
             alert("Error: "+response.statusText);
         });// fin ajax editbusiness
     };// fin funcion saveBusiness
+
+    $scope.addBusiness = function(){
+
+      alert("Esta funcionalidad no esta disponible por el momento. Espere a recibir la invitación para poder activarla.");
+
+
+    }
 }); // fin controller editBusinessController
 
 app.controller("editServicesController",function($scope,$http,Upload){
