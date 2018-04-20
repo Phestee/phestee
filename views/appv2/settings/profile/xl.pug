@@ -40,12 +40,40 @@ block pannel
                 option(value='1') Hombre
                 option(value='2') Mujer
                 option(value='3') Prefiero no decirlo
-              small En qué Ciudad vives
-              select#inputGroupSelect01.custom-select.custom-select-sm.rounded-0.ml-2.border-top-0.border-left-0.border-right-0
+              small En qué Estado vives
+              select#perfilState.custom-select.custom-select-sm.rounded-0.ml-2.border-top-0.border-left-0.border-right-0
                 option(selected='') Selecciona
-                option(value='1') Guadalajara
-                option(value='2') Zapopan
-                option(value='3') El Salto
+                option(value='1') Guadalajara, JAL
+                option(value='2') El Salto, JAL
+                option(value='2') Puerto Vallarta, JAL
+                option(value='3') Tlajomulco, JAL
+                option(value='4') Tonalá, JAL
+                option(value='5') Zapopan, JAL
+                option(value='6') Celaya, GTO
+                option(value='7') Irapuato, GTO
+                option(value='8') Leon, GTO
+                option(value='9') Salamanca, GTO
+                option(value='10') Silao, GTO
+                option(value='11') Ciudad de México
+                option(value='11') Monterrey, NL
+                option(value='11') Mi ciudad no está listada
+              small En qué Ciudad vives  
+              select#perfilCity.custom-select.custom-select-sm.rounded-0.ml-2.border-top-0.border-left-0.border-right-0
+                option(selected='') Selecciona
+                option(value='1') Guadalajara, JAL
+                option(value='2') El Salto, JAL
+                option(value='2') Puerto Vallarta, JAL
+                option(value='3') Tlajomulco, JAL
+                option(value='4') Tonalá, JAL
+                option(value='5') Zapopan, JAL
+                option(value='6') Celaya, GTO
+                option(value='7') Irapuato, GTO
+                option(value='8') Leon, GTO
+                option(value='9') Salamanca, GTO
+                option(value='10') Silao, GTO
+                option(value='11') Ciudad de México
+                option(value='11') Monterrey, NL
+                option(value='11') Mi ciudad no está listada
               small Fecha de Nacimiento
               small.my-auto
                 input.my-auto.text-center.datepicker-here.rounded-0.border-top-0.border-left-0.border-right-0(type='text', data-language='es', placeholder='Selecciona')
@@ -64,8 +92,12 @@ block pannel
             .col-12.mt-3.d-flex.justify-content-between
               i.fab.phtext-muted.fa-instagram.my-auto
               input.form-control.phfield.form-control-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='URL de Instagram')
-              i.fas.phtext-muted.fa-globe.ml-3.my-auto
-              input.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='Página Web')
+              i.fab.phtext-muted.fa-linkedin.ml-3.my-auto
+              input.form-control.phfield.form-control-sm.ml-1.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='URL de LinkedIn')
+          .form-row.my-auto
+            .col-12.mt-3.d-flex.justify-content-between
+              i.fas.phtext-muted.fa-globe.my-auto
+              input.form-control.phfield.form-control-sm.ml-2.rounded-0.border-top-0.border-left-0.border-right-0(type='text', placeholder='Página Web')  
     .row.my-auto.text-right
       .col-12.justify-content-end.mt-5
         button.btn.phbtn-blue
