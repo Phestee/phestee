@@ -93,6 +93,13 @@ router.get("/business",function(request,response){
   response.render("appv2/settings/business/xl");
 });
 
+router.get("/board",function(request,response){
+  logger.info('-----------------------------------------------------');
+  logger.info('M001 GET "/board"');
+  response.render("appv2/settings/board/xl");
+
+});
+
 
 router.put("/uploadImage",multipartymiddleware,FileUploadController.uploadFile);
 
@@ -488,7 +495,7 @@ router.post("/getEmergencyData",function(request,response){
       if(!err)
       {
           if(data)
-          {              
+          {
                 userJson = {
                   name: data['name'],
                   mail: data['mail'],

@@ -3251,7 +3251,7 @@ app.controller("editProfileController",function($scope,$http,$localStorage,$sess
     $scope.folderImgUser = userdatalocal.folderImg;
 
   }  // fin loadDataUser
-  
+
 });// fin app controller editProfileController
 
 
@@ -3286,6 +3286,7 @@ app.controller("editBusinessController",function($scope,$localStorage,$http){
       $scope.dataBusinessUser = [];
 
       var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+      var userdatalocal = JSON.parse(localStorage.getItem("UserData"));
       if(businessdatalocal == undefined || businessdatalocal == null)
       {
             $http.post("/appv2/getEmergencyData").then(function(responsesuc){
@@ -3295,6 +3296,8 @@ app.controller("editBusinessController",function($scope,$localStorage,$http){
                 localStorage.setItem("UserData",JSON.stringify(result.userjson));
                 localStorage.setItem("BusinessData",JSON.stringify(result.databusinessServer));
                 businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+                userdatalocal = JSON.parse(localStorage.getItem("UserData"));
+
               }
               else {
                 alert("Error al cargar los datos. Se regresará al login de la aplicación");
@@ -3328,7 +3331,11 @@ app.controller("editBusinessController",function($scope,$localStorage,$http){
           $scope.slcDynamicBusiness[i] = (businessdatalocal[i].businessdynamic != undefined ? businessdatalocal[i].businessdynamic : "");
           if(businessdatalocal[i].name == "Freelance")
           {
-            //Aqui se van a cargar el correo y las redes sociales de la parte del usuario, entonces tengo que cargar el usuario para cargar estos datos.
+            $scope.iptEmailBusiness[i] = userdatalocal.mail;
+            $scope.iptTwitter[i] = userdatalocal.twitteruser;
+            $scope.iptFacebook[i] = userdatalocal.facebookurl;
+            $scope.iptInstagram[i] = userdatalocal.instagramurl;
+            $scope.iptWebpage[i] = userdatalocal.webpage;
             $scope.disabledfield[i] = true;
           }
           else
