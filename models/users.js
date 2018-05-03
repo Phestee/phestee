@@ -53,7 +53,18 @@ var users_schema = new Schema ({
 
                        }
                      ],
-    active:          {type: Boolean,default: true}
+    active:          {type: Boolean,default: true},
+    twitteruser:     {type: String},
+    facebookurl:     {type: String},
+    instagramurl:    {type: String},
+    linkedinurl:     {type: String},
+    webpage:         {type: String},
+
+    city:            {type: String},
+    state:           {type: String},
+    username:        {type: String}
+
+
 
 });
 

@@ -421,14 +421,15 @@ app.post("/users", function(request,response){
 });
 
 
-app.get("/availablename/:nameusercheck", function(request,response){
+app.get("/availableusername/:nameusercheck", function(request,response){
       logger.info('-----------------------------------------------------');
       logger.info('M001 GET "/availablename/variable"');
       try{
+
               if(request.params.nameusercheck !='' && request.params.nameusercheck != undefined )
               {
                   logger.info('nameusercheck: '+request.params.nameusercheck);
-                  users.findOne({name:request.params.nameusercheck},function(err,data){
+                  users.findOne({username:request.params.nameusercheck},function(err,data){
                     if(!err)
                     {
                       if(data)

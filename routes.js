@@ -100,7 +100,7 @@ router.put("/editBusiness",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 PUT "/editBusiness"');
 
-  var negocios = request.body;  
+  var negocios = request.body;
   negocios.forEach(function(element)
   {
       try{
@@ -153,7 +153,6 @@ router.put("/editBusiness",function(request,response){
           response.send('{"error":1,"message":"Error al guardar el negocio"}');
         }
    }); // fin for
-   console.log("Saldre de inmediato");
    response.send('{"error":0,"message":""}');
 
 
@@ -201,7 +200,7 @@ router.post("/addService",multipartymiddleware,function(request,response){
                 logger.info('Error: '+err);
 
               file[i].path = "/wamp/www/PhesteeProject/public/img/"+folderImg+"/Services/"+imagename[i]+"."+imageextension[i];
-              fs.writeFile(file[i].path, data, function (err) {
+               fs.writeFile(file[i].path, data, function (err) {
                 if (err) {
                   logger.info('Error: '+err);
                   response.send('{"error":1,"message":"'+err+'"}');
@@ -489,18 +488,28 @@ router.post("/getEmergencyData",function(request,response){
       if(!err)
       {
           if(data)
-          {
+          {              
                 userJson = {
                   name: data['name'],
                   mail: data['mail'],
                   profileImage: data['profileImage'],
                   gender: data['gender'],
                   folderImg: data['folderImg'],
+                  dateBirth: data['dateBirth'],
                   location:{
                       latitude: data['location']['latitude'],
                       length: data['location']['length']
                   },
-                  ownedBusinesses: data['ownedBusinesses']
+                  ownedBusinesses: data['ownedBusinesses'],
+                  twitteruser: data['twitteruser'],
+                  facebookurl: data['facebookurl'],
+                  instagramurl: data['instagramurl'],
+                  linkedinurl: data['linkedinurl'],
+                  webpage: data['webpage'],
+                  city: data['city'],
+                  state: data['state'],
+                  username: data['username']
+
                 };
                 business.find({_id: {$in: data.ownedBusinesses}},function(errB,dataB){
                   if(!errB)
@@ -546,7 +555,6 @@ router.post("/getEmergencyData",function(request,response){
                             dataBusinessServer.push(objectBus);
                         }
                         logger.info('Sending data to the client...');
-                        console.log("Negocio cliente: "+JSON.stringify(dataBusinessServer));
                         response.send(JSON.stringify({error:0,userjson: userJson,databusinessServer: dataBusinessServer}));
 
                     }
