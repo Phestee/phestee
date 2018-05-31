@@ -3444,15 +3444,15 @@ app.controller("editServicesController",function($scope,$http,Upload){
    {value:"isMovilOffering",label:"Oferta movil"}
  ];
 
- $scope.idbusiness = [];
+
 
  $scope.slcProdServiceAdd = [];
  $scope.iptNameServiceAdd = [];
  $scope.iptCostServiceAdd = [];
- $scope.txtaDescriptionAdd = [];
+
  $scope.slcTypeServiceAdd = [];
  $scope.txtaHashtagAdd = [];
- $scope.imgServiceAdd = [];
+
 
 
  $scope.slcProdService = [];
@@ -3461,10 +3461,19 @@ app.controller("editServicesController",function($scope,$http,Upload){
  $scope.txtaDescription = [];
  $scope.slcTypeService = [];
  $scope.txtaHashtag = [];
+
+ $scope.imgServiceAdd = [];
+ $scope.idbusiness = [];
  $scope.idservicebuss = [];
-
-
+ $scope.iptProductServiceAdd = [];
+ $scope.txtaDescriptionAdd = [];
+ $scope.iptHashtagAdd = [];
+ $scope.iptPriceAdd = [];
+ $scope.txtaDescriptionData = [];
+ $scope.iptHashtagData = [];
+ $scope.iptPriceData = [];
  $scope.dataServicesUser = [];
+
 
  $scope.checararchivos = function(nobusiness,imgServiceAdd){
 
@@ -3498,107 +3507,220 @@ app.controller("editServicesController",function($scope,$http,Upload){
 
  };
 
- $scope.loadServicesUser = function(business){
+ $scope.loadServicesUser = function(){
 
-   //var businessdatalocal = JSON.parse(localStorage.getItem("business"));
-   //if(businessdatalocal == undefined || businessdatalocal == null)
-   //{
-     $scope.dataServicesUser = business;
-     for(var x=0;x<business.length;x++)
-     {
-       $scope.idbusiness[x] = business[x]._id;
-       for(var i=0;i<business[x].services.length;i++)
+       var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+       var userdatalocal = JSON.parse(localStorage.getItem("UserData"));
+       if(businessdatalocal == undefined || businessdatalocal == null)
        {
-         $scope.idservicebuss[i] = business[x].services[i]._id;
-         $scope.slcProdService[i] = business[x].services[i].type;
-         $scope.iptNameService[i] = business[x].services[i].name;
-         $scope.iptCostService[i] = business[x].services[i].cost;
-         $scope.txtaDescription[i] = business[x].services[i].description;
-         $scope.slcTypeService[i] = (business[x].services[i].homeservices == true ? "homeservice" : "isMovilOffering");
-         $scope.txtaHashtag[i] = business[x].services[i].hshtgs;
+             $http.post("/appv2/getEmergencyData").then(function(responsesuc){
+               var result = angular.fromJson(responsesuc.data);
+               if(result.error == 0)
+               {
+                 localStorage.setItem("UserData",JSON.stringify(result.userjson));
+                 localStorage.setItem("BusinessData",JSON.stringify(result.databusinessServer));
+                 businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+                 userdatalocal = JSON.parse(localStorage.getItem("UserData"));
+
+               }
+               else {
+                 alert("Error al cargar los datos. Se regresará al login de la aplicación");
+                 localStorage.clear();
+                 window.location.href="/appv2/signout";
+               }
+
+             },function(response){
+                 alert("Error: "+response.statusText);
+                 localStorage.clear();
+                 window.location.href="/appv2/signout";
+             });
        }
-     }
-   //}
-   //else
-   //{
+
+       $scope.dataServicesUser = businessdatalocal;
+      for(var x=0;x<businessdatalocal.length;x++)
+      {
+        $scope.idbusiness[x] = businessdatalocal[x]._id;
+        $scope.txtaDescriptionData[x] = new Array();
+        $scope.iptHashtagData[x] = new Array();
+        $scope.iptPriceData[x] = new Array();
+        $scope.idservicebuss[x] = new Array();
+        for(var y=0;y<businessdatalocal[x].services.length;y++)
+        {
+          $scope.idservicebuss[x][y] = businessdatalocal[x].services[y]._id;
+          $scope.txtaDescriptionData[x][y] = businessdatalocal[x].services[y].description;
+          $scope.iptHashtagData[x][y] = businessdatalocal[x].services[y].hshtgs;
+          $scope.iptPriceData[x][y] = businessdatalocal[x].services[y].cost;
 
 
-   //}
+        }
+      }
  }; // fin loadServicesUser
 
- $scope.addService = function(nobusiness){
-
-   if(imgServiceAdd != undefined)
+ $scope.addBoard = function(idbusiness,imgServiceAdd){
+   if($scope.iptProductServiceAdd != "" && $scope.iptProductServiceAdd != undefined)
    {
-       imgServiceAdd.upload = Upload.upload({
-              method: 'POST',
-              url: '/app/addService',
-              file: imgProfile,
-              data: {idbusiness: $scope.idbusiness[nobusiness],
-                     serviceproduct: $scope.slcprodServiceAdd[nobusiness],
-                     nameserviceprod: $scope.iptNameServiceAdd[nobusiness],
-                     costservprod: $scope.iptCostServiceAdd[nobusiness],
-                     description: $scope.txtaDescriptionAdd[nobusiness],
-                     typeservice: $scope.slcTypeServiceAdd[nobusiness],
-                     hashtags: $scope.txtaHashtagAdd[nobusiness]
-            }
+           if(imgServiceAdd != undefined)
+           {
+               imgServiceAdd.upload = Upload.upload({
+                      method: 'POST',
+                      url: '/appv2/addService',
+                      file: imgServiceAdd,
+                      data: {idbusiness: $scope.dataServicesUser[idbusiness]._id,
+                           servicename: $scope.iptProductServiceAdd[idbusiness],
+                           description: $scope.txtaDescriptionAdd[idbusiness],
+                           hashtags: $scope.iptHashtagAdd[idbusiness],
+                           price: $scope.iptPriceAdd[idbusiness]
+                    }
+               });
+
+               imgServiceAdd.upload.then(function (response) {
+
+                     var result = angular.fromJson(response.data);
+                     if(result.error == 0)
+                     {
+                          var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+                          if(result.objectImg != undefined)
+                          {
+                            businessdatalocal[idbusiness].services.push({_id: result.message,name: $scope.iptProductServiceAdd[idbusiness],cost: $scope.iptPriceAdd[idbusiness],description: $scope.txtaDescriptionAdd[idbusiness],hshtgs: $scope.iptHashtagAdd[idbusiness],imgs: result.objectImg});
+                            $scope.dataServicesUser[idbusiness].services.push({_id: result.message,name: $scope.iptProductServiceAdd[idbusiness],cost: $scope.iptPriceAdd[idbusiness],description: $scope.txtaDescriptionAdd[idbusiness],hshtgs: $scope.iptHashtagAdd[idbusiness],imgs: result.objectImg});
+                          }
+                          else
+                          {
+                            businessdatalocal[idbusiness].services.push({_id: result.message,name: $scope.iptProductServiceAdd[idbusiness],cost: $scope.iptPriceAdd[idbusiness],description: $scope.txtaDescriptionAdd[idbusiness],hshtgs: $scope.iptHashtagAdd[idbusiness]});
+                            $scope.dataServicesUser[idbusiness].services.push({_id: result.message,name: $scope.iptProductServiceAdd[idbusiness],cost: $scope.iptPriceAdd[idbusiness],description: $scope.txtaDescriptionAdd[idbusiness],hshtgs: $scope.iptHashtagAdd[idbusiness]});
+                          }
+                          $scope.idservicebuss[idbusiness].push(result.message);
+                          $scope.txtaDescriptionData[idbusiness].push($scope.txtaDescriptionAdd[idbusiness]);
+                          $scope.iptHashtagData[idbusiness].push($scope.iptHashtagAdd[idbusiness]);
+                          $scope.iptPriceData[idbusiness].push($scope.iptPriceAdd[idbusiness]);
+                          localStorage.setItem("BusinessData",JSON.stringify(businessdatalocal));
+                          $scope.txtaDescriptionAdd[idbusiness] = "";
+                          $scope.iptProductServiceAdd[idbusiness] = "";
+                          $scope.iptHashtagAdd[idbusiness] = "";
+                          $scope.iptPriceAdd[idbusiness]= "";
+                          alert("El servicio se ha agregado con éxito");
+                          $scope.imgServiceAdd[idbusiness] = null;
+                     }
+                     else
+                     {
+                          alert(result.message);
+                     }
+                      $timeout(function(){
+                            alert("Error al subir la imagen. Tiempo de carga de imagen ha finalizado");
+                      });
+                      }, function (response) {
+                          if (response.status > 0)
+                          {
+                              alert("Error al agregar el servicio: "+response.toSource());
+                              return false;
+                          }
+                        }, function (evt) {
+                     //Para agregar una barra de progreso
+                     //imgProfile.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+                    });
+           }
+           else
+           {
+                 var addserviceobject = {
+                   "idbusiness" : $scope.dataServicesUser[idbusiness]._id,
+                   "servicename": $scope.iptProductServiceAdd[idbusiness],
+                   "description": $scope.txtaDescriptionAdd[idbusiness],
+                   "hashtags": $scope.iptHashtagAdd[idbusiness],
+                   "price": $scope.iptPriceAdd[idbusiness]
+                 };
+
+                 $http.post("/appv2/addService",addserviceobject).then(function(responsesuc){
+                   var result = angular.fromJson(responsesuc.data);
+                   if(result.error == 0)
+                   {
+                        var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+                        businessdatalocal[idbusiness].services.push({_id: result.message,name: $scope.iptProductServiceAdd[idbusiness],cost: $scope.iptPriceAdd[idbusiness],description: $scope.txtaDescriptionAdd[idbusiness],hshtgs: $scope.iptHashtagAdd[idbusiness],imgs: result.objectImg});
+                        $scope.dataServicesUser[idbusiness].services.push({_id: result.message,name: $scope.iptProductServiceAdd[idbusiness],cost: $scope.iptPriceAdd[idbusiness],description: $scope.txtaDescriptionAdd[idbusiness],hshtgs: $scope.iptHashtagAdd[idbusiness],imgs: result.objectImg});
+                        $scope.idservicebuss[idbusiness].push(result.message);
+                        $scope.txtaDescriptionData[idbusiness].push($scope.txtaDescriptionAdd[idbusiness]);
+                        $scope.iptHashtagData[idbusiness].push($scope.iptHashtagAdd[idbusiness]);
+                        $scope.iptPriceData[idbusiness].push($scope.iptPriceAdd[idbusiness]);
+                        localStorage.setItem("BusinessData",JSON.stringify(businessdatalocal));
+                        $scope.imgServiceAdd[idbusiness] = null;
+                        $scope.txtaDescriptionAdd[idbusiness] = "";
+                        $scope.iptProductServiceAdd[idbusiness] = "";
+                        $scope.iptHashtagAdd[idbusiness] = "";
+                        $scope.iptPriceAdd[idbusiness]= "";
+                        alert("El servicio se ha agregado con éxito");
+                   }
+                   else
+                   {
+                        alert(result.message);
+                   }
+
+                 },function(response){
+                     alert("Error: "+response.statusText);
+                 });
+           }
+
+ }
+ else
+ {
+   alert("Por favor ingrese el nombre de un producto/servicio para continuar.");
+   return false;
+
+ }
+ }; // fin addBoard
+
+
+  $scope.saveServices = function(){
+
+       var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+       var objectupdateserv = [];
+       var dataobject;
+       for(var i=0;i<businessdatalocal.length;i++)
+       {
+         dataobject = {
+           "idbusiness": businessdatalocal[i]._id,
+           "servicesck": []
+         };
+         for(var j=0;j<businessdatalocal[i].services.length;j++)
+         {
+            dataobject.servicesck.push({"descriptioncheck": $scope.txtaDescriptionData[i][j],"hashtagscheck": $scope.iptHashtagData[i][j],"pricecheck": $scope.iptPriceData[i][j]});
+         }
+         objectupdateserv.push(dataobject);
+         dataobject = "";
+       }
+
+
+       $http.put("/appv2/editService",objectupdateserv).then(function(responsesuc){
+         var result = angular.fromJson(responsesuc.data);
+         if(result.error == 0)
+         {
+           var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+           for(var i=0;i<businessdatalocal.length;i++)
+           {
+              for(var j=0;j<businessdatalocal[i].services.length;j++)
+              {
+                businessdatalocal[i].services[j].description = $scope.txtaDescriptionData[i][j];
+                businessdatalocal[i].services[j].hshtgs = $scope.iptHashtagData[i][j];
+                businessdatalocal[i].services[j].cost = $scope.iptPriceData[i][j];
+              }
+           }
+           localStorage.setItem("BusinessData",JSON.stringify(businessdatalocal));
+           alert("El negocio se ha modificado con éxito");
+           //$scope.loadServicesUser();
+         }
+         else
+         {
+           alert(result.message);
+         }
+       }
+       ,function(response){
+           alert("Error: "+response.statusText);
+
        });
 
-       imgServiceAdd.upload.then(function (response) {
 
-             var result = angular.fromJson(response.data);
-             if(result.error==0)
-              alert("El servicio se ha agregado con éxito.");
-              window.location.href= '/app';
-              $timeout(function(){
-                    alert("Error al subir la imagen. Tiempo de carga de imagen ha finalizado");
-              });
-              }, function (response) {
-                  if (response.status > 0)
-                  {
-                      alert("Error al agregar el servicio: "+response.toSource());
-                      return false;
-                  }
-                }, function (evt) {
-             //Para agregar una barra de progreso
-             //imgProfile.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
-            });
-   }
-   else
-   {
-     var addserviceobject = {
-       "idbusiness" : $scope.idbusiness[nobusiness],
-       "serviceproduct" : $scope.slcProdServiceAdd[nobusiness],
-       "nameserviceprod" : $scope.iptNameServiceAdd[nobusiness],
-       "costservprod" : $scope.iptCostServiceAdd[nobusiness],
-       "description" : $scope.txtaDescriptionAdd[nobusiness],
-       "typeservice" : $scope.slcTypeServiceAdd[nobusiness],
-       "hashtags" : $scope.txtaHashtagAdd[nobusiness]
-     };
 
-     $http.post("/app/addService",addserviceobject).then(function(responsesuc){
-       var result = angular.fromJson(responsesuc.data);
-       if(result.error == 0)
-       {
-         alert("El servicio se ha agregado con éxito");
-         //localStorage.setItem("business",JSON.stringify(objectbusiness));
-         $scope.dataServicesUser = [];
-         window.location.href="/app";
-       }
-       else
-       {
-         alert(result.message);
-       }
 
-     },function(response){
-         alert("Error: "+response.statusText);
-     });
-   }
-  }; // fin addservice
 
-  $scope.updateService = function(noService){
-
-    alert("No servicio: "+ noService);
+/*    alert("No servicio: "+ noService);
     var objectupdateserv = {
       "idbusiness": $scope.idbusiness[0],
       "idservicebuss":$scope.idservicebuss[noService],
@@ -3628,18 +3750,45 @@ app.controller("editServicesController",function($scope,$http,Upload){
     ,function(response){
         alert("Error: "+response.statusText);
 
-    });
-  }; // fin de updateService
+    });*/
 
-  $scope.deleteService = function(noServiceDel){
-    if(confirm("¿Desea eliminar "+$scope.iptNameService[noServiceDel]+"? ¿Desea continuar?"))
+  }; // fin de saveServices
+
+
+
+
+
+
+  $scope.deleteService = function(nameService,businessnum,servicenum){
+
+    if(confirm("¿Desea eliminar "+nameService+"?"))
     {
-          $http.delete("/app/deleteService/"+$scope.idservicebuss[noServiceDel]).then(function(responsesuc){
+          $http.delete("/appv2/deleteService/"+$scope.idservicebuss[businessnum][servicenum]+"/"+$scope.idbusiness[businessnum]).then(function(responsesuc){
             var result = angular.fromJson(responsesuc.data);
             if(result.error == 0)
             {
+              var businessdatalocal = JSON.parse(localStorage.getItem("BusinessData"));
+              for(var i=0;i<businessdatalocal.length;i++)
+              {
+                if(businessdatalocal[i]._id == $scope.idbusiness[businessnum])
+                {
+                  for(var x=0;x<businessdatalocal[i].services.length;x++)
+                  {
+                    if(businessdatalocal[i].services[x]._id == $scope.idservicebuss[businessnum][servicenum])
+                    {
+                        businessdatalocal[i].services.splice(x,1);
+                        $scope.dataServicesUser[i].services.splice(x,1);
+                        $scope.idservicebuss[i].splice(x,1);
+                        $scope.txtaDescriptionData[i].splice(x,1);
+                        $scope.iptHashtagData[i].splice(x,1);
+                        $scope.iptPriceData[i].splice(x,1);
+                    }
+                  }
+                  break;
+                }
+              }
+              localStorage.setItem("BusinessData",JSON.stringify(businessdatalocal));
               alert("El servicio se ha eliminado con éxito");
-              window.location.href="/app";
             }
             else
             {
@@ -3649,6 +3798,8 @@ app.controller("editServicesController",function($scope,$http,Upload){
               alert(response.statusText);
           });
     }
+
+
   };
 }); // fin controller editServicesController
 

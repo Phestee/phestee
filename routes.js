@@ -165,7 +165,7 @@ router.put("/editBusiness",function(request,response){
 
 });
 
-router.post("/addService",multipartymiddleware,function(request,response){
+/*router.post("/addService",multipartymiddleware,function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 - POST "/addService"');
   try{
@@ -267,6 +267,153 @@ router.post("/addService",multipartymiddleware,function(request,response){
   {
     logger.info("Error 666: "+e);
   };
+});*/
+
+router.post("/checkfile",upload.single('file'),function(request,response){
+
+    if(request.files != undefined)
+      response.send('{"error":0,"message":"Si llego el archivo"}');
+    else
+      response.send('{"error":0,"message":"No llego el archivo"}');
+
+
+});
+
+router.post("/addService",multipartymiddleware,function(request,response){
+    logger.info('-----------------------------------------------------');
+    logger.info('M001 - POST "/addService"');
+    try
+    {
+          var imageextension = [];
+          var imagename = [];
+          var finalname = [];
+          var objectsend = [];
+          business.findOne({_id: request.body.idbusiness},function(err,data){
+            if(!err)
+            {
+                if(data)
+                {
+                    var idservicesend = new mongoose.Types.ObjectId;
+                    logger.info("data license: "+data.licenseType);
+                    logger.info("Data services: "+data.services.length);
+                    if(data.licenseType == 'Freemium' && data.services.length >= 4)
+                    {
+                      logger.info("The account is Freemium and the user has 4 services");
+                      response.send('{"error":1,"message":"La cuenta ha llegado a su limite de servicios. Para agregar mas servicios, por favor adquiera una cuenta Premium"}');
+                    }
+                    else
+                    {
+                            if(request.files != undefined)
+                            {
+                              for(var i=0;i<request.files.file.length;i++)
+                              {
+                                  imageextension[i] = request.files.file[i].name.split(".").pop();
+                                  imagename[i] = randomstring.generate(36);
+                                  finalname[i] = imagename[i]+"."+imageextension[i];
+                                  objectsend.push({img: finalname[i], thumbsmall: finalname[i], thumbmedium: finalname[i], thumbbig: finalname[i]});
+                              }
+                              data.services.push({_id: idservicesend,name: request.body.servicename,cost: request.body.price,hshtgs: request.body.hashtags,description: request.body.description,imgs: objectsend});
+                            }
+                            else
+                            {
+                              objectsend.push({img: "../../system/default.png"});
+                              data.services.push({_id: idservicesend,name: request.body.servicename,cost: request.body.price,hshtgs: request.body.hashtags,description: request.body.description,imgs: objectsend});
+                            }
+
+
+                            data.save(function(errB){
+                              if(!errB)
+                              {
+                                 if(request.files != undefined)
+                                 {
+                                     request.files.file.forEach(function(dataFileObject,x){
+                                           fs.readFile(dataFileObject.path, function(errFile,dataFile){
+                                           if(errFile)
+                                           {
+                                             logger.info("Error: "+errFile);
+                                             response.send('{"error":1,"message":"Error al crear el servicio"}');
+                                           }
+
+                                           logger.info("Ruta:/Users/hejosemi/Documents/GitHub/phestee/public/img/"+request.session.folderimg+"/Services/"+imagename[x]+"."+imageextension[x]);
+                                           dataFileObject.path = "/Users/hejosemi/Documents/GitHub/phestee/public/img/"+request.session.folderimg+"/Services/"+imagename[x]+"."+imageextension[x];
+                                           fs.writeFile(dataFileObject.path, dataFile, function(errWrite){
+                                             if(errWrite)
+                                             {
+                                               logger.info("Error: "+errWrite);
+                                               response.send('{"error":1,"message":"Error al crear el servicio"}');
+                                             }
+
+                                             /*thumb({
+                                                     source: '/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/'+imagename[x]+'.'+imageextension[x],
+                                                     destination: '/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/thumbnailsmall/',
+                                                     width: 100,
+                                                     suffix: ''
+                                                     },
+                                                     function(files, err, stdout, stderr) {
+                                                       logger.info("Thumbsmall was created successfully");
+                                                     }
+                                                 ); // fin thumbnailsmall*/
+                                              thumb({
+                                                     source: '/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/'+imagename[x]+'.'+imageextension[x],
+                                                     destination: '/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/thumbnailmedium/',
+                                                     width: 300,
+                                                     suffix: ''
+                                                     },
+                                                     function(files, err, stdout, stderr) {
+                                                       logger.info("Thumbmedium was created successfully");
+                                                     }
+                                               );
+
+                                               /*thumb({
+                                                       source: '/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/'+imagename[x]+'.'+imageextension[x],
+                                                       destination: '/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/thumbnailbig/',
+                                                       width: 500,
+                                                       suffix: ''
+                                                       },
+                                                       function(files, err, stdout, stderr) {
+                                                         logger.info("Thumbs was created successfully");
+                                                     }
+                                                 );*/
+                                           });// fin writefile
+                                         }); // fin readfile
+                                     }); // fin foreach
+                                     logger.info("El servicio se creo con éxito");
+                                     var dataSendClient = JSON.stringify({error: 0, message: idservicesend,objectImg: objectsend});
+                                     response.send(dataSendClient);
+                                 }
+                                 else
+                                 {
+                                   logger.info("El servicio se creo con éxito");
+                                   var dataSendClient = JSON.stringify({error: 0, message: idservicesend,objectImg: objectsend});
+                                   response.send(dataSendClient);
+                                 }
+                              }
+                              else
+                              {
+                                logger.info("Error: "+err);
+                                response.send('{"error":1,"message":"Error al agregar el servicio/producto"}');
+                              }
+                            });// fin de data save
+                  }
+              }
+              else
+              {
+                logger.info("Error: There is not data in the query");
+                response.send();
+              }
+            }
+            else
+            {
+              logger.info("Error: "+err);
+              response.send('{"error":1,"message":"Error al agregar el servicio/producto"}');
+            }
+          });
+    }
+    catch(e)
+    {
+      logger.info("Error 666: "+e);
+      response.send('{"error":1,"message":"Error al agregar el servicio/producto"}');
+    }
 });
 
 router.post("/addServiceTest",multipartymiddleware,function(request,response){
@@ -301,7 +448,61 @@ router.post("/addServiceTest",multipartymiddleware,function(request,response){
 router.put("/editService",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 - PUT "/editService"');
-  var homeserviceValueUp = (request.body.typeservice == 'homeservice' ? true : false);
+
+        var idbusinesses = [];
+        var error = 0;
+        for(var i=0;i<request.body.length;i++)
+        {
+            idbusinesses.push(request.body[i].idbusiness);
+        }
+
+
+        idbusinesses.forEach(function(element,iter)
+        {
+              business.findOne({_id: element},function(errB,dataB){
+              if(!errB)
+              {
+                if(dataB)
+                {
+                        for(var z=0;z<dataB.services.length;z++)
+                        {
+                          dataB.services[z].description =  request.body[iter].servicesck[z].descriptioncheck;
+                          dataB.services[z].cost = request.body[iter].servicesck[z].pricecheck;
+                          dataB.services[z].hshtgs = request.body[iter].servicesck[z].hashtagscheck;
+                        }
+
+                      dataB.save(function(errSave){
+                          if(!errSave)
+                          {
+                              error = 0;
+                          }
+                          else
+                          {
+                            logger.info("Error: "+errSave);
+                            error == 1;
+                          }
+                      });
+                }
+                else
+                {
+                    logger.info("Error: There is not data in business in editService");
+                    error = 1;
+                }
+              }
+              else
+              {
+                logger.info("Error: "+err);
+                error = 1;
+              }
+            });// fin business findone
+      });// fin foreach idbusiness
+
+      if(error == 0)
+        response.send('{"error":0,"message":""}');
+      else
+        response.send('{"error":1,"message":"Error al actualizar los servicios."}');
+
+        /*var homeserviceValueUp = (request.body.typeservice == 'homeservice' ? true : false);
   var isMovilOfferingValueUp = (request.body.typeservice == 'isMovilOffering' ? true : false);
   try{
     business.findOne({_id: request.body.idbusiness},function(err,data){
@@ -356,39 +557,77 @@ router.put("/editService",function(request,response){
   }
   catch(e){
     logger.info('Error 666: '+e);
-  };
+  };*/
 });
 
-router.delete("/deleteService/:iddeleteservice",function(request,response){
+router.delete("/deleteService/:iddeleteservice/:idbusinessdelete",function(request,response){
   logger.info('-----------------------------------------------------');
   logger.info('M001 - DELETE "/deleteService"');
   try
   {
-      if(request.params.iddeleteservice != '' && request.params.iddeleteservice != undefined)
+      var imagetodelete = [];
+      if(request.params.iddeleteservice != '' && request.params.iddeleteservice != undefined && request.params.idbusinessdelete != '' && request.params.idbusinessdelete != undefined)
       {
-          logger.info('idservice: '+request.params.iddeleteservice);
-          business.update({},{$pull:{services: {_id: request.params.iddeleteservice}}},{multi: true},function(err,data){
-          if(!err)
-          {
-              logger.info('El servicio se eliminó con exito');
-              response.send('{"error":0,"message":""}');
-          }
-          else
-          {
+          business.findOne({_id: request.params.idbusinessdelete},function(err,data){
+            if(!err)
+            {
+              if(data)
+              {
+                  for(var i=0;i<data.services.length;i++)
+                  {
+                    if(data.services[i]._id == request.params.iddeleteservice)
+                    {
+                        imagetodelete = data.services[i].imgs;
+                        data.services.splice(i,1);
+                        break;
+                    }
+                  }
+                  data.save(function(errSaveServ){
+                    if(!errSaveServ)
+                    {
+                      imagetodelete.forEach(function(element){
+                            if(element.img != "../../system/default.png")
+                            {
+                              fs.unlinkSync('/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/'+element.img);
+                              //fs.unlinkSync('/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/thumbnailsmall/'+element.img);
+                              fs.unlinkSync('/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/thumbnailmedium/'+element.img);
+                              //fs.unlinkSync('/Users/hejosemi/Documents/GitHub/phestee/public/img/'+request.session.folderimg+'/Services/thumbnailbig/'+element.img);
+                            }
+
+                      });
+                      imagetodelete = [];
+                      response.send('{"error":0,"message":""}');
+                    }
+                    else
+                    {
+                      logger.info('Error: '+errSaveServ);
+                      response.send('{"error":1,"message":"Error al guardar el servicio"}');
+                    }
+                  });
+              }
+              else
+              {
+                  logger.info('Error: There is not data in the query.');
+                  response.send('{"error":1,"message":"Error al eliminar el servicio"}')
+              }
+            }
+            else
+            {
               logger.info('Error: '+err);
-              response.send('{"error":1,"message":"Error al eliminar un servicio"}')
-          }
-        });
+              response.send('{"error":1,"message":"Error al eliminar el usuario"}');
+            }
+          });
       }
       else
       {
-        logger.info('Error: No hay servicio que eliminar');
+        logger.info('Error: The parameters do not arrive complete.');
         response.send('{"error":1,"message":"Error al eliminar el servicio"}')
       }
   }
   catch(e)
   {
     logger.info('Error 666: '+e);
+    response.send('{"error":1,"message":"Error al eliminar el servicio"}');
   }
 });
 

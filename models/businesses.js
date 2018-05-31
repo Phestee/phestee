@@ -52,11 +52,12 @@ var businesses_schema = new Schema ({
                         homeservice:      {type: Boolean},
                         isMovilOffering:  {type: Boolean},
                         establishedbuss:  {type: Boolean},
-                        hshtgs:           [String],
+                        hshtgs:           {type: String},
                         description:      {type: String},
                         type:             {type: String},
                         imgs:             [
                                             {
+                                                _id:          false,
                                                 img:          {type: String},
                                                 thumbsmall:   {type: String},
                                                 thumbmedium:  {type: String},

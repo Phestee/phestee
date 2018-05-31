@@ -296,6 +296,7 @@ app.post("/validation",function(request,response){
                       request.session.user_id = data._id;
                       request.session.loadbusiness = 0;
                       request.session.business = data.ownedBusinesses;
+                      request.session.folderimg = data.folderImg;
                       logger.info('ID USER: '+request.session.user_id);
                       logger.info('LOADBUSINESS: '+request.session.loadbusiness);
                       response.send('{"error":0,"message":"Successful Login"}');
